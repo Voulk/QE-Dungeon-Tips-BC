@@ -21,8 +21,68 @@ tipsMap = {
 	---------------------------------------------------
 	
 	-- Hellfire Ramparts --
-	[17259] = {{"Important", "Test Message. Might delete later."}}, -- Bonechewer Hungerer
+	[17259] = {{"Important", "Has a disarm and an attack power debuff. Don't worry, being melee will get better."}}, -- Bonechewer Hungerer
+	[17264] = {{"Important", "Beware: Has a dangerous single target stun."}}, -- Ravener
+	[17280] = {{"Important", ""}}, -- Shattered Hand Warhound
+	[17269] = {{"Important", ""}}, -- Bleeding Hollow Darkcaster
+	[17270] = {{"Important", ""}}, -- Bleeding Hollow Archer
+	[17271] = {{"Important", ""}}, -- Bonechewer Destroyer
+	[17478] = {{"Important", ""}}, -- Bonechewer Scryer
+	[17455] = {{"Important", ""}}, -- Bonechewer Beastmaster
+	[17517] = {{"Important", ""}}, -- Hellfire Sentry
+	
+	[17306] = {{"Important", ""}}, -- Watchkeeper Gargolmar
+	[17309] = {{"Important", ""}}, -- Hellfire Watcher (add)
+	[17308] = {{"Important", ""}}, -- Omor the Unscarred
+	[17537] = {{"Important", ""}}, -- Vazruden (P1)
+	[17307] = {{"Important", ""}}, -- Nazan (P2)
+	
+	-- Blood Furnace --
+	[17370] = {{"Important", ""}}, -- Laughing Skull Enforcer
+	[17397] = {{"Important", ""}}, -- Shadowmoon Adept
+	[17477] = {{"Important", ""}}, -- Hellfire Imp 
+	[17491] = {{"Important", ""}}, -- Laughing Skull Rogue
+	[17395] = {{"Important", ""}}, -- Shadowmoon Summoner
+	[17626] = {{"Important", ""}}, -- Laughing Skull Legionnaire
+	[17371] = {{"Important", ""}}, -- Shadowmoon Warlock
+	[17414] = {{"Important", ""}}, -- Shadowmoon Technician
+	[17624] = {{"Important", ""}}, -- Laughing Skull Warden
+	[17398] = {{"Important", ""}}, -- Nascent Fel Orc
+	[19016] = {{"Important", ""}}, -- Hellfire Familiar
+	[18894] = {{"Important", ""}}, -- Felguard Brute
+	[17400] = {{"Important", "Pull these packs one at a time. They deal VERY high damage."}}, -- Felguard Annihilator
+	[17653] = {{"Important", ""}}, -- Shadowmoon Channeler
+	
+	[17381] = {{"Important", ""}}, -- The Maker
+	[17380] = {{"Important", ""}}, -- Broggok
+	[17377] = {{"Important", ""}}, -- Keli'dan the Breaker
+	
+	-- Shattered Halls
+	[16700] = {{"Important", ""}}, -- Shattered Hand Legionnaire
+	[17420] = {{"Important", ""}}, -- Shattered Hand Heathen
+	[16507] = {{"Important", ""}}, -- Shattered Hand Sentry
+	[17694] = {{"Important", ""}}, -- Shadowmoon Darkcaster
+	[16594] = {{"Important", ""}}, -- Shadowmoon Acolyte
+	[16704] = {{"Important", ""}}, -- Shattered Hand Sharpshooter
+	[16699] = {{"Important", ""}}, -- Shattered Hand Reaver
+	[17083] = {{"Important", ""}}, -- Fel Orc Convert
+	[16593] = {{"Important", ""}}, -- Shattered Hand Brawler 
+	[17669] = {{"Important", ""}}, -- Rabid Warhound
+	[17670] = {{"Important", ""}}, -- Shattered Hand Houndmaster
+	[17357] = {{"Important", ""}}, -- Creeping Oozeling
+	[17462] = {{"Important", ""}}, -- Shattered Hand Zealot
+	[17427] = {{"Important", ""}}, -- Shattered Hand Archer
+	[16523] = {{"Important", ""}}, -- Shattered Hand Savage
+	[17671] = {{"Important", ""}}, -- Shattered Hand Champion
+	[17695] = {{"Important", ""}}, -- Shattered Hand Assassin
+	[17301] = {{"Important", ""}}, -- Shattered Hand Executioner
 
+	
+	[16807] = {{"Important", ""}}, -- Grand Warlock Nethekurse
+	[20923] = {{"Important", ""}}, -- Blood Guard Porung
+	[16809] = {{"Important", ""}}, -- Warbringer O'mrogg
+	[16808] = {{"Important", ""}}, -- Kargath Bladefist
+	
 	
 	---------------------------------------------------
 	-------------------Shadowlands---------------------

@@ -106,7 +106,32 @@ local iconList = {
 }
 
 addon.acceptedDungeons = {
+	-- Dungeon Content --
+	[246] = true, -- Shattered Halls
+	[256] = true, -- Auch
+	[257] = true, -- Auch
+	[258] = true, -- Seth Halls
+	[259] = true, -- Seth Halls
+	[260] = true, -- Shadow Labs
+	[261] = true, -- Blood Furnace
+	[262] = true, -- Underbog
+	[263] = true, -- Steamvault I
+	[264] = true, -- Steamvault II
+	[265] = true, -- Slave Pens
+	[266] = true, -- Botanica
+	[267] = true, -- Mechanar I
+	[268] = true, -- Mechanar II
+	[269] = true, -- Arcatraz
+	[270] = true, -- Arcatraz
+	[271] = true, -- Arcatraz
+	[272] = true, -- Mana-Tombs
+	[273] = true, -- Black Morass
+	[274] = true, -- Old Hillsbrad
+	
 	[347] = true, -- Hellfire Ramparts
+	
+	-- Raid Content --
+	-- Coming Soon --
 
 	
 	[1] = true -- Bookstop
