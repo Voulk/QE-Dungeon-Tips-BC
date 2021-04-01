@@ -1,10 +1,10 @@
 
--- This is the full database of tips.
+-- This is the full database of tips for Burning Crusade.
 
 local _, addon = ...;
 
 
--- The Tips maps holds tooltip information and mob ID's for all 13 legion dungeons, 10 BFA dungeons and the 8 Shadowlands dungeons. This is basically the database.
+-- The Tips maps holds tooltip information and mob ID's for Burning Crusade dungeons and raids.
 -- Each array uses the format: {{"Type", "Tip1"}, {"Type", "Tip2"}}
 tipsMap = {
 	-- Example

@@ -1,6 +1,6 @@
 --[[
-Questionably Epic Mythic+ Dungeon Tips
-Version: 5.0 (Shadowlands)
+Questionably Epic Dungeon Tips
+Version: 0.5 (Burning Crusade Classic Alpha)
 Developed by: Voulk
 Contact: 
 	Discord: Voulk#1858
@@ -9,7 +9,7 @@ Contact:
 	
 Special Thanks:
  - CoV (testing & support)
- - Everyone who helped test the addon and support the site 
+ - Everyone who helped test the addon and support the site
 	
 
 --Shorthand--
@@ -54,10 +54,7 @@ local tipsColors = {
 	["DAMAGE"] = {1, 0.72, 0.68},
 	
 	
-	--["DEMONHUNTER"] = {0.64, 0.19, 0.79},
-	["DEMONHUNTER"] = {0.68, 0.22, 0.84},
 	["DRUID"] = {1, 0.49, 0.04},
-	["DEATHKNIGHT"] = {0.77, 0.12, 0.23},
 	["HUNTER"] = {0.67, 0.83, 0.45},
 	["MAGE"] = {0.41, 0.8, 0.94},
 	["MONK"] = {0, 1, 0.59},
@@ -71,9 +68,7 @@ local tipsColors = {
 }
 
 local classList =  {
-	DEMONHUNTER = true,
 	DRUID = true,
-	DEATHKNIGHT = true,
 	HUNTER = true,
 	MAGE = true,
 	MONK = true,
@@ -93,9 +88,7 @@ local iconList = {
 	Legion = "ability_dualwield",
 	Dodge = "ability_dualwield",
 	
-	DEMONHUNTER = "classicon_demonhunter",
 	DRUID = "classicon_druid",		
-	DEATHKNIGHT = "classicon_deathknight",
 	HUNTER = "classicon_hunter",
 	MAGE = "classicon_mage",
 	MONK = "classicon_monk",
@@ -115,162 +108,6 @@ local iconList = {
 addon.acceptedDungeons = {
 	[347] = true, -- Hellfire Ramparts
 
-	-- Shadowlands	
-	[1683] = true, -- Theater of Pain
-	[1684] = true, -- Theater of Pain
-	[1685] = true, -- Theater of Pain
-	[1686] = true, -- Theater of Pain
-	[1687] = true, -- Theater of Pain
-	[1663] = true, -- Halls of Atonement
-	[1664] = true, -- Halls of Atonement
-	[1665] = true, -- Halls of Atonement
-	[1669] = true, -- Mists of Tirna Scithe
-	[1674] = true, -- Plaguefall
-	[1697] = true, -- Plaguefall
-	[1675] = true, -- Sanguine Depths
-	[1676] = true, -- Sanguine Depths
-	[1692] = true, -- Spires of Ascension
-	[1693] = true, -- Spires of Ascension
-	[1694] = true, -- Spires of Ascension
-	[1695] = true, -- Spires of Ascension
-	[1666] = true, -- Necrotic Wake
-	[1667] = true, -- Necrotic Wake
-	[1668] = true, -- Necrotic Wake
-	[1683] = true, -- Theater of Pain
-	[1684] = true, -- Theater of Pain
-	[1685] = true, -- Theater of Pain
-	[1686] = true, -- Theater of Pain
-	[1687] = true, -- Theater of Pain
-	[1680] = true, -- De Other Side
-	[1678] = true, -- De Other Side
-	[1679] = true, -- De Other Side
-	[1677] = true, -- De Other Side 
-	
-	-- Shadowlands (Torghast)
-	[1618] = true,
-	[1619] = true,
-	[1620] = true, -- Torghast
-	[1621] = true, -- Torghast
-	[1623] = true, -- Torghast
-	[1624] = true, -- Torghast
-	[1627] = true, -- Torghast
-	[1628] = true, -- Torghast
-	[1629] = true, -- Torghast
-	[1630] = true, -- Torghast
-	[1631] = true, -- Torghast
-	[1632] = true, -- Torghast
-	[1635] = true, -- Torghast
-	[1636] = true, -- Torghast
-	[1641] = true, -- Torghast
-	[1645] = true, -- Torghast
-	[1721] = true, -- Torghast
-	[1736] = true, -- Torghast
-	[1749] = true, -- Torghast
-	[1751] = true, -- Torghast
-	[1752] = true, -- Torghast
-	[1753] = true, -- Torghast
-	[1754] = true, -- Torghast
-	[1792] = true, -- Torghast
-	[1787] = true, -- Torghast
-	[1789] = true, -- Torghast
-	[1791] = true, -- Torghast
-	[1768] = true, -- Torghast
-	[1764] = true, -- Torghast
-	[1770] = true, -- Torghast
-	[1801] = true, -- Torghast
-	[1805] = true, -- Torghast
-	[1807] = true, -- Torghast
-	[1920] = true, -- Torghast
-	[1921] = true, -- Torghast
-	[1913] = true, -- Torghast
-	[1914] = true, -- Torghast
-	
-
-	-- BFA
-	[1038] = true, -- Temple of Sethraliss
-	[1043] = true, -- Temple of Sethraliss
-	[934] = true, -- Atal'Dazar (MapUI = 934,  instance = 968))
-	[935] = true, -- Atal'Dazar (MapUI = 934,  instance = 968))
-	[936] = true, -- Freehold
-	[1004] = true, -- Kings' Rest
-	[1039] = true, -- Shrine of the Storm
-	[1040] = true, -- Shrine of the Storm
-	[1161] = true, -- Siege of Boralus
-	[1162] = true, -- Siege of Boralus
-	[1010] = true, -- Motherlode
-	[1041] = true, -- Underrot
-	[1042] = true, -- Tol Dagor
-	[974] = true, -- Tol Dagor
-	[975] = true, -- Tol Dagor
-	[976] = true, -- Tol Dagor
-	[977] = true, -- Tol Dagor
-	[978] = true, -- Tol Dagor
-	[979] = true, -- Tol Dagor (+1169!?)
-	[980] = true, -- Tol Dagor
-	[1169] = true, -- Tol Dagor
-	[1015] = true, -- Waycrest Manor
-	[1016] = true, -- Waycrest Manor
-	[1017] = true, -- Waycrest Manor
-	[1018] = true, -- Waycrest Manor
-	
-	[1148] = true, -- Uldir
-	[1149] = true, -- Uldir
-	[1150] = true, -- Uldir
-	[1151] = true, -- Uldir
-	[1152] = true, -- Uldir
-	[1153] = true, -- Uldir
-	[1154] = true, -- Uldir
-	[1155] = true, -- Uldir
-	
-	-- Legion
-	[751] = true, -- Blackrook Hold
-	[752] = true, -- Blackrook Hold
-	[753] = true, -- Blackrook Hold
-	[754] = true, -- Blackrook Hold
-	[755] = true, -- Blackrook Hold
-	[756] = true, -- Blackrook Hold
-	[845] = true, -- Cathedral of Endless Night
-	[846] = true, -- Cathedral of Endless Night
-	[847] = true, -- Cathedral of Endless Night
-	[848] = true, -- Cathedral of Endless Night
-	[849] = true, -- Cathedral of Endless Night
-	[761] = true, -- Court of Stars
-	[762] = true, -- Court of Stars
-	[763] = true, -- Court of Stars
-	[733] = true, -- Darkheart Thicket
-	[790] = true, -- Eye of Azshara
-	[703] = true, -- Halls of Valor
-	[704] = true, -- Halls of Valor
-	[705] = true, -- Halls of Valor
-	[829] = true, -- Halls of Valor
-	[1] = true, -- Maw of Souls
-	[731] = true, -- Neltharion's Lair
-	[794] = true, -- Return to Karazhan
-	[795] = true, -- Return to Karazhan
-	[796] = true, -- Return to Karazhan
-	[797] = true, -- Return to Karazhan
-	[809] = true, -- Return to Karazhan
-	[810] = true, -- Return to Karazhan
-	[811] = true, -- Return to Karazhan
-	[812] = true, -- Return to Karazhan
-	[813] = true, -- Return to Karazhan
-	[814] = true, -- Return to Karazhan
-	[815] = true, -- Return to Karazhan
-	[816] = true, -- Return to Karazhan
-	[817] = true, -- Return to Karazhan
-	[818] = true, -- Return to Karazhan
-	[819] = true, -- Return to Karazhan
-	[820] = true, -- Return to Karazhan
-	[821] = true, -- Return to Karazhan
-	[822] = true, -- Return to Karazhan
-	[903] = true, -- Seat of the Triumvirate
-	[749] = true, -- Arcway
-	[677] = true, -- Vault of the Wardens
-	[678] = true, -- Vault of the Wardens
-	[679] = true, -- Vault of the Wardens
-	[710] = true, -- Vault of the Wardens
-	[711] = true, -- Vault of the Wardens
-	[712] = true, -- Vault of the Wardens
 	
 	[1] = true -- Bookstop
 	
