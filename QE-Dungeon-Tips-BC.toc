@@ -1,5 +1,5 @@
 ## Interface: 20400
-## Title: QE-DungeonTips
+## Title: QEDungeonTipsBC
 ## Author: Voulk (Discord: Voulk#1858)
 ## Notes: QE Mythic+ Dungeon Tips highlights information about dangerous trash mobs in Burning Crusade dungeons and raids.
 ## Version: 0.5.0
