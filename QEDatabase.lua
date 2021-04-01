@@ -77,11 +77,16 @@ tipsMap = {
 	[17695] = {{"Important", ""}}, -- Shattered Hand Assassin
 	[17301] = {{"Important", ""}}, -- Shattered Hand Executioner
 
-	
 	[16807] = {{"Important", ""}}, -- Grand Warlock Nethekurse
 	[20923] = {{"Important", ""}}, -- Blood Guard Porung
 	[16809] = {{"Important", ""}}, -- Warbringer O'mrogg
 	[16808] = {{"Important", ""}}, -- Kargath Bladefist
+	
+	-- Underbog --
+	
+	-- Steam Vaults
+	
+	-- Slave Pens
 	
 	
 	---------------------------------------------------
