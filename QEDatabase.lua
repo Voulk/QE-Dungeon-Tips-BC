@@ -83,10 +83,173 @@ tipsMap = {
 	[16808] = {{"Important", ""}}, -- Kargath Bladefist
 	
 	-- Underbog --
+	[17724] = {{"Important", ""}}, -- Underbat
+	[17871] = {{"Important", ""}}, -- Underbog Shambler
+	[17725] = {{"Important", ""}}, -- Underbog Lurker
+	[17723] = {{"Important", ""}}, -- Bog Giant
+	[17726] = {{"Important", ""}}, -- Wrathfin Myrmidon
+	[17727] = {{"Important", ""}}, -- Wrathfin Sentry
+	[17735] = {{"Important", ""}}, -- Wrathfin Warrior
+	[17728] = {{"Important", ""}}, -- Murkblood Tribesman
+	[17771] = {{"Important", ""}}, -- Murkblood Oracle
+	[17730] = {{"Important", ""}}, -- Murkblood Healer
+	[17729] = {{"Important", ""}}, -- Murkblood Spearman
+	[17731] = {{"Important", ""}}, -- Fen Ray
+	[17732] = {{"Important", ""}}, -- Lykul Wasp
+	[19632] = {{"Important", ""}}, -- Lykul Stinger
+	[17734] = {{"Important", ""}}, -- Underbog Lord
+	
+	[17770] = {{"Important", ""}}, -- Hungarfen
+	[18105] = {{"Important", ""}}, -- Ghaz'an
+	[17826] = {{"Important", ""}}, -- Swamplord Musel'ek
+	[17882] = {{"Important", ""}}, -- The Black Stalker
 	
 	-- Steam Vaults
+	[17802] = {{"Important", ""}}, -- Coilfang Warrior
+	[17721] = {{"Important", ""}}, -- Coilfang Engineer
+	[17801] = {{"Important", ""}}, -- Coilfang Siren
+	[21694] = {{"Important", ""}}, -- Bog Overlord
+	[21695] = {{"Important", ""}}, -- Tidal Surger
+	[21696] = {{"Important", ""}}, -- Steam Surger
+	[17803] = {{"Important", ""}}, -- Coilfang Oracle
+	[17800] = {{"Important", ""}}, -- Coilfang Myrmidon
+	[17722] = {{"Important", ""}}, -- Coilfang Sorceress
+	[17805] = {{"Important", ""}}, -- Coilfang Slavemaster
+	[21338] = {{"Important", ""}}, -- Coilfang Leper
+	
+	-- (Mention clicking the consoles.)
+	[17797] = {{"Important", ""}}, -- Hydromancer Thespia
+	[17796] = {{"Important", ""}}, -- Mekgineer Steamrigger
+	[17798] = {{"Important", ""}}, -- Warlord Kalithresh
 	
 	-- Slave Pens
+	[17817] = {{"Important", ""}}, -- Greater Bogstrok
+	[17816] = {{"Important", ""}}, -- Bogstrok
+	[17959] = {{"Important", ""}}, -- Coilfang Slavehandler
+	[17957] = {{"Important", ""}}, -- Coilfang Champion
+	[17961] = {{"Important", ""}}, -- Coilfang Enchantress
+	[17958] = {{"Important", ""}}, -- Coilfang Defender
+	[17940] = {{"Important", ""}}, -- Coilfang Technician
+	[17962] = {{"Important", ""}}, -- Coilfang Collaborator
+	[21127] = {{"Important", ""}}, -- Coilfang Tempest
+	[17938] = {{"Important", ""}}, -- Coilfang Observer
+	[21126] = {{"Important", ""}}, -- Coilfang Scale-Healer
+	[17960] = {{"Important", ""}}, -- Coilfang Soothsayer
+	[17893] = {{"Important", ""}}, -- Naturalist Bite (Friendly) - Grants Nature Resist + Stats
+
+	[17941] = {{"Important", ""}}, -- Mennu the Betrayer
+	[17991] = {{"Important", ""}}, -- Rokmar the Crackler
+	[17942] = {{"Important", ""}}, -- Quagmirran
+
+	-- Auch Crypts
+	[18495] = {{"Important", ""}}, -- Auchenai Vindicator
+	[18493] = {{"Important", ""}}, -- Auchenai Soulpriest
+	[18497] = {{"Important", ""}}, -- Auchenai Monk
+	[18521] = {{"Important", ""}}, -- Raging Skeleton
+	[18524] = {{"Important", ""}}, -- Angered Skeleton
+	[18700] = {{"Important", ""}}, -- Reanimated Bones
+	[18702] = {{"Important", ""}}, -- Auchenai Necromancer
+	
+	[18371] = {{"Important", ""}}, -- Shirrak the Dead Watcer
+	[18373] = {{"Important", ""}}, -- Exarch Maladaar
+	
+	
+	-- Mana Tombs
+	[18311] = {{"Important", ""}}, -- Ethereal Crypt Raider
+	[18309] = {{"Important", ""}}, -- Ethereal Scavenger
+	[18313] = {{"Important", ""}}, -- Ethereal Sorcerer
+	[18317] = {{"Important", ""}}, -- Ethereal Priest
+	[19306] = {{"Important", ""}}, -- Mana Leech
+	[19307] = {{"Important", ""}}, -- Nexus Terror
+	[18331] = {{"Important", ""}}, -- Ethereal Darkcaster
+	[18314] = {{"Important", ""}}, -- Nexus Stalker
+	[18312] = {{"Important", ""}}, -- Ethereal Spellbinder
+	[18315] = {{"Important", ""}}, -- Ethereal Theurgist
+	
+	[18341] = {{"Important", ""}}, -- Pandemonius (Pulling pulls all trash)
+	[18343] = {{"Important", ""}}, -- Tavarok
+	[18344] = {{"Important", ""}}, -- Nexus-Prince Shaffar
+	
+	
+	-- Seth Halls
+	[18323] = {{"Important", ""}}, -- Sethekk Guard
+	[18318] = {{"Important", ""}}, -- Sethekk Initiate
+	[18327] = {{"Important", ""}}, -- Time-lost Controller
+	[19429] = {{"Important", ""}}, -- Avian Darkhawk
+	[18328] = {{"Important", ""}}, -- Sethekk Oracle
+	[18956] = {{"Important", ""}}, -- Lakka (Friendly)
+	[18322] = {{"Important", ""}}, -- Sethekk Ravenguard
+	[19428] = {{"Important", ""}}, -- Cobalt Serpent
+	[18319] = {{"Important", ""}}, -- Time-Lost Scryer
+	[21891] = {{"Important", ""}}, -- Avian Ripper
+	[18321] = {{"Important", ""}}, -- Sethekk Talon Lord
+	[18325] = {{"Important", ""}}, -- Sethekk Prophet
+	[18326] = {{"Important", ""}}, -- Sethekk Shaman
+	
+	[18472] = {{"Important", ""}}, -- Darkweaver Syth
+	[23035] = {{"Important", ""}}, -- Anzu
+	[18473] = {{"Important", ""}}, -- Talon Lord Ikiss
+	
+	-- Shadow Lab
+	[18635] = {{"Important", ""}}, -- Cabal Deathsworn
+	[18633] = {{"Important", ""}}, -- Cabal Acolyte
+	[18640] = {{"Important", ""}}, -- Cabal Warlock
+	[18641] = {{"Important", ""}}, -- Cabal Familiar
+	[18796] = {{"Important", ""}}, -- Fel Overseer
+	[18848] = {{"Important", ""}}, -- Malicious Instructor
+	[18631] = {{"Important", ""}}, -- Cabal Cultist
+	[18637] = {{"Important", ""}}, -- Cabal Shadow Priest
+	[18638] = {{"Important", ""}}, -- Cabal Zealot
+	[18797] = {{"Important", ""}}, -- Tortured Skeleton
+	[18830] = {{"Important", ""}}, -- Cabal Fanatic
+	[18632] = {{"Important", ""}}, -- Cabal Executioner
+	[18634] = {{"Important", ""}}, -- Cabal Summoner
+	[18639] = {{"Important", ""}}, -- Cabal Spellbinder
+	
+	[18731] = {{"Important", ""}}, -- Ambassador Hellmaw
+	[18667] = {{"Important", ""}}, -- Blackheart the Inciter
+	[18732] = {{"Important", ""}}, -- Grandmaster Vorpil
+	[18708] = {{"Important", ""}}, -- Murmur
+	
+	-- Botanica
+	[18] = {{"Important", ""}}, -- 
+	
+	-- Arcatraz
+	[18] = {{"Important", ""}}, -- 
+	
+	-- Mechanar
+	[18] = {{"Important", ""}}, -- 
+	
+	
+	-- Old Hillsbrad Foothills
+	[18] = {{"Important", ""}}, -- 
+	
+	
+	-- The Black Morass
+	[18] = {{"Important", ""}}, -- 
+	
+	-- Magister's Terrace
+	[18] = {{"Important", ""}}, -- 
+	
+	
+	------------------------
+	------- BC Raids -------
+	------------------------
+	-- Karazhan --
+	
+	
+	
+	-- Gruuls Lair --
+	
+	
+	-- Magtheridon's Lair --
+	
+	
+	-- Serpentshrine Cavern --
+	
+	
+	-- Tempest Keep --
+	
 	
 	
 	---------------------------------------------------
