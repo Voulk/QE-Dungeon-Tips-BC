@@ -212,23 +212,133 @@ tipsMap = {
 	[18708] = {{"Important", ""}}, -- Murmur
 	
 	-- Botanica
-	[18] = {{"Important", ""}}, -- 
+	[17993] = {{"Important", ""}}, -- Bloodwarder Protector
+	[18405] = {{"Important", ""}}, -- Tempest-Forge Peacekeeper
+	[18419] = {{"Important", ""}}, -- Bloodwarder Greenkeeper
+	[19633] = {{"Important", ""}}, -- Bloodwarder Mender
+	[18155] = {{"Important", ""}}, -- Bloodfalcon
+	[17994] = {{"Important", ""}}, -- Bloodwarder Falconer
+	[18404] = {{"Important", ""}}, -- Bloodwarder Steward
+	[19557] = {{"Important", ""}}, -- Greater Frayer
+	[18421] = {{"Important", ""}}, -- Sunseeker Researcher
+	[19486] = {{"Important", ""}}, -- Sunseeker Chemist
+	[18587] = {{"Important", ""}}, -- Frayer
+	[18420] = {{"Important", ""}}, -- Sunseeker Geomancer
+	[19505] = {{"Important", ""}}, -- Sunseeker Channeler
+	[19511] = {{"Important", ""}}, -- Nethervine Inciter
+	[19508] = {{"Important", ""}}, -- Sunseeker Herbalist
+	[19512] = {{"Important", ""}}, -- Nethervine Reaper
+	[19843] = {{"Important", ""}}, -- Nethervine Trickster
+	[19598] = {{"Important", ""}}, -- Mutate Fleshlasher
+	[19509] = {{"Important", ""}}, -- Sunseeker Harvester
+	[19507] = {{"Important", ""}}, -- Sunseeker Gene-Splicer
+	[19865] = {{"Important", ""}}, -- Mutate Horror
+	[19513] = {{"Important", ""}}, -- Mutate Fear-Shrieker
+	[19608] = {{"Important", ""}}, -- Frayer Wildling
+	
+	[17976] = {{"Important", ""}}, -- Commander Sarannis
+	[17975] = {{"Important", ""}}, -- High Botanist Freywinn
+	[17978] = {{"Important", ""}}, -- Thorngrin the Tender
+	[17980] = {{"Important", ""}}, -- Laj
+	[17977] = {{"Important", ""}}, -- Warp Slayer
 	
 	-- Arcatraz
-	[18] = {{"Important", ""}}, -- 
+	[20859] = {{"Important", ""}}, -- Arcatraz Warder
+	[20857] = {{"Important", ""}}, -- Arcatraz Defender
+	[20865] = {{"Important", ""}}, -- Protean Horror
+	[20864] = {{"Important", ""}}, -- Protean Nightmare
+	[20867] = {{"Important", ""}}, -- Death Watcher
+	[20866] = {{"Important", ""}}, -- Soul Devourer
+	[20868] = {{"Important", ""}}, -- Entropic Eye
+	[20869] = {{"Important", ""}}, -- Arcatraz Sentinel (dead mob that sparks)
+	[20875] = {{"Important", ""}}, -- Negaton Screamer
+	[20873] = {{"Important", ""}}, -- Negaton Warp-Master
+	[20880] = {{"Important", ""}}, -- Eredar Deathbringer
+	[20879] = {{"Important", ""}}, -- Eredar Soul-Eater
+	[20883] = {{"Important", ""}}, -- Spiteful Temptress
+	[20881] = {{"Important", ""}}, -- Unbound Devastator
+	[20896] = {{"Important", ""}}, -- Ethereum Slayer
+	[21702] = {{"Important", ""}}, -- Ethereum Life-Binder
+	[20897] = {{"Important", ""}}, -- Ethereum Wave-Caster
+	[20898] = {{"Important", ""}}, -- Gargantuan Abyssal
+	[20902] = {{"Important", ""}}, -- Sargeron Hellcaller
+	[20901] = {{"Important", ""}}, -- Sargeron Archer
+	[20900] = {{"Important", ""}}, -- Unchained Doombringer
+	[20904] = {{"Important", ""}}, -- Warden Mellichar
+	-- Prisons
+	[20905] = {{"Important", ""}}, -- Blazing Trickster
+	[20977] = {{"Important", ""}}, -- Millhouse Manastorm (Friendly)
+	[20908] = {{"Important", ""}}, -- Akkiris Lightning-Waker
+	[20910] = {{"Important", ""}}, -- Twilight Drakonaar
 	
-	-- Mechanar
-	[18] = {{"Important", ""}}, -- 
+	[20870] = {{"Important", ""}}, -- Zereketh the Unbound
+	[20885] = {{"Important", ""}}, -- Dalliah the Doomsayer
+	[20886] = {{"Important", ""}}, -- Wrath-Scryer Soccothrates
+	[20912] = {{"Important", ""}}, -- Harbinger Skyriss
+	
+	-- Mechanar --
+	[19166] = {{"Important", ""}}, -- Tempest-Forge Patroller
+	[20990] = {{"Important", ""}}, -- Bloodwarder Physician
+	[19167] = {{"Important", ""}}, -- Bloodwarder Slayer
+	[19510] = {{"Important", ""}}, -- Bloodwarder Centurion
+	[20059] = {{"Important", ""}}, -- Sunseeker Netherbinder
+	[19712] = {{"Important", ""}}, -- Mechanar Driller
+	[19231] = {{"Important", ""}}, -- Mechanar Crusher
+	[19716] = {{"Important", ""}}, -- Mechanar Tinkerer
+	[20988] = {{"Important", ""}}, -- Sunseeker Engineer
+	[19713] = {{"Important", ""}}, -- Mechanar Wrecker
+	[19735] = {{"Important", ""}}, -- Tempest-Forge Destroyer
+	[19168] = {{"Important", ""}}, -- Sunseeker Astromage
+	
+	[19219] = {{"Important", ""}}, -- Mechano-Lord Capacitus
+	[19218] = {{"Important", ""}}, -- Gatewatcher Gyro-Kill
+	[19710] = {{"Important", ""}}, -- Gatewatcher Iron-Hand
+	[19221] = {{"Important", ""}}, -- Nethermancer Sepethrea
+	[19220] = {{"Important", ""}}, -- Pathaleon the Calculator
 	
 	
-	-- Old Hillsbrad Foothills
-	[18] = {{"Important", ""}}, -- 
+	-- Old Hillsbrad Foothills --
+	[18725] = {{"Important", ""}}, -- Brazen (Friendly, click to be flown to the other side of the instance)
+	[17819] = {{"Important", ""}}, -- Durnholde Sentry
+	[17820] = {{"Important", ""}}, -- Durnholde Rifleman
+	[17840] = {{"Important", ""}}, -- Durnholde Tracking Hound
+	[17833] = {{"Important", ""}}, -- Durnholde Warden
+	[17860] = {{"Important", ""}}, -- Durnholde Veteran
+	[18786] = {{"Important", ""}}, -- Thrall (Friendly) - Add details about escort.
+	[18934] = {{"Important", ""}}, -- Durnholde Mage
+	[18094] = {{"Important", ""}}, -- Tarren Mill Lookout
+	[18093] = {{"Important", ""}}, -- Tarren Mill Protector
+	[18092] = {{"Important", ""}}, -- Tarren Mill Guardsman
+	[17814] = {{"Important", ""}}, -- Lordaeron Watchman
+	
+	[17848] = {{"Important", ""}}, -- Lieutenant Drake
+	[17862] = {{"Important", ""}}, -- Captain Skarloc
+	[18096] = {{"Important", ""}}, -- Epoch Hunter
 	
 	
-	-- The Black Morass
-	[18] = {{"Important", ""}}, -- 
+	-- The Black Morass --
+	[15608] = {{"Important", ""}}, -- Medivh (Friendly)
+	[18982] = {{"Important", ""}}, -- Sable Jaguar
+	[17952] = {{"Important", ""}}, -- Darkwater Crocolisk
+	[18983] = {{"Important", ""}}, -- Blackfang Tarantula
+	[21137] = {{"Important", ""}}, -- Infinite Assassin
+	[21818] = {{"Important", ""}}, -- Infinite Whelp
+	[17892] = {{"Important", ""}}, -- Infinite Chronomancer
+	[21140] = {{"Important", ""}}, -- Rift Lord
+	[21104] = {{"Important", ""}}, -- Rift Keeper
+	[17835] = {{"Important", ""}}, -- Infinite Assassin (II)
+	[21148] = {{"Important", ""}}, -- Rift Keeper (II)
+	[21136] = {{"Important", ""}}, -- Infinite Chronomancer (II)
+	[21138] = {{"Important", ""}}, -- Infinite Executioner
+	[18994] = {{"Important", ""}}, -- Infinite Executioner (II)
+	[18995] = {{"Important", ""}}, -- Infinite Vanquisher 
+
+	[17879] = {{"Important", ""}}, -- Chrono Lord Deja
+	[17880] = {{"Important", ""}}, -- Temporus
+	[17881] = {{"Important", ""}}, -- Aonus
 	
-	-- Magister's Terrace
+	-- Magister's Terrace -- (Not available at BC release)
+	-- We'll add this as part of a future release. 
 	[18] = {{"Important", ""}}, -- 
 	
 	
