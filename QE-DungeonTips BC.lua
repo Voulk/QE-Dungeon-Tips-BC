@@ -81,7 +81,7 @@ local classList =  {
 }
 
 local iconList = {
-	PriorityTargets = "ability_hunter_markedfordeath",
+	PriorityTargets = "ability_hunter_snipershot",
 	Interrupts = "ability_kick",
 	Defensives = "inv_shield_05",
 	Important = "ability_dualwield",
