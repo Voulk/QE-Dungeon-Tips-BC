@@ -1,2237 +1,2270 @@
 
--- This is the full database of tips for Burning Crusade.
+-- This is the full database of tips.
 
 local _, addon = ...;
 
 
--- The Tips maps holds tooltip information and mob ID's for Burning Crusade dungeons and raids.
+-- The Tips maps holds tooltip information and mob ID's for all 13 legion dungeons, 10 BFA dungeons and the 8 Shadowlands dungeons. This is basically the database.
 -- Each array uses the format: {{"Type", "Tip1"}, {"Type", "Tip2"}}
 tipsMap = {
 	-- Example
 	[126389] = {{"Blank", "A+ Tip right here. \n It's a shame it's so damn long eh? It just goes on and on and on and ooon"}, 
-				{"Interrupt", "INTERRUPT: Stone Bolt"}}, -- In this example case, all roles will see "A+ Tip right here" on the mobs tooltip but only Healers will see the second tip.
+				{"Interrupts", "INTERRUPT: Stone Bolt"}}, -- In this example case, all roles will see "A+ Tip right here" on the mobs tooltip but only Healers will see the second tip.
 	
 		--
 	[99999] = {{"Important", "PlaceholderImportant"}, {"Important", "PlaceholderImportant"},
 				{"Advanced", "PlaceholderAdvanced"}}, -- Tirnenn Villager	
-	
+
+
 
 	---------------------------------------------------
-	-----------------Burning Crusade-------------------
+	----------------Burning Crusade--------------------
 	---------------------------------------------------
-	
-	-- Hellfire Ramparts --
-	[17259] = {{"Important", "Has a disarm and an attack power debuff. Don't worry, being melee will get better."}}, -- Bonechewer Hungerer
-	[17264] = {{"Important", "Beware: Has a dangerous single target stun."}}, -- Ravener
-	[17280] = {{"Important", ""}}, -- Shattered Hand Warhound
-	[17269] = {{"Important", ""}}, -- Bleeding Hollow Darkcaster
-	[17270] = {{"Important", ""}}, -- Bleeding Hollow Archer
-	[17271] = {{"Important", ""}}, -- Bonechewer Destroyer
-	[17478] = {{"Important", ""}}, -- Bonechewer Scryer
-	[17455] = {{"Important", ""}}, -- Bonechewer Beastmaster
-	[17517] = {{"Important", ""}}, -- Hellfire Sentry
-	
-	[17306] = {{"Important", ""}}, -- Watchkeeper Gargolmar
-	[17309] = {{"Important", ""}}, -- Hellfire Watcher (add)
-	[17308] = {{"Important", ""}}, -- Omor the Unscarred
-	[17537] = {{"Important", ""}}, -- Vazruden (P1)
-	[17307] = {{"Important", ""}}, -- Nazan (P2)
-	
-	-- Blood Furnace --
-	[17370] = {{"Important", ""}}, -- Laughing Skull Enforcer
-	[17397] = {{"Important", ""}}, -- Shadowmoon Adept
-	[17477] = {{"Important", ""}}, -- Hellfire Imp 
-	[17491] = {{"Important", ""}}, -- Laughing Skull Rogue
-	[17395] = {{"Important", ""}}, -- Shadowmoon Summoner
-	[17626] = {{"Important", ""}}, -- Laughing Skull Legionnaire
-	[17371] = {{"Important", ""}}, -- Shadowmoon Warlock
-	[17414] = {{"Important", ""}}, -- Shadowmoon Technician
-	[17624] = {{"Important", ""}}, -- Laughing Skull Warden
-	[17398] = {{"Important", ""}}, -- Nascent Fel Orc
-	[19016] = {{"Important", ""}}, -- Hellfire Familiar
-	[18894] = {{"Important", ""}}, -- Felguard Brute
+
+	------- World Boss -----------------
+
+	[17711] = {{"Legion", ""}}, -- Doomwalker
+	[18728] = {{"Legion", ""}}, -- Doom Lord Kazzak
+
+
+	------- Raid: Karazhan -----------------
+
+	---Bosses
+	[16151] = {{"Important", "Make sure that the trash leading up to Attumen has been cleared (has a 25 min respawn timer while Midnight is still alive)"},
+				{"Important", "Midnight AND Attumen are immune to taunt effects, so make sure that ALL raiders are properly managing their threat for their role and during phase changes!"},
+				{"Advanced", "PHASE ONE"},
+				{"Important", "Place offtank on Midnight during start of the fight. Warrior maintank should be reserved for Attumen"},
+				{"HEALER", "Each tank should have its own dedicated healer for start of fight plus another for raid healing"},
+				{"Advanced", "PHASE TWO (Starts when Midnight is at 95% and Attumen appears)"},
+				{"TANK", "Warrior/MT should pick up Attumen and move boss slightly away from Midnight and facing away from group to avoid cleaves"},
+				{"HEALER", "STOP Heals when Attumen appears in order for MT to pick up aggro on Attumen"},
+				{"DAMAGE", "STOP DPS at start of phase 2 as Attumen wipes threat at start of transition"},
+				{"DAMAGE", "DPS should stack behind Attumen to avoid his cleave damage"},
+				{"Important", "Dispel/Spell Reflect CURSE: Intangible Presence (Reduce player hit chance by 50%)"},
+				{"DRUID", "Intangible Presence: Dispel Curse from PLAYER with REMOVE CURSE"},
+				{"MAGE", "Intangible Presence: Dispel Curse from PLAYER with REMOVE CURSE"},
+				{"WARRIOR", "If Tank: Use Spell Reflect when boss about to apply curse (instant cast)"},
+				{"DAMAGE", "When Attumen appears (when Midnight is at 95%), DPS should swap to Attumen"},
+				{"Advanced", "PHASE THREE (Starts when Midnight/Attumen is dropped to 25% - Attumen will mount Midnight at this phase)"},
+				{"TANK", "Attumen wipes threat at start of transition, pick him up quick!"},
+				{"HEALER", "STOP Heals at start of phase 3 as Attumen wipes threat at start of transition"},
+				{"DAMAGE", "STOP DPS at start of phase 3 as Attumen wipes threat at start of transition"},
+				{"TANK", "OT that was assigned to Midnight should swap to DPS'ing Attumen"}}, -- Midnight
+	[16152] = {{"Important", "Make sure that the trash leading up to Attumen has been cleared (has a 25 min respawn timer while Midnight is still alive)"},
+				{"Important", "Midnight AND Attumen are immune to taunt effects, so make sure that ALL raiders are properly managing their threat for their role and during phase changes!"},
+				{"Advanced", "PHASE ONE"},
+				{"Important", "Place offtank on Midnight during start of the fight. Warrior maintank should be reserved for Attumen"},
+				{"HEALER", "Each tank should have its own dedicated healer for start of fight plus another for raid healing"},
+				{"Advanced", "PHASE TWO (Starts when Midnight is at 95% and Attumen appears)"},
+				{"TANK", "Warrior/MT should pick up Attumen and move boss slightly away from Midnight and facing away from group to avoid cleaves"},
+				{"HEALER", "STOP Heals when Attumen appears in order for MT to pick up aggro on Attumen"},
+				{"DAMAGE", "STOP DPS at start of phase 2 as Attumen wipes threat at start of transition"},
+				{"DAMAGE", "DPS should stack behind Attumen to avoid his cleave damage"},
+				{"Important", "Dispel/Spell Reflect CURSE: Intangible Presence (Reduce player hit chance by 50%)"},
+				{"DRUID", "Intangible Presence: Dispel Curse from PLAYER with REMOVE CURSE"},
+				{"MAGE", "Intangible Presence: Dispel Curse from PLAYER with REMOVE CURSE"},
+				{"WARRIOR", "If Tank: Use Spell Reflect when boss about to apply curse (instant cast)"},
+				{"DAMAGE", "When Attumen appears (when Midnight is at 95%), DPS should swap to Attumen"},
+				{"Advanced", "PHASE THREE (Starts when Midnight/Attumen is dropped to 25% - Attumen will mount Midnight at this phase)"},
+				{"TANK", "Attumen wipes threat at start of transition, pick him up quick!"},
+				{"HEALER", "STOP Heals at start of phase 3 as Attumen wipes threat at start of transition"},
+				{"DAMAGE", "STOP DPS at start of phase 3 as Attumen wipes threat at start of transition"},
+				{"TANK", "OT that was assigned to Midnight should swap to DPS'ing Attumen"}}, -- Attumen the Huntsman
+	[15687] = {{"Important", "Clear room before engaging Moroes so that you'll have room to deal with boss"},
+				{"Important", "Mark Boss and his 4 dinner guests and assign MT/OT/CC of those targets"},
+				{"Important", "When fight starts, MT should be on Moroes, CC targets should be applied when on their initial platform or one side of room, while OT should be on Top Kill Prio Dinner guest & remain #2 on Moroes threat"},
+				{"PriorityTargets", "CC/Kill Priority for Moroes' Dinner Guests:"},
+				{"Important", "1) Baroness Dorothea Millstipe (mana burner)"},
+				{"Important", "2) Lady Catriona Von'Indi and Lady Keira Berrybuck (healers that will buff/heal other dinner guests"},
+				{"Important", "3) Baron Rafe Dreuger (stunner that can result in loss of aggro)"},
+				{"Important", "4) Lord Robin Daris (warrior-type mob that should be fought away from other raid members due to his Whirlwind ability)"},
+				{"Important", "5) Moroes (boss)"},
+				{"Important", "6) Lord Crispin Ference (survivalist, takes long time to kill, deal with this guy AFTER Moroes)"},
+				{"Advanced", "DEALING WITH GARROTE"},
+				{"Important", "GARROTE: Every 30 seconds, Moroes vanishes and applies this LARGE bleed on random raid target. This player should be called out so that they can receive heal priority."},
+				{"Important", "Dwarves can use STONEFORM racial to remove their own bleed"},
+				{"PALADIN", "Remove garrote using Divine Shield (from self) / Blessing of Protection (from raid member)"},
+				{"MAGE", "Remove garrote using Ice Block"},
+				{"Advanced", "DEALING WITH GOUGE"},
+				{"Important", "MT and OT should remain #1 and #2 on threat meters"},
+				{"Important", "Moroes will Gouge/Stun MT and then swap to #2 threat, during that stun."},
+				{"Advanced", "DEALING WITH BLIND"},
+				{"Important", "Assign a non-tank player to stand on top of Moroes at all times to receive the Blind (10 sec CC)"},
+				{"Important", "Paladins, Druids, Shamans can remove Blinds (disease)"}}, -- Moroes <Tower Steward>
+	[16812] = {{"Legion", "Speak to Barnes when ready to start Opera boss event"}}, -- Barnes <The Stage Manager>
+	[16457] = {{"Important", "Maiden is immune to taunt, so allow tank(s) chance to build up aggro on boss before others engage. Maiden's abilities are used at random and not a strict timer, but knowing her ability CD can help plan for dealing with Repentance"},
+				{"Advanced", "POSITIONING"},
+				{"Important", "Tank and Melee DPS (the fewer Melee the better) will fight boss in center of room"},
+				{"Important", "Melee DPS should stand in a triangle around Maiden to minimize chance of a chained Holy Wrath hitting multiple targets"},
+				{"Important", "Ranged DPS and Healers should be assigned to their own gap between pillars. When fight begins, Ranged should take one step forward to ensure they are in LoS of Healers"},
+				{"Important", "Healers should be placed opposite the other(s) to ensure they are within range of their assigned raid members"},
+				{"Advanced", "DEALING WITH REPENTANCE"},
+				{"Important", "Maiden casts Repentance stunning raid for 12 seconds (broken on damage or certain abilities)"},
+				{"HEALER", "When Maiden's Repentance timer is almost up, healers should run to center of platform to take Holy Ground damage to break the upcoming Repentance. When Repentance is used, Healers should return to original positions OFF of center platform. If healer can break Repentance, they don't need to run into Holy Ground AoE"},
+				{"TANK", "DEFENSIVE: When group takes Repentance, tank(s) should be popping defensives until healers can break free of Repentance. If Healer is stunned with Repentance and can't break free, pull Maiden over Healer(s) so that Holy Ground AoE can break healers free of stun"},
+				{"HUNTER", "Using Bestial Wrath before Repentance can negate its effect"},
+				{"PRIEST", "Using Shadow Word: Pain during the 0.5 sec Repentance cast can break the Priest free when they are hit with Repentance"},
+				{"WARRIOR", "Popping Berserker Rage can allow warrior to become immune or break Repentance"},
+				{"Advanced", "DEALING WITH HOLY FIRE (Magic Debuff causing Fire Damage)"},
+				{"Important", "Using a Major Fire Protection Potion can mitigate Holy Fire DoT"},
+				{"Important", "Restorative Potion can remove Holy Fire"},
+				{"MAGE", "HOLY FIRE: Remove with ICE BLOCK"},
+				{"PALADIN", "HOLY FIRE: Dispel Magic with CLEANSE or DIVINE SHIELD"},
+				{"PRIEST", "HOLY FIRE: Dispel Magic with DISPEL MAGIC"},
+				{"ROGUE", "HOLY FIRE: Remove with CLOAK OF SHADOWS"},
+				{"SHAMAN", "Effective positioning of Grounding Totem can remove a nearby player's Holy Fire debuff"},
+				{"WARRIOR", "HOLY FIRE: Use SPELL REFLECTION"},
+				{"WARLOCK", "HOLY FIRE: Dispel Magic with DEVOUR MAGIC (Felhound)"}}, -- Maiden of Virtue
+	[15691] = {{"Advanced", "FLARE PHASE"},
+				{"PriorityTargets", "Curator summons an Astral Flare every 10 sec at 10% of boss' mana. Flares must be destroyed before next flare is launched"},
+				{"Important", "During this phase, Curator should ONLY be damaged IF/WHEN there are no Flares up!"}, 
+				{"Advanced", "EVOCATION PHASE (starts when boss has 0% mana):"},
+				{"Important", "Curator takes increased damage during this phase. Make sure that ALL Flares are destroyed before switching to Curator!"},
+				{"Advanced", "ENRAGE PHASE (starts at 15% health:"},
+				{"Important", "Curator stops launching Flares and its damage output increases. Tank n spank phase"}}, 
+				-- The Curator
+	[15688] = {{"Important", "Kill Priority: DEMON CHAINS > KIL'REK > ILLHOOF"},
+				{"Important", "Composition: Should have a paladin healer w/Concentration Aura (for warlock) and Destro Lock with Nether Protection and Intensity. Paladin healer should be dedicated to healing Warlock and Warlock should use Hellfire to deal with portal imps. A priest buffing Prayer of Shadow Protection can help resist Sacrifice DoT"},
+				{"WARLOCK", "Destruction Locks speced with Nether Protection are immune to most firebolts (and Sacrifice damage when Nether Protection is active). They should be spamming Seed of Corruption on Illhoof to also deal with non-elite imps"},
+				{"TANK", "Maintank should be on Illhoof and Kil'rek. Illhoof should be tanked next to green circle on the floor"},
+				{"Advanced", "DEALING WITH SACRIFICE"},
+				{"Important", "Occasionally boss will sacrifice a player putting Demon Chains around player (placing them in center of room) and begin leeching their HP. The Demon Chains need to be taken down ASAP!"},
+				{"Important", "Have a dedicated player watch Illhoof's castbar and target to call out to healers who the sacrifice victim will be."},
+				{"TANK", "If Main-Tank is being Sacrificed, the OT should pick up Illhoof"},
+				{"Important", "While Demon Chains are not up, focus on Kil'rek. Raid leader should call out for AoE to destroy the non-elite imps once in awhile"},
+				{"MAGE", "Using Ice Block can remove Demon Chains from Mage"},
+				{"PALADIN", "Using Bubble can remove Demon Chains from Paladin"},
+				{"Advanced", "DEALING WITH KIL'REK"},
+				{"WARLOCK", "Placing Curse of Tongues on Kil'rek can reduce the incoming damage"},
+				{"Important", "Killing Kil'rek will place a debuff on Illhoof that increases damage the boss takes for 25 seconds. Kil'rek will respawn after ~45 seconds"}},
+				-- Terestian Illhoof
+	[16524] = {{"Important", "No tanks are needed for this fight. Threat-reducing buffs should be replaced with DPS-increasing buffs. Having healers that can heal while moving, such as Druids or Priests are most helpful for this fight"},
+				{"Advanced", "POSITIONING"},
+				{"Important", "Tanks and Melee should stand in center of room fighting Aran. Casters and Healers should stand at least 10 yards from Aran to avoid boss' AoE Counterspell. Healers using instant heals will not be interrupted by the counterspell"},
+				{"Advanced", "SPECIAL ABILITIES"},
+				{"Important", "Circular Blizzard (Ranged players should move clockwise around room to avoid Blizzard. If snared, ranged player should move to center of room)"},
+				{"Important", "Flame Wreath (Whole raid needs to stop moving to see where Flame Wreath will be placed. Moving into or out of a ring (or using Reincarn/SS or accepting a resurrection) will trigger a very large explosion! This ring dissipates after 20 seconds)"},
+				{"Important", "Turning your character either inside or outside of Flame Wreath will NOT trigger the explosion"},
+				{"DRUID", "NO Shapeshifting inside a ring, otherwise it will trigger the Flame Wreath explosion"},
+				{"MAGE", "NO Blinking into or out of a ring otherwise you'll trigger the Flame Wreath explosion"},
+				{"SHAMAN", "Shaman elementals crossing into or out of a ring will trigger the Flame Wreath explosion"},
+				{"Important", "Arcane Explosion (Players should IMMEDIATELY run to the outside of the room"},
+				{"Advanced", "POLYMORPH PHASE (20% mana):"},
+				{"Important", "Aran polymorphs raid members, if you're not polymorphed because of being broken out by Aran's Water Elementals or a Druid's Tree of Life, Aran's drinking should NOT be interrupted"},
+				{"Important", "Because Polymorph regenerates player health/mana quickly, this phase shouldn't run at the same time as the water elemental phase"},
+				{"Advanced", "WATER ELEMENTAL PHASE (40% health)"},
+				{"Important", "Water Elementals last for 90 seconds should be killed quickly or controlled with a Warlock's fear/banish. They are immune to Frost damage"}}, 
+				-- Shade of Aran
+	[15689] = {{"Advanced", "PORTAL PHASE (lasts 60 sec):"},
+				{"Important", "Assign and alternate players for specific portals. After player leaves portal's beam for 8-20 seconds, the player will receive debuff preventing interaction with that color portal for 90 seconds"},
+				{"TANK", "The tank (red beam) can sidestep 3-5 yards out of red beam for a few seconds to slow negative effect stack of reducing max HP of 1k per tick"},
+				{"Important", "TANK: Red Beam (Netherspite will aggro to this player. Tanks should alternate ONLY with each portal phase because of the debuff timer. If necessary, a well-armored DPS can ride the red beam for 20 seconds before trading out."},
+				{"HEALER", "It is unnecessary for healers to heal the player in the red beam because of it's health regen abilities"},
+				{"Important", "HEALER: Green Beam (Healers are especially helpful to primary this beam as it quickly regenerates mana and increases healing done. Classes that need to have their mana quickly regenerated can stand briefly in this beam before the assigned healer, but this beam must ALWAYS be blocked, otherwise it will quickly regen Netherspite's HP"},
+				{"Important", "DPS: Blue Beam (Ideally a DPS with Shadow Resistance, or a Warlock/Shadow Priest to replenish their health lost)"},
+				{"HEALER", "The player in the Blue (DPS) Beam will need big heals!"},
+				{"Important", "Even Number Portal Phase Rotation Suggestion:"},
+				{"Legion", "RED: main-tank, BLUE: dps-a then dps-b, GREEN: off-tank and/or healer"},
+				{"Important", "Odd Number Portal Phase Rotation Suggestion:"},
+				{"Legion", "RED: off-tank, BLUE: dps-c then dps-d, GREEN: main-tank and/or healer"},
+				{"Advanced", "BANISH PHASE (lasts 30 sec)"},
+				{"Important", "After short time of inactivity, Boss will cast Netherbreath (Frontal cone dealing Arcane Damage +Knockback)"},
+				{"DAMAGE", "DPS should run by the telescope to regen mana and bandage up as necessary"},
+				{"SHAMAN", "Dropping a Searing Totem during this phase will not be killable by Netherbreath and after the phase ends, Netherspite will go after the Searing Totem, allowing tank time to pick up boss with red beam"},
+				{"TANK", "The tank that will be doing the next phase's red beam should have their back against the door to the room to deal with knockback and prevent other players from receiving Netherbreath"},
+				{"HEALER", "Healer should stand on side of Netherspite to keep up the tank that is dealing with boss during this phase"},
+				{"Important", "After Banish Phase ends, boss will go back to Poral Phase until it is defeated"}}, 
+				-- Netherspite
+	[15690] = {{"Important", "Positioning: TANK and MELEE should have back against wall to avoid Shadow Nova knockback, ranged and healers should stand ~30 yds from boss to avoid Shadow Nova, Players (esp melee) need to be aware of Falling Infernals and Enfeeble"},
+				{"Advanced", "PHASE ONE"},
+				{"Important", "Prince will put Shadow Word: Pain on the MT and another target during P1 and P3 - this should be esp dispelled from the tank"},
+				{"Important", "Prince summons Netherspite Infernals (Every 45 seconds in P1 and P2, cast Hellfire AoE ~3 seconds after landing; Despawn in ~180 seconds). The Infernals are stationary and MUST be avoided by raid members!"},
+				{"Important", "Assign and mark a ranged raider to watch for the falling infernals coming from the sky. The spotter will need to move to a safe spot, but still in range of healers"},
+				{"TANK", "Watch/Listen to your infernal spotter so that you and your melee teammates don't take Hellfire damage"},
+				{"Important", "Using an Elixir of Detect Demon (esp the tank who will be adjusting Prince's location), during this fight can point out locations of Infernals on the minimap"},
+				{"HUNTER", "Turning on your Track Demons will help show you where Infernals are located, without needing the Elixir of Detect Demon"},
+				{"WARLOCK", "Turning on your Track Demons will help show you where Infernals are located, without needing the Elixir of Detect Demon"},
+				{"HEALER", "Work things out with healers so that the tank will continue to receive heals when the group must move to avoid an Infernal's Hellfire AoE"},
+				{"Advanced", "DEALING WITH ENFEEBLE"},
+				{"Important", "Enfeeble is cast on five random players excluding the current target (tank). This debuff reduces player health to 1 for 7 seconds and can't be removed"},
+				{"HEALER", "Players with Enfeeble debuff can't be healed above 1 health, so don't waste your mana. Their HP will return after the effect ends"},
+				{"Important", "Shadow Nova (~24 yd range around Prince; 3 sec cast also has knockback) is usually cast ~4 sec after Enfeeble during P1 and P2"},
+				{"PALADIN", "During P1 and P2, Paladin MUST not use Seal of Blood as this will cause an instant death if paladin is hit with Enfeeble"},
+				{"Important", "Melee DPS should have an escape route planned to avoid infernals when also enfeebled"},
+				{"Advanced", "PHASE TWO (Starts at 60% health)"},
+				{"TANK", "Tank will need to use Defensive CDs esp during this phase as it is most dangerous for them during P2 (esp with Sunder Armor)"},
+				{"HEALER", "Because of Thrash and Sunder Armor, healers should keep tank as close to max health as much as possible"},
+				{"TANK", "During P2, Paladin tanks can focus on using magic damaging abilities, instead of melee attacks to maximize the number of hits to get past boss' increased parry"},
+				{"WARLOCK", "Use Thunderclap, Demoralizing Shout, or Curse of Weakness on Prince to keep his AP and speed reduced at all times (esp in P2 onward)"},
+				{"WARRIOR", "Use Thunderclap, Demoralizing Shout, or Curse of Weakness on Prince to keep his AP and speed reduced at all times (esp in P2 onward)"},
+				{"Advanced", "PHASE THREE (Starts at 30% health) - POP HERO/LUST!"},
+				{"Important", "There will be more Enfeebles, but Infernals will land every 15 seconds (instead of every 45 seconds)"},
+				{"TANK", "Melee damage on tanks will reduce to P1 levels during this phase"}}, -- Prince Malchezaar
+	[17225] = {{"Important", "During Air to Ground transition, make sure that the Nightbane tank has enought time to build up their aggro before others engage in fight!"},
+				{"HUNTER", "Hunters casting Misdirect onto the Nightbane tank can help build up the tank's aggro!"},
+				{"Advanced", "POSITIONING"},
+				{"Important", "Tank assigned to Nightbane should have back to outside wall to direct cleave and breath away from raid members"},
+				{"Important", "Ranged should split into two groups: GROUP A standing against inside wall, and GROUP B standing to the outside wall. Healers should stand with GROUP B to ensure they are in range of Nightbane tank. Groups A and B should be at max range to avoid his 35 yd Bellowing Roar AoE Fear (used every 45-60 seconds)"},
+				{"Important", "Melee DPS should stand on side of hind leg closest to Groups A and B to stay in range of heals"},
+				{"Important", "Nightbane's frontal cone and tail sweep are reasons why ONLY the tank should be standing in front of Nightbane and NO ONE should be standing behind the boss"},
+				{"Advanced", "GROUND PHASE"},
+				{"Important", "Nightbane will apply Distracting Ash that will reduce hit chance by 30% for 40 seconds. This should be dispelled, esp if applied to the tank"},
+				{"Important", "Smoldering Ash is a frontal cone attack dealing 5-6k damage plus a 1.6-1.9k DoT every 3 seconds for 15 seconds!"},
+				{"Important", "Cleave hits for ~6k on plate and 11k on cloth."},
+				{"TANK", "Use Defensive CDs wisely when dealing with Cleave when also having Smoldering Ash debuff on you"},
+				{"HEALER", "Be prepared to use extra heals on tank during Cleave +Smolding Ash periods"},
+				{"Dodge", "DODGE: Nightbane will char the ground below a random player (~5 yd radius) that deals ~3k fire damage each second"},
+				{"Important", "DEALING WITH FEAR"},
+				{"Important", "PVP Trinkets or Undead Racial can drop some of the fears"},
+				{"PRIEST", "Using Fear Ward on a non-warrior Nightbane tank or leading melee DPS could be helpful to minimize damage from raid being feared"},
+				{"SHAMAN", "Shamans using Tremor Totem can stop the fear of some of the Bellowing Roars on melee raid members"},
+				{"WARRIOR", "Use Berserker Rage (stance dance to Berserker Stance first, if necessary) to drop Fear"},
+				{"Important", "When fear is concluded, adjust your positioning to ~ how it was when fight began"},
+				{"Advanced", "FLIGHT PHASE starts when Nightbane health at 75%, 50% and 25%"},
+				{"TANK", "DPS and TANKS should swap to killing the summoned skeletons during this phase"},
+				{"DAMAGE", "DPS and TANKS should swap to killing the summoned skeletons during this phase"},
+				{"Important", "If DPS is having harder time dealing with Skeletons, they can farm some Stratholme Holy Water (Undead side of Stratholme) to help burn these down more quickly"},
+				{"HEALER", "Usually a healer will be targeted by Smoking Blast and that healer will need increased healing"},
+				{"Important", "After Flight phase, Nighbane will land again until you've defeated it"}}, -- Nightbane
+
+	---Servant Quarters
+	[16179] = {{"Important", "Tanks should be #1 and #2 on threat meters"},
+				{"Important", "Boss will apply webbing (magic debuff) to MT and swap to OT"},
+				{"Important", "Boss will apply Acidic Wound (Reduces armor and Nature DoT"}}, -- Hyakiss the Lurker
+	[16180] = {{"Important", "Tank and spank fight"}}, -- Shadikith the Glider
+	[16181] = {{"Important", "Pull boss into the room leading into his room"},
+				{"Important", "Due to AoE knockback, MT should stand with back against wall and Ranged DPS, Healers should stand with back against adjacent wall"}, 
+				{"Important", "Boss will charge furthest member of raid, this player should be OT due to this being a hard-hitting ability"},
+				{"Important", "MT should have their back should be against wall to avoid being knocked back, while OT should stand with back against adjacent wall furthest from boss (due to his hard-hitting charge on furthest player)"},
+				{"Important", "Boss does cast Sonic Burst (5 sec AoE Silence with 20 yd range)"}}, -- Rokad the Ravager
+
+	---Moroes' Dinner Guests
+	[17007] = {{"Legion", "HOLY PALADIN-Type Mob"},
+				{"PriorityTargets", "Kill/CC Priority: 2nd"},
+				{"Important", "Keep target CC'd unless group is fighting this mob"},
+				{"Important", "Mob will heal and buff other dinner guests w/Holy Light heal & Blessing of Might"}}, -- Lady Keira Berrybuck
+	[19872] = {{"Legion", "HOLY PRIEST-Type Mob"},
+				{"PriorityTargets", "Kill/CC Priority: 2nd"},
+				{"Important", "Keep target CC'd unless group is fighting this mob"},
+				{"Important", "Mob will heal and buff other dinner guests w/Greater Heal & PW: Shield"}}, -- Lady Catriona Von'Indi
+	[19873] = {{"Legion", "PROTECTION WARRIOR-Type Mob"},
+				{"PriorityTargets", "Kill/CC Priority: 6th (Least priority mob of Moroes fight)"},
+				{"Important", "Will occasionally cast Disarm on player"}}, -- Lord Crispin Ference
+	[19874] = {{"Legion", "PROT/RET PALADIN-Type Mob"},
+				{"PriorityTargets", "Kill/CC Priority: 3rd"},
+				{"Important", "Should be OT or CC'd as mob will stun player with Hammer of Justice"}}, -- Baron Rafe Dreuger
+	[19875] = {{"Legion", "SHADOW PRIEST-Type Mob"},
+				{"PriorityTargets", "Kill/CC Priority: 1st"},
+				{"Important", "Due to Mana Burn, this target should remain CC'd"}}, -- Baroness Dorothea Millstipe
+	[19876] = {{"Legion", "MORTAL STRIKE WARRIOR-Type Mob"},
+				{"PriorityTargets", "Kill/CC Priority: 4th"},
+				{"Important", "Due to mob's Whirlwind ability, players should not stand close to him"},
+				{"TANK", "If Robin is OT, should place this target away from MT, Moroes and other players due to WW Damage"}}, -- Lord Robin Daris
+
+	---Opera Event
+	[17603] = {{"Important", "Only 1 tank is needed; best that this is a warrior due to their Berserker Rage during Boss' Fear ability"},
+				{"TANK", "Tank wolf along one wall medium distance away from rest of raid"},
+				{"Important", "Ranged DPS and HEALERS should stand a third to a half-stage length from boss on adjacent wall to allow reaction time for RED RIDING HOOD stage"},
+				{"Important", "Prior to Wolf casting RED RIDING HOOD on a player, boss will briefly target the player that will receive debuff before swapping back to tank and applying RED RIDING HOOD debuff.  This should give player (esp melee) advanced warning of the application of debuff"},
+				{"Important", "RED RIDING HOOD (20 sec debuff; Player is turned into Little Red Riding Hood and their armor & resistance drops to 0.  Little Red Riding Hood should circle the outside of the room, running away from the Big Bad Wolf"},
+				{"HEALER", "Make sure to watch your aggro up on Wolf during RED RIDING HOOD as wolf will go to highest threat player when that phase ends!"},
+				{"TANK", "Make sure to keep your aggro up on Wolf during RED RIDING HOOD as wolf will go to highest threat player when that phase ends!"},
+				{"DAMAGE", "Make sure to watch your aggro up on Wolf during RED RIDING HOOD as wolf will go to highest threat player when that phase ends!"},
+				{"Important", "Casts Terrifying Howl (10 yd range; 3 sec AoE Fear)"},
+				{"WARRIOR", "If feared, can use Berserker Rage to drop fear (will need to be in Berserker Stance first)"}}, 
+				-- Grandmother (Wolf in Disguise)
+	[17521] = {{"Important", "Only 1 tank is needed; best that this is a warrior due to their Berserker Rage during Boss' Fear ability"},
+				{"TANK", "Tank wolf along one wall medium distance away from rest of raid"},
+				{"Important", "Ranged DPS and HEALERS should stand a third to a half-stage length from boss on adjacent wall to allow reaction time for RED RIDING HOOD stage"},
+				{"Important", "Prior to Wolf casting RED RIDING HOOD on a player, boss will briefly target the player that will receive debuff before swapping back to tank and applying RED RIDING HOOD debuff.  This should give player (esp melee) advanced warning of the application of debuff"},
+				{"Important", "RED RIDING HOOD (20 sec debuff; Player is turned into Little Red Riding Hood and their armor & resistance drops to 0.  Little Red Riding Hood should circle the outside of the room, running away from the Big Bad Wolf"},
+				{"HEALER", "Make sure to watch your aggro up on Wolf during RED RIDING HOOD as wolf will go to highest threat player when that phase ends!"},
+				{"TANK", "Make sure to keep your aggro up on Wolf during RED RIDING HOOD as wolf will go to highest threat player when that phase ends!"},
+				{"DAMAGE", "Make sure to watch your aggro up on Wolf during RED RIDING HOOD as wolf will go to highest threat player when that phase ends!"},
+				{"Important", "Casts Terrifying Howl (10 yd range; 3 sec AoE Fear)"},
+				{"WARRIOR", "If feared, can use Berserker Rage to drop fear (will need to be in Berserker Stance first)"}}, 
+				-- The Big Bad Wolf
+	[17533] = {{"PriorityTargets", "In Phase 3 (fighting both Romulo and Julianne, they MUST die within 10 seconds of each other otherwise they will rez the other to full health. DPS should be aware of this so that targets can be adjusted during this fight!"},
+				{"Advanced", "PHASE ONE - Fight Julianne"},
+				{"Important", "It is best to use a Warrior-Tank for Romulo for the Disarms"},
+				{"Important", "Dispel MAGIC (from MOB): Devotion (50% increase to Physical damage dealt; 50% increase to caster's attack speed)"},
+				{"MAGE", "Devotion: Dispel magic from MOB with SPELLSTEAL"},
+				{"PRIEST", "Devotion: Dispel Magic from MOB"},
+				{"SHAMAN", "Devotion: Dispel Magic from MOB with PURGE"},
+				{"WARLOCK", "Devotion: Dispel Magic from MOB with DEVOUR MAGIC (Felhunter Pet Only)"},
+				{"WARRIOR", "Devotion: Dispel magic from MOB with SHIELD SLAM"},
+				{"TANK", "It is best to have Julianne die in corner away from Romulo to make it easier for tank to pick her up in phase 3"},
+				{"Advanced", "PHASE TWO - Fight Romulo"},
+				{"Important", "Romulo should be tanked with his back against wall away from where Julianne died and no players should stand behind Romulo"},
+				{"Important", "Coordinate with others for Disarming Romulo during DARING"},
+				{"Advanced", "PHASE THREE - Fight Romulo and Julianne"},
+				{"Important", "Romulo group is generally ranged/casters due to boss' melee abilities and Julianne group should be mostly melee/interrupters/dispellers"}}, 
+				-- Romulo
+	[17534] = {{"PriorityTargets", "In Phase 3 (fighting both Romulo and Julianne, they MUST die within 10 seconds of each other otherwise they will rez the other to full health. DPS should be aware of this so that targets can be adjusted during this fight!"},
+				{"Advanced", "PHASE ONE - Fight Julianne"},
+				{"Important", "It is best to use a Warrior-Tank for Romulo for the Disarms"},
+				{"Important", "Dispel MAGIC (from MOB): Devotion (50% increase to Physical damage dealt; 50% increase to caster's attack speed)"},
+				{"MAGE", "Devotion: Dispel magic from MOB with SPELLSTEAL"},
+				{"PRIEST", "Devotion: Dispel Magic from MOB"},
+				{"SHAMAN", "Devotion: Dispel Magic from MOB with PURGE"},
+				{"WARLOCK", "Devotion: Dispel Magic from MOB with DEVOUR MAGIC (Felhunter Pet Only)"},
+				{"WARRIOR", "Devotion: Dispel magic from MOB with SHIELD SLAM"},
+				{"TANK", "It is best to have Julianne die in corner away from Romulo to make it easier for tank to pick her up in phase 3"},
+				{"Advanced", "PHASE TWO - Fight Romulo"},
+				{"Important", "Romulo should be tanked with his back against wall away from where Julianne died and no players should stand behind Romulo"},
+				{"Important", "Coordinate with others for Disarming Romulo during DARING"},
+				{"Advanced", "PHASE THREE - Fight Romulo and Julianne"},
+				{"Important", "Romulo group is generally ranged/casters due to boss' melee abilities and Julianne group should be mostly melee/interrupters/dispellers"}}, 
+				-- Julianne
+	[17535] = {{"PriorityTargets", "Dorothee can't be tanked/interrupted and should be killed first"},
+				{"Important", "Attacking Dorothee will start the encounter"},
+				{"Important", "Casts Frightened Scream (Fears 3 random players for 2 seconds)"}}, -- Dorothee
+	[17543] = {{"Important", "Use Highest Rank, Non-AoE/DoT Fire spells (or Fire damage Wand) on Strawman to trigger Burning Straw debuff, which will disorient boss for 6 seconds"},
+				{"TANK", "Roar's Tank should taunt Strawman"},
+				{"MAGE", "Molten Armor will not trigger Burning Straw debuff"},
+				{"WARLOCK", "Immolate is considered a DoT and will not trigger Burning Straw debuff"}}, -- Strawman
+	[17546] = {{"Important", "Susceptible to Fear, Death Coil and Scare Beast (but NOT Hibernate). A warlock and tank should be able to control him"},
+				{"Important", "Casts an AoE Fear"}}, -- Roar
+	[17547] = {{"Important", "Due to high amount of damage, main-tank should be on this target"},
+				{"Important", "As encounter continues, mob develops rust slowing him down and allowing him to be kited"}}, -- Tinhead
+	[17548] = {{"PriorityTargets", "Should be killed AFTER Dorothee as killing Tito first will cause Dorothee to ENRAGE"},
+				{"Important", "Tank should be assigned to Tito"},
+				{"Important", "Interrupts/Silences casters"}}, -- Tito
+	[18168] = {{"Legion", "Appears when Dorothee, Roar, Strawman and Tinhead are defeated"},
+				{"Important", "Main-Tank should pick up boss immediately!"},
+				{"Important", "Assign a raid member to call out cyclones"},
+				{"Important", "Summons Cyclones that move around and across the center of the stage; Cyclones will knock raid members into the air. Players will then fall to the ground, so a slow fall can be helpful here"},
+				{"HEALER", "Priority Heals to cycloned players due to their incoming fall damage"}}, -- The Crone
+
+	---Chess Event
+	[16816] = {{"Legion", "Healing Cheat (Heals Medivh's king and possibly other pieces to full HP)"},
+				{"Legion", "Damage Cheat (Places fire AoE on random player controlled piece)"},
+				{"Legion", "Berserking Cheat (One of Medivh's pieces gains increased size, speed and damage)"},
+				{"Important", "Players should choose which piece they want to control and first control the pawn that is blocking that piece from moving before switching to real piece"},
+				{"Advanced", "Strategy: King should keep HERO/LUST up if allies in one of eight of the adjacent squares. Pawns should only be used to move the good pieces out of the way. Bishops are the only pieces that heal"},
+				{"PriorityTargets", "Kill Priority: 1) King, 2) Bishop, 3) Queen, 4) Rook, 5) Knight, 6) Pawn"}}, 
+				-- Echo of Medivh
+	[17211] = {{"Legion", "Pawn-Type; Moves 1 space any direction"},
+				{"PriorityTargets", "Lowest Priority"},
+				{"Legion", "Low Health/Low Damage"},
+				{"Advanced", "Strategy: As this is a weak unit, it should only be used to move piece out of way of other piece. These pieces will autoengage enemies in range if a player is not controlling them"},
+				{"Important", "Heroic Blow (Deals 1k damage to target 1 square in front)"},
+				{"Important", "Shield Block (Absorbs 500 damage; Lasts 5 seconds) - Should not be used"}}, 
+				-- Human Footman
+	[17469] = {{"Legion", "Pawn-Type; Moves 1 space any direction"},
+				{"PriorityTargets", "Lowest Priority"},
+				{"Legion", "Low Health/Low Damage"},
+				{"Advanced", "Strategy: As this is a weak unit, it should only be used to move piece out of way of other piece. These pieces will autoengage enemies in range if a player is not controlling them"},
+				{"Important", "Vicious Strike (Deals 1k damage to target 1 square in front)"},
+				{"Important", "Weapon Deflection (Absorbs 500 damage; Lasts 5 seconds) - Should not be used"}}, 
+				-- Orc Grunt
+	[21160] = {{"Legion", "Rook-Type; Moves 1 space any direction"},
+				{"PriorityTargets", "4th - due to medium ranged damage"},
+				{"Legion", "Low Health/Medium Damage"},
+				{"Important", "Geyser (Deals 3k damage to all adjacent hostile pieces)"},
+				{"Important", "Water Shield (Reduce damage taken by 50% for 5 seconds)"}}, -- Conjured Water Elemental
+	[21664] = {{"Legion", "Knight-Type; Moves in L-shaped direction"},
+				{"PriorityTargets", "5th - due to low melee/ranged damage"},
+				{"Legion", "Medium Health/Low Damage"},
+				{"Important", "Smash (Deals 3k damage to target 1 square in front)"},
+				{"Important", "Stomp (Deals 2k damage to enemy units standing in a straight line of 3 squares in front)"}}, 
+				-- Human Charger
+	[21682] = {{"Legion", "Bishop-Type (Only healing piece available)"},
+				{"PriorityTargets", "2nd - only piece that can heal their king/other pieces"},
+				{"Legion", "Low Health/Low Damage"},
+				{"Important", "This piece should move very little (staying out of fire) and focusing on keeping King/Queen alive"}}, 
+				-- Human Cleric
+	[21683] = {{"Legion", "Queen-Type; Moves 3 straight/2 diagonal"},
+				{"PriorityTargets", "3rd - deals high single target/AoE Damage"},
+				{"Legion", "Medium Health/High Damage"},
+				{"Advanced", "Strategy: Use Rain of Fire on CD focusing on center of packs you want to destroy; Use Elemental Blast on your main target (see priority) as a filler"},
+				{"Important", "Elemental Blast (Deals 4k damage to single chess piece; Range: 4 straight/3 diagnonal)"},
+				{"Important", "Rain of Fire (Deals 6k damage to any any hostile piece and all adjacent hostile pieces; 15 sec CD; Range: 4 straight/3 diagonal)"}}, 
+				-- Human Conjurer
+	[21684] = {{"Legion", "Start the fight by speaking to the king - the king you speak with will open up that side's pieces for your team to use"},
+				{"PriorityTargets", "1st - first enemy king to die loses"},
+				{"Legion", "High Health/High Damage"},
+				{"Advanced", "Strategy: Use Sweep when 1-3 units in front of king exist. Keep Heroism up IF allied players in at least one of the eight adjacent squares"},
+				{"Important", "Sweep (Deals 4k damage to 3 frontal adjacent units)"},
+				{"Important", "Heroism (50% inc damage on other allies on all 8 adjacent spaces"}}, 
+				-- King Llane
+	[21726] = {{"Legion", "Rook-Type; Moves 1 space any direction"},
+				{"PriorityTargets", "4th - due to medium ranged damage"},
+				{"Legion", "Low Health/Medium Damage"},
+				{"Important", "Hellfire (Deals 3k damage to all adjacent hostile pieces)"},
+				{"Important", "Fire Shield (Reduce damage taken by 50% for 5 seconds)"}}, -- Summoned Daemon
+	[21747] = {{"Legion", "Bishop-Type (Only healing piece available)"},
+				{"PriorityTargets", "2nd - only piece that can heal their king/other pieces"},
+				{"Legion", "Low Health/Low Damage"},
+				{"Important", "This piece should move very little (staying out of fire) and focusing on keeping King/Queen alive"}}, 
+				-- Orc Necrolyte
+	[21748] = {{"Legion", "Knight-Type; Moves in L-shaped direction"},
+				{"PriorityTargets", "5th - due to low melee/ranged damage"},
+				{"Legion", "Medium Health/Low Damage"},
+				{"Important", "Bite (Deals 3k damage to target 1 square in front)"},
+				{"Important", "Howl (Deals 2k damage to enemy units standing in a straight line of 3 squares in front)"}}, 
+				-- Orc Wolf
+	[21750] = {{"Legion", "Queen-Type; Moves 3 straight/2 diagonal"},
+				{"PriorityTargets", "3rd - deals high single target/AoE Damage"},
+				{"Advanced", "Strategy: Use Poison Cloud on CD focusing on center of packs you want to destroy; Use Fireball on your main target (see priority) as a filler"},
+				{"Important", "Fireball (Deals 4k damage to single chess piece; Range: 4 straight/3 diagnonal)"},
+				{"Important", "Poison Cloud (Deals 6k damage to any any hostile piece and all adjacent hostile pieces; 15 sec CD; Range: 4 straight/3 diagonal)"}}, 
+				-- Orc Warlock
+	[21752] = {{"Legion", "Start the fight by speaking to the king - the king you speak with will open up that side's pieces for your team to use"},
+				{"PriorityTargets", "1st - first enemy king to die loses"},
+				{"Legion", "High Health/High Damage"},
+				{"Advanced", "Strategy: Use Cleave when 1-3 units in front of king exist. Keep Bloodlust up IF allied players in at least one of the eight adjacent squares"},
+				{"Important", "Cleave (Deals 4k damage to 3 frontal adjacent units)"},
+				{"Important", "Bloodlust (50% inc damage on other allies on all 8 adjacent spaces"}}, 
+				-- Warchief Blackhand
+
+	---Trash Mobs
+	[15547] = {{"Important", "Charges furthest player & casts Fear (4 sec AoE Fear; Should be pulled away from packs that raid is not yet in combat with)"}}, -- Spectral Charger
+	[15548] = {{"Legion", ""}}, -- Spectral Stallion
+	[15551] = {{"PriorityTargets", ""},
+				{"Interrupts", "Interrupt: Mend Pet (Heals Spectral Chargers & Stallions)"}}, -- Spectral Stable Hand
+	[16170] = {{"Legion", "Stealthed Mob"}}, -- Coldmist Stalker
+	[16171] = {{"Legion", "Except for patrols, this mob will be accompanied by 2 stealthed Coldmist Stalkers"}}, -- Coldmist Widow
+	[16173] = {{"Important", "Casts AoE Spell Interrupt/Spell Lock"},
+				{"TANK", "Due to AoE Spell Interrupt, keep mob away from casters"}}, -- Shadowbat
+	[16174] = {{"Legion", ""}}, -- Greater Shadowbat
+	[16175] = {{"Legion", ""}}, -- Vampiric Shadowbat
+	[16176] = {{"Important", "Casts Howl of the Broken Hills (10 yd range; 5 min curse draining mana, energy rage)"}}, -- Shadowbeast
+	[16177] = {{"Important", "Mob casts Cleave - only tank should be standing in front of mob!"}}, -- Dreadbeast
+	[16178] = {{"Important", "Phasing (Similar ability as Warp Stalker, can keep mob visible with Hunter's Mark)"}}, -- Phase Hound
+	[16389] = {{"Legion", "Weak melee mob"}}, -- Spectral Apprentice
+	[16406] = {{"Important", "Due to their healing ability and coming with packs of Spectral Retainers, CC is a must for these mobs"}}, -- Phantom Attendant
+	[16407] = {{"Legion", "Weak melee attack"},
+				{"Important", "Casts Curse of Past Burdens (Reduces movement speed and strength by 70%)"}}, -- Spectral Servant
+	[16408] = {{"Legion", "Mobs are immune to taunt and deal high melee DPS"},
+				{"Important", "Casts Demoralizing Shout (Reduces nearby player attack power)"}}, -- Phantom Valet
+	[16409] = {{"TANK", "Pull this mob with nearby group and use an AoE Taunt such Consecration or Thunder Clap"},
+				{"Important", "AoE this mob and it's group down AFTER tank has picked up aggro on all engaged enemies to avoid many raid members taking damage"}}, -- Phantom Guest
+	[16410] = {{"Important", "Casts a non dispellable Mind Control (Player that gets MC'd should be sheeped)"},
+				{"Important", "IMMUNE to Shackle!"}}, -- Spectral Retainer
+	[16411] = {{"Legion", ""}}, -- Spectral Chef
+	[16412] = {{"Important", "Inflicts fire damage +2 sec knockdown"}}, -- Ghostly Baker
+	[16414] = {{"Important", "Applies Drunken Skull Crack (40 yd range; 4 sec stun)"},
+				{"Important", "Usually in packs of two that should be pulled separate from other mobs by main-tank and off-tank"},
+				{"HEALER", "Target hit by Drunken Skull Crack will take high damage while debuff is active"}}, -- Ghostly Steward
+	[16415] = {{"Legion", "Tanks should mark these targets so as to pull them individually"},
+				{"Important", "Casts Brittle Bones on player (2 min debuff periodically removing all armor of one with debuff). Brittle Bones can only be removed by Paladin's Divine Shield, or ability absorbed with Shaman's Grounding Totem"}}, -- Skeletal Waiter
+	[16424] = {{"Legion", "Ranged Mob vulnerable to Shackle"}}, -- Spectral Sentry
+	[16425] = {{"Legion", "Can be shackled/stunned"},
+				{"Important", "Shield Slam (Stuns player for 3 sec)"}}, -- Phantom Guardsman
+	[16459] = {{"Important", "Alluring Aura (pre-tranform; reduces physical damage taken by 50%)"},
+				{"Important", "Wipes debuffs at 50% when transforms into true form"},
+				{"Important", "Bewitching Aura (post-transform; reduces magic damage taken by 50%)"},
+				{"Important", "Banshee Wail (Short range AoE silence that is used when transformed)"}}, -- Wanton Hostess
+	[16460] = {{"PriorityTargets", ""},
+				{"WARLOCK", "Immune to Curse of Tongues"},
+				{"Important", "Casts Impending Betrayal (Deals 3k damage after 10 sec)"},
+				{"Important", "Wipes debuffs at 50% when transforms into true form"}}, -- Night Mistress
+	[16461] = {{"Important", "AoE Seduce (Lasts 6 sec; OT should stand away from this mob and pickup when MT is seduced)"},
+				{"Important", "Wipes debuffs at 50% when transforms into true form"}}, -- Concubine
+	[16468] = {{"Legion", ""}}, -- Spectral Patron
+	[16470] = {{"Important", "Immune to taunt/CC; Careful with use of AoE as this can result to pulling additional groups!"}}, -- Ghostly Philanthropist
+	[16471] = {{"Legion", "Immune to taunt, turn undead, freeze trap, stuns and cyclone; Vulnerable to shackle"},
+				{"Important", "When these mobs are in pairs, one should be shackled"},
+				{"TANK", "Warrior should be MT and should cast Spell Reflect after receiving Frost Shock in order to spell reflect the stun part of the spell back to mob"}}, -- Skeletal Usher
+	[16472] = {{"Important", "Immune to snare, shackle and stuns"},
+				{"Important", "Should be disarmed by warrior/rogue"}}, -- Phantom Stagehand
+	[16473] = {{"TANK", "Pull mob out of Spotlight as this will increase damage done by the one standing in spotlight"},
+				{"Important", "Immune to freezing trap and shackle"},
+				{"DAMAGE", "Stand in Spotlight to receive a damage boost"}}, -- Spectral Performer
+	[16481] = {{"Legion", ""}}, -- Ghastly Haunt
+	[16482] = {{"Legion", "Immune to Shackle & Stun"}}, -- Trapped Soul
+	[16485] = {{"Important", "When these mobs come in packs, don't split DPS - fight them one at a time"},
+				{"Important", "Player that receives Overload (Arcane debuff dealing increased AoE damage per tick) should run away from raid members"}}, -- Arcane Watchman
+	[16488] = {{"PriorityTargets", "Upon death Loose Mana will restore player mana"},
+				{"Important", "DPS mob through it's mana shield and mob will die when it runs out of mana"}}, -- Arcane Anomaly
+	[16489] = {{"Advanced", "Strategy: Range pull nearby Mana-Feeders and have tank pull Chaotic Sentience away from raid members"},
+				{"Important", "Applies Unstable Magic debuff to players (Increased spell damage done by 300 and spell damage taken by 600; Lasts 2 minutes)"},
+				{"Important", "Immune to banish and stuns"}}, -- Chaotic Sentience
+	[16491] = {{"Important", "Mobs are immune to most magic effects, including wands; use Physical damage attacks (even casters)"}}, -- Mana Feeder
+	[16492] = {{"Important", "Casts Drain Mana (Channeled ability) - Best to defeat nearby Arcane Anomaly as Loose Mana will restore player mana upon its death helping with defeating this mob"}}, -- Syphoner
+	[16504] = {{"TANK", "Kite mob during Fist of Stone (Hard/Slow hitting ability: +35% melee damage, -75% movement speed on Arcane Protector, -35% attack speed)"},
+				{"Important", "During Return Fire deals an arcane ability depending upon what it announces:"},
+				{"Legion", "EL-2S (Retaliates against spells)"},
+				{"Legion", "EL-5R (Retaliates against ranged projectiles)"},
+				{"Legion", "EL-7M (Retaliates against melee)"}}, -- Arcane Protector
+	[16525] = {{"Legion", "Mob phases in and out. Use Detect Invisibility or Elixir of Detect Lesser Invisibility to continue to see this mob"},
+				{"Important", "Vulnerable to Curse of Tongues, Shackle Undead, and Turn Undead"}}, -- Spell Shade
+	[16526] = {{"Important", "Burn these mobs first; the volleys have a 20 yd range"},
+				{"Important", "Immune to Shackle Undead & Curse of Tongues"}}, -- Sorcerous Shade
+	[16529] = {{"PriorityTargets", "Focus on this mob before Mana Warps due to its Arcane Volley AoE ability"},
+				{"Important", "Immune to Banish"}}, -- Magical Horror
+	[16530] = {{"Important", "Mobs cast Warp Breach growing and dealing Arcane AoE damage when near death. These mobs should be Feared/Stunned at approx 8-15% health to avoid Arcane AoE"}}, -- Mana Warp
+	[16539] = {{"Legion", "Vulnerable to Enslave Demon and Banish"}}, -- Homunculus
+	[16540] = {{"Legion", "Immune to all forms of Crown Control"}}, -- Shadow Pillager
+	[16544] = {{"Important", "Make sure that MT and OT are #1 and #2 on the threat meter as they are immune to taunt and can deal large damage to non-tank players"},
+				{"Important", "Mob will disarm highest aggro target and lowering that player's aggro on mob"}}, -- Ethereal Thief
+	[16545] = {{"PriorityTargets", "Stacking debuff on raid of 3% less intel/spirit per stack (Stacks up to 15)"},
+				{"Important", "Casts Transference (Magic debuff that transfers heals from one player onto mob)"},
+				{"Important", "Arcane Volley (Multi-target Arcane spell hitting at 2k per hit)"}}, -- Ethereal Spellfilcher
+	[16595] = {{"Important", "Immune to all forms of CC"},
+				{"Important", "Frontal Cleave (Avoid standing in front of mob unless you're its tank). If multiple mobs, each one should have its own tank and should be separated slightly to avoid double cleaves"}}, -- Fleshbeast
+	[16596] = {{"Important", "Gaping Maw (AoE Bleed effect to players in melee range)"},
+				{"Important", "Infectious Poison (10 yd range; AoE Nature DoT)"}}, -- Greater Fleshbeast
+	[17067] = {{"Legion", "Summoned by Phantom Guardsman"},
+				{"Important", "Applies Rend (Bleed) - these mobs can be OT or burned down with DoTs"}}, -- Phantom Hound
+	[17096] = {{"PriorityTargets", "Spawns every 10 seconds"}}, -- Astral Flare
+	[17167] = {{"PriorityTargets", "Last for 90 sec being despawning. Frost Resist gear helpful."},
+				{"Important", "Immune to frost damage"},
+				{"WARLOCK", "Vulnerable to Fear/Banish"}}, -- Conjured Elemental
+	[17229] = {{"PriorityTargets", "Respawns every ~45 seconds"},
+				{"Important", "After mob dies it places debuff on Terestian Illhoof which increases damage boss takes from players"},
+				{"PALADIN", "Immune to Turn Evil"}}, -- Kil'rek
+	[17248] = {{"PriorityTargets", "Appears on raid member during Terestian Illhoof fight; Destroy these ASAP!"}}, -- Demon Chains
+	[17261] = {{"Legion", ""}}, -- Restless Skeleton
+	[17267] = {{"Legion", ""}}, -- Fiendish Imp
+	[17283] = {{"Legion", ""}}, -- Astral Spark
+
+
+	------- Raid: Zul'Aman -----------------
+
+	---Bosses
+	[23863] = {{"Important", ""}}, -- Zul'jin
+	[24239] = {{"Important", ""}}, -- Hex Lord Malacrass
+	[23574] = {{"Important", ""}}, -- Akil'zon <Eagle Avatar>
+	[23576] = {{"Important", ""}}, -- Nalorakk <Bear Avatar>
+	[23577] = {{"Important", ""}}, -- Halazzi <Lynx Avatar>
+	[23578] = {{"Important", ""}}, -- Jan'alai <Dragonhawk Avatar>
+
+	---Trash Mobs
+	[23542] = {{"Important", ""}}, -- Amani'shi Axe Thrower
+	[23580] = {{"Important", ""}}, -- Amani'shi Warbringer
+	[23581] = {{"Important", ""}}, -- Amani'shi Medicine Man
+	[23582] = {{"Important", ""}}, -- Amani'shi Tribesman
+	[23584] = {{"Important", ""}}, -- Amani Bear
+	[23586] = {{"Important", ""}}, -- Amani'shi Scout
+	[23596] = {{"Important", ""}}, -- Amani'shi Flame Caster
+	[23597] = {{"Important", ""}}, -- Amani'shi Guardian
+	[23774] = {{"Important", ""}}, -- Amani'shi Trainer
+	[23834] = {{"Important", ""}}, -- Amani Dragonhawk
+	[23889] = {{"Important", ""}}, -- Amani'shi Savage
+	[24043] = {{"Important", ""}}, -- Amani Lynx
+	[24047] = {{"Important", ""}}, -- Amani Crocolisk
+	[24059] = {{"Important", ""}}, -- Amani'shi Beast Tamer
+	[24064] = {{"Important", ""}}, -- Amani Lynx Cub
+	[24065] = {{"Important", ""}}, -- Amani'shi Handler
+	[24138] = {{"Important", ""}}, -- Tamed Amani Crocolisk
+	[24175] = {{"Legion", ""}}, -- Amani'shi Lookout
+	[24179] = {{"Important", ""}}, -- Amani'shi Wind Walker
+	[24180] = {{"Important", ""}}, -- Amani'shi Protector
+	[24217] = {{"Important", ""}}, -- Amani Bear Mount
+	[24374] = {{"Important", ""}}, -- Amani'shi Berserker
+	[24530] = {{"Important", ""}}, -- Amani Elder Lynx
+	[24549] = {{"Important", ""}}, -- Amani'shi Tempest
+
+
+	------- Raid: Gruul's Lair -------------
+
+	---Bosses
+	[19044] = {{"Advanced", "POSITIONING: The fight favors ranged DPS over melee! Tanks, DPS and Healers should NOT stack on each other, and instead spread out"},
+				{"Important", "Make sure that MT and OT are #1 and #2 respectively on the threat meter as the Hurtful Strike hits the player with the second-highest threat"},
+				{"Important", "Gruul uses Growth every 30 sec (stacking to 30) which increases damage done by 15% per stack - This is a HIGH Stam/High DPS race!"},
+				{"TANK", "DEFENSIVES: Hurtful Strike (which is applied ~20 sec) is applied to off-tank"},
+				{"HEALER", "Keep HoTs refreshed on MT and OT as a zone-wide Silence will be cast by Gruul lasting 4 seconds"},
+				{"DODGE", "Run out of Cave-ins (usually on top of himself and will occur more freqently as fight continues). Cave In deals ~3k AoE damage every 3 seconds"},
+				{"Important", "Gruul will do a random direction knockback. Players that get knocked back and find themselves close together need to spread as they will be turned to stone within a few seconds. After being turned to stone, those players will shatter dealing AoE damage to yourself and nearby players"},
+				{"HEALER", "Due to silences (4 sec silence), knockbacks and turning into stone, refresh tank HoTs VERY regularly and keep them at 100%, even if it means overhealing"},
+				{"Important", "Gruul doesn't use Magic abilities, so it can be helpful to have a Mage buff raid with Amplify Magic"},
+				{"Important", "A Paladin in your raid with Improved Concentration Aura should be placed in a group composed of healers to reduce healer silence time"}}, 
+				-- Gruul the Dragonkiller
+
+	---Council Fight
+	[18831] = {{"Important", ""}}, -- High King Maulgar <Lord of the Ogres>
+	[18832] = {{"Important", ""}}, -- Krosh Firehand
+	[18834] = {{"Important", ""}}, -- Olm the Summoner
+	[18847] = {{"Important", ""}}, -- Wild Fel Stalker
+	[18835] = {{"Important", ""}}, -- Kiggler the Crazed
+	[18836] = {{"Important", ""}}, -- Blindeye the Seer
+
+	---Trash Mobs
+	[19389] = {{"Important", "Immune to stuns and snares"},
+				{"HEALER", "To prevent being cleaved/charged, stand as close to mob's backside as possible"},
+				{"TANK", "Due to mob's cleave, the tank should face this mob away from raid"},
+				{"DAMAGE", "To prevent being cleaved/charged, stand as close to mob's backside as possible"}}, -- Lair Brute
+	[21350] = {{"Interrupts", "Interrupt: Heal (2 sec cast; Large heal that restores ~50% of mob's health)"}}, -- Gronn-Priest
+
+
+	------- Raid: Magtheridon's Lair -------
+
+	---Bosses
+	[17257] = {{"Advanced", "POSITIONING and MANTICRON CUBES"},
+				{"Important", "When entering the room, players will see 5 Hellfire Channelers each standing next to a Manticron Cube."},
+				{"Important", "The Raid Leader needs to assign 4 groups of 5 clickers per rotation (plus backups) that will click the Manticron Cube once boss casts Blast Nova"},
+				{"Important", "When it is a player's turn to click their Cube, they should position themselves with their backs against the wall in front of their Cube's platform, but should NOT stand on that cube platform - else cave-ins may result in damage to them when they should be clicking their cube! Also, these cubes should be clicked ONCE as a debuff will prevent player from clicking a cube again for a period of time. Clicking off a cube too early will likely result in a raid wipe"},
+				{"Advanced", "PHASE 1 - STARTING THE FIGHT"},
+				{"Important", "Assign a tank and healer to each of the channelers. The fight will start once one of the channelers are attacked (see tactics for those Channelers in their own tooltip)"},
+				{"Important", "When the channelers are first engaged, you'll have 2 minutes to kill as many channelers before Magtheridon becomes active (ideally all of them)"},
+				{"Dodge", "DODGE: Conflagration (boss puts fire on a random part of the floor"},
+				{"Advanced", "PHASE 2 - MAGTHERIDON ACTIVATES"},
+				{"Important", "Main-Tank should pick up the boss and pull him to the opposite wall of the entrance, with the tank's back against the wall. This will allow tank to maintain their position during the Quake knockback"},
+				{"Important", "Raid will spread out with the first group going to their assigned places (Manticron Cube) when Blast Nova goes off (which goes off every 60 seconds). The player should click their assigned cube (along with the four other assigned players to their cubes) when the raidwide warning reads that Magtheridon begins casting Blast Nova. They should also NOT move during this part of the phase"},
+				{"Important", "Be aware that boss will occasionally cast Quake, which is a raid knockback"},
+				{"HUNTER", "Hunters that are channeling with a cube should click off the boss, prior to clicking their cube so that auto shot will not break their channeling"},
+				{"DAMAGE", "While Magtheridon is under the effect of all 5 purple beams, he will take increased damage, so the beams should be held as long as possible (clickers will take ticking damage while channeling, so will need heals!"},
+				{"HEALER", "Focus your heals on the clickers as they will take ticking damage while they are channeling with their cube"},
+				{"Advanced", "PHASE 3 - MAGTHERIDON AT 30% HEALTH"},
+				{"Important", "When phase begins, boss shatters the roof causing raidwide damage and stunning players for 2 seconds"},
+				{"HEALER", "Healers should be ready for phase 3 so that players can be topped off with HoTs applied"},
+				{"Dodge", "DODGE: Periodically during this phase, small roof cave-ins will damage players in random areas throughout the room"}}, -- Magtheridon
+
+	---Trash Mobs
+	[17256] = {{"Important", "Do NOT attack channelers until you're ready to start the fight. Attacking them is what starts the encounter"},
+				{"Important", "When a channeler dies, their soul will enter surviving channelers increase those channelers casting speed and damage (stacks)!"}, 
+				{"Interrupts", "INTERRUPT: Dark Mending (2 sec cast, will heal another channeler for 1/8th of their health)"},
+				{"Interrupts", "INTERRUPT: Shadow Bolt Volley"},
+				{"ROGUE", "Make sure to apply Mind Numbing Poison to slow cast time of these mobs"},
+				{"WARLOCK", "Make sure to apply Curse of Tongues to slow cast time of these mobs"},
+				{"Important", "Channelers will occasionally drop Infernals on the raid dealing large damage (an off-tank should pick these up quickly and DPS should focus these down)"}}, 
+				-- Hellfire Channeler
+	[17454] = {{"PriorityTargets", "When channelers drop these Infernals, focus DPS on them"},
+				{"Important", "Warlocks can Banish these Infernals"},
+				{"TANK", "If not enough locks in the raid to deal with the Infernals, they should be picked up by an off-tank"}}, -- Burning Abyssal
+	[18829] = {{"Interrupts", "Assign interrupters on each of the Warders per pull to interrupt Shadow Bolt Volley (Shadow Damage hitting nearby players)"},
+				{"TANK", "When mob casts Shadow Burst, it will knockback nearby players and reset threat. Be ready with your taunt for when this goes off"},
+				{"Important", "Do NOT Dispel Unstable Affliction as it will direct some damage to the dispeler and silence them for 5 seconds!"},
+				{"Dodge", "DODGE: Rain of Fire (AoE Fire Damage)"}}, -- Hellfire Warder
+
+
+	------- Raid: Serpentshrine Cavern -----
+
+	---Bosses
+	[21216] = {{"Important", ""}}, -- Hydross the Unstable <Duke of Currents>
+	[21217] = {{"Important", ""}}, -- The Lurker Below
+	[21215] = {{"Important", ""}}, -- Leotheras the Blind
+	[21214] = {{"Important", ""}}, -- Fathom-Lord Karathress
+	[21213] = {{"Important", ""}}, -- Morogrim Tidewalker
+	[21212] = {{"Important", ""}}, -- Lady Vashj <Coilfang Matron>
+
+	---Fathom Guards
+	[21964] = {{"Important", ""}}, -- Fathom-Guard Caribdis
+	[21965] = {{"Important", ""}}, -- Fathom-Guard Tidalvess
+	[21966] = {{"Important", ""}}, -- Fathom-Guard Sharkkis
+
+	---Trash Mobs
+	[21218] = {{"Important", ""}}, -- Vashj'ir Honor Guard
+	[21220] = {{"Important", ""}}, -- Coilfang Priestess
+	[21221] = {{"Important", ""}}, -- Coilfang Beast-Tamer
+	[21224] = {{"Important", ""}}, -- Tidewalker Depth-Seer
+	[21225] = {{"Important", ""}}, -- Tidewalker Warrior
+	[21226] = {{"Important", ""}}, -- Tidewalker Shaman
+	[21227] = {{"Important", ""}}, -- Tidewalker Harpooner
+	[21228] = {{"Important", ""}}, -- Tidewalker Hydromancer
+	[21229] = {{"Important", ""}}, -- Greyheart Tidecaller
+	[21230] = {{"Important", ""}}, -- Greyheart Nether-Mage
+	[21231] = {{"Important", ""}}, -- Greyheart Shield-Bearer
+	[21232] = {{"Important", ""}}, -- Greyheart Skulker
+	[21246] = {{"Important", ""}}, -- Serpentshrine Sporebat
+	[21251] = {{"Important", ""}}, -- Underbog Colossus
+	[21253] = {{"Important", ""}}, -- Tainted Water Elemental
+	[21263] = {{"Important", ""}}, -- Greyheart Technician
+	[21298] = {{"Important", ""}}, -- Coilfang Serpentguard
+	[21299] = {{"Important", ""}}, -- Coilfang Fathom-Witch
+	[21301] = {{"Important", ""}}, -- Coilfang Shatterer
+	[21339] = {{"Important", ""}}, -- Coilfang Hate-Screamer
+	[21508] = {{"Important", ""}}, -- Coilfang Frenzy
+	[21806] = {{"Important", ""}}, -- Greyheart Spellbinder
+	[21857] = {{"Legion", ""}}, -- Inner Demon
+	[21863] = {{"Important", ""}}, -- Serpentshrine Lurker
+	[21865] = {{"Important", ""}}, -- Coilfang Ambusher
+	[21873] = {{"Important", ""}}, -- Coilfang Guardian
+	[21875] = {{"Important", ""}}, -- Shadow of Leotheras
+	[21920] = {{"Important", ""}}, -- Tidewalker Lurker
+	[21958] = {{"Important", ""}}, -- Enchanted Elemental
+	[22009] = {{"Important", ""}}, -- Tainted Elemental
+	[22035] = {{"Important", ""}}, -- Pure Spawn of Hydross
+	[22036] = {{"Important", ""}}, -- Tainted Spawn of Hydross
+	[22055] = {{"Important", ""}}, -- Coilfang Elite
+	[22056] = {{"Important", ""}}, -- Coilfang Strider
+	[22119] = {{"Important", ""}}, -- Fathom Lurker
+	[22120] = {{"Important", ""}}, -- Fathom Sporebat
+	[22238] = {{"Important", ""}}, -- Serpentshrine Tidecaller
+	[22250] = {{"Important", ""}}, -- Rancid Mushroom
+	[22347] = {{"Important", ""}}, -- Colossus Lurker
+	[22352] = {{"Important", ""}}, -- Colossus Rager
+	[22820] = {{"Legion", ""}}, -- Seer Olum
+
+
+	------- Raid: Tempest Keep The Eye -----
+
+	---Bosses
+	[19516] = {{"Important", ""}}, -- Void Reaver
+	[19514] = {{"Important", ""}}, -- Al'ar <Phoenix God>
+	[18805] = {{"Important", ""}}, -- High Astromancer Solarian
+	[19622] = {{"Important", ""}}, -- Kael'thas Sunstrider <Lord of the Blood Elves>
+
+	---Advisors of Kael'thas Sunstrider
+	[20060] = {{"Important", ""}}, -- Lord Sanguinar <The Blood Hammer>
+	[20062] = {{"Important", ""}}, -- Grand Astromancer Capernian <Advisor to Kael'thas>
+	[20063] = {{"Important", ""}}, -- Master Engineer Telonicus <Advisor to Kael'thas>
+	[20064] = {{"Important", ""}}, -- Thaladred the Darkener <Advisor to Kael'thas>
+
+	---Weapons of Kael'thas Sunstrider
+	[21268] = {{"Important", ""}}, -- Netherstrand Longbow
+	[21269] = {{"Important", ""}}, -- Devastation
+	[21270] = {{"Important", ""}}, -- Cosmic Infuser
+	[21271] = {{"Important", ""}}, -- Infinity Blades
+	[21272] = {{"Important", ""}}, -- Warp Slicer
+	[21273] = {{"Important", ""}}, -- Phaseshift Bulwark
+	[21274] = {{"Important", ""}}, -- Staff of Disintegration
+
+	---Trash Mobs
+	[18806] = {{"Important", ""}}, -- Solarium Priest
+	[18925] = {{"Important", ""}}, -- Solarium Agent
+	[19551] = {{"Important", ""}}, -- Ember of Al'ar
+	[20031] = {{"Important", ""}}, -- Bloodwarder Legionnaire
+	[20032] = {{"Important", ""}}, -- Bloodwarder Vindicator
+	[20033] = {{"Important", ""}}, -- Astromancer
+	[20034] = {{"Important", ""}}, -- Star Scryer
+	[20035] = {{"Important", ""}}, -- Bloodwarder Marshal
+	[20036] = {{"Important", ""}}, -- Bloodwarder Squire
+	[20037] = {{"Important", ""}}, -- Tempest Falconer
+	[20038] = {{"Important", ""}}, -- Phoenix-Hawk Hatchling
+	[20039] = {{"Important", ""}}, -- Phoenix-Hawk
+	[20040] = {{"Important", ""}}, -- Crystalcore Devastator
+	[20041] = {{"Important", ""}}, -- Crystalcore Sentinel
+	[20042] = {{"Important", ""}}, -- Tempest-Smith
+	[20043] = {{"Important", ""}}, -- Apprentice Star Scryer
+	[20044] = {{"Important", ""}}, -- Novice Astromancer
+	[20045] = {{"Important", ""}}, -- Nether Scryer
+	[20045] = {{"Important", ""}}, -- Nether Scryer
+	[20046] = {{"Important", ""}}, -- Astromancer Lord
+	[20047] = {{"Important", ""}}, -- Crimson Hand Battle Mage
+	[20048] = {{"Important", ""}}, -- Crimson Hand Centurion
+	[20049] = {{"Important", ""}}, -- Crimson Hand Blood Knight
+	[20050] = {{"Important", ""}}, -- Crimson Hand Inquisitor
+	[20052] = {{"Important", ""}}, -- Crystalcore Mechanic
+	[21362] = {{"Important", ""}}, -- Phoenix
+	[21364] = {{"Important", ""}}, -- Phoenix Egg
+
+
+	------- Raid: Hyjal Summit -------------
+
+	---Bosses
+	[17767] = {{"Important", ""}}, -- Rage Winterchill
+	[17808] = {{"Important", ""}}, -- Anetheron
+	[17888] = {{"Important", ""}}, -- Kaz'rogal
+	[17842] = {{"Important", ""}}, -- Azgalor
+	[17968] = {{"Important", ""}}, -- Archimonde
+
+	---Trash Mobs
+	[17818] = {{"Important", ""}}, -- Towering Infernal
+	[17864] = {{"Important", ""}}, -- Lesser Doomguard
+	[17895] = {{"Important", ""}}, -- Ghoul
+	[17897] = {{"Important", ""}}, -- Crypt Fiend
+	[17898] = {{"Important", ""}}, -- Abomination
+	[17899] = {{"Important", ""}}, -- Shadowy Necromancer
+	[17902] = {{"Important", ""}}, -- Skeleton Invader
+	[17903] = {{"Important", ""}}, -- Skeleton Mage
+	[17905] = {{"Important", ""}}, -- Banshee
+	[17906] = {{"Important", ""}}, -- Gargoyle
+	[17907] = {{"Important", ""}}, -- Frost Wyrm
+	[17908] = {{"Important", ""}}, -- Giant Infernal
+	[17916] = {{"Important", ""}}, -- Fel Stalker
+
+
+	------- Raid: Black Temple -------------
+
+	---Bosses
+	[22887] = {{"Important", ""}}, -- High Warlord Naj'entus
+	[22898] = {{"Important", ""}}, -- Supremus
+	[22841] = {{"Important", ""}}, -- Shade of Akama
+	[22871] = {{"Important", ""}}, -- Teron Gorefiend
+	[22948] = {{"Important", ""}}, -- Gurtogg Bloodboil
+	[23418] = {{"Important", ""}}, -- Essence of Suffering
+	[23419] = {{"Important", ""}}, -- Essence of Desire
+	[23420] = {{"Important", ""}}, -- Essence of Anger
+	[22947] = {{"Important", ""}}, -- Mother Shahraz
+	[22949] = {{"Important", ""}}, -- Gathios the Shatterer
+	[22950] = {{"Important", ""}}, -- High Nethermancer Zerevor
+	[22951] = {{"Important", ""}}, -- Lady Malande
+	[22952] = {{"Important", ""}}, -- Veras Darkshadow
+	[22917] = {{"Important", ""}}, -- Illidan Stormrage <The Betrayer>
+
+	---Trash Mobs
+	[22844] = {{"Important", ""}}, -- Ashtongue Battlelord
+	[22845] = {{"Important", ""}}, -- Ashtongue Mystic
+	[22846] = {{"Important", ""}}, -- Ashtongue Stormcaller
+	[22847] = {{"Important", ""}}, -- Ashtongue Primalist
+	[22848] = {{"Important", ""}}, -- Storm Fury
+	[22849] = {{"Important", ""}}, -- Ashtongue Feral Spirit
+	[22853] = {{"Important", ""}}, -- Illidari Defiler
+	[22855] = {{"Important", ""}}, -- Illidari Nightlord
+	[22869] = {{"Important", ""}}, -- Illidari Boneslicer
+	[22873] = {{"Important", ""}}, -- Coilskar General
+	[22874] = {{"Important", ""}}, -- Coilskar Harpooner
+	[22875] = {{"Important", ""}}, -- Coilskar Sea-Caller
+	[22876] = {{"Important", ""}}, -- Coilskar Soothsayer
+	[22877] = {{"Important", ""}}, -- Coilskar Wrangler
+	[22878] = {{"Important", ""}}, -- Aqueous Lord
+	[22879] = {{"Important", ""}}, -- Shadowmoon Reaver
+	[22880] = {{"Important", ""}}, -- Shadowmoon Champion
+	[22881] = {{"Important", ""}}, -- Aqueous Surger
+	[22882] = {{"Important", ""}}, -- Shadowmoon Deathshaper
+	[22883] = {{"Important", ""}}, -- Aqueous Spawn
+	[22884] = {{"Important", ""}}, -- Leviathan
+	[22885] = {{"Important", ""}}, -- Dragon Turtle <Coilskar Harpooner's Pet>
+	[22929] = {{"Important", ""}}, -- Greater Shadowfiend
+	[22939] = {{"Important", ""}}, -- Temple Concubine
+	[22945] = {{"Important", ""}}, -- Shadowmoon Blood Mage
+	[22946] = {{"Important", ""}}, -- Shadowmoon War Hound
+	[22953] = {{"Important", ""}}, -- Wrathbone Flayer
+	[22954] = {{"Important", ""}}, -- Illidari Fearbringer
+	[22955] = {{"Important", ""}}, -- Charming Courtesan
+	[22956] = {{"Important", ""}}, -- Sister of Pain
+	[22957] = {{"Important", ""}}, -- Priestess of Dementia
+	[22959] = {{"Important", ""}}, -- Spellbound Attendant
+	[22960] = {{"Important", ""}}, -- Dragonmaw Wyrmcaller
+	[22962] = {{"Important", ""}}, -- Priestess of Delight
+	[22963] = {{"Important", ""}}, -- Bonechewer Worker
+	[22964] = {{"Important", ""}}, -- Sister of Pleasure
+	[22965] = {{"Important", ""}}, -- Enslaved Servant
+	[22996] = {{"Important", ""}}, -- Blade of Azzinoth
+	[22997] = {{"Important", ""}}, -- Flame of Azzinoth
+	[23018] = {{"Important", ""}}, -- Shadowmoon Houndmaster
+	[23028] = {{"Important", ""}}, -- Bonechewer Taskmaster
+	[23030] = {{"Important", ""}}, -- Dragonmaw Sky Stalker
+	[23047] = {{"Important", ""}}, -- Shadowmoon Soldier
+	[23049] = {{"Important", ""}}, -- Shadowmoon Weapon Master
+	[23083] = {{"Important", ""}}, -- Shadowmoon Riding Hound
+	[23109] = {{"Important", ""}}, -- Vengeful Spirit
+	[23111] = {{"Important", ""}}, -- Shadowy Construct
+	[23147] = {{"Important", ""}}, -- Shadowmoon Grunt
+	[23172] = {{"Important", ""}}, -- Hand of Gorefiend
+	[23196] = {{"Important", ""}}, -- Bonechewer Behemoth
+	[23215] = {{"Important", ""}}, -- Ashtongue Sorcerer
+	[23216] = {{"Important", ""}}, -- Ashtongue Defender
+	[23222] = {{"Important", ""}}, -- Bonechewer Brawler
+	[23223] = {{"Important", ""}}, -- Bonechewer Spectator
+	[23232] = {{"Important", ""}}, -- Mutant War Hound
+	[23235] = {{"Important", ""}}, -- Bonechewer Blade Fury
+	[23236] = {{"Important", ""}}, -- Bonechewer Shield Disciple
+	[23237] = {{"Important", ""}}, -- Bonechewer Blood Prophet
+	[23239] = {{"Important", ""}}, -- Bonechewer Combatant
+	[23318] = {{"Important", ""}}, -- Ashtongue Rogue
+	[23319] = {{"Important", ""}}, -- Ashtongue Broken
+	[23330] = {{"Important", ""}}, -- Dragonmaw Wind Reaver
+	[23337] = {{"Important", ""}}, -- Illidari Centurion
+	[23339] = {{"Important", ""}}, -- Illidari Heartseeker
+	[23371] = {{"Important", ""}}, -- Shadowmoon Fallen
+	[23374] = {{"Important", ""}}, -- Ashtongue Stalker
+	[23375] = {{"Important", ""}}, -- Shadow Demon
+	[23389] = {{"Important", ""}}, -- Fallen Ally
+	[23394] = {{"Important", ""}}, -- Promenade Sentinel
+	[23397] = {{"Important", ""}}, -- Illidari Blood Lord
+	[23398] = {{"Important", ""}}, -- Angered Soul Fragment
+	[23399] = {{"Important", ""}}, -- Suffering Soul Fragment
+	[23400] = {{"Important", ""}}, -- Illidari Archon
+	[23401] = {{"Important", ""}}, -- Hungering Soul Fragment
+	[23402] = {{"Important", ""}}, -- Illidari Battle-mage
+	[23403] = {{"Important", ""}}, -- Illidari Assassin
+	[23421] = {{"Important", ""}}, -- Ashtongue Channeler
+	[23436] = {{"Important", ""}}, -- Image of Dementia
+	[23469] = {{"Important", ""}}, -- Enslaved Soul
+	[23498] = {{"Important", ""}}, -- Parasitic Shadowfiend
+	[23523] = {{"Important", ""}}, -- Ashtongue Elementalist
+	[23524] = {{"Important", ""}}, -- Ashtongue Spiritbinder
+
+
+	------- Raid: Sunwell Plateau ----------
+
+	---Bosses
+	[24850] = {{"Important", ""}}, -- Kalecgos
+	[24892] = {{"Important", ""}}, -- Sathrovarr the Corruptor
+	[24882] = {{"Important", ""}}, -- Brutallus
+	[25038] = {{"Important", ""}}, -- Felmyst
+	[25166] = {{"Important", ""}}, -- Grand Warlock Alythess
+	[25165] = {{"Important", ""}}, -- Lady Sacrolash
+	[25741] = {{"Important", ""}}, -- M'uru
+	[25840] = {{"Important", ""}}, -- Entropius
+	[25315] = {{"Important", ""}}, -- Kil'jaeden <The Deceiver>
+
+	---Trash Mobs
+	[25268] = {{"Legion", ""}}, -- Unyielding Dead
+	[25363] = {{"Important", ""}}, -- Sunblade Cabalist
+	[25367] = {{"Important", ""}}, -- Sunblade Arch Mage
+	[25368] = {{"Important", ""}}, -- Sunblade Slayer
+	[25369] = {{"Important", ""}}, -- Sunblade Vindicator
+	[25370] = {{"Important", ""}}, -- Sunblade Dusk Priest
+	[25371] = {{"Important", ""}}, -- Sunblade Dawn Priest
+	[25372] = {{"Important", ""}}, -- Sunblade Scout
+	[25373] = {{"Important", ""}}, -- Shadowsword Soulbinder
+	[25483] = {{"Important", ""}}, -- Shadowsword Manafiend
+	[25484] = {{"Important", ""}}, -- Shadowsword Assassin
+	[25485] = {{"Important", ""}}, -- Shadowsword Deathbringer
+	[25486] = {{"Important", ""}}, -- Shadowsword Vanquisher
+	[25502] = {{"Important", ""}}, -- Shield Orb
+	[25506] = {{"Important", ""}}, -- Shadowsword Lifeshaper
+	[25507] = {{"Important", ""}}, -- Sunblade Protector
+	[25508] = {{"Important", ""}}, -- Shadowsword Guardian
+	[25509] = {{"Important", ""}}, -- Priestess of Torment
+	[25588] = {{"Important", ""}}, -- Hand of the Deceiver
+	[25591] = {{"Important", ""}}, -- Painbringer
+	[25592] = {{"Important", ""}}, -- Doomfire Destroyer
+	[25593] = {{"Important", ""}}, -- Apocalypse Guard
+	[25595] = {{"Important", ""}}, -- Chaos Gazer
+	[25597] = {{"Important", ""}}, -- Oblivion Mage
+	[25598] = {{"Important", ""}}, -- Volatile Felfire Fiend
+	[25599] = {{"Important", ""}}, -- Cataclysm Hound
+	[25708] = {{"Important", ""}}, -- Sinister Reflection
+	[25744] = {{"Important", ""}}, -- Dark Fiend
+	[25772] = {{"Important", ""}}, -- Void Sentinel
+	[25798] = {{"Important", ""}}, -- Shadowsword Berserker
+	[25799] = {{"Important", ""}}, -- Shadowsword Fury Mage
+	[25824] = {{"Important", ""}}, -- Void Spawn
+	[25837] = {{"Important", ""}}, -- Shadowsword Commander
+	[25851] = {{"Important", ""}}, -- Volatile Fiend
+	[25867] = {{"Important", ""}}, -- Sunblade Dragonhawk
+	[25948] = {{"Important", ""}}, -- Doomfire Shard
+	[26101] = {{"Important", ""}}, -- Fire Fiend
+
+
+	------- Dungeon: Hellfire Ramparts --------------
+
+	---Bosses
+	[17306] = {{"Important", "Focus on killing adds FIRST as they will heal boss!"},
+				{"Important", "Spread out to avoid knockback from Surge"}}, -- Watchkeeper Gargolmar
+	[17309] = {{"PriorityTargets", "INTERRUPT: Heal (Heals boss, will also use Renew)"}},
+				-- Hellfire Watcher <Watchkeeper's Subordinate>
+	[17308] = {{"Legion", "Having high shadow resistance will help deal with boss' damage dealt to players"},
+				{"Dodge", "If inflicted with Bane of Treachery run away from group. If healer or tank gets Bane, DPS needs to run away from them. Lasts 15 sec"},
+				{"Important", "~40% health, the boss casts Demonic Shield on self reducing physical and magical damage taken by 75% for 10 sec"},
+				{"Important", "CC boss' hounds or have tank taunt them"}}, -- Omor the Unscarred
+	[17540] = {{"TANK", "Taunt pets to avoid them going after other players!"},
+				{"Important", "CC/Burn down adds"},
+				{"Interrupts", "Interrupt: Drain Life"}}, -- Fiendish Hound <Omar's Pets>
+	[17537] = {{"Legion", "Bosses deal Fire damage - use resistances/pots to aid in reducing damage done to players"},
+				{"Important", "Party members should spread out to minimize multiple people being hit with AoE Fireball from Nazan"},
+				{"Dodge", "DODGE: If hit by Fireball from Nazan, run away to avoid continuing ticks of damage!"},
+				{"TANK", "Be quick to pick up boss as he will run quickly to highest threat upon landing"},
+				{"Advanced", "VAZRUDEN (Orc) Strategy (Phase 1)"},
+				{"Important", "Player afflicted with Vazruden's Mark will be the focus of Vazruden's attacks for 6 sec. Pop Defensives."},
+				{"HEALER", "Provide extra heals to the player afflicted with Vazruden's Mark"},
+				{"Advanced", "NAZAN (Mount) Strategy (Phase 2)"},
+				{"Important", "Nazan will land when he is at 20% health or when Vazruden (orc) reaches ~40-50% health"},
+				{"TANK", "When Nazan lands, the tank should turn the boss away from the group to avoid fire AoE hitting the group"},
+				{"Important", "Nazan will do a Bellowing Roar (AoE fear)"},
+				{"DAMAGE", "Don't stand in front of Nazan!"}}, -- Vazruden
+	[17536] = {{"Legion", "Bosses deal Fire damage - use resistances/pots to aid in reducing damage done to players"},
+				{"Important", "Party members should spread out to minimize multiple people being hit with AoE Fireball from Nazan"},
+				{"Dodge", "DODGE: If hit by Fireball from Nazan, run away to avoid continuing ticks of damage!"},
+				{"TANK", "Be quick to pick up boss as he will run quickly to highest threat upon landing"},
+				{"Advanced", "VAZRUDEN (Orc) Strategy (Phase 1)"},
+				{"Important", "Player afflicted with Vazruden's Mark will be the focus of Vazruden's attacks for 6 sec. Pop Defensives."},
+				{"HEALER", "Provide extra heals to the player afflicted with Vazruden's Mark"},
+				{"Advanced", "NAZAN (Mount) Strategy (Phase 2)"},
+				{"Important", "Nazan will land when he is at 20% health or when Vazruden (orc) reaches ~40-50% health"},
+				{"TANK", "When Nazan lands, the tank should turn the boss away from the group to avoid fire AoE hitting the group"},
+				{"Important", "Nazan will do a Bellowing Roar (AoE fear)"},
+				{"DAMAGE", "Don't stand in front of Nazan!"}}, -- Nazan <Vazruden's Mount>
+
+	---Trash Mobs
+	[17259] = {{"Important", "Has a disarm and an attack power debuff. Don't worry, being melee will get better."}}, 
+				-- Bonechewer Hungerer
+	[17264] = {{"Important", "Beware: Has a dangerous single target stun (Kidney Shot)."}}, -- Bonechewer Ravener
+	[17269] = {{"Legion", "Mob uses Fire Damage abilities"},
+				{"Dodge", "Run out of Rain of Fire AoE"}},
+				-- Bleeding Hollow Darkcaster
+	[17270] = {{"Important", "Tank should turn these mobs away from the group to avoid party members from being hit by Aimed Shot & Multi-Shot"}}, 
+				-- Bleeding Hollow Archer
+	[17271] = {{"Important", "Tank should watch direction their back is as this mob will do a knockback and you avoid pulling unwanted groups."},
+				{"Defensives", "Mortal Strike will also be applied to target reducing the effectiveness of healing received"}}, 
+				-- Bonechewer Destroyer
+	[17280] = {{"Legion", "Non-elites; Deals heavy damage to cloth wearers"},
+				{"Important", "Vulnerable to CCs such as Polymorph, Trap and Hibernate"}}, -- Shattered Hand Warhound
+	[17281] = {{"Defensives", "Has an enrage when they become larger. Tank popping Defensive CDs may be necessary here, as well as additional heals to compensate for the increase in damage"}}, 
+				-- Bonechewer Ripper
+	[17455] = {{"Important", "Beastmaster summons Warhounds to aid them, and also deals Uppercut (knockback to a player)."}}, 
+				-- Bonechewer Beastmaster
+	[17478] = {{"Important", "Scryers buff Bonechewer Rippers - kill the Scyers quickly after LoS pulling them."},
+				{"Interrupts", "Interrupt: Fear (1 sec cast; 20 yd range)"},
+				{"SHAMAN", "Use Tremor Totem to break party members out of Fear (esp tank/healer)"},
+				{"WARLOCK", "Applying Curse of Tongues on these mobs could allow your team to do more interrupts on Fears, esp if Shaman w/Tremor Totem isn't available"}}, 
+				-- Bleeding Hollow Scryer
+	[17517] = {{"Legion", "Killing the last Sentry will result in the boss fight starting"}}, -- Hellfire Sentry <Herald's Sentry>
+
+
+
+	------- Dungeon: The Blood Furnace --------------
+
+	---Bosses
+	[17381] = {{"Legion", "Players should spread at least 8 yds apart to avoid multiple players being hit with Exploding Beaker (Nature damage +AoE knockback)"},
+				{"Important", "Boss will Mind Control random player. The MC'd player should be CC'd asap. If MC is on the tank, the boss will go straight for the healer!"},
+				{"Important", "Boss will spew an AoE Acid Spray within melee range"}}, 
+				-- The Maker
+	[17380] = {{"Legion", "Deals Nature Damage - Nature resistance (gear/pots) helpful here to mitigate damage received"},
+				{"TANK", "Kite boss out of Poison Cloud"},
+				{"Important", "Only the tank should stand in front of boss due to boss' Slime Spray frontal cone attack"},
+				{"HEALER", "Watch for players hit by Poison Bolt as this is a Nature damage DoT"}}, 
+				-- Broggok
+	[17429] = {{"Legion", "4 waves, first wave activated by clicking Cell Door Lever"},
+				{"TANK", "Tank should be the closest one to the cage that is to open. Pop an AoE taunt ability (such as Consecration, Thunder Clap, Swipe as Bear Druid to pull adds to you."},
+				{"Important", "Mobs can be feared/trapped/slowed, which allows players to receive less damage from mass of orcs"},
+				{"Important", "When mob from each wave dies, the next cell door will automatically open. Boss' door will open after last orc from 4th wave goes down."}}, -- Fel Orc Neophyte <Broggok's Buddies>
+	[17377] = {{"Legion", "Boss/Adds deals Fire & Shadow Damage - having fire & shadow resistance will be helpful in dealing with mechanics (shadow more important)"},
+				{"Important", "Spread out as much as possible to mitigate group damage from Shadow Bolt Volley (30 yd shadow AoE - mostly helpful for ranged players/healer)"},
+				{"Important", "Run away when you hear boss saying 'CLOSER...COME CLOSER AND BURN' as he is about to do a HEAVY Fire damage AoE"}}, 
+				-- Keli'dan the Breaker
+	[17653] = {{"Legion", "Adds deals Shadow Damage - having shadow resistance will be helpful in dealing with boss mechanics"},
+				{"Important", "After Adds go down, boss will come after group"}}, 
+				-- Shadowmoon Channeler
+
+	---Trash Mobs
+	[17370] = {{"Important", "Shield Bash will stun player for 2 sec"}}, -- Laughing Skull Enforcer
+	[17371] = {{"Important", "Affliction Warlock-Type Mob dealing Shadow Damage"},
+				{"Important", "Dispel Curse of Tongues from player (Increases casting time of abilities)"}}, 
+				-- Shadowmoon Warlock
+	[17395] = {{"PriorityTargets", "Warlock-Type Mob dealing Fire damage that summons pets"},
+				{"Important", "Interrupt: Summon Felhound Manastalker/Seductress"}}, -- Shadowmoon Summoner
+	[17397] = {{"Important", "When dealing with multiples of these it is best to CC one of them as Thrash can be have some very hard hitting damage"}}, 
+				-- Shadowmoon Adept
+	[17398] = {{"Important", "Deals AoE Damage to melee in form of Stomp and also uses Concussion Blow (5 sec stun)"}}, 
+				-- Nascent Fel Orc
+	[17399] = {{"Important", "Charms players for 6 sec (magic can be dispelled)"},
+				{"Important", "If no one can dispel charm, the charmed player should be CC'd or stunned"}}, 
+				-- Seductress
 	[17400] = {{"Important", "Pull these packs one at a time. They deal VERY high damage."}}, -- Felguard Annihilator
-	[17653] = {{"Important", ""}}, -- Shadowmoon Channeler
-	
-	[17381] = {{"Important", ""}}, -- The Maker
-	[17380] = {{"Important", ""}}, -- Broggok
-	[17377] = {{"Important", ""}}, -- Keli'dan the Breaker
-	
-	-- Shattered Halls
-	[16700] = {{"Important", ""}}, -- Shattered Hand Legionnaire
-	[17420] = {{"Important", ""}}, -- Shattered Hand Heathen
-	[16507] = {{"Important", ""}}, -- Shattered Hand Sentry
-	[17694] = {{"Important", ""}}, -- Shadowmoon Darkcaster
-	[16594] = {{"Important", ""}}, -- Shadowmoon Acolyte
-	[16704] = {{"Important", ""}}, -- Shattered Hand Sharpshooter
-	[16699] = {{"Important", ""}}, -- Shattered Hand Reaver
-	[17083] = {{"Important", ""}}, -- Fel Orc Convert
-	[16593] = {{"Important", ""}}, -- Shattered Hand Brawler 
-	[17669] = {{"Important", ""}}, -- Rabid Warhound
-	[17670] = {{"Important", ""}}, -- Shattered Hand Houndmaster
-	[17357] = {{"Important", ""}}, -- Creeping Oozeling
-	[17462] = {{"Important", ""}}, -- Shattered Hand Zealot
-	[17427] = {{"Important", ""}}, -- Shattered Hand Archer
-	[16523] = {{"Important", ""}}, -- Shattered Hand Savage
-	[17671] = {{"Important", ""}}, -- Shattered Hand Champion
-	[17695] = {{"Important", ""}}, -- Shattered Hand Assassin
-	[17301] = {{"Important", ""}}, -- Shattered Hand Executioner
+	[17401] = {{"Important", "Will Spell Lock casters & burn mana users"},
+				{"PALADIN", "If tanking, can use Seal of Wisdom after sufficient threat has been built up"}}, 
+				-- Felhound Manastalker
+	[17414] = {{"Important", "Players should spread out when dealing with this mob to avoid AoE Fire damage from Throw Dynamite"},
+				{"Important", "These mobs will also place Proximity Mines on the ground. Avoid these mines! These can be cleared by Rogues, Hunters and Warlocks"}, 
+				{"ROGUE", "Use Disarm Trap to deactivate Proximity Mines"},
+				{"HUNTER", "Using Eye of the Beast can allow your pet to trigger mines (esp helpful if using pet with high stamina)"},
+				{"WARLOCK", "Use your Eye of Kilrogg to clear mines ahead of group after a pull (may aggro mobs, so be careful"}, 
+				{"MAGE", "Use Fire Ward to trigger Proximity Mines"},
+				{"Defensives", "Mobs will cast a silence on player. If Healer is hit by 5 sec silence, Tank may need to pop extra defensive CDs"}},
+				-- Shadowmoon Technician
+	[17477] = {{"Important", "Imp that deals Fire damage"}}, -- Hellfire Imp
+	[17491] = {{"Legion", "~6-7 mobs of this type will be found in this instance"},
+				{"Important", "These are stealthed mobs that can be exposed by a Hunter's Flare. DPS should avoid running ahead of tank"},
+				{"Important", "Dispel Poison from player (Nature DoT over 15 sec}"}, 
+				{"Important", "If tank gets hit by Kidney Shot (stun), DPS should slow/kite mob until tank can get back the aggro"}},
+				-- Laughing Skull Rogue
+	[17624] = {{"Legion", "Buffs allies w/its Battle Shout"}}, -- Laughing Skull Warden
+	[17626] = {{"Important", "Uppercut inflicts weapon damage +knockback - Tank should have back to the wall, or know place they will be knocked back won't pull unwanted mobs"}}, 
+				-- Laughing Skull Legionnaire
+	[18894] = {{"Important", "Uppercut inflicts weapon damage +knockback - Tank should have back to the wall, or know place they will be knocked back won't pull unwanted mobs"}}, 
+				-- Felguard Brute
+	[19016] = {{"Important", "Imp that deals Fire damage"}}, -- Hellfire Familiar
 
-	[16807] = {{"Important", ""}}, -- Grand Warlock Nethekurse
-	[20923] = {{"Important", ""}}, -- Blood Guard Porung
-	[16809] = {{"Important", ""}}, -- Warbringer O'mrogg
-	[16808] = {{"Important", ""}}, -- Kargath Bladefist
-	
-	-- Underbog --
-	[17724] = {{"Important", ""}}, -- Underbat
-	[17871] = {{"Important", ""}}, -- Underbog Shambler
-	[17725] = {{"Important", ""}}, -- Underbog Lurker
-	[17723] = {{"Important", ""}}, -- Bog Giant
-	[17726] = {{"Important", ""}}, -- Wrathfin Myrmidon
-	[17727] = {{"Important", ""}}, -- Wrathfin Sentry
-	[17735] = {{"Important", ""}}, -- Wrathfin Warrior
-	[17728] = {{"Important", ""}}, -- Murkblood Tribesman
-	[17771] = {{"Important", ""}}, -- Murkblood Oracle
-	[17730] = {{"Important", ""}}, -- Murkblood Healer
-	[17729] = {{"Important", ""}}, -- Murkblood Spearman
-	[17731] = {{"Important", ""}}, -- Fen Ray
-	[17732] = {{"Important", ""}}, -- Lykul Wasp
-	[19632] = {{"Important", ""}}, -- Lykul Stinger
-	[17734] = {{"Important", ""}}, -- Underbog Lord
-	
-	[17770] = {{"Important", ""}}, -- Hungarfen
-	[18105] = {{"Important", ""}}, -- Ghaz'an
-	[17826] = {{"Important", ""}}, -- Swamplord Musel'ek
-	[17882] = {{"Important", ""}}, -- The Black Stalker
-	
-	-- Steam Vaults
-	[17802] = {{"Important", ""}}, -- Coilfang Warrior
-	[17721] = {{"Important", ""}}, -- Coilfang Engineer
-	[17801] = {{"Important", ""}}, -- Coilfang Siren
-	[21694] = {{"Important", ""}}, -- Bog Overlord
-	[21695] = {{"Important", ""}}, -- Tidal Surger
-	[21696] = {{"Important", ""}}, -- Steam Surger
-	[17803] = {{"Important", ""}}, -- Coilfang Oracle
-	[17800] = {{"Important", ""}}, -- Coilfang Myrmidon
-	[17722] = {{"Important", ""}}, -- Coilfang Sorceress
-	[17805] = {{"Important", ""}}, -- Coilfang Slavemaster
-	[21338] = {{"Important", ""}}, -- Coilfang Leper
-	
-	-- (Mention clicking the consoles.)
-	[17797] = {{"Important", ""}}, -- Hydromancer Thespia
-	[17796] = {{"Important", ""}}, -- Mekgineer Steamrigger
-	[17798] = {{"Important", ""}}, -- Warlord Kalithresh
-	
-	-- Slave Pens
-	[17817] = {{"Important", ""}}, -- Greater Bogstrok
-	[17816] = {{"Important", ""}}, -- Bogstrok
-	[17959] = {{"Important", ""}}, -- Coilfang Slavehandler
-	[17957] = {{"Important", ""}}, -- Coilfang Champion
-	[17961] = {{"Important", ""}}, -- Coilfang Enchantress
-	[17958] = {{"Important", ""}}, -- Coilfang Defender
-	[17940] = {{"Important", ""}}, -- Coilfang Technician
-	[17962] = {{"Important", ""}}, -- Coilfang Collaborator
-	[21127] = {{"Important", ""}}, -- Coilfang Tempest
-	[17938] = {{"Important", ""}}, -- Coilfang Observer
-	[21126] = {{"Important", ""}}, -- Coilfang Scale-Healer
-	[17960] = {{"Important", ""}}, -- Coilfang Soothsayer
-	[17893] = {{"Important", ""}}, -- Naturalist Bite (Friendly) - Grants Nature Resist + Stats
 
-	[17941] = {{"Important", ""}}, -- Mennu the Betrayer
-	[17991] = {{"Important", ""}}, -- Rokmar the Crackler
-	[17942] = {{"Important", ""}}, -- Quagmirran
+	------- Dungeon: The Shattered Halls ------------
 
-	-- Auch Crypts
-	[18495] = {{"Important", ""}}, -- Auchenai Vindicator
-	[18493] = {{"Important", ""}}, -- Auchenai Soulpriest
-	[18497] = {{"Important", ""}}, -- Auchenai Monk
-	[18521] = {{"Important", ""}}, -- Raging Skeleton
-	[18524] = {{"Important", ""}}, -- Angered Skeleton
-	[18700] = {{"Important", ""}}, -- Reanimated Bones
-	[18702] = {{"Important", ""}}, -- Auchenai Necromancer
-	
-	[18371] = {{"Important", ""}}, -- Shirrak the Dead Watcer
-	[18373] = {{"Important", ""}}, -- Exarch Maladaar
-	
-	
-	-- Mana Tombs
-	[18311] = {{"Important", ""}}, -- Ethereal Crypt Raider
-	[18309] = {{"Important", ""}}, -- Ethereal Scavenger
-	[18313] = {{"Important", ""}}, -- Ethereal Sorcerer
-	[18317] = {{"Important", ""}}, -- Ethereal Priest
-	[19306] = {{"Important", ""}}, -- Mana Leech
-	[19307] = {{"Important", ""}}, -- Nexus Terror
-	[18331] = {{"Important", ""}}, -- Ethereal Darkcaster
-	[18314] = {{"Important", ""}}, -- Nexus Stalker
-	[18312] = {{"Important", ""}}, -- Ethereal Spellbinder
-	[18315] = {{"Important", ""}}, -- Ethereal Theurgist
-	
-	[18341] = {{"Important", ""}}, -- Pandemonius (Pulling pulls all trash)
-	[18343] = {{"Important", ""}}, -- Tavarok
-	[18344] = {{"Important", ""}}, -- Nexus-Prince Shaffar
-	
-	
-	-- Seth Halls
-	[18323] = {{"Important", ""}}, -- Sethekk Guard
-	[18318] = {{"Important", ""}}, -- Sethekk Initiate
-	[18327] = {{"Important", ""}}, -- Time-lost Controller
-	[19429] = {{"Important", ""}}, -- Avian Darkhawk
-	[18328] = {{"Important", ""}}, -- Sethekk Oracle
-	[18956] = {{"Important", ""}}, -- Lakka (Friendly)
-	[18322] = {{"Important", ""}}, -- Sethekk Ravenguard
-	[19428] = {{"Important", ""}}, -- Cobalt Serpent
-	[18319] = {{"Important", ""}}, -- Time-Lost Scryer
-	[21891] = {{"Important", ""}}, -- Avian Ripper
-	[18321] = {{"Important", ""}}, -- Sethekk Talon Lord
-	[18325] = {{"Important", ""}}, -- Sethekk Prophet
-	[18326] = {{"Important", ""}}, -- Sethekk Shaman
-	
-	[18472] = {{"Important", ""}}, -- Darkweaver Syth
-	[23035] = {{"Important", ""}}, -- Anzu
-	[18473] = {{"Important", ""}}, -- Talon Lord Ikiss
-	
-	-- Shadow Lab
-	[18635] = {{"Important", ""}}, -- Cabal Deathsworn
-	[18633] = {{"Important", ""}}, -- Cabal Acolyte
-	[18640] = {{"Important", ""}}, -- Cabal Warlock
-	[18641] = {{"Important", ""}}, -- Cabal Familiar
-	[18796] = {{"Important", ""}}, -- Fel Overseer
-	[18848] = {{"Important", ""}}, -- Malicious Instructor
-	[18631] = {{"Important", ""}}, -- Cabal Cultist
-	[18637] = {{"Important", ""}}, -- Cabal Shadow Priest
-	[18638] = {{"Important", ""}}, -- Cabal Zealot
-	[18797] = {{"Important", ""}}, -- Tortured Skeleton
-	[18830] = {{"Important", ""}}, -- Cabal Fanatic
-	[18632] = {{"Important", ""}}, -- Cabal Executioner
-	[18634] = {{"Important", ""}}, -- Cabal Summoner
-	[18639] = {{"Important", ""}}, -- Cabal Spellbinder
-	
-	[18731] = {{"Important", ""}}, -- Ambassador Hellmaw
-	[18667] = {{"Important", ""}}, -- Blackheart the Inciter
-	[18732] = {{"Important", ""}}, -- Grandmaster Vorpil
-	[18708] = {{"Important", ""}}, -- Murmur
-	
-	-- Botanica
-	[17993] = {{"Important", ""}}, -- Bloodwarder Protector
-	[18405] = {{"Important", ""}}, -- Tempest-Forge Peacekeeper
-	[18419] = {{"Important", ""}}, -- Bloodwarder Greenkeeper
-	[19633] = {{"Important", ""}}, -- Bloodwarder Mender
-	[18155] = {{"Important", ""}}, -- Bloodfalcon
-	[17994] = {{"Important", ""}}, -- Bloodwarder Falconer
-	[18404] = {{"Important", ""}}, -- Bloodwarder Steward
-	[19557] = {{"Important", ""}}, -- Greater Frayer
-	[18421] = {{"Important", ""}}, -- Sunseeker Researcher
-	[19486] = {{"Important", ""}}, -- Sunseeker Chemist
-	[18587] = {{"Important", ""}}, -- Frayer
-	[18420] = {{"Important", ""}}, -- Sunseeker Geomancer
-	[19505] = {{"Important", ""}}, -- Sunseeker Channeler
-	[19511] = {{"Important", ""}}, -- Nethervine Inciter
-	[19508] = {{"Important", ""}}, -- Sunseeker Herbalist
-	[19512] = {{"Important", ""}}, -- Nethervine Reaper
-	[19843] = {{"Important", ""}}, -- Nethervine Trickster
-	[19598] = {{"Important", ""}}, -- Mutate Fleshlasher
-	[19509] = {{"Important", ""}}, -- Sunseeker Harvester
-	[19507] = {{"Important", ""}}, -- Sunseeker Gene-Splicer
-	[19865] = {{"Important", ""}}, -- Mutate Horror
-	[19513] = {{"Important", ""}}, -- Mutate Fear-Shrieker
-	[19608] = {{"Important", ""}}, -- Frayer Wildling
-	
-	[17976] = {{"Important", ""}}, -- Commander Sarannis
-	[17975] = {{"Important", ""}}, -- High Botanist Freywinn
-	[17978] = {{"Important", ""}}, -- Thorngrin the Tender
-	[17980] = {{"Important", ""}}, -- Laj
-	[17977] = {{"Important", ""}}, -- Warp Slayer
-	
-	-- Arcatraz
-	[20859] = {{"Important", ""}}, -- Arcatraz Warder
-	[20857] = {{"Important", ""}}, -- Arcatraz Defender
-	[20865] = {{"Important", ""}}, -- Protean Horror
-	[20864] = {{"Important", ""}}, -- Protean Nightmare
-	[20867] = {{"Important", ""}}, -- Death Watcher
-	[20866] = {{"Important", ""}}, -- Soul Devourer
-	[20868] = {{"Important", ""}}, -- Entropic Eye
-	[20869] = {{"Important", ""}}, -- Arcatraz Sentinel (dead mob that sparks)
-	[20875] = {{"Important", ""}}, -- Negaton Screamer
-	[20873] = {{"Important", ""}}, -- Negaton Warp-Master
-	[20880] = {{"Important", ""}}, -- Eredar Deathbringer
-	[20879] = {{"Important", ""}}, -- Eredar Soul-Eater
-	[20883] = {{"Important", ""}}, -- Spiteful Temptress
-	[20881] = {{"Important", ""}}, -- Unbound Devastator
-	[20896] = {{"Important", ""}}, -- Ethereum Slayer
-	[21702] = {{"Important", ""}}, -- Ethereum Life-Binder
-	[20897] = {{"Important", ""}}, -- Ethereum Wave-Caster
-	[20898] = {{"Important", ""}}, -- Gargantuan Abyssal
-	[20902] = {{"Important", ""}}, -- Sargeron Hellcaller
-	[20901] = {{"Important", ""}}, -- Sargeron Archer
-	[20900] = {{"Important", ""}}, -- Unchained Doombringer
-	[20904] = {{"Important", ""}}, -- Warden Mellichar
-	-- Prisons
-	[20905] = {{"Important", ""}}, -- Blazing Trickster
-	[20977] = {{"Important", ""}}, -- Millhouse Manastorm (Friendly)
-	[20908] = {{"Important", ""}}, -- Akkiris Lightning-Waker
-	[20910] = {{"Important", ""}}, -- Twilight Drakonaar
-	
-	[20870] = {{"Important", ""}}, -- Zereketh the Unbound
-	[20885] = {{"Important", ""}}, -- Dalliah the Doomsayer
-	[20886] = {{"Important", ""}}, -- Wrath-Scryer Soccothrates
-	[20912] = {{"Important", ""}}, -- Harbinger Skyriss
-	
-	-- Mechanar --
-	[19166] = {{"Important", ""}}, -- Tempest-Forge Patroller
-	[20990] = {{"Important", ""}}, -- Bloodwarder Physician
-	[19167] = {{"Important", ""}}, -- Bloodwarder Slayer
-	[19510] = {{"Important", ""}}, -- Bloodwarder Centurion
-	[20059] = {{"Important", ""}}, -- Sunseeker Netherbinder
-	[19712] = {{"Important", ""}}, -- Mechanar Driller
-	[19231] = {{"Important", ""}}, -- Mechanar Crusher
-	[19716] = {{"Important", ""}}, -- Mechanar Tinkerer
-	[20988] = {{"Important", ""}}, -- Sunseeker Engineer
-	[19713] = {{"Important", ""}}, -- Mechanar Wrecker
-	[19735] = {{"Important", ""}}, -- Tempest-Forge Destroyer
-	[19168] = {{"Important", ""}}, -- Sunseeker Astromage
-	
-	[19219] = {{"Important", ""}}, -- Mechano-Lord Capacitus
-	[19218] = {{"Important", ""}}, -- Gatewatcher Gyro-Kill
-	[19710] = {{"Important", ""}}, -- Gatewatcher Iron-Hand
-	[19221] = {{"Important", ""}}, -- Nethermancer Sepethrea
-	[19220] = {{"Important", ""}}, -- Pathaleon the Calculator
-	
-	
-	-- Old Hillsbrad Foothills --
-	[18725] = {{"Important", ""}}, -- Brazen (Friendly, click to be flown to the other side of the instance)
-	[17819] = {{"Important", ""}}, -- Durnholde Sentry
-	[17820] = {{"Important", ""}}, -- Durnholde Rifleman
-	[17840] = {{"Important", ""}}, -- Durnholde Tracking Hound
-	[17833] = {{"Important", ""}}, -- Durnholde Warden
-	[17860] = {{"Important", ""}}, -- Durnholde Veteran
-	[18786] = {{"Important", ""}}, -- Thrall (Friendly) - Add details about escort.
-	[18934] = {{"Important", ""}}, -- Durnholde Mage
-	[18094] = {{"Important", ""}}, -- Tarren Mill Lookout
-	[18093] = {{"Important", ""}}, -- Tarren Mill Protector
-	[18092] = {{"Important", ""}}, -- Tarren Mill Guardsman
-	[17814] = {{"Important", ""}}, -- Lordaeron Watchman
-	
-	[17848] = {{"Important", ""}}, -- Lieutenant Drake
-	[17862] = {{"Important", ""}}, -- Captain Skarloc
-	[18096] = {{"Important", ""}}, -- Epoch Hunter
-	
-	
-	-- The Black Morass --
-	[15608] = {{"Important", ""}}, -- Medivh (Friendly)
-	[18982] = {{"Important", ""}}, -- Sable Jaguar
-	[17952] = {{"Important", ""}}, -- Darkwater Crocolisk
-	[18983] = {{"Important", ""}}, -- Blackfang Tarantula
-	[21137] = {{"Important", ""}}, -- Infinite Assassin
-	[21818] = {{"Important", ""}}, -- Infinite Whelp
-	[17892] = {{"Important", ""}}, -- Infinite Chronomancer
-	[21140] = {{"Important", ""}}, -- Rift Lord
-	[21104] = {{"Important", ""}}, -- Rift Keeper
-	[17835] = {{"Important", ""}}, -- Infinite Assassin (II)
-	[21148] = {{"Important", ""}}, -- Rift Keeper (II)
-	[21136] = {{"Important", ""}}, -- Infinite Chronomancer (II)
-	[21138] = {{"Important", ""}}, -- Infinite Executioner
-	[18994] = {{"Important", ""}}, -- Infinite Executioner (II)
-	[18995] = {{"Important", ""}}, -- Infinite Vanquisher 
-
-	[17879] = {{"Important", ""}}, -- Chrono Lord Deja
-	[17880] = {{"Important", ""}}, -- Temporus
-	[17881] = {{"Important", ""}}, -- Aonus
-	
-	-- Magister's Terrace -- (Not available at BC release)
-	-- We'll add this as part of a future release. 
-	[18] = {{"Important", ""}}, -- 
-	
-	
-	------------------------
-	------- BC Raids -------
-	------------------------
-	-- Karazhan --
-	
-	
-	
-	-- Gruuls Lair --
-	
-	
-	-- Magtheridon's Lair --
-	
-	
-	-- Serpentshrine Cavern --
-	
-	
-	-- Tempest Keep --
-	
-	
-	
-	---------------------------------------------------
-	-------------------Shadowlands---------------------
-	---------------------------------------------------
-	
-	-- Torghast --
-	[152594] = {{"Important", ""}}, -- Broker Ve'ken
-	
-	-- Bosses --
-	[159190] = {{"Important", "Interrupting Slam: Stop casting"},
-				{"Important", "Adds a stacking -haste, -movement speed debuff. "},
-				{"Important", "Boss is basically just a hard DPS check. "}}, -- Synod
-	[156015] = {{"Important", "Splits into smaller and smaller blobs as you kill him."},
-				{"Important", "If you're not overflowing with power then kill each new blob as it spawns."},
-				{"Important", "Avoid being overwhelmed by 8+ slimes. Remember to use AoE CC in a pinch."}}, -- Writhing Soulmass
-	[153451] = {{"Important", "Stacks an enrage buff when you move."},
-				{"Important", "Move to dodge swirls, and stay still the entire rest of the fight."}}, -- Kosarus the Fallen
-	[157122] = {{"Dodge", "Dodge the red scars on the ground. They hurt a lot."},
-				{"Important", "Interrupt (!): Dark Volley (Nuke)"}}, -- Patrician Cromwell
-	[151331] = {{"Dodge", "Shockwave: Large frontal cone that stuns"},
-				{"Important", "RUN during Lumbering Might. He'll be slow but hit VERY hard."},
-				{"Important", "Stop DPS during Crumbling Walls or you'll spawn adds."},
-				{"Important", "Not an easy fight. Hope you got some good powers."}}, -- Cellblock Sentinel
-	[156239] = {{"Interrupts", "Interrupt: Shadow Rip (Dmg + DoT)"},
-				{"Important", "Deals very heavy damage so consider kiting if low."},
-				{"Important", "Purge or Steal: Stygian Shield (30% DR)."}}, -- Dark Ascended Corrus
-	[170418] = {{"Interrupts", "Stun Interrupt (!!): Mass Devour (Dmg + boss shield)"},
-				{"Important", "DPS orbs down whenever they're up to stop him eating them."}}, -- Goxul the Devourer
-	[171422] = {{"Interrupts", "Interrupt: Soul Bolt (Big ST Nuke, boss will chain-cast but get as many as you can)"},
-				{"Dodge", "Dodge the swirls from Suppress."},
-				{"Important", "Deaden Magic will give him a small magic shield which can be purged, but is very small anyway."}}, -- Arch-Suppressor Laguas
-	[0] = {{"Important", ""}}, -- Default
-	
-	-- Regular Mobs --
-	
-	[157634] = {{"Important", "Sidestep the Fanning the Flames cast. Otherwise not dangerous."}}, -- Flameforge Enforcer
-	[157584] = {{"Interrupts", "Interrupt: Fireball (Medium ST nuke)"}}, -- Flameforge Master
-	[152875] = {{"Important", "Outrange: Mighty Slam (10 yds). Knocks you back but otherwise not that dangerous."},
-				{"Important", "Melee hits are quite dangerous."}}, -- Massive Crusher
-	[157571] = {{"Interrupts", "Interrupt (!!): Inner Flames (AoE heal & Dmg increase)"}}, -- Mawsworn Flametender
-	[157572] = {{"Interrupts", "Interrupt: Fireball (Medium ST nuke)"}}, -- Mawsworn Firecaller
-	[157583] = {{"Interrupts", "Interrupt: Fireball (Medium ST nuke)"},
-				{"Interrupts", "Interrupt (or dodge): Flamestrike (Small AoE nuke)"}}, -- Forge Keeper
-	[150958] = {{"Interrupts", "Interrupt (!): Accursed Strength (big damage buff)"},
-				{"Dodge", "Dodge: Massive Strike (big frontal)"}}, -- Mawsword Guard		
-	
-	[168105] = {{"Interrupts", "Interrupt (!!): Inner Flames (AoE heal & Dmg increase, 30s cooldown)"}}, -- Empowered Mawsworn Flametender
-	[168104] = {{"Interrupts", "Interrupt: Fireball (Medium ST nuke)"},
-				{"Important", "Will basically just spam Fireballs and you have to lock him down or burst him before he kills you."}}, -- Empowered Flameforge Master
-	[151128] = {{"Important", "This guy is dangerous. You'll want to stun interrupt Whirlwind, or use a mobility CD to get away."},
-				{"Dodge", "Dodge: Lockdown (grey swirl)"}}, -- Lord of Locks
-				
-	[152661] = {{"Interrupts", "Travel in packs but don't do anything dangerous."}}, -- Mawsworn Ward
-	[157810] = {{"Interrupts", "Interrupt (!): Pain Spike (ST Nuke)"}}, -- Mawsworn Endbringer
-	[153874] = {{"Important", "Has a disarm so if you're a melee then careful pulling this with too many mobs."}}, -- Mawsworn Sentry
-	[151353] = {{"Important", "Will flee below half health. Not dangerous."}}, -- Mawrat
-	[155824] = {{"Interrupts", "Interrupt (!): Bone Armor (Large absorb)"},
-				{"Important", "Explodes on Death"}}, -- Lumbering Creation
-	[154129] = {{"Interrupts", "Interrupt (!!!): Conflagrate (Disorient + DoT)"},
-				{"Interrupts", "Interrupt: Fuselighter (AoE. Much lower priority)"}}, -- Burning Emberguard
-	[168002] = {{"Important", "Shackles: Run away when shackled. You're slowed so blinks / dashes if you have them."},
-				{"Important", "Crippling Blow: Reduces healing by 25%. Not dangerous but take care."}}, -- Empowered Mawsworn Shackler
-	[157807] = {{"Interrupts", "Interrupt (!): Wracking Torment (Channeled dmg)"},
-				{"Interrupts", "Interrupt: Pain Spike (ST Nuke, lower prio)"}}, -- Mawsworn Soulweaver
-	[155812] = {{"Important", "Will summon more skeletons, making this is a good priority target."},
-				{"Interrupts", "Interrupt: Soul Blast / Soul Volley"}}, -- Mawsworn Ritualist
-	[152708] = {{"Important", "Deafening Howl: Interrupts spell casts at the end. Outrangeable in groups."}}, -- Mawsworn Seeker
-	[168107] = {{"Important", "You MUST avoid the traps on the ground. They stun you."},
-				{"Important", "Otherwise doesn't do much. Just high ranged autoattack damage."}}, -- Empowered Mawsworn Interceptor
-	[155831] = {{"Interrupts", "Interrupt (!): Dark Binding (Channeled dmg + slow)"},
-				{"Interrupts", "Interrupt / Dispel: Cripple (atk spd slow)"}}, -- Mawsworn Soulbinder
-	[168108] = {{"Important", "Interrupt Bone Armor, but otherwise just does high sustained melee dmg."}}, -- Empowered Lumbering Creation
-	[155908] = {{"Interrupts", "Interrupt (!!): Wave of Suffering (large nuke)"}}, -- Deathspeaker
-	[155828] = {{"Interrupts", "Interrupt (!!): Terrifying Roar (2s Fear). SHORT RANGE."}}, -- Runecarved Colossus
-	[152508] = {{"Dodge", "Dodge: Goring Swipe (Knockback)"},
-				{"Important", "Does have a second knock that you can't avoid, face your back to the wall."}}, -- Dusky Tremorbeast   // has knock, thrash not dodgeable
-	[152905] = {{"Important", "Applies a haste debuff to the floor. Increases in intensity closer to the mob."},
-				{"PriorityTargets", "Priority Target"}}, -- Tower Sentinel
-	[169108] = {{"Interrupts", "Interrupt (!): Soul Blast / Soul Volley (Nukes)"}}, -- Empowered Mawsworn Ritualist
-	[151127] = {{"Interrupts", "Interrupt (!!): Eternal Torment (Channeled Nuke)"},
-				{"Interrupts", "Interrupt (!!): Wave of Suffering (AoE Nuke)"}}, -- Lord of Torment
-	[154011] = {{"Important", ""}}, -- Armed Prisoner
-	[165060] = {{"Important", "Hides as an anima power but you'll know that before you read this... woops."}}, -- Animimic (hides as a power)
-	[168004] = {{"Important", ""}}, -- Empowered Imperial Consular
-	[157809] = {{"Important", ""}}, -- Mawswarn Darkcaster
-	[168110] = {{"Important", ""}}, -- Empowered Imperial Duelist
-	[150965] = {{"Important", ""}}, -- Mawsworn Shackler
-	[0] = {{"Important", ""}}, -- Default
-	[0] = {{"Important", ""}}, -- Default
-	[0] = {{"Important", ""}}, -- Default
-	-- Coldheart
-	[156157] = {{"Interrupts", "Interrupt: Shadow Rip (Nuke + DoT)."},
-				{"Important", "If you're in a group spread out since Falling Strike hits in a 5yd AoE."},
-				{"Important", "Purge or steal: Dark Fortress (-dmg taken)."}}, -- Coldheart Ascendant
-	[156213] = {{"Interrupts", "Interrupt: Shadow Rip (Nuke + DoT)."},
-				{"Important", "Purge or steal: Dark Fortress (-dmg taken)."}}, -- Coldheart Guardian
-	[156219] = {{"Important", "Throws spears and dies quickly."},
-				{"Important", "Purge or steal: Fallen Armaments (+haste)."}}, -- Coldheart Scout
-	[156159] = {{"Important", "Will throw a net on you that stops you moving. Priority target."},
-				{"Important", "Purge or steal: Fallen Armaments (+haste)."}}, -- Coldheart Javelineer
-	[156244] = {{"Dodge", "Rebounding Blades: fires from the front of the mob and then comes back to him."}}, -- Winged Automaton
-	[156226] = {{"Interrupts", "Interrupt (!): Shadow Storm (AoE dmg, can also be outranged)."}}, -- Coldheart Binder
-	[156241] = {{"Interrupts", "Gains a stacking damage buff when you move. Stay still whenever possible and this is an easy kill."}}, -- Monstrous Guardian
-	
-	[168098] = {{"Interrupts", "Interrupt (!!): Terror (Long Fear, 20yd range)."},
-				{"Important", "Will spam Shadow Spear on you for very high damage."},
-				{"Important", "You'll want to use all of the control and self healing in your kit to keep yourself alive."},
-				{"Important", "Use everything here, including DPS cooldowns."}}, -- Empowered Coldheart Agent
-	[156245] = {{"Dodge", "Dodge: Thundering Stomp (10yrd range, BIG damage)."}}, --  Grand Automaton
-	[156212] = {{"Interrupts", "Interrupt (!!): Terror (Long Fear, 20yd range)."},
-				{"PriorityTargets", "Priority Target"}}, -- Coldheart Agent
-	[156158] = {{"Interrupts", "Interrupt (!!): Crushing Shadows (Long Stun)"},
-				{"Interrupts", "Interrupt: Shadow Bolt Volley (AoE Nuke)"}}, -- Adjutant Felipos (Rare)
-	[168099] = {{"Important", "Will throw a net on you that stops you moving."},
-				{"Important", "Spams spears on you. Pure DPS check before it kills you."}}, -- Empowered Coldheart Javelineer
-	
-	
-	----- Mists -----
-	[172995] = {{"Important", ""}}, -- Hydra Seed
-	[164567] = {{"Important", "Focus Droman first to 20%. Feel free to cleave Ingra, especially if it's a single target DPS increase."},
-				{"Important", "When Droman is low she'll stun Ingra and increase his dmg taken by 200% for 12s. Pop DPS cooldowns and burst."},
-				{"Dodge", "DODGE: The blue frontal beam & the purple swirls. Avoid the black puddles."},
-				{"Interrupts", "Interrupt (!): Spirit Bolt (Random target ST Nuke)."},
-				{"HEALER", "Make sure you contribute damage to the burst phase. Every bit counts and incoming dmg is low."},
-				}, -- Ingra Maloch
-	[170217] = {{"Important", "Minigame is at 70, 40 and 10%. You'll need to kill the illusion that stands out from the others in Shape, Circle, or Opacity."},
-				{"Important", "Shape: Leaf vs Flower. Opacity: Shapes can either be 'filled in' or 'clear'. Circle is self explanatory."},
-				{"Important", "Save your cooldowns for 10% and you can burst her down before the third mini-game."},
-				{"Important", "Interrupt(!!!): Patty Cake. Will chop the tank in half. MUST be interrupted by the tank themselves."},
-				{"Dodge", "If the white fox touches you, it'll AoE freeze. You can CC it, and of course kite it."}}, -- Mistcaller
-	[172312] = {{"Important", "DODGE THE GREEN SWIRLY. It'll knock you off the edge. Stand with your back to the bridge where possible."}}, -- Spinemaw Gorger
-	[164501] = {{"Important", "Minigame is at 70, 40 and 10%. You'll need to kill the illusion that stands out from the others in Shape, Circle, or Opacity."},
-				{"Important", "Shape: Leaf vs Flower. Opacity: Shapes can either be 'filled in' or 'clear'. Circle is self explanatory."},
-				{"Important", "Save your cooldowns for 10% and you can burst her down before the third mini-game."},
-				{"Important", "Interrupt(!!!): Patty Cake. Will chop the tank in half. MUST be interrupted by the tank themselves."},
-				{"Dodge", "If the white fox touches you, it'll AoE freeze. You can CC it, and of course kite it."}},-- Mistcaller
-	[164517] = {{"Important", "Mind Link: Quickly spread out to break the chains."},
-				{"Important", "Kite and DPS down the Larvas. They'll fixate a player in a later boss phase."},
-				{"Important", "Interrupt (!!): Parasitic X (will pacify / stun / MC a player depending on phase)."},
-				{"Dodge", "Dodge: green and blue swirls. The green stuff on the floor from Larva deaths."}}, -- Tred'ova
-	[166301] = {{"Important", "Moderate tank damage."}}, -- Mistveil Stalker
-	[167111] = {{"Important", "Interrupt(!!): Stimulate Resistance (large AoE absorb, can be purged)"},
-				{"Important", "Interrupt(!!): Stiumlate Regeneration (large AoE healing channel)"}}, -- Spinemaw Staghorn
-	[173655] = {{"Important", "Puts down a large healing pool. You MUST move her out of this asap."}, {"Important", "Has a large AoE frontal cone. The tank can also dodge it after cast begins."}}, -- Mistveil Matriarch
-	[164804] = {{"Important", "Focus Droman first to 20%. Feel free to cleave Ingra, especially if it's a single target DPS increase."},
-				{"Important", "When Droman is low she'll stun Ingra and increase his dmg taken by 200% for 12s. Pop DPS cooldowns and burst."},
-				{"Dodge", "DODGE: The blue frontal beam & the purple swirls. Avoid the black puddles."},
-				{"Interrupts", "Interrupt (!): Spirit Bolt (Random target ST Nuke)."},
-				{"HEALER", "Make sure you contribute damage to the burst phase. Every bit counts and incoming dmg is low."}}, -- Droman Oulfarran
-	[173720] = {{"Important", "Lightly Spread. Run 12+ yards away from the boss during the Poisonous Secretions cast."}, {"Important", "Avoid his frontal attack lest you be tongue lashed."}}, -- Mistveil Gorgegullet
-	[167116] = {{"Important", "These patrol around. Try and pull them early so they don't surprise you."},
-				{"Important", "Will poison random players. Dispel it if you can."}}, -- Spinemaw Reaver
-	[164920] = {{"Important", "Dispel: Soul Split (Increased Damage Taken, DANGEROUS)"}, {"Tank", "The mob will buff itself with Hand of Thros, ideally kite it during this time to prevent it self-healing."},
-				{"HEALER", "You must dispel the Soul Split debuff ASAP or the tank will need huge healing."}}, -- Drust Soulcleaver
-	[165108] = {{"Important", ""}}, -- Illusionary Clone
-	[166304] = {{"Important", "Spread out with the Anima Injection debuff (circle AoE around you)."}}, -- Mistveil Stinger
-	[167113] = {{"Important", "Move out of the group if you get the Volatile Acid debuff. Can be kicked but low priority compared to the others in the pack."}}, -- Spinemaw Acidgullet
-	[165512] = {{"Important", ""}}, -- Cocoon of Lakali
-	[172992] = {{"Important", ""}}, -- Overgrown Hydra
-	[165251] = {{"Important", "RUN AWAY. You can also CC the poor fox."}}, -- Illusionary Vulpin
-	[164929] = {{"Dodge", "LARGE FRONTAL CONE. Basically a big blue kamehameha that will disorient you."}, {"Important", "Will cocoon a random player. Break it with damage."}, {"Important", "Becomes friendly at 20% and heals / restores mana"}, {"HEALER", "The disorient is dispellable because we both know at least one DPS is walking into it"}}, -- Tirnenn Villager
-	[164921] = {{"Interrupts", "Interrupt(!): Harvest Essence (AoE Channel + Heal"}}, -- Drust Harvester
-	[167117] = {{"Dodge", "Drops an acid pool on death."}}, -- Spinemaw Larva
-	[166276] = {{"Important", "Bucking Rampage can be stunned during it's initial cast."}}, -- Mistveil Guardian
-	[166299] = {{"Important", "Interrupt(!): Nourish the Forest (large AoE HoT, can also be purged / spellstolen)"}}, -- Mistveil Tender
-	[164926] = {{"Important", "For the dobule Boughbreaker pack, kill them one at a time because they do a large unavoidable AoE channel at 50% health."}}, -- Drust Boughbreaker
-	[165560] = {{"Important", ""}}, -- Gormling Larva
-	[166275] = {{"Important", "Interrupt(!!): Bramblethorn Coat (shield that AoE roots when broken)."}}, -- Mistveil Shaper
-	[173714] = {{"Important", ""}}, -- Mistveil Nightblossom
-	[170229] = {{"Important", "Focus Droman first to 20%. Feel free to cleave Ingra, especially if it's a single target DPS increase."},
-				{"Important", "When Droman is low she'll stun Ingra and increase his dmg taken by 200% for 12s. Pop DPS cooldowns and burst."},
-				{"Dodge", "DODGE: The blue frontal beam and the purple swirls"},
-				{"HEALER", "Make sure you contribute damage to the burst phase. Every bit counts and incoming dmg is low."}}, -- Droman Oulfarran
-	[165111] = {{"Important", "Explodes on death, cursing all allies AND ENEMIES within 30 yards, increasing dmg taken. Stacks."}, {"Important", "Inflict a small 8 yd bleed. Lightly spread"}}, -- Drust Spiteclaw
-	[163058] = {{"Important", "SOOTHE: Protector's Rage (+50% damage buff)"}, {"Important", "If you don't have a soothe available, kill this mob first since it gains the enrage effect on ally death."},
-				{"Important", "Frontal Cleave"}, {"TANK", "You can move out of Spear Flurry once the cast begins."}}, -- Mistveil Defender
-	[171772] = {{"Important", "SOOTHE: Protector's Rage (+50% damage buff)"}, {"Important", "If you don't have a soothe available, kill this mob first since it gains the enrage effect on ally death."},
-				{"Important", "Frontal Cleave"}, {"TANK", "You can move out of Spear Flurry once the cast begins."}}, -- Mistveil Defender
-	[172991] = {{"Important", "Dispel: Soul Split (Increased Damage Taken)"}, {"Tank", "The mob will buff itself with Hand of Thros, ideally kite it during this time to prevent it self-healing."}}, -- Drust Soulcleaver
-	[168988] = {{"Important", "Break your ally out! Quickly! He's losing DPS!"}}, -- Overgrowth
-	[173680] = {{"Important", "+10% primary stat for 10 minutes."}}, -- Savory Statshroom
-	[165120] = {{"Important", "LARGE FRONTAL CONE. Basically a big blue kamehameha that will disorient you."}, {"Important", "Will cocoon a random player. Break it with damage."}, {"Important", "Becomes friendly at 20% and heals / restores mana"}, {"HEALER", "The disorient is dispellable because we both know at least one DPS is walking into it"}}, -- Tirnenn Villager
-	[170218] = {{"Important", "Focus Droman first to 20%. Feel free to cleave Ingra, especially if it's a single target DPS increase."},
-				{"Important", "When Droman is low she'll stun Ingra and increase his dmg taken by 200% for 12s. Pop DPS cooldowns and burst."},
-				{"Dodge", "DODGE: The blue frontal beam and the purple swirls"},
-				{"HEALER", "Make sure you contribute damage to the burst phase. Every bit counts and incoming dmg is low."}}, -- Droman Oulfarran
-	[172647] = {{"Important", ""}}, -- Parasitic Infestor
-	[173679] = {{"Important", "+10% Stamina for 10 minutes."}}, -- Tasty Toughshroom
-	[167707] = {{"Important", "Dawww"}}, -- Tirnenn Sapling
-	
-	----- De Other Side -----
-	
-	[169769] = {{"Important", "Master of Dance has three possible vectors which he'll cast randomly. Left, Right, and 'Close' (the front half of the platform)."},
-				{"Important", "Watch the boss closely to see where he'll slam next, and move accordingly."},
-				{"Important", "During Shatter Reality, take one of the portals that spawn, kill the add in front of you, then click the giant totem"},
-				{"Important", "Boss dies at 10%. Each add killed removes 20% and gives you a large haste buff."}}, -- Mueh'zala
-	[164450] = {{"Important", "The traps on the ground throw you into the air. Walk into them when:"},
-				{"Important", "- You have a bomb debuff that expires within 2s OR"},
-				{"Important", "- The Explosive Contrivance boss cast finishes with 2s."}}, -- Dealer Xy'exa
-	[166473] = {{"Important", "Focus the fixating adds as priority. Kill them away from the boss since they drop big red pools on death."},
-				{"Important", "Spread with Corrupted Blood. It spreads out of control quickly otherwise."},
-				{"Important", "Save DPS cooldowns for the Blood Barrier phase. Interrupt Blood Barrage once the shield is broken."}}, -- Hakkar the Soulflayer
-	[101976] = {{"Important", "VERY high tank damage. Save defensives for high bleed stacks."},
-				{"Important", "Summons two squirrel bombs. Click them to disarm."},
-				{"Important", "When targeted by a blue circle, run it close to Millificent to stun her. Lets tank reset bleed."}}, -- Millificent Manastorm
-	[169905] = {{"Important", "Soothe: Undying Rage (Unkillable + huge dmg inc)"},
-				{"Dodge", "Dodge the giant red whirlwind. Scary."}}, -- Risen Warlord
-	[164861] = {{"Important", "Interrupt: Bark Binder (Minor absorb)"}}, -- Spriggan Barkbinder
-	[170147] = {{"Important", ""}}, -- Volatile Memory
-	[171184] = {{"Important", "Mini-boss that can be skipped by sticking hard to the right."},
-				{"Important", "Has a short-range fear. Run out during it's long 3s cast."}}, -- Mythresh, Sky's Talons
-	[168934] = {{"Important", "Don't bother killing the mask spawns. It's easier to just focus on dodging the swirls."},
-				{"Important", "Rage is a heavy AoE damage channel. It can be interrupted via displacement. Else, pop defensive cooldowns."},
-				{"PriorityTargets", "Priority Target"}}, -- Enraged Spirit
-	[170490] = {{"Important", "Interrupt (!): Heal (... Heals)"},
-				{"HEALER", "Dispel the Shadow Word: Pain."}}, -- Atal'ai High Priest
-	[164558] = {{"Important", "Focus the fixating adds as priority. Kill them away from the boss since they drop big red pools on death."},
-				{"Important", "Spread with Corrupted Blood. It spreads out of control quickly otherwise."},
-				{"Important", "Save DPS cooldowns for the Blood Barrier phase. Interrupt Blood Barrage once the shield is broken."}}, -- Hakkar the Soulflayer
-				
-	[174327] = {{"Important", ""}}, -- Mask of Bwonsamdi
-	[164556] = {{"Important", "Intercept the beams that fire from Crystals around the room. They give dmg buff."},
-				{"Important", "Two players targeted by Echo Finger Laser. Run to either side of Millhouse to stun him."},
-				{"Dodge", "Move from the laser after the initial hit fires to dodge the stun."}}, -- Millhouse Manastorm
-	[171342] = {{"Important", ""}}, -- Juvenile Runestag
-	[164862] = {{"Important", "Jump to remove the curse. Can also be decursed. Not dangerous."}}, -- Weald Shimmermoth
-	[167962] = {{"Important", "Line of sight around a pillar during Haywire (Large AoE damage)."}}, -- Defunct Dental Drill
-	[164873] = {{"Important", ""}}, -- Runestag Elderhorn
-	
-	[167964] = {{"Important", "Random player will get a circle that'll stun. Spread out for it."}}, -- 4.RF-4.RF
-	[166608] = {{"Important", "Master of Dance has three possible vectors which he'll cast randomly. Left, Right, and 'Close' (the front half of the platform)."},
-				{"Important", "Watch the boss closely to see where he'll slam next, and move accordingly."},
-				{"Important", "During Shatter Reality, take one of the portals that spawn, kill the add in front of you, then click the giant totem"},
-				{"Important", "Boss dies at 10%. Each add killed removes 20% and gives you a large haste buff."}}, -- Mueh'zala
-				
-	[168942] = {{"Important", "Purge / Steal (!!): Death's Embrace (100% haste)"},
-				{"Important", "Erupting Darkness is a line knockback. Avoid the beam or you'll be knocked off the platform."}}, -- Death Speaker
-	[170486] = {{"Important", "Stun Interrupt (!!): Devoted Sacrifice (Transforms into dangerous mob)"}}, -- Atal'ai Devoted
-	[170480] = {{"Important", "Turns into a dangerous spirit when killed. RUN!"},
-				{"Important", "Stun Interrupt (!): Bladestorm (AoE damage, can also run away)"}}, -- Atal'ai Deathwalker
-				
-	[170572] = {{"Important", "Interrupt (!!): Lightning Discharge (AoE Nuke)"},
-				{"Important", "Interrupt (!): Healing Wave (A heal, in wave form)"},
-				{"Important", "Interrupt (!): Hex (ST CC)"}}, -- Atal'ai Hoodoo Hexxer
-	[164555] = {{"Important", "VERY high tank damage. Save defensives for high bleed stacks."},
-				{"Important", "Summons two squirrel bombs. Click them to disarm."},
-				{"Important", "When targeted by a blue circle, run it close to Millificent to stun her. Lets tank reset bleed."}}, -- Millificent Manastorm
-	[171181] = {{"Important", "Stacks a tank debuff. Not overly dangerous."}}, -- Territorial Bladebeak
-	[175588] = {{"Important", ""}}, -- Acrobatic Steward
-	[167965] = {{"Important", "Interrupt (!): Lubricate (reduces hit chance)"},
-				{"Important", "Interrupt (!): Self-Cleaning Cycle (Channeled Heal)"}}, -- Lubricator
-	[168141] = {{"Important", "On our team... for now..."}}, -- Bwonsamdi
-	[167963] = {{"Important", "Interrupt: Discharge (ST nuke)"},
-				{"Important", "Will do a big spinny AoE attack. It doesn't hurt too much but be careful."}}, -- Headless Client
-	[169501] = {{"Important", ""}}, -- Shadowlands Wormhole
-	[171343] = {{"Important", "Soothe: Angering Shriek (AoE dmg increase)"}, {"Important", "Stacks a debuff on the tank but it isn't very dangerous."}}, -- Bladebeak Matriarch
-	[170488] = {{"PriorityTargets", "Priority Target"}, {"Important", "Fixates a random player. Drops a large red pool on death."}}, -- Son of Hakkar
-	[167967] = {{"Important", "Interrupt (!!): Essential Oil (ST Nuke to random target)."}}, -- Sentient Oil
-	[168986] = {{"Important", ""}}, -- Skeletal Raptor
-	
-	[168992] = {{"Dodge", "Dodge the little purple flowers. You can also stun the cast (Dark Lotus)."}}, -- Risen Cultist
-	[164857] = {{"Important", ""}}, -- Spriggan Mendbender
-	[168949] = {{"Important", "Frontal knockback"}}, -- Risen Bonesoldier
-	[169912] = {{"Important", ""}}, -- Enraged Mask
-	[171341] = {{"Important", "Light tank damage."}}, -- Bladebeak Hatchling
-	[165905] = {{"PriorityTargets", "Priority Target"}, {"Important", "Fixates a random player. Drops a large red pool on death."}}, -- Son of Hakkar
-	[168326] = {{"Important", ""}}, -- Shattered Visage
-	[173458] = {{"Important", ""}}, -- Meikothe, Clutch Guardian
-	[170483] = {{"Important", ""}}, -- Atal'ai Deathwalker's Spirit
-	[171333] = {{"Important", "Stun Interrupt (!!): Devoted Sacrifice (Transforms into dangerous mob)"}}, -- Atal'ai Devoted
-	[167966] = {{"Important", "Explode on touching player."},
-				{"Important", "Yes Mass Grip and knockbacks all work. Do with this information what you will."}}, -- Experimental Sludge
-	[171472] = {{"Important", ""}}, -- Bwonsamdi
-	
-	----- Sanguine Depths -----
-	[165318] = {{"Important", "At 100 energy casts Gloom Squall. You need to use your big shield ability and stack in it."},
-				{"Important", "When marked with Wicked Rush, spread out."},
-				{"Dodge", "Does large line attacks across the arena. Once a line fires, move into it to dodge the others."},
-				{"Important", "Dies at 50% health."}}, -- General Kaal
-	[162103] = {{"Important", "SPREAD during Castigate. Pop a defensive because the damage is very high."},
-				{"Important", "Two orbs will fly around the arena. One close to the outer wall, one closer to the inner wall."},
-				{"Important", "Once an orb passes you, move to that 'lane', alternating with each orb that passes."},
-				{"Important", "Hard focus on burning down the adds, then move once they die since they'll drop a puddle."}}, -- Executor Tarvold
-	[166689] = {{"Important", ""}}, -- General Draven
-	[162100] = {{"Important", "During Juggernaut Rush: Stack in a line to split the damage."},
-				{"Important", "After Severing Smash: Soak the orbs one by one. They deal AoE dmg to the party so take care."},
-				{"Important", "Orbs that hit the boss will heal him."},
-				{"Interrupts", "Interrupt (!!): Hungering Drain (AoE Dmg + boss dmg buff)"}}, -- Kryxis the Voracious
-	[162102] = {{"Important", "During Rite of Supremacy: soak 3-4 yellow orbs. Pop a defensive if you come up short."},
-				{"Dodge", "Dodge the big yellow swirls. These really hurt."},
-				{"TANK", "Pop a defensive during Iron Spikes."}}, -- Grand Proctor Beryllia
-	[169617] = {{"Important", ""}}, -- Duraka the Unbreakable
-	[162040] = {{"PriorityTargets", "Priority Target"}, {"Interrupts", "Interrupt (!): Gloom Burst (ST Nuke)"},
-				{"Important", "When chained: move away from the boss to break."}}, -- Grand Overseer
-	[166396] = {{"Important", "Stun Interrupt: Animate Weapon. Wep will despawn when mob dies."}}, -- Noble Skirmisher
-	[171455] = {{"Important", "These continually spawn in a gauntlet fashion but aren't at all dangerous."}}, -- Stonewall Gargon
-	[174001] = {{"Important", ""}}, -- Anima Collector
-	[162099] = {{"Important", "At 100 energy casts Gloom Squall. You need to use your big shield ability and stack in it."},
-				{"Important", "When marked with Wicked Rush, spread out."},
-				{"Dodge", "Does large line attacks across the arena. Once a line fires, move into it to dodge the others."},
-				{"Important", "Dies at 50% health."}}, -- General Kaal
-	[162057] = {{"Important", "DANGEROUS frontal cone bleed. Face away from party."},
-				{"Dodge", "Dodge: The brown swirls will knock you up."},
-				{"Interrupts", "Interrupt (!): Stoneskin (dmg reduction, can be stolen)"}}, -- Chamber Sentinel
-	[168591] = {{"Important", ""}}, -- Ravenous Dreadbat
-	[162039] = {{"Interrupts", "Interrupt (!): Wrack Soul (Dispellable DoT)"},
-				{"Interrupts", "Interrupt (!!): Curse of Suppression (5s silence)"},
-				{"Important", "Stay lightly spread."}}, -- Wicked Oppressor
-	[171448] = {{"Important", "Avoid the big red traps."}}, -- Dreadful Huntmaster
-	[171799] = {{"Important", ""}}, -- Depths Warden
-	[162038] = {{"Important", "Will thrust in front of him. Next thrust cast will reactivate previous thrusts."},
-				{"Important", "Can play around this mechanic by tanking him in one place and sidestepping the thrust."},
-				{"Important", "He will drop a pool that increases his dmg, but this isn't dangerous if you dodge thrusts."}}, -- Regal Mistdancer
-	[168882] = {{"Important", ""}}, -- Fleeting Manifestation
-	[165076] = {{"Interrupts", "Interrupt: Engorge (Explodes on death for number of Engorge stacks."}}, -- Gluttonous Tick
-	[171376] = {{"Dodge", "Dodge: the big tornado. It's speedy."},
-				{"Important", "Will empower one of the little grubs around him. Focus that target down."}}, -- Head Custodian Javlin
-	[167956] = {{"Important", ""}}, -- Dark Acolyte
-	[162133] = {{"Important", "At 100 energy casts Gloom Squall. You need to use your big shield ability and stack in it."},
-				{"Important", "When marked with Wicked Rush, spread out."},
-				{"Important", "Does large line attacks across the arena. Once a line fires, move into it to dodge the others."},
-				{"Important", "Dies at 50% health."}}, -- General Kaal
-	[162049] = {{"Important", ""}}, -- Vestige of Doubt
-	[162047] = {{"Dodge", "Dodge: blue swirl. Will heal the boss if hit."}}, -- Insatiable Brute
-	[171384] = {{"Dodge", "Dodge: the big fire swirls."}}, -- Research Scribe
-	[172265] = {{"Interrupts", "Interrupt (!): Explosive Anger (AoE damage, does increase player dmg so don't kick if you're healthy)"}}, -- Remnant of Fury
-	[162041] = {{"Important", "If Empowered then focus down. Otherwise not dangerous."}}, -- Grubby Dirtcruncher
-	[162056] = {{"Important", ""}}, -- Rockbound Sprite
-	[168457] = {{"Important", ""}}, -- Stonewall Gargon
-	[169903] = {{"Important", ""}}, -- Sinfall Flyer
-	[162051] = {{"Important", ""}}, -- Frenzied Ghoul
-	[167955] = {{"Important", ""}}, -- Sanguine Cadet
-	[169753] = {{"Important", "Not particularly dangerous."}}, -- Famished Tick
-	[166219] = {{"Important", ""}}, -- General Draven
-	[165073] = {{"Important", ""}}, -- Forlorn Captive
-	[162046] = {{"Important", "Not dangerous."}}, -- Famished Tick
-	[171805] = {{"Dodge", "Dodge: the big fire swirls."}}, -- Research Scribe
-	[168594] = {{"Important", ""}}, -- Chamber Sentinel
-	[168058] = {{"Important", ""}}, -- Infused Quill-feather
-	[156540] = {{"Important", ""}}, -- Scrawny Rat
-	[166589] = {{"Important", "Despawns when owner dies."}}, -- Animated Weapon
-	[165556] = {{"Important", ""}}, -- Fleeting Manifestation
-	[168703] = {{"Important", ""}}, -- Spider
-	[162158] = {{"Important", ""}}, -- Starving Prisoner
-	[170129] = {{"Important", ""}}, -- Lingering Manifestation
-	[166692] = {{"Important", ""}}, -- Sinfall Defender
-	[166691] = {{"Important", ""}}, -- Sinfall Defender
-	[169898] = {{"Important", ""}}, -- Sinfall Flyer
-	
-	----- Halls of Atonement -----
-	[164218] = {{"Dodge", "Will throw statues. Statues face the direction they're going to fly and can be dodged."},
-				{"Important", "Ritual of Woe: One player must stand between the boss and each statue. If not, you'll take massive AoE dmg"},
-				{"Important", "Pop defensives during the Ritual since the damage is quite high even with perfect play."},
-				{"Important", "Ritual of Woe is cast at 70% and 40% health."},
-				{"HEALER", "Allocate a cooldown to each Ritual of Woe."}}, -- Lord Chamberlain
-	[165410] = {{"Important", "Ghosts will fixate players. Run them into the jars around the room."},
-				{"Important", "Ghosts do an AoE around them. It hurts. Keep your distance."},
-				{"Interrupts", "Interrupt (!!!): Volley of Power (large AoE nuke)"},
-				{"Interrupts", "Interrupt (!): Bolt of Power (med nuke on tank)"}}, -- High Adjudicator Aleez
-	[165408] = {{"Important", "(Mythic) Stay in the red circle or you'll be perma feared."},
-				{"Important", "The beam can CHANGE DIRECTIONS. Stay in the middle of the two beams so you can move quickly."},
-				{"Important", "(Heroic) A random player will be feared. You can dispel them."},
-				{"Important", "If you must run through glass, pop defensives."}}, -- Halkias
-				
-	[164563] = {{"Important", "Can be enraged by nearby Houndmasters. Soothe or kite. VERY high tank damage."}}, -- Vicious Gargon
-	[167876] = {{"Important", "Clear out the Tormented Souls before you DPS him. He'll drain them to heal otherwise."}}, -- Inquisitor Sigar
-	[156827] = {{"Important", "When targeted with leap (circle): stand near dead statues to shatter them."},
-				{"Important", "Non-shattered adds will respawn."},
-				{"Important", "Focus adds down first, shatter them with the debuff and avoid the red pools"}}, -- Echelon
-	[174175] = {{"Important", "VENTHYR: Press your extra action button when near to control the Stoneborn."},
-				{"Important", "Frontal Cone."}}, -- Loyal Stoneborn
-	[164557] = {{"Important", "Thrash is a large AoE damage ability. This can be outranged on high keys, but otherwise pop defensives."},
-				{"Important", "Each Shard of Halkias you kill will restore anima to Halkias. Kill all three to summon boss."}}, -- Shard of Halkias
-	[164562] = {{"Interrupts", "Stun Interrupt (!!): Loyal Beasts (large enrage effect, soothable)"}}, -- Depraved Houndmaster
-	[164185] = {{"Important", "When targeted with leap (circle): stand near dead statues to shatter them."},
-				{"Important", "Non-shattered adds will respawn."},
-				{"Important", "Focus adds down first, shatter them with the debuff and avoid the red pools"}}, -- Echelon
-	[165515] = {{"Important", "FRONTAL CONE"}}, -- Depraved Darkblade
-	[165529] = {{"Interrupts", "Interrupt (!!): Collect Sins (Mass add summon)"},
-				{"Interrupts", "Interrupt (!): Siphon Life (health drain)"}}, -- Depraved Collector
-	[165414] = {{"Interrupts", "Interrupt (!): Curse of Obliteration (AoE Shadow Dam around target."}}, -- Depraved Obliterator
-	[167610] = {{"Important", "Will bite your ankles and stun you. You can AoE stun them then burn down."}}, -- Stonefiend Anklebiter
-	[165415] = {{"Important", ""}}, -- Toiling Groundskeeper
-	[167612] = {{"Important", "Dispel (!!): Stony Veins. Kills at 10 stacks."}}, -- Stoneborn Reaver
-	[167607] = {{"Important", "FRONTAL CONE - Knocks back targets."}}, -- Stoneborn Slasher
-	[175588] = {{"Important", ""}}, -- Acrobatic Steward
-	[164363] = {{"Important", ""}}, -- Undying Stonefiend
-	[165913] = {{"Important", ""}}, -- Ghastly Parishioner
-	[167611] = {{"Important", ""}}, -- Stoneborn Eviscerator
-	[167892] = {{"PriorityTargets", "Priority target. Kill before Sigar."}}, -- Tormented Soul
-	[167806] = {{"Important", ""}}, -- Animated Sin
-	[167615] = {{"Important", ""}}, -- Depraved Darkblade
-	[167898] = {{"Important", "Will fixate a random player. Kite and kill."}}, -- Manifestation of Envy
-	[175577] = {{"Important", ""}}, -- Sinfall Flyer
-	
-	----- Plaguefall -----
-	[164266] = {{"Important", "No mechanics happening: stay stacked."},
-				{"Important", "Shadow Ambush: Run the circle out of the party, then restack after the stun."},
-				{"Important", "When Brood Assasins are cast, run around the webs casting zone AoEs or knockbacks to reveal spiders."},
-				{"Important", "Focus these spiders down since they're very dangerous."},
-				{"Important", "If any players make mistakes and are webbed, break them out ASAP."}}, -- Domina Venomblade
-	[164967] = {{"Important", "HARD focus the Plague Bomb add before it completes it's channel."},
-				{"Important", "Tank the Congealed Slime away from the Plague Bomb. It reduces dmg by 75%."},
-				{"Important", "Pull the trash on every platform BACK before you engage boss. He will jump between platforms."}}, -- Doctor Ickus
-	[164267] = {{"Important", "Tentacles spawn in multiple patterns and crash down a few seconds later."},
-				{"Important", "Dodging them is an absolute priority."},
-				{"Important", "Tank should soak the small circle under the add or it'll explode."},
-				{"Important", "Focus on survivability. Boss doesn't have much health."}}, -- Margrave Stradama
-	[174195] = {{"Important", ""}}, -- Hairball
-	[164255] = {{"Dodge", "Slive Wave: Large cone at random player. Stay close to boss to dodge."},
-				{"Important", "You MUST kill the big ooze when it spawns. You can also CC it. It mustn't touch the boss."},
-				{"Important", "Once the big ooze is dead, kill as many smaller oozes as possible."}}, -- Globgrog
-	[163857] = {{"Important", "HEAVY tank damage, but slow. Easy to kite."},
-				{"Important", "Ickor will buff one of them. Make sure that it's slowed and kited."}}, -- Plaguebound Devoted
-	[163892] = {{"Important", ""}}, -- Rotting Slimeclaw
-	[168969] = {{"Important", "Not particularly dangerous."}}, -- Gushing Slime
-	[165357] = {{"Important", ""}}, -- Pestilence Slime
-	[163894] = {{"Dodge", "FRONTAL CONE: Festering Belch (tank can dodge after cast start"}}, -- Blighted Spinebreaker
-	[165010] = {{"Important", ""}}, -- Congealed Slime
-	[168627] = {{"Important", ""}}, -- Plaguebinder
-	[168580] = {{"Important", ""}}, -- Plagueborer
-	[168365] = {{"Important", ""}}, -- Fungret Shroomtender
-	[163891] = {{"Important", ""}}, -- Rotmarrow Slime
-	[168886] = {{"Important", ""}}, -- Virulax Blightweaver
-	[169498] = {{"PriorityTargets", "Prio Target. Must die before cast ends."}}, -- Plague Bomb
-	[163882] = {{"Interrupts", "Interrupt: Creepy Crawlers (summons adds)"}}, -- Decaying Flesh Giant
-	[168153] = {{"Important", "Knocks tank back. Just don't tank near the cliff."}}, -- Plagueroc
-	[168396] = {{"Important", "Will summon oozes that run to him and heal. Focus them down. Can also be CC'd."}}, -- Plaguebelcher
-	[171474] = {{"Important", ""}}, -- Finger Food
-	[168878] = {{"Important", "Will blow itself up. Explosion hits allies and enemies alike."}}, -- Rigged Plagueborer
-	[173840] = {{"Important", ""}}, -- Plaguebound Devoted
-	[168310] = {{"Important", "Knocks tank back. Just don't tank near the cliff."}}, -- Plagueroc
-	[170474] = {{"Important", "Break out of stealth with zone AoE and then focus down."}}, -- Brood Assassin
-	[171887] = {{"Important", ""}}, -- Slimy Smorgasbord
-	[164737] = {{"Important", "Will hide Stealthlings somewhere. You need to AoE CC them or they'll hard nuke a random player."},
-				{"Important", "Enveloping Webbing is a channeled root which isn't dangerous."}}, -- Brood Ambusher
-	[168578] = {{"Interrupts", "Interrupt (!): Wonder Grow (dmg buff, stealable)"}}, -- Fungalmancer
-	[168572] = {{"Important", "Has a channeled Bladestorm. Consider CC because it's tough to dodge without pulling more mobs."}}, -- Fungi Stormer
-	[163862] = {{"Interrupts", "Stun Interrupt (!): Bulwark of Maldraxxus (bubble that reduces dmg by 90%)"}}, -- Defender of Many Eyes
-	[165430] = {{"Important", ""}}, -- Malignant Spawn
-	[163915] = {{"Important", ""}}, -- Hatchling Nest
-	[169696] = {{"Important", ""}}, -- Mire Soldier
-	[168837] = {{"Important", ""}}, -- Stealthling
-	[169861] = {{"Important", "Will jump between packs when low. You can mostly focus on just killing the skeletons."}}, -- Ickor Bileflesh
-	[168393] = {{"Important", "Will summon oozes that run to him and heal. Focus them down. Can also be CC'd."}}, -- Plaguebelcher
-	[167493] = {{"Important", ""}}, -- Venomous Sniper
-	[169501] = {{"Important", ""}}, -- Shadowlands Wormhole
-	[168361] = {{"Important", ""}}, -- Fen Hornet
-	[168022] = {{"Important", "Will grab the tank. Don't pull with too many other mobs but otherwise very easy."}}, -- Slime Tentacle
-	[164705] = {{"Important", ""}}, -- Pestilence Slime
-	[169159] = {{"Important", "Explodes on death. Hits enemy mobs!"}}, -- Unstable Canister
-	[164362] = {{"Important", ""}}, -- Slimy Morsel
-	[170851] = {{"Important", ""}}, -- Volatile Plague Bomb
-	[168574] = {{"Important", ""}}, -- Pestilent Harvester
-	[170927] = {{"Important", ""}}, -- Erupting Ooze
-	[168579] = {{"Important", ""}}, -- Fen Hatchling
-	[169430] = {{"Important", ""}}, -- Ur'zul
-	[168932] = {{"Important", ""}}, -- Doomguard
-	[172093] = {{"Important", ""}}, -- Hearty Haunch
-	[164707] = {{"PriorityTargets", "Prio target. Reduces nearby enemy damage taken by 75%"}}, -- Congealed Slime
-	[168891] = {{"Important", ""}}, -- Rigged Plagueborer
-	[169421] = {{"Important", ""}}, -- Felguard
-	[168968] = {{"Important", ""}}, -- Plaguebound Fallen
-	[168907] = {{"Important", "Will grab the tank. Don't pull with too many other mobs but otherwise very easy."}}, -- Slime Tentacle
-	[169425] = {{"Important", ""}}, -- Felhound
-	[164552] = {{"Important", ""}}, -- Rotmarrow Slime
-	[172064] = {{"Important", ""}}, -- Unstable Larva
-	[170021] = {{"Important", ""}}, -- Gushing Ooze
-	[169429] = {{"Important", ""}}, -- Shivarra
-	[164550] = {{"Important", ""}}, -- Slithering Ooze
-	[168747] = {{"Important", ""}}, -- Venomfang
-	[169265] = {{"Important", ""}}, -- Creepy Crawler
-	[169426] = {{"Important", ""}}, -- Infernal
-	[168398] = {{"PriorityTargets", "Priority Target"}}, -- Slimy Morsel
-	[173360] = {{"Important", "Will summon oozes that run to him and heal. Focus them down. Can also be CC'd."}},
-	[173339] = {{"Important", "Will summon oozes that run to him and heal. Focus them down. Can also be CC'd."}},
-	[172335] = {{"Important", "Will summon oozes that run to him and heal. Focus them down. Can also be CC'd."}},
-	[173359] = {{"Important", ""}}, -- Slimy Morsel
-	[172336] = {{"Important", ""}}, -- Decaying Flesh Giant
-	[173361] = {{"Important", ""}}, -- Slimy Morsel
-	[168394] = {{"Important", ""}}, -- Slimy Morsel
-	[172282] = {{"Important", ""}}, -- Web Wrap
-	[169428] = {{"Important", ""}}, -- Wrathguard
-	[171188] = {{"Important", ""}}, -- Plaguebound Devoted
-	
-	----- Theater of Pain -----
-	[162329] = {{"Important", "Big priority on killing the banner. Stacking slow will kill you during the dance."},
-				{"Important", "Dance involves watching where the boss is facing and avoiding the receptacle."},
-				{"Important", "Two DPS will be pulled down to duel. In key pushes let a player win. In M0, it's to the DEATH."}}, -- Xav the Unfallen
-	[162309] = {{"Important", "Your soul will be pulled from your body. You'll take heavy damage until you retrieve it."},
-				{"Important", "Stand behind the grasping roots so that when your soul is taken from you, it doesn't move far."},
-				{"Important", "Dispel: Phantasmal Parasite. Two go out so dispel one and defensive the other."}}, -- Kul'tharok
-	[165946] = {{"Important", "Most Dangerous: Sub 50% health boss spawns ghost horses that will run across the room."},
-				{"Important", "Position yourself near a wall and make dodging them your highest priority."},
-				{"Dodge", "Dodge: The big black beam. The soldiers that fight in swirls in the middle of the room."},
-				{"Important", "Run hard against the Grasping Rift. It'll kill you if it can suck you in."}}, -- Mordretha, the Endless Empress
-	[164451] = {{"Important", "Recommended Kill Order: Sathel -> Paceran -> Dessia"},
-				{"Important", "When below 40%: Absorb Shield + Fixates a random player. CAN BE REMOVED WITH SOOTHE."}}, -- Dessia the Decapitator
-	[162317] = {{"Dodge", "Try and stay in the center of the room to dodge the wall of hooks."},
-				{"Important", "Boss will sometimes pull you before hook wall. Quickly find the gap."},
-				{"Important", "Try and kill the little adds away from teh center since they drop pool on death."}}, -- Gorechop
-	[170690] = {{"Important", "Disease: Reduces tank health by 5% per stack."},
-				{"Interrupts", "Interrupt: Meat Shield (Absorb)"}}, -- Diseased Horror
-	[170850] = {{"Important", "Soothe: Raging Tantrum (AoE channeled damage)."},
-				{"Important", "Side step the Horn Rush. It has a 2s cast time."}}, -- Raging Bloodhorn
-	[164461] = {{"Important", "Recommended Kill Order: Sathel -> Paceran -> Dessia"},
-				{"Important", "When below 40%: Shields for 30% life and becomes interruptable while it holds."}}, -- Sathel the Accursed
-	[164463] = {{"Important", "Recommended Kill Order: Sathel -> Paceran -> Dessia"}, 
-				{"Important", "When below 40%: Players get debuff that spawns mushrooms near them."},
-				{"Important", "Encounter Warning: Xira will pop out and stun a random player. CC her to break it."}}, -- Paceran the Virulent
-	[164464] = {{"Important", "Will stun a random player. CC her to break it."}}, -- Xira the Underhanded
-	[175588] = {{"Important", ""}}, -- Acrobatic Steward
-	[174210] = {{"Interrupts", "Interrupt (!!): Withering Discharge (AoE disease that reduces dam / healing)."}}, -- Blighted Sludge-Spewer
-	[164506] = {{"PriorityTargets", "Priority Target"},
-				{"Important", "Gives allies an AoE damage reduction aura."}}, -- Ancient Captain
-	[174197] = {{"Important", "Adds healing absorb to target. Heal through it."},
-				{"Interrupts", "Interrupt (!): Unholy Fervor (buffs ally: heals on atk)"}}, -- Battlefield Ritualist
-	[169927] = {{"Interrupts", "Stun Interrupt: Devour Flesh (health drain)"}}, -- Putrid Butcher
-	[170838] = {{"Important", "Soothe: Death Wish (+20% dmg done, +20% phys dmg taken)"}}, -- Unyielding Contender
-	[170882] = {{"Interrupts", "Stun Interrupt (!!): Bone Spear (big bleed, will one shot on high keys)"}}, -- Bone Magus
-	[165260] = {{"Important", ""}}, -- Oozing Leftovers
-	[169875] = {{"Important", "Pull these out of the gauntlet area they're in and you won't have to dodge swirls!"},
-				{"Interrupts", "Interrupt: Bind Soul (High damage to random target)"}}, -- Shackled Soul
-	[170671] = {{"Important", ""}}, -- Grandmaster Vole
-	[166524] = {{"Important", ""}}, -- Deathwalker
-	[170750] = {{"Important", ""}}, -- Battlefield Reaper
-	[173675] = {{"Important", ""}}, -- Ghostly Contender
-	[163086] = {{"Important", "Eruption: Cone out his front and... back. Sidestep."}}, -- Rancid Gasbag
-	[162744] = {{"Important", "Interrupting Roar interrupts spell casts. Slide an instant in instead."}}, -- Nekthara
-	[167998] = {{"Important", "Soulstorm is a large, scary AoE. Pop your defensives and healing CDs here."},
-				{"Important", "Dispel (Curse): Shadow Vulnerability."}},
-	[169893] = {{"Important", "Summons giant tornado. It WILL knock you off. Sidestep before the cast goes off."},
-				{"Important", "Dispel: Curse of Desolation (zones under feet every 3s)"}}, -- Nefarious Darkspeaker
-	[162744] = {{"Important", "Interrupting Roar interrupts all casts. Slide an instant in instead."},
-				{"Dodge", "Dodge: Whirling Blade (brown swirl; spinning weapon after)"}}, -- Nekthara
-	[167532] = {{"Important", "Interrupting Roar interrupts all casts. Slide an instant in instead."},
-				{"Dodge", "Dodge: Ground Smash (swirl)"}}, -- Heavin the Breaker
-	[167536] = {{"Important", "When you get a red circle around you, run away from allies."},
-			{"Interrupts", "Interrupt (!!): Battle Trance (absorb and atk spd buff)"}}, -- Harugia the Bloodthirsty
-	[167534] = {{"Important", "Straightforward but very heavy damage to the tank, and moderate to the party."}}, -- Rek the Hardened
-
-	
-
-	
-	----- Necrotic Wake -----
-	[166945] = {{"Important", "Comet Storm will spawn swirls under you. You need to run because these hurt a lot."},
-				{"Important", "When player is rooted: everyone runs out of circle then dispel. DONT DISPEL EARLY."},
-				{"Important", "One DPS will be chosen for gauntlet run. Run to the end, interrupt and kill the miniboss then talk to the 'angel'"},
-				{"Important", "When you return from gauntlet you'll explode a few seconds later and drop a pool. Drop to the side. Enjoy your 100% crit buff."}}, -- Nalthor the Rimebinder
-	[166882] = {{"Important", "The add will cast Meat Hook which needs to be aimed at the boss to grip him down."},
-				{"Important", "If you're chosen for Meat Hook then stand between the add and boss, then move once it's locked on"},
-				{"Important", "Fixates a random player: Run away because this HURTS."},
-				{"Important", "Two adds at once will wipe your group so hard focus one down if a second spawns."}}, -- Surgeon Stitchflesh
-	[166880] = {{"Important", "Face Heaving Retch away from the group. Randomly targeted."},
-				{"Important", "Hard focus, and kite, the Carrion Worms. If they hit you 3 times they'll explode for BIG damage."},
-				{"Important", "Kite the boss away from the disease patches so that DPS have room to kite worms."}}, -- Blightbone
-	[163157] = {{"Important", "Focus down adds so that they're dead before Final Harvest."},
-				{"Interrupts", "Interrupt (!): Frost Volley (adds)"},
-				{"Important", "Final Harvest: Corpses explode 8yd AoE. Live mobs deal damage to all players."},
-				{"Dodge", "Dodge: Breath ability. Will rotate in one direction."}}, -- Amarth
-	[171750] = {{"Important", ""}}, -- Malfunctioning Goliath
-	[164479] = {{"Important", ""}}, -- Bonefang
-	[162693] = {{"Important", "Comet Storm will spawn swirls under you. You need to run because these hurt a lot."},
-				{"Important", "When player is rooted: everyone runs out of circle then dispel. DONT DISPEL EARLY."},
-				{"Important", "One DPS will be chosen for gauntlet run. Run to the end, interrupt and kill the miniboss then talk to the 'angel'"},
-				{"Important", "When you return from gauntlet you'll explode a few seconds later and drop a pool. Drop to the side. Enjoy your 100% crit buff."}}, -- Nalthor the Rimebinder
-	[162691] = {{"Important", "Face Heaving Retch away from the group. Randomly targeted."},
-				{"Important", "Hard focus, and kite, the Carrion Worms. If they hit you 3 times they'll explode for BIG damage."},
-				{"Important", "Kite the boss away from the disease patches so that DPS have room to kite worms."}}, -- Blightbone
-	[162729] = {{"Important", "Easy mob. Pull 20 of them before remembering the AoE damage cap."}}, -- Patchwerk Soldier
-	[162689] = {{"Important", "The add will cast Meat Hook which needs to be aimed at the boss to grip him down."},
-				{"Important", "If you're chosen for Meat Hook then stand between the add and boss, then move once it's locked on"},
-				{"Important", "Fixates a random player: Run away because this HURTS."},
-				{"Important", "Two adds at once will wipe your group so hard focus one down if a second spawns."}}, -- Surgeon Stitchflesh
-	[165824] = {{"Dodge", "Dodge: Death Orbs (silence + dam). Big green balls."},
-				{"Important", "Purge / Steal: Dark Shroud (Phys immunity, AoE damage)"}}, -- Nar'zudah
-	[165137] = {{"Important", "Adds a stacking DoT that increases over time. When dispelled it resets to 0 and jumps target."},
-				{"HEALER", "You can dispel this about every 10-12 seconds to keep it's damage low."}}, -- Zolramus Gatekeeper
-	[162692] = {{"Important", "Focus down adds so that they're dead before Final Harvest."},
-				{"Interrupts", "Interrupt (!): Frost Volley (adds)"},
-				{"Important", "Final Harvest: Corpses explode 8yd AoE. Live mobs deal damage to all players."},
-				{"Dodge", "Dodge: Breath ability. Will rotate in one direction."}}, -- Amarth
-	[163121] = {{"Interrupts", "Stun Interrupt: Meat Shield (absorb)"},
-				{"Important", "Soothe: Seething Rage (atk spd, stacks)"}}, -- Stitched Vanguard
-	[172981] = {{"PriorityTargets", "Priority Target."}, 
-				{"Important", "Stacks damage taken debuff on tank."}}, -- Kyrian Stitchwerk
-	[165919] = {{"Interrupts", "Interrupt (!!): Rasping Scream (15yd AoE Fear)"},
-				{"Important", "FRONTAL CLEAVE"}}, -- Skeletal Marauder
-	[163618] = {{"PriorityTargets", "Priority Target. Nearby minions die when he dies."},
-				{"Important", "Grim Fate: Spread out (green swirl around one player)."}}, -- Zolramus Necromancer
-	[164702] = {{"Important", ""}}, -- Carrion Worm
-	[166302] = {{"Important", ""}}, -- Corpse Harvester
-	[173016] = {{"Interrupts", "Interrupt (!!): Drain Fluids (ST Stun)"},
-				{"Interrupts", "Interrupt (!): Goresplatter (AoE DoT)"}}, -- Corpse Collector
-	[164578] = {{"Important", ""}}, -- Stitchflesh's Creation
-	[165872] = {{"Important", "Hooks random players. Stand behind monsters and it'll hit them instead."},
-				{"Interrupt", "Interrupt (!): Repair Flesh (Heals loyal creation)"}}, -- Flesh Crafter
-	[171095] = {{"Important", ""}}, -- Grisly Colossus
-	[167731] = {{"Important", "Hooks random players. Stand behind monsters and it'll hit them instead."},
-				{"Important", "Run if fixated."}}, -- Separation Assistant
-	[174783] = {{"Important", ""}}, -- Opeth
-	[163621] = {{"Important", "Stacks damage taken increase on tank."},
-				{"Important", "FRONTAL CLEAVE"}}, -- Goregrind
-	[165138] = {{"Important", "Explodes on death which hits allies AND enemies."}}, -- Blight Bag
-	[165197] = {{"Important", "Very large tank damage due to stacking debuff. Pop DPS cooldowns and kill quickly."},
-				{"Dodge", "Dodge: blue swirls"}}, -- Skeletal Monstrosity
-	[163128] = {{"Important", ""}}, -- Zolramus Sorcerer
-	[168246] = {{"Important", ""}}, -- Reanimated Crossbowman
-	[175588] = {{"Important", ""}}, -- Acrobatic Steward
-	[163619] = {{"Interrupts", "Stun Interrupt (!): Boneflay (reduces tank MaxHP)"}}, -- Zolramus Bonecarver
-	[173044] = {{"Important", "Hooks random players. Stand behind monsters and it'll hit them instead."},
-				{"Important", "Interrupt (!!): Drain Fluids (ST Stun)"}}, -- Stitching Assistant
-	[163620] = {{"Important", "Drops poison cloud. Not dangerous for miniboss."}}, -- Rotspew
-	[166266] = {{"Important", "Harmless."}}, -- Spare Parts
-	[165911] = {{"Important", "Will enrage if Flesh Crafter dies first. Soothable."}}, -- Loyal Creation
-	[164427] = {{"Important", ""}}, -- Reanimated Warrior
-	[164414] = {{"Important", ""}}, -- Reanimated Mage
-	[165222] = {{"Interrupts", "Interrupt (!!): Final Bargain (huge heal)"},
-				{"Interrupts", "Interrupt (!): Bonemend (small heal)"}}, -- Zolramus Bonemender
-	[163126] = {{"Interrupts", "Interrupt (!): Frostbolt Volley (AoE damage)"}}, -- Brittlebone Mage
-	[163122] = {{"Important", ""}}, -- Brittlebone Warrior
-	[163622] = {{"Important", ""}}, -- Goregrind Bits
-	[168607] = {{"Important", ""}}, -- Xandria
-	[163623] = {{"Important", ""}}, -- Rotspew Leftovers
-	[164815] = {{"Important", ""}}, -- Zolramus Siphoner
-	[171500] = {{"Important", ""}}, -- Shuffling Corpse
-	[171463] = {{"Important", ""}}, -- Spare Parts
-	[166079] = {{"Important", ""}}, -- Brittlebone Crossbowman
-	[174785] = {{"Important", ""}}, -- Skeletal Marauder
-	[166264] = {{"Important", ""}}, -- Spare Parts
-	[168357] = {{"Important", ""}}, -- Zolramus Sorcerer
-	[164814] = {{"Important", ""}}, -- Gilded Champion
-	[168343] = {{"Important", "Easy mob. Crush in groups."}}, -- Patchwerk Soldier
-	[165597] = {{"Important", "Easy mob. Use them to pad damage."}}, -- Patchwerk Soldier
-	[165528] = {{"Important", ""}}, -- Gilded Champion
-	[165605] = {{"Important", ""}}, -- Winged Champion
-	[164959] = {{"Important", ""}}, -- Captured Aspirant
-	[171750] = {{"Important", "KYRIAN: Summon your Steward to bring the Goliath to life, summoning orbs of power"}},
-	
-	----- Spires of Ascension -----
-	[167410] = {{"Important", "Stand in the big blue safe zone."},
-				{"Important", "Will charge random players. There's enough room in the bubble to lightly spread."},
-				{"Important", "During P2 boss will take off. Collect orbs and move them to the spear in the middle."},
-				{"Important", "When all orbs are collected, click the spear and throw it at the boss to bring her back down."},
-				{"HEALER", "Dispel on cooldown in P2. You have to deal with a heavy stacking DoT, and regular dispels will keep stacks down."}}, -- Devos
-	[162060] = {{"Important", "Take the Purifying Blast (blue circle) debuff out of the party."},
-				{"Important", "Stack for Empyreal Ordnance to stack the resulting zones in one place."},
-				{"Important", "During Recharge Anima: soak balls released from said zones. Try spread them across your party."},
-				{"Important", "There's also a tank stomp, make sure you're not close to the tank for it."}}, -- Oryphrion
-	[162058] = {{"Important", "The pass fail here is dodging the small black orbs which will knock you up."},
-				{"Important", "They'll spawn from rifts the boss leaves behind when he Shadow whirls. Tank the boss close to rifts."},
-				{"TANK", "Blinding Flash: Sidestep the boss after the cast locks on."},
-				{"HEALER", "Dark Strides target will take a MASSIVE DoT. They'll need a lot of healing."}}, -- Ventunax
-	[162059] = {{"Dodge", "The pass-fail here is whether you dodge the small black missiles fired from Azules"},
-				{"Important", "The further you stand from the bird, the easier they are to dodge."},
-				{"Important", "Charged Spear can't really be dodged, but you should spread so it only hits one target."},
-				{"Important", "Boss health is shared. Let me see your MULTI DOTS."}}, -- Kin-Tara
-	[163077] = {{"Important", ""}}, -- Azules
-	[163506] = {{"Important", "Stealthed mob that adds a bleed. Let the tank go first."}}, -- Forsworn Stealthclaw
-	[162061] = {{"Important", "Stand in the big blue safe zone."},
-				{"Important", "Will charge random players. There's enough room in the bubble to lightly spread."},
-				{"Important", "During P2 boss will take off. Collect orbs and move them to the spear in the middle."},
-				{"Important", "When all orbs are collected, click the spear and throw it at the boss to bring her back down."},
-				{"HEALER", "Dispel on cooldown in P2. You have to deal with a heavy stacking DoT, and regular dispels will keep stacks down."}}, -- Devos
-	[163503] = {{"Important", "Throws projectiles and DoTs up tank. Not too dangerous."}}, -- Etherdiver
-	[168318] = {{"Interrupts", "Interrupt (!!): Rebellious Fist (AoE)"},
-				{"Important", "Burst mob during Recharge Anima to break shield."}}, -- Forsworn Goliath
-	[171456] = {{"Important", ""}}, -- Shattered Devastator
-	[163520] = {{"PriorityTargets", "Priority Target"},
-				{"Important", "Nearby enemies take 75% reduced AoE dmg."}}, -- Forsworn Squad-Leader
-	[169501] = {{"Important", ""}}, -- Shadowlands Wormhole
-	[168681] = {{"Important", "AoEs the group and drops void zones on the ground."}}, -- Forsworn Helion
-	[163457] = {{"Important", "FRONTAL CLEAVE"}}, -- Forsworn Vanguard
-	[163459] = {{"Interrupts", "Interrupt (!!): Forsworn Doctrine (HoT, can be purged / stolen)"},
-				{"Important", "Purge: Imbue Weapon (Arcane dmg on autoattack)"}}, -- Forsworn Mender
-	[163458] = {{"Interrupts", "Interrupt (!): Burden of Knowledge (DoT)"}}, -- Forsworn Castigator
-	[168718] = {{"Interrupts", "Interrupt (!!): Greater Mending (AoE Heal)"},
-				{"Important", "Purge / Steal: Bless Weapon (Dmg + Heal on atk)"}}, -- Forsworn Warden
-	[168420] = {{"Important", ""}}, -- Forsworn Champion
-	[163524] = {{"Dodge", "Dodge: Slice-Spell. Random charge on a player."}}, -- Kyrian Dark-Praetor
-	[168845] = {{"Important", "Pull one at a time and let debuffs fall off!"},
-				{"Dodge", "Dodge: black swirl (Charged Spear)"}}, -- Astronos
-	[168843] = {{"Important", "Pull one at a time and let debuffs fall off!"},
-				{"Important", "Stacks a DoT on group."}}, -- Klotos
-	[168844] = {{"Important", "Pull one at a time and let debuffs fall off!"},
-				{"Important", "Stacks a dmg taken debuff on group."}}, -- Lakesis
-	[168418] = {{"Interrupts", "Interrupt: Dark Lash (tank dmg)"},
-				{"Interrupts", "Interrupt: Internal Strife (DoT on random players that AoEs"}}, -- Forsworn Inquisitor
-	[168717] = {{"Important", ""}}, -- Forsworn Justicar
-	[165714] = {{"Important", ""}}, -- Kyrestia the Firstborne
-	[163501] = {{"Important", "Spears random targets."}}, -- Forsworn Skirmisher
-	[163589] = {{"Important", ""}}, -- Kyrian Ascendant
-	[166411] = {{"Important", ""}}, -- Forsworn Usurper
-	
-	----- Castle Nathria -----
-	-- COMING SOON --
-		
-	
-	---------------------------------------------------
-	----------------Battle for Azeroth-----------------
-	---------------------------------------------------
-	----- Ataldazar -----
-	
-	-- Trash toward Priestess
-	[122971] = {{"Important", "Ranged players should stay spread 8 yards to avoid his charge hitting more than one player"}, {"Important", "Enrage: Dispel or Kite away during Fanatic's Rage"},
-				{"Advanced", "The charge can be avoided completely with blinks / or sprints (stand as far away as possible)"}}, -- Dazar'ai Juggernaut
-	[127799] = {{"Important", "Minor tank damage. Not dangerous."}}, -- Dazar'ai Honor Guard
-	[127757] = {{"PriorityTargets", "Priority Target"}, {"Important", "MUST kill the reanimation totem first."}, {"Important", "Will pulse HEAVY AoE to the party after totem is dead. Kill quickly."}}, -- Reanimated Honor Guard
-	[122973] = {{"Interrupts", "Interrupt(!): Bwonsamdi's Mantle (big CC immunity bubble)"}, {"Interrupts", "Interrupt: Mending Word (medium heal)"}, 
-				{"TANK", "If they get a bubble off then you'll need to drag all of the mobs out of it."}}, -- Dazar'ai Confessor
-	[122972] = {{"Interrupts", "Interrupt(!!): Fiery Enchant (buffs a nearby Juggernaut to throw fire)"}, 
-				{"Important", "Will also cast Wild Fire (dmg + DoT) on random players but this is a less important interrupt"}}, -- Dazar'ai Augur
-	[122984] = {{"PriorityTargets", "Priority Target: will heal and gain damage every time a nearby mob dies"}, {"Defensives", "Defensive: Soul Burn (Heavy DoT on one player)"}}, -- Dazar'ai Colossus
-	[132126] = {{"Important", "Not dangerous. Stand in blood pools before transfusion to kill them more quickly"}}, -- Gilded Priestess
-	
-	-- Trash toward Vol'kaal
-	[128435] = {{"Important", "Will jump to random allies and deal damage in a small AoE"}, {"Important", "Stay grouped but with a 3yd gap between each player."}}, -- Toxic Saurid
-	[128434] = {{"Interrupts", "Interrupt(!!): Terrifying Screech (long AoE fear)"}}, -- Feasting Skyscreamer
-	[128455] = {{"Important", "Skippable! Just walk carefully around the edge of the platform."}, {"Important", "Will charge a random player. Other allies should stand clear so only one is hit"}}, -- T'lonja
-	[129552] = {{"Important", "Skippable! Just walk carefully around the edge of the platform."}}, -- Monzumi
-	[129553] = {{"Important", "Skippable! Just walk carefully around the edge of the platform."}, {"Interrupts", "Interrupt or Purge: Dino Might (medium HoT)"}}, -- Dinomancer Kish'o
-	[122969] = {{"Interrupts", "Interrupt or decurse: Unstable Hex (long CC)"}, {"Important", "The Hex spreads to allies within 8 yards when dispelled. Give them time to walk out."}}, -- Zanchuli Witch-Doctor
-	[127879] = {{"Important", "Channels a big damage reduction shield that protects nearby enemies"}, {"Important", "Knockbacks are key here because you can knock his shield away from the rest of the pack"},
-				{"Important", "Will Shield Bash nearby enemies if tank isn't in range. This really hurts so keep distance."}}, -- Shieldbearer of Zul
-	[135989] = {{"Important", "Channels a big damage reduction shield that protects nearby enemies"}, {"Important", "Knockbacks are key here because you can knock his shield away from the rest of the pack"},
-				{"Important", "Will Shield Bash nearby enemies if tank isn't in range. This really hurts so keep distance."}}, -- Shieldbearer of Zul
-	[122970] = {{"Important", "Start stealthed and will stun you if they get the jump on you. Let the tank lead."}, {"Important", "Heavy tank damage. Particularly during Venonfang Strike (dispellable poison)"}, 
-				{"Fluff", "The mob is stealthed so by the time you read this you might already be dead..."}}, -- Shadowblade Stalker
-	
-	-- Bosses
-	[122967] = {{"Important", "Stand in the blood pools before Transfusion is cast"}, {"Important", "The debuff lasts 15 seconds so you can grab it early"},
-				{"PriorityTargets", "Priority Target (or CC): Spirit of Gold (eats blood pools)"}, {"HEALER", "Contribute DPS and keep the tank alive. Very easy fight."}}, -- Priestess Alun'za
-		[131009] = {{"Important", "Stand in the blood pools before Transfusion is cast"}, {"Important", "The debuff lasts 15 seconds so you can grab it early"},
-				{"PriorityTargets", "Priority Target (or CC): Spirit of Gold (eats blood pools)"}, {"HEALER", "Contribute DPS and keep the tank alive. Very easy fight."}}, -- Priestess Alun'za (Spirit of Gold)
-				
-	[122965] = {{"Important", "Totems first. Boss second. Totems MUST die within 7 seconds of each other."}, {"Important", "Consider assigning one DPS to each totem."},
-				{"Important", "Boss will instantly heal until totems are dead so don't multi-DoT him."}, {"HEALER", "Heavy ticking damage. Be efficient, use your cooldowns regularly."},
-				{"HEALER", "The damage tends to be heavier while the totems are up so it's ok if you use more mana / CD's there."}}, -- Vol'kaal
-	[122963] = {{"Important", "Don't stand on piles of bones"}, {"Important", "Line of Sight: Terrifying Visage"}, {"Important", "Tank the boss up against a pillar on the side of the room. You can use them for easy LoS."},
-				{"Important", "Run from: Pursuit (though currently undertuned)"}}, -- Rezan
-	[122968] = {{"Important", "Put down a raid marker 40 yards from the boss. During Soulrend, DPS / Healers stack on this point."}, {"Important", "This lets you stun and AoE down the adds that spawn."},
-				{"Important", "There's plenty on the floor to dance around. It all hurts."}, {"HEALER", "Healing CD: Soulrend. Otherwise spot heal anyone who stands in spiders."}}, -- Yazma
-	
-	
-	
-	--- Freehold
-	-- Trash toward Skycap'n Kragg
-	[128551] = {{"Important", "Moderate tank damage."}, {"DRUID", "Soothe: Beastial Wrath (50% dmg buff)"}, {"HUNTER", "Tranq Shot: Beastial Wrath (50% dmg buff)"}}, -- Irontide Mastiff
-	[129788] = {{"Important", "Moderate tank damage."}, {"Interrupts", "Interrupt (or purge): Healing Balm (medium HoT)"}, {"HEALER", "Dispel: Infected Wound (Disease, -healing taken)"}}, -- Irontide Bonesaw
-	[129602] = {{"Important", "VERY annoying mob. Frontal cleave (tank can dodge after cast starts)"}, {"Important", "Will throw the tank but no longer drops threat. Pull one at a time if possible."}}, -- Irontide Enforcer
-	[126928] = {{"Important", "Moderate tank damage."}, {"HEALER", "Dispel: Poisoning Strike (Poison, DoT, wait until 2 stacks)"}}, -- Irontide Corsair
-	[126918] = {{"Important", "Move out of the red swirls. They burn. Don't burn."}, {"TANK", "These don't really move but still have threat table. Tank everything on top of them."}}, -- Irontide Crackshot
-	[129598] = {{"Important", "Why are you killing the poor mules!?"}, {"Important", "No notable mechanics but still... why!?"}},
-	
-	-- The Village	
-	[130522] = {{"Important", "Mostly harmless. Pull as few of them as you can."}}, -- Freehold Shipmate (Neutral)
-	[130521] = {{"Important", "Mostly harmless. Pull as few of them as you can."}}, -- Freehold Deckhand (Neutral)
-	[127124] = {{"Important", "Mostly harmless. Pull as few of them as you can."}}, -- Freehold Barhand (Neutral)
-	[129526] = {{"Important", "Mostly harmless. Pull as few of them as you can."}}, -- Bilge Rat Swabby (Neutral)	
-	[130024] = {{"Important", "Stacks healing debuff on tank. Pull out your AoE CC here."}}, -- Soggy Shiprat
-	[127111] = {{"Interrupts", "Interrupt or Dodge: Sea Spout (conjures dodgeable blue swirls everywhere)"}}, -- Irontide Oarsman
-	[130400] = {{"Important", "Two abilities to dodge. Boulder toss is a grey swirl that will stun you (if you live)."}, {"Important", "Ground Shatter is a 9 yard AoE around him that you'll move out of."}}, -- Irontide Crusher
-	[130404] = {{"Important", "Will lay traps around the area. Standing in one roots you and deals very heavy damage"}}, -- Vermin Trapper
-	[129527] = {{"Important", ""}}, -- Bilge Rat Buccaneer
-	[129600] = {{"Important", ""}}, -- Bilge Rat Brinescale
-	[129550] = {{"Important", "Will jump to random players."}, {"Important", "Don't stand 50 yards away so they stay in AoE (looking at you, Hunters)"}, {"HEALER", "Dispel: Plague Step (Disease, small DoT & -healing taken"}}, -- Bilge Rat Padfoot
-	[129548] = {{"Important", "Have a minor AoE slow but otherwise harmless"}}, -- Blacktooth Brute
-	[129529] = {{"Important", "Fixates random allies. The scrapper should be kited or you should pop a major defensive."}, {"DRUID", "Soothe: Blind Rage (yes, you can stop the fixate. Soothe is god.)"},
-				{"HUNTER", "Tranq Shot: Blind Rage (yes, you can stop the fixate.)"}}, -- Blacktooth Scrapper
-	[129547] = {{"Interrupts", "Interrupt(!): Shattering Bellow (AoE damage, spell interrupt)"}, {"Important", "Bellow only has a 30 yard range so it doesn't hurt to stand back if you're a caster."}}, -- Blacktooth Knuckleduster
-	[129599] = {{"Important", "Has a bouncing blade. Stand 8 yards apart to minimize bouncing."}}, -- Cutwater Knife Juggler
-	[129601] = {{"Important", "Will drag random ranged players into him. Consider using a defensive."}, {"Important", "The real danger here is that you get dragged into the Crushers abilities."}}, -- Cutwater Harpooner
-	[129559] = {{"Important", ""}}, -- Cutwater Duelist	
-		
-	[135978] = {{"Important", ""}}, -- Bilge Rat Grog Jerk (Allied - Hands out drinks)
-	[135353] = {{"Important", ""}}, -- Veteran Man O' Warden (World Quest mob)
-	[130090] = {{"Important", ""}}, -- Gukguk "The Motivator" (Allied)
-	
-	-- Path to Sweete
-	[130012] = {{"Interrupts", "Interrupt: Painful Motivation (45% dmg buff)"}, {"Important", "The buff also deals heavy damage to the mobs. The risk is up to you."}}, -- Irontide Ravager
-	[126919] = {{"Interrupts", "Interrupt: Thundering Squall (moderate 12s 10yrd AoE)"}, {"Important", "You can walk out of this but your melee will lose damage."}}, -- Irontide Stormcaller
-	[130011] = {{"Important", "Frontal Cleave (Blade Barrage, tank can dodge after cast start)"}}, -- Irontide Buccaneer
-	[127106] = {{"Important", "Heavy tank damage."}, {"HEALER", "Dispel(!): Oiled Blade (Magic, 75% healing reduction)"}}, -- Irontide Officer
-		
-	-- Bosses
-	[126832] = {{"Important", "Phase 1 (above 75% HP): Just dodge the brown charge swirl."}, {"Interrupts", "Interrupt: Revitalizing Brew (HoT). You can drink it off the floor after you interrupt it."},
-				{"Important", "Spread around the boss. His powder shot deals damage in a big cone in a random players direction."}, 
-				{"Important", "Big bird will swoop through the arena dealing heavy dmg. Watch what direction he's facing."}}, -- Skycap'n Kragg
-	[126845] = {{"Important", "Don't fight all three at once! You need to complete a mini game to remove one from the fight."}, {"Important", "Mini-game rotates weekly. Find the dog, drink with vulperas or beat up the knuckledusters."},
-				{"Important", "Raoul: Throws barrels on allies heads. Destroy them (barrel, not player). Dodge swirls."}, {"Important", "Eudora: Hits random allies, then casts big series of cones across arena."},
-				{"Important", "Jolly: Dodge spinning blades. Watch out for boss charge."}, {"Important", "Honestly this fight has way too many mechanics. Check website soon for more information."}}, -- CoC: Captain Jolly
-	[126847] = {{"Important", "Don't fight all three at once! You need to complete a mini game to remove one from the fight."}, {"Important", "Mini-game rotates weekly. Find the dog, drink with vulperas or beat up the knuckledusters."},
-				{"Important", "Raoul: Throws barrels on allies heads. Destroy them (barrel, not player). Dodge swirls."}, {"Important", "Eudora: Hits random allies, then casts big series of cones across arena."},
-				{"Important", "Jolly: Dodge spinning blades. Watch out for boss charge."}, {"Important", "Honestly this fight has way too many mechanics. Check website soon for more information."}}, -- CoC: Captain Raoul
-	[126848] = {{"Important", "Don't fight all three at once! You need to complete a mini game to remove one from the fight."}, {"Important", "Mini-game rotates weekly. Find the dog, drink with vulperas or beat up the knuckledusters."},
-				{"Important", "Raoul: Throws barrels on allies heads. Destroy them (barrel, not player). Dodge swirls."}, {"Important", "Eudora: Hits random allies, then casts big series of cones across arena."},
-				{"Important", "Jolly: Dodge spinning blades. Watch out for boss charge."}, {"Important", "Honestly this fight has way too many mechanics. Check website soon for more information."}}, -- CoC: Captain Eudora
-	[130099] = {{"Important", "Phase 1 (Pig). You need to click him 5 times as a group."}, {"Important", "Phase 2 (Turtle): Dodge the big shells."}, {"Important", "Phase 3 (Shark Puncher): Move from Sharknado, run from flailing sharks."},
-				{"Important", "You need to run the sharks through the chum to slow them down."}, {"TANK", "Go too close to the side of the arena and spectators will throw fruit. Heavy fruit."}}, -- RoB: Lightning (Pig)
-	[129699] = {{"Important", "Phase 1 (Pig). You need to click him 5 times as a group."}, {"Important", "Phase 2 (Turtle): Dodge the big shells."}, {"Important", "Phase 3 (Shark Puncher): Move from Sharknado, run from flailing sharks."},
-				{"Important", "You need to run the sharks through the chum to slow them down."}, {"TANK", "Go too close to the side of the arena and spectators will throw fruit. Heavy fruit."}}, -- RoB: Ludwig Von Tortollan
-	[126969] = {{"Important", "Phase 1 (Pig). You need to click him 5 times as a group."}, {"Important", "Phase 2 (Turtle): Dodge the big shells."}, {"Important", "Phase 3 (Shark Puncher): Move from Sharknado, run from flailing sharks."},
-				{"Important", "You need to run the sharks through the chum to slow them down."}, {"TANK", "Go too close to the side of the arena and spectators will throw fruit. Heavy fruit."}}, -- RoB: Trothak (Shark Puncher)
-	[126983] = {{"Important", "When marked with Cannon Barrage run from the party. You'll spawn swirls."}, {"Important", "Prioritize the adds that spawn. They'll fixate a player and self-destruct. CC, slow, kill."},
-				{"Important", "Sabers spawn near the boss and fly in the direction they're facing. Stand between them."}, {"Important", "At 30% life he'll take and deal double damage. Save defensive, and offensive cooldowns."}, {"Fluff", "Not good looking."}}, -- Harlan Sweete
-	
-	
-	----- King's Rest -----
-	-- Trash toward Golden Serpent
-	[133935] = {{"Important", "Frontal Cleave ('Suppression Slam', stuns, dodgeable by tank)"}, {"Tank", "MUCH more dangerous with the Released Inhibitors buff (gained a few moments in). Take care."}}, -- Animated Guardian
-	[133943] = {{"Important", "Fixates random players and fears if they touch."}, {"Important", "Purge / Mass Dispel / Arcane Torrent will instantly kill them."}}, -- Minion of Zul
-	[134158] = {{"Important", "Will block all spells from a direction with Vigilant Defense. Attack from behind."}, {"TANK", "Deals very heavy damage with Ancestral Fury. Cooldown if no soothe available."},
-				{"DRUID", "Soothe: Ancestral Fury (+100% dmg)"}, {"HUNTER", "Tranq Shot: Ancestral Fury (+100% dmg)"}}, -- Shadow-Borne Champion
-	[134174] = {{"Interrupts", "Interrupt(!!): Shadowbolt Volley (AoE nuke)"}}, -- Shadow-Borne Witch Doctor
-	[134157] = {{"Important", "Do your best to avoid the tornados. Melee especially."}}, -- Shadow-Borne Warrior
-	
-	-- Trash toward Mchima. The traps.
-	[137474] = {{"Important", "Bladestorm will wreck your life. Dread it. Run from it. Bladestorm arrives all the same."}}, -- King Timalji
-	[137478] = {{"Important", "Will Mind Control a random player. Dispel it. Don't kill them."}}, -- Queen Wasi
-	
-	[134331] = {{"Important", "Channels HEAVY AoE lightning. Move. Quickly."}, {"Important", "If you stopped to read this you're probably already dead."}}, -- King Rahu'ai
-	[137473] = {{"Interrupts", "Stun Interrupt(!): Axe Barrage (Heavy AoE DoT)"}}, -- Guard Captain Atu
-	[134251] = {{"Interrupts", "Interrupt or Purge(!!): Induce Regeneration (big ST heal)"}}, -- Seneschal M'bara
-	
-	[137486] = {{"Important", "Don't stand in the big purple pools. Easy."}}, -- Queen Patlaa
-	[137487] = {{"Important", "Will leap to a random player and then spam cleave. Just move away / behind it."}}, -- Skeletal Hunting Raptor
-	
-	[137484] = {{"Important", "While debuffed you'll poop pools behind you. Don't drop them on friends."}, {"HEALER", "Dispel: Hidden Blade (Poison, causes the green pools)"}}, -- King A'akul
-	[137485] = {{"Important", "Will teleport to the purple swirls and AoE. Just move from them."}}, -- Bloodsword Agent
-	
-	
-	[134739] = {{"Important", "Will spin a beam in a clockwise direction. Follow it around so you don't get hit."}, {"Important", "Don't stand in the fire. You've been practicing for 14 years."}}, -- Purification Construct
-
-	-- Trash toward Council. The walkway.
-	[135204] = {{"Interrupts", "Interrupt(!): Hex (long adorable CC)"}}, -- Spectral Hex Priest
-	[135167] = {{"PriorityTargets", "Priority Target"}, {"Important", "The tank must stay within 10 yards of the mob to soak Severing Blade casts."},
-				{"Important", "The mob will leap to random players. Don't stand too far away, and run when he moves."}, {"HEALER", "These deal HEAVY tank damage. It's Ironbark / Sac / Guardian Spirit time."}}, -- Spectral Beserker
-	[135231] = {{"Important", "Huge, easily dodgeable ground AoE attack. Ranged should keep distance to minimize movement."}}, -- Spectral Brute
-	[135239] = {{"Important", "You must kill the Healing Tide Totem they put down."}}, -- Spectral Witch Doctor
-	[135235] = {{"Important", "If targeted by Poison Barrage you must move out of the party."}, {"Important", "A large cone AoE will be fired in your direction and only you must be hit."},
-				{"Important", "Also has a knockback. Stand close to the edge at your own peril."}}, -- Spectral Beastmaster
-	[135192] = {{"Important", "Wait for it to jump to a target, then run behind it. It's like a cleave."}}, -- Honored Raptor	
-	
-	-- Trash toward Dazar
-	[138489] = {{"Important", "If afflicted with Dark Revelation then run from the group. Deals proximity dmg on expiry."}, {"Important", "On debuff expiry focus fire the add that spawns."},
-				{"Important", "One player stands in each dark pool. You'll soak the damage for the party."}}, -- Shadow of Zul
-	
-	-- Bosses
-	[135322] = {{"Important", "When afflicted with Spit Gold you should run to a corner that your party pre-selects."}, {"Important", "You'll drop a pool when it expires. You want all the pools grouped closely together"},
-				{"Important", "When Lucre's Call is cast all pools will turn into adds which will run to the boss."}, {"Important", "CC them, slow them, kill them. If they reach the boss he'll get an absorb shield and dmg buff."},
-				{"Important", "When the boss is low CC the adds and burn him down."}, {"Important", "Dodge the Serpentine Gust. It's a basic 15yd AoE."}, 
-				{"TANK", "You need to pull the boss away from the gold blobs wherever possible. You're first to die if they reach him."},
-				{"HEALER", "Spit Gold targets will need heavy spot healing."}, {"HEALER", "You have CC of your own. Time to pull out that utility."}}, -- The Golden Serpent
-		[135406] = {{"Important", "When afflicted with Spit Gold you should run to a corner that your party pre-selects."}, {"Important", "You'll drop a pool when it expires. You want all the pools grouped closely together"},
-				{"Important", "When Lucre's Call is cast all pools will turn into adds which will run to the boss."}, {"Important", "CC them, slow them, kill them. If they reach the boss he'll get an absorb shield and dmg buff."},
-				{"Important", "When the boss is low CC the adds and burn him down."}, {"Important", "Dodge the Serpentine Gust. It's a basic 15yd AoE."}, 
-				{"TANK", "You need to pull the boss away from the gold blobs wherever possible. You're first to die if they reach him."},
-				{"HEALER", "Spit Gold targets will need heavy spot healing."}, {"HEALER", "You have CC of your own. Time to pull out that utility."}}, -- The Golden Serpent (Animated Gold)
-				
-	[134993] = {{"Important", "Mchimba here is going to shut one of you in a crypt. Spam action button to shake your coffin."}, {"Important", "The rest of the party finds the wiggling sarcophagus and lets them out"},
-				{"Important", "Opening the wrong one spawns a mummy. Interrupt its Wretched Discharge or pay the price."}, {"Important", "There's also plenty of fire around the room to dodge."},
-				{"HEALER", "Debuff: Drain Fluids / Dessication. Spam heal the player to above 90% life."}}, -- Mchimba
-	[135470] = {{"Important", "Council. Order you fight them in changes week to week. When you kill one they'll cast as spirits."}, {"Important", "Aka'ali: Barrel Through. targeted on player. Rest of party stands between them and boss to soak."},
-				{"Important", "Kula: Dodge the spinning axes"}, {"Important", "Zanazal(!!!): Kill the Explosive Totem immediately. Party wipe if cast goes off."}, {"Important", "Totem kill order is otherwise Explosive > Thundering > Torrent > Earthwall"},
-				{"TANK", "Aka'ali: Run away from boss after Debilitating Backhand knockback. You take triple dmg during debuff."}, {"HEALER", "Kula: Spot heal the Severing Axe debuff."}}, -- Council of Tribes (Aka'ali the Conqueror)
-	[135475] = {{"Important", "Council. Order you fight them in changes week to week. When you kill one they'll cast as spirits."}, {"Important", "Aka'ali: Barrel Through. targeted on player. Rest of party stands between them and boss to soak."},
-				{"Important", "Kula: Dodge the spinning axes"}, {"Important", "Zanazal(!!!): Kill the Explosive Totem immediately. Party wipe if cast goes off."}, {"Important", "Totem kill order is otherwise Explosive > Thundering > Torrent > Earthwall"},
-				{"TANK", "Aka'ali: Run away from boss after Debilitating Backhand knockback. You take triple dmg during debuff."}, {"HEALER", "Kula: Spot heal the Severing Axe debuff."}}, -- Council of Tribes (Kula the Butcher)
-	[135472] = {{"Important", "Council. Order you fight them in changes week to week. When you kill one they'll cast as spirits."}, {"Important", "Aka'ali: Barrel Through. targeted on player. Rest of party stands between them and boss to soak."},
-				{"Important", "Kula: Dodge the spinning axes"}, {"Important", "Zanazal(!!!): Kill the Explosive Totem immediately. Party wipe if cast goes off."}, {"Important", "Totem kill order is otherwise Explosive > Thundering > Torrent > Earthwall"},
-				{"TANK", "Aka'ali: Run away from boss after Debilitating Backhand knockback. You take triple dmg during debuff."}, {"HEALER", "Kula: Spot heal the Severing Axe debuff."}}, -- Council of Tribes (Zanazal the Wise)
-	[136160] = {{"Important", "Busy boss, but most of it isn't threatening."}, {"Important", "Dodge tornados, move away from the raptor after it leaps. Kill Reban quickly when he spawns."},
-				{"Important", "Will cast an uninterruptable fear while riding T'zala. Again, not that dangerous."}, {"Important", "At 40% you'll have to dodge patterns of brown spear swirls. Focus on your movement instead of DPS."}}, -- Dazar, The First King
-		
-	
-	----- Siege of Boralus -----
-	-- Siege has multiple IDs for a lot of mobs. I'm theorising that they change after your first clear (with the first being tied heavily into the questline) but that needs more testing.
-	-- Until then this section is a mess of duplicates. Horde / Alliance also see different mobs leading up to the first boss. Same mechanics, different names / IDs. So there's that too.
-	
-	-- Path to the Horde / Alliance boss
-	[141283] = {{"Important", "Look. This isn't related to the mob, but don't swim in the water. A shark will eat you."}, {"Important", "Frontal Cleave ('Slobber Knocker', tank can dodge)"}}, -- Kul Tiran Halberd
-	[141565] = {{"PriorityTargets", "Priority Target"}, {"Important", "Mostly just wreck your tank including a -haste debuff."}}, -- Kul Tiran Footman
-	[141284] = {{"Interrupts", "Interrupt or Purge(!!!): Watertight Shell (90% AoE DR, AoE damage on expiration)"}}, -- Kul Tiran Wavetender
-	[132532] = {{"Important", "Throws fire at random players. Mostly harmless."}}, -- Kul Tiran Marksman
-	[132481] = {{"Important", "Frontal Cleave ('Heavy Slash', stuns, tank can dodge)"}}, -- Kul Tiran Vanguard
-	[133990] = {{"Important", "Completely harmless. Your healer could 1 v 1 it."}}, -- Scrimshaw Gutter
-	[138002] = {{"Important", "Completely harmless. Your healer could 1 v 1 it."}}, -- Scrimshaw Gutter (2nd ID)
-	[129374] = {{"Important", "No notable mechanics."}}, -- Scrimshaw Enforcer
-	[143934] = {{"Important", "Dangerous. Don't punch."}}, -- Bloodcrazed Shark
-	
-	-- Path to Lockwood
-	[144071] = {{"Interrupts", "Interrupt or Purge(!!!): Watertight Shell (90% AoE DR, AoE damage on expiration)"}}, -- Irontide Waveshaper (wavetender dup)
-	[129370] = {{"Interrupts", "Interrupt or Purge(!!!): Watertight Shell (90% AoE DR, AoE damage on expiration)"}}, -- Irontide Waveshaper (wavetender dup, 2nd ID)
-	[138254] = {{"Important", "Throws fire at random players. Mostly harmless."}}, -- Irontide Powdershot (marksman dup)
-	[137521] = {{"Important", "Throws fire at random players. Mostly harmless."}}, -- Irontide Powdershot (marksman dup, 2nd ID)
-	[129373] = {{"Important", "Will charge random players. Spread out."}}, -- Dockhound Packmaster
-	[129640] = {{"PriorityTargets", "Priority Target"}, {"Important", "The hound and packmaster get +125% dmg while together so kill the dog quickly."}}, -- Snarling Dockhound
-	[129371] = {{"Important", "Watch for the swirl he'll mark on the ground. He's apparently a stealthy little shit."}, {"Important", "Frontal Cleave ('Singing Steel', tank can dodge)"}}, -- Riptide Shredder
-	[129369] = {{"Important", "Has an AoE attack called Savage Tempest. Step away from the mob at that time."}, {"Important", "Will hook random players and there's nothing you can do about it."}}, -- Irontide Raider
-	[129372] = {{"Important", "Spread 5 yards and dodge any Burning Tar patches."}}, -- Blacktar Bomber
-	[138247] = {{"PriorityTargets", "Stacks a curse on the tank. Dispel it, or focus this mob first."}}, -- Irontide Marauder
-	[128969] = {{"Important", "Will focus a random player and charge toward them. All players must dodge this."}, {"Important", "Once fixated he won't follow the player, so even they can avoid it."},
-				{"Important", "Will cast Bolstering Shout (DR buff to nearby allies). Try and tank him away from the others where possible."}}, -- Ashvane Commander
-	[138255] = {{"Important", "Keep her rooted or slowed to stop her leaping around the room."}, {"Important", "A player will get a Sighted Artillery debuff. Their location is hit with missiles every 1.5s"},
-				{"Important", "These missiles also damage trash. Use wisely and don't die."}}, -- Ashvane Spotter
-	[138464] = {{"Important", "Frontal Cleave ('Crimson Swipe')"}}, -- Ashvane Deckhand
-	[135258] = {{"Important", "Completely harmless. Your grandma could 1 v 1 it."}}, -- Irontide Marauder
-	
-	-- Path to Darkfathom
-	[129366] = {{"Important", "D-don't walk into the bananas."}}, -- Bilge Rat Buccaneer
-	[135241] = {{"Important", "Frontal Cleave ('Viscous Slobber', tank can't dodge)"}}, -- Bilge Rat Pillager
-	[135245] = {{"Important", "Frontal Cleave ('Crushing Slam', stuns, tank CAN dodge)"}, {"Important", "Terrifying Roar is a 30yd AoE Fear. Ranged players should stand at max distance."}}, -- Bilge Rat Demolisher
-	[129367] = {{"Interrupts", "Interrupt(!): Revitalizing Mist (Big ST heal)"}, {"Interrupts", "Interrupt or Dispel(!): Choking Waters (DoT, silence)"}}, -- Bilge Rat Tempest
-	[137511] = {{"Important", "Moderate tank threat. Stacks -healing debuff."}, {"HEALER", "Dispel: Rotting Wounds (Disease, -healing, stacks)"}}, -- Bilge Rat Cutthroat
-	
-	
-	-- Bosses
-	[144158] = {{"Important", "Focus all adds over the boss until he's low."}, {"Important", "Boss will fixate a ranged player who must kite. He'll hit you with iron pipe if he catches you."},
-				{"Important", "Kite the boss into the munitions to stun him."}, {"Important", "Will re-fixate every 20 seconds. He does speed up so if you're going to get hit then pop defensive CD."},
-				{"DRUID", "BEAR FORM THE IRON PIPE. Or... just run."}}, -- Sergeant Bainbridge (Horde version of the boss)
-	[128649] = {{"Important", "Focus all adds over the boss until he's low."}, {"Important", "Boss will fixate a ranged player who must kite. He'll hit you with iron pipe if he catches you."},
-				{"Important", "Kite the boss into the munitions to stun him."}, {"Important", "Will re-fixate every 20 seconds. He does speed up so if you're going to get hit then pop defensive CD."},
-				{"DRUID", "BEAR FORM THE IRON PIPE. Or... just run."}}, -- Sergeant Bainbridge (Horde version of the boss)
-				
-	[144160] = {{"Important", "Focus all adds over the boss until he's low."}, {"Important", "Boss will fixate a ranged player who must kite. He'll hit you with iron pipe if he catches you."},
-				{"Important", "Kite the boss into the munitions to stun him."}, {"Important", "Will re-fixate every 20 seconds. He does speed up so if you're going to get hit then pop defensive CD."},
-				{"DRUID", "BEAR FORM THE IRON PIPE. Or... just run."}}, -- Chopper Redhook (Alliance version of the boss)
-	[128650] = {{"Important", "Focus all adds over the boss until he's low."}, {"Important", "Boss will fixate a ranged player who must kite. He'll hit you with iron pipe if he catches you."},
-				{"Important", "Kite the boss into the munitions to stun him."}, {"Important", "Will re-fixate every 20 seconds. He does speed up so if you're going to get hit then pop defensive CD."},
-				{"DRUID", "BEAR FORM THE IRON PIPE. Or... just run."}}, -- Chopper Redhook (Alliance version of the boss, second ID for some reason)
-				
-	[129208] = {{"Important", "Keep her rooted or slowed to prevent her running and Gut Shotting people."}, {"Important", "When boss reaches full energy she'll return to her ship and start firing in patterns."},
-				{"Important", "AoE the adds down until a cannoneer drops an ordnance to fire back at the boss."}, {"Important", "This causes her to re-engage and the fight repeats."},
-				{"Important", "Frontal Cleave (Deckhands & boss)"}}, -- Dread Captain Lockwood
-				
-	[128651] = {{"Important", "Will shoot damaging pools in a straight line in front of him. Don't stand in them."}, {"Important", "You'll want to tank him near a corner to minimize space taken up by pools."},
-				{"Important", "He'll also target random allies with Break Water which leave identical pools. Watch your position."}, {"Important", "Hide behind the statue during the massive wave. It won't hurt you there."}}, -- Hadal Darkfathom
-	[130086] = {{"Important", "Will shoot damaging pools in a straight line in front of him. Don't stand in them."}, {"Important", "You'll want to tank him near a corner to minimize space taken up by pools."},
-			{"Important", "He'll also target random allies with Break Water which leave identical pools. Watch your position."}, {"Important", "Hide behind the statue during the massive wave. It won't hurt you there."}}, -- Hadal Darkfathom
-
-	
-	[128652] = {{"PriorityTargets", "Target order: Demolishing Terror > Gripping Terror. Target swap whenever a new Demo spawns."}, {"Important", "Demolishers need to be tanked quickly or they'll deal crushing AoE damage to the party."},
-				{"Important", "Killing Gripping Terrors will reactive the cannon. Use it to damage the boss."}, {"Important", "After firing cannon move left to the next one. There are three total. The water hurts. Don't swim."},
-				{"HEALER", "The cannons line of sight healing. Zzzzzzzzzzzzzz."}, {"HEALER", "Dispel Putrid Waters on cooldown or the 30s debuff will overwhelm you."}}, -- Viq'Goth
-		[137614] = {{"PriorityTargets", "Target order: Demolishing Terror > Gripping Terror. Target swap whenever a new Demo spawns."}, {"Important", "Demolishers need to be tanked quickly or they'll deal crushing AoE damage to the party."},
-				{"Important", "Killing Gripping Terrors will reactive the cannon. Use it to damage the boss."}, {"Important", "After firing cannon move left to the next one. There are three total. The water hurts. Don't swim."},
-				{"HEALER", "The cannons line of sight healing. Zzzzzzzzzzzzzz."}, {"HEALER", "Dispel Putrid Waters on cooldown or the 30s debuff will overwhelm you."}}, -- Viq'Goth (Demolishing Terror)
-		[137405] = {{"PriorityTargets", "Target order: Demolishing Terror > Gripping Terror. Target swap whenever a new Demo spawns."}, {"Important", "Demolishers need to be tanked quickly or they'll deal crushing AoE damage to the party."},
-				{"Important", "Killing Gripping Terrors will reactive the cannon. Use it to damage the boss."}, {"Important", "After firing cannon move left to the next one. There are three total. The water hurts. Don't swim."},
-				{"HEALER", "The cannons line of sight healing. Zzzzzzzzzzzzzz."}, {"HEALER", "Dispel Putrid Waters on cooldown or the 30s debuff will overwhelm you."}}, -- Viq'Goth (Gripping Terror)
-	
-	
-	
-	----- Temple of Sethraliss -----
-	-- Path to Twin Snakes
-	[134600] = {{"Important", "Will cast a slow Power Shot at a player. Hits in a line and all players should avoid when cast starts."}, {"Important", "No threat table. Attacks random players."},
-				{"Important", "Don't move with Neurotoxin unless in the way of Power Shot. It'll sleep you."}}, -- Sandswept Marksman
-	[134900] = {{"Interrupts", "Interrupt(!): Healing Surge (moderate heal)"}, {"Interrupts", "Will also lightning bolt random players but this is low priority."}}, -- Charged Dustdevil
-	[134991] = {{"Important", "Has a 30yd mini-interrupt. Casters must stand further away."}}, -- Sandfury Stonefist
-	[134616] = {{"Important", "These interrupt random players. I hate to say this, but you're going to have to kill some puppies."}}, -- Krolusk Pup
-	[134602] = {{"Important", "Will blade flurry the tank. Tank can take it but nearby melee should stay 5yds away."}}, -- Shrouded Fang (stealthed)
-	[134990] = {{"Interrupts", "Interrupt(!!): Healing Surge (Large ST Heal)"}}, -- Charged Dust Devil
-	
-	-- Path to Merektha
-	[134629] = {{"Important", "Frontal Cleave (Noxious Breath, DoT, tank can dodge after cast start)"}, {"Important", "They also have a SECOND frontal cleave so definitely face away"},
-				{"Important", "When Electrified Scales is up you'll take reflect damage. Don't stop DPS, just watch health."}}, -- Scaled Krolusk Rider
-	[135562] = {{"HEALER", "Dispel: Cytotoxin (Poison, Stacking DoT, dispel on 2+)"}}, -- Venomous Ophidian
-	[135846] = {{"PriorityTargets", "Priority Target"}, {"Important", "Drag mobs out of the sandcloud they drop. It causes everything to miss."}}, -- Sand-Crusted Striker
-	[134686] = {{"Important", "Frontal Cleave (Scouring Sand, large area)"}, {"Important", "Frontal Cleave (Noxious Breath, DoT, tank can dodge after cast start)"}}, -- Mature Krolusk
-	[139422] = {{"Important", "Frontal Cleave"}, {"Important", "When Electrified Scales is up you'll take reflect damage. Don't stop DPS, just watch health."}}, -- Scaled Krolusk Tamer
-	[139425] = {{"Important", "Move out of the lightning circles on the ground"}, {"Important", "Will self destruct when low. Kill quickly or move away from it."},
-				{"Interrupts", "Interrupt(!!): Stoneshield Potion (90% damage reduction)"}}, -- Crazed Incubator
-	[134364] = {{"Important", "Healer mob. Don't pull too many at once or you'll spend half your timer here."}, {"Interrupts", "Stun Interrupt: Drain (big heal, dmg buff)"}, 
-				{"Interrupts", "Interrupt: Greater Healing Potion (Big heal)"},
-				{"HEALER", "Dispel: Venomous Spit (Poison, DoT, Stacks)"}}, -- Faithless Tender
-	[134390] = {{"PriorityTargets", "Priority Target"}, {"Important", "Drag mobs out of the sandcloud they drop. It causes everything to miss."}}, -- Sand-crusted Striker
-	
-	-- Path to Galvazzt
-	[136076] = {{"Interrupts", "Interrupt or Purge(!!): Accumulate Charge (damage buff)"}, {"Important", "Will deal heavy AoE damage based on number of charges."}}, -- Agitated Nimbus
-	[134599] = {{"Important", "Don't stand in the swirls."}, {"Important", "Will Shock random players for medium damage. Save your kicks for the Nimbus."}}, -- Imbued Stormcaller
-	[134691] = {{"Important", "Will deal persistent AoE to random allies. Not overly dangerous."}}, -- Static Charged Dervish
-	
-	-- Path to Avatar
-	[139110] = {{"Important", "Engaging him will stop sparks on the bridge so your... less-mobile allies can make it across."}, {"Important", "Dodge the blue swirls."},
-				{"Interrupts", "Interrupt: Shock (damage burst on random ally)"}}, -- Spark Channeler
-	[135971] = {{"Important", "Exist only to whack the orb carrier. AoE them down, keep as much threat as you can."}, {"Important", "Respawn after a minute or so."}}, -- Faithless Conscript
-	[135007] = {{"PriorityTargets", "Priority Target"}, {"Important", "You need to pick up orbs from each side of the room and move them to the big skull door."},
-				{"Important", "You can throw the orbs between players with the extra action button and should do so"}, {"Important", "Getting hit by a mob will cause you to drop it and be unable to pick it back up for a bit."},
-				{"Important", "This mob will steal the orb back. CC them and focus them down."}, {"Important", "Respawn after a minute or so."}}, -- Orb Guardian
-	[136250] = {{"HEALER", "Dispel: Flame Shock (Magic, moderate DoT)"}}, -- Hoodoo Hexer (also involved in boss fight)
-	[139949] = {{"Interrupts", "Interrupt: Chain Lightning (AoE dmg)"}, {"HEALER", "Dispel(!!): Snake Charm (Magic, long CC)"}}, -- Plague Doctor
-	[139946] = {{"PriorityTargets", "Priority Target"}, {"Important", "Stacks a damage taken increase on the tank. Kite if low DPS."}}, -- Heart Guardian
-	
-	-- Bosses
-	[133944] = {{"Important", "DON'T ATTACK THE ONE WITH LIGHTNING SHIELD"}, {"Important", "Lightly spread around the room to minimize movement"}, {"Important", "Run out: Conduction debuff (8 yard AoE on expiry)"}, 
-				{"Important", "If you have 0-1 melee then have a ranged stay within 15yds to split Arcing Blade"},
-				{"Defensives", "Defensive: Static Shock (2s cast, used when Aspix at 100 energy)"}}, -- A&A: Aspix
-	[133379] = {{"Important", "DON'T ATTACK THE ONE WITH LIGHTNING SHIELD"}, {"Important", "Lightly spread around the room to minimize movement"}, {"Important", "Run out: Conduction debuff (8 yard AoE on expiry)"}, 
-				{"Important", "If you have 0-1 melee then have a ranged stay within 15yds to split Arcing Blade"},
-				{"Defensives", "Defensive: Static Shock (2s cast, used when Aspix at 100 energy)"}}, -- A&A: Adderis
-	[133384] = {{"Important", "LOOK AWAY DURING BLINDING SAND. AHHHHH."}, {"Important", "You can break allies from snakes with stun / incap. Otherwise DPS them out."}, 
-				{"Important", "Boss only burrows twice. Even on tyrannical +30."},
-				{"Important", "During Boss burrow: DPS the adds and watch out for her dashes across the arena."},
-				{"HEALER", "Dispel: Cytotoxin (Posion, heavy DoT)"}}, -- Merektha
-	[133389] = {{"Important", "You need to intercept beams so they don't hit boss or he'll gain energy"}, {"Important", "Beams debuff you and deal more damage over time. Take full beam, then switch for next set"},
-				{"Defensives", "Defensive: Consume Charge (at 100 energy, heavy AoE)"}, {"HEALER", "Damage gets worse longer the fight lasts. Channel healing into beam soakers"},
-				{"HEALER", "Healing CD: Consume Charge. Cast as boss nears 100 energy since party likely isn't topped"}}, -- Galvazzt
-	[133392] = {{"Important", "Kill Order: Heart Guardian > Toads > Plague Doctor > Hoodoo Hexer"}, {"Important", "Toads must be kept off your healer. They can be CC'd to buy time"},
-				{"HEALER", "After hexers die you can heal boss in increments of 10->40, 40->70, 70-100% health"}, {"HEALER", "You have as MUCH TIME AS YOU NEED. New hexers won't spawn until you heal him 30%."},
-				{"HEALER", "That means don't burn all of your mana rushing it. Save your cooldowns for the rest of the fight"}}, -- Avatar of Sethraliss (Friendly)
-	
-	
-	----- Motherlode!! -----
-	-- Path to the... coin dude
-	[130436] = {{"Important", "Will wang random allies with wrenches. Just heal through it."}}, -- Off-Duty Laborer
-	[136470] = {{"PriorityTargets", "Priority Target"}, {"Interrupts", "Interrupt(!): Iced Spritzer (DoT, stun if full channel)"},
-				{"Interrupts", "Interrupt(!): Kaja'Cola Refresher (HoT)"}, {"HEALER", "You can dispel the Brain Freeze stun if nobody interrupts."}}, -- Refreshment Vendor
-	[136006] = {{"Important", "Harmless."}}, -- Rowdy Reveler
-	[130488] = {{"Important", "Must be CC'd if they try and run to a mech or they'll get inside."}, {"Important", "Dodge the red swirls to avoid knockback"}}, -- Mech Jockey
-	[136139] = {{"Important", "Energy Shield blocks attacks from one direction. Just move around it."}, {"Important", "Watch out for the Tear Gas clouds. They disorient."}}, -- Mechanized Peacekeeper
-	[134232] = {{"Interrupts", "Interrupt(!): Toxic Blades (causes DoT on all attacks)"}, {"Important", "Stun / CC Interrupt(!): Hail of Flechettes (heavy AoE)"},
-				{"Important", "The Flechettes have a huge radius so outranging isn't really an option."}}, -- Hired Assassin
-	[130435] = {{"Important", "Will charge random allies and stun them. Rude."}, {"Interrupts", "Interrupt: Inhale Vapors (+50% phys dmg)"}, {"DRUID", "Soothe: Inhale Vapors"},
-				{"HUNTER", "Tranq Shot: Inhale Vapors"}}, -- Addled Thug
-	
-	-- Path to the... rock dude
-	[130653] = {{"Important", "When sappers get low they'll cast Final Blast. Kill or CC them to prevent the cast or move away from it."},
-				{"Important", "The big red swirls hurt. You have five seconds to move from them."}}, -- Wanton Sapper
-	[130437] = {{"Important", "Pelt random allies with rocks. Annoying but not dangerous."}}, -- Mine Rat
-	[130661] = {{"Interrupts", "Interrupt or Purge(!): Earth Shield (DR + healing when hit)"}}, -- Venture Co. Earthshaper
-	[136643] = {{"Important", "Frontal Cleave (Power through)"}}, -- Azerite Extractor
-	[136688] = {{"Important", "Moderate tank damage."}}, -- Fanatical Driller
-	[130635] = {{"Interrupts", "Interrupt(!!): Furious Quake (Heavy AoE)"}, {"Interrupts", "Interrupt or Purge(!): Tectonic Barrier (DR + interrupt immunity)"}}, -- Stonefury
-	[134005] = {{"Important", "Mostly harmless."}}, -- Shalebiter
-	[134012] = {{"Important", "During the Cower cast just drag away nearby trash. It's a big DR shield."}, {"Important", "Will deal heavy tank damage when below 20% HP."},
-				{"Important", "Kill the Sappers first. This guy isn't too dangerous."}}, -- Taskmaster Askari
-	
-	-- Path to the boss whose name I can't remember because she dies so quickly
-	[133345] = {{"Interrupts", "Interrupt(!!): Transfiguration Serum"}, {"Interrupts", "Interrupt: Blowtorch (frontal cone AoE)"}}, -- Feckless Assistant
-	[136934] = {{"Important", "This mob is awful. During Force Cannon you need to rotate around him. Randomly targeted."}, {"Important", "Frontal Cleave (Echo Blade, tank can't dodge, silences)"},
-				{"HEALER", "You can dispel the Echo Blade silence debuff that hopefully only the tank got."}}, -- Weapons Tester
-	[133432] = {{"Interrupts", "Interrupt or Dispel: Transmute Enemy to Goo (10s Polymorph)"}}, -- Venture Co. Alchemist
-	[133430] = {{"PriorityTargets", "Priority Target"}, {"Important", "Watch out for the purple orbs. They heal the mob."}, {"Important", "Purge: Azerite Injection (heal, +dmg)"}, 
-				{"HEALER", "Energy Lash targets need heavy spot healing."}}, -- Venture Co. Mastermind
-	[133963] = {{"Important", "Mostly harmless but do get stronger over time so clear them quickly."}}, -- Test Subject
-	
-	-- The part you probably want to invis potion
-	[133482] = {{"Important", "These will fixate a player and explode. Kill them quickly or kite them."}}, -- Crawler Mine
-	[137029] = {{"Interrupts", "Interrupt: Artillery Barrage (conjures 100 red swirls to dodge)."}}, -- Ordnance Specialist
-	[133436] = {{"Important", "Will fixate a target with a red laser. It can be intercepted by standing in it when shot fires."}, {"Important", "The shot does give you a -healing debuff, so take care if the tank soaks it."}}, -- Venture Co. Skyscorcher
-	[133463] = {{"Important", "Will rock the tank with Charged Shot. They'll need a defensive."}}, -- Venture Co. War Machine
-	[133593] = {{"Interrupts", "Stun Interrupt(!): Repair (heal on the war machine)"}, {"Interrupts", "Interrupt: Overcharge (haste buff on war machine)"}}, -- Expert Tactician
-	
-	-- Bosses
-	[129214] = {{"Important", "Let's play football. The boss will throw balls around the arena."}, {"Important", "You have to click them to kick them toward the boss. You have to aim them."},
-				{"Important", "Any that aren't kicked into the boss will explode for big AoE damage."}, {"Important", "Frontal Cleave (Shocking Claw, tank dodgeable after cast starts)"},
-				{"TANK", "Try and move the boss away from the coin piles. He'll suck them in for a damage bonus."}}, -- Coin-Operated Crowd Pummeler
-	[129227] = {{"Important", "The adds will fixate random targets. They must be kited and killed very quickly."}, {"Important", "Frontal Cleave (Tectonic Smash, tank can dodge after cast start)."},
-				{"Important", "Boss will sometimes empower an add, it'll deal and take more damage. Nuke it."}, {"Important", "When the boss casts Resonant Pulse all alive adds must be CC'd."},
-				{"HEALER", "Almost all of the damage is in the first minute. Pop your cooldowns immediately."}}, -- Azerokk
-	[129231] = {{"Important", "You can use Propellant Blast to push the azerite pools off the platform."}, {"Important", "Other than that, don't stand in pools and this is very easy."},
-				{"HEALER", "Dispel: Chemical Burn (DoT)"}}, -- Rixxa Fluxflame
-	[129232] = {{"Important", "Homing Missle will target ranged players. Run it from the group."}, {"Important", "Two boomba adds will fly around the arena. They'll fire red swirlies across 3/4 of the platform."},
-				{"Important", "You can avoid them by looking up at standing in the quarter they're not facing."}, {"Important", "In P2 all players must stand near the brown rockets (look like closets)"},
-				{"Important", "Random player will be targeted and resulting Drill Smash will break the rockets."}, {"Important", "Break them all and boss will return to platform."},
-				{"HEALER", "Phase 1 is damage light, phase 2 quite heavy. Save your cooldowns."}}, -- Mogul Razdunk
-	
-	
-	----- The Underrot -----
-	-- Path to Elder Leaxa
-	[131402] = {{"Important", "Look small but are vicious."}, {"Important", "Stacks HEAVY DoT on the tank and explodes on death."}, 
-				{"Important", "Pull as few of these as possible and stagger your kills so your healer can recover."}}, -- Underrot Tick
-	[130909] = {{"Important", "Frontal breath in a random allies direction."}, {"Important", "Wait until the cast starts, then make sure you're nowhere near the front of the mob."}}, -- Fetid Maggot
-	[131436] = {{"PriorityTargets", "Priority Target"}, {"Important", "Frontal Cleave (Savage Cleave, heavy damage + DoT)"}, {"Important", "Warcry heavily buffs all nearby enemies. It can be soothed / tranq shotted."}, 
-				{"Important", "Try and go down whichever path has fewer Blood Matrons"}}, -- Chosen Blood Matron
-	[133663] = {{"Important", "Will pelt random allies. Hooked Snare is a DoT. Consider defensives here."}}, -- Fanatical Headhunter
-	[131492] = {{"Interrupts", "Interrupt(!!): Dark Reconstitution (big heal)"}, {"Interrupts", "Interrupt or Purge(!): Gift of G'huun (+100% damage, unkillable)"}}, -- Devout Blood Priest
-	[133685] = {{"Interrupts", "Interrupt(!!!): Harrowing Despair (BIG AoE)"}, {"Important", "Will also channel on random players. Spread a little so you don't share the damage"}, 
-				{"HEALER", "Dark Omen should be on you bars and they'll need some decent healing."}}, -- Befouled Spirit
-	
-	-- The Crag
-	[133835] = {{"Important", "Will fixate a random player. Kite, CC, don't get hit."}, {"Interrupts", "Interrupt: Sonic Screech (AoE damage, interrupts spells)"}}, -- Feral Bloodswarmer
-	[133870] = {{"Interrupts", "Interrupt(!!): Decaying Mind (Long CC)"}, {"Important", "If a Decaying Mind goes off it can be cleansed by healing through the healing absorb."},
-				{"Important", "It can also be cleansed (disease)"}, {"Important", "If it was targeted on the healer you are likely to wipe. Interrupt it."}}, -- Diseased Lasher
-	[133852] = {{"Important", "Drop green pools around them. Can interrupt but low priority."}}, -- Living Rot
-	
-	-- Path to Sporecaller Zancha
-	[133836] = {{"Important", "Will cast Bone Shield, a big absorb on themselves. Try and AoE CC them and burn."}}, -- Reanimated Guardian
-	[138338] = {{"Important", "Will cast Bone Shield, a big absorb on themselves. Try and AoE CC them and burn."}}, -- Reanimated Guardian (second ID)
-	[138187] = {{"Interrupts", "Interrupt(!!): Death Bolt (AoE dmg + DoT)"}, {"Important", "You really need to interrupt every Death Bolt here."}}, -- Grotesque Horror
-	[134284] = {{"Interrupts", "Interrupt: Raise Dead (summons a Guardian)"}, {"Interrupts", "Interrupt or Soothe: Wicked Frenzy (+100% haste)"}}, -- Fallen Deathspeaker
-	[133912] = {{"Interrupts", "Interrupt(!!): Withering Curse (+dmg taken, -dmg done)"}, {"Interrupts", "Interrupt(!): Shadowbolt Volley (Medium AoE)"},
-				{"Important", "Summons a totem that MUST be killed or run away from within 6 seconds (6yd AoE)."}}, -- Bloodsworn Defiler
-	
-	-- Path to the Abomination
-	[138281] = {{"Important", "Dodge: Maddening Gaze (Long fear, targeted in random players direction)"}, {"Important", "Move away from tentacles when they spawn. They're easy to dodge."}}, -- Faceless Corruptor
-	
-	
-	-- Bosses
-	[131318] = {{"Important", "When Leaxa or an add casts Sanguine Feast you must walk away from them"}, {"Important", "Dodge: Creeping Rot (moving ground effect that leaves from boss)"}, 
-				{"PriorityTargets", "Priority Target: Blood Effigy"}, {"Interrupts", "Interrupt: Blood Bolt (where possible, ST nuke)"}, 
-				{"HEALER", "All boss abilities inflict stacking DoT / healing absorb on target."}}, -- Elder Leaxa
-	[131817] = {{"Important", "Larva spawn when boss uses abilities. Stand on them to squish."}, {"Important", "Larva grow into adds if not stood on within 8 seconds"},
-				{"Important", "Dodge: Charge (Cast on random target, BIG damage)"}, {"HEALER", "Healing CD: Tantrum (big AoE damage, cast at 100 energy)"}}, -- Cragmaw the Infested
-	[131383] = {{"Important", "Every mushroom that explodes leaves a stacking DoT. Avoid taking more than 2 stacks."}, {"Important", "Targeted by Upheaval: stand next to a group of mushrooms then run out of the swirl"}, 
-				{"Important", "Run into lone mushrooms to detonate them"}, {"Important", "Boss will explode all mushrooms every ~50s. You must clear all mushrooms beforehand"},
-				{"TANK", "Frontal Cleave: It also destroys mushrooms"}, {"HEALER", "Consider saving healing CDs for Boundless Rot since it's big dmg if mushrooms are alive"},
-				{"ROGUE", "Immunity: the mushroom debuff. Run into as many as possible"}}, -- Sporecaller Zancha
-	[133007] = {{"Important", "Boss gains energy instead of taking damage. At 100 he releases adds."}, {"Important", "Dodge: Floating Spores, Vile Expulsion (Cone targeted at player)"},
-				{"Important", "Yellow circle around you? Party stacks in it. Clears your debuffs"}, {"PriorityTargets", "Priority Target: Blood Visage > Boss. Killing Blood Visages damages boss."},
-				{"Important", "Spores can be one-shot. Clear any that are getting close."},
-				{"HEALER", "Stacking dispellable DoT on entire party. Yellow circle clears it. Dispel newbies that miss circle."}}, -- Unbound Abomination
-		[137103] = {{"Important", "Boss gains energy instead of taking damage. At 100 he releases adds."}, {"Important", "Dodge: Floating Spores, Vile Expulsion (Cone targeted at player)"},
-				{"Important", "Yellow circle around you? Party stacks in it. Clears your debuffs"}, {"PriorityTargets", "Priority Target: Blood Visage > Boss. Killing Blood Visages damages boss."},
-				{"Important", "Spores can be one-shot. Clear any that are getting close."},
-				{"HEALER", "Stacking dispellable DoT on entire party. Yellow circle clears it. Dispel newbies that miss circle."}}, -- Unbound Abomination (Blood Visage)
-	
-	
-	
-	
-	----- Tol Dagor -----
-	-- Outside
-	[127480] = {{"Important", "Stack a light DoT on the party. Just AoE them down."}}, -- Stinging Parasite
-	[127381] = {{"Important", "Will squeeze random players for moderate dmg. Don't pull too many at once."}, {"HEALER", "Make sure you can see the Squeeze debuff on your party frames."},
-				{"DRUID", "You can shapeshift out of Squeeze. Nice."}}, -- Silt Crab
-	
-	
-	-- Sewer / Lower Prison
-	[127482] = {{"Important", "Will lower the max health of the tank. Don't pull too many at once."}}, -- Sewer Vicejaw
-	[130025] = {{"Interrupts", "Interrupt(!!): Debilitating Shout (AoE dmg + dmg dealt reduction"}}, -- Irontide Thug
-	[131112] = {{"Important", "Low priority mob. Harmless."}}, -- Cutwater Striker
-	[135366] = {{"Important", "Prominent torch chucker. Will give your healer something to dispel but not otherwise dangerous."}, {"HEALER", "Dispel: Torch Strike (Magic, DoT, stacking, dispel at 2+)"}}, -- Blacktooth Arsonist
-	[127485] = {{"Important", "Moderate tank damage."}, {"Important", "You can AoE purge (Mass dispel, Arcane Torrent) their Darkstep buff."}}, -- Bilge Rat Looter
-	[130582] = {{"Important", ""}}, -- Despondent Scallywag (Neutral)
-	[130026] = {{"Interrupts", "Interrupt(!!): Watery Dome (AoE damage reduction)"}}, -- Bilge Rat Seaspeaker
-	[135254] = {{"Important", "Harmless."}}, -- Irontide Raider
-	[131445] = {{"Important", ""}}, -- Block Warden
-	
-	-- Upper Prison
-	[135699] = {{"Interrupts", "Stun / CC Interrupt: Riot Shield (dmg reduction, spell reflect)"}, {"Important", "Will REFLECT spells during Riot Shield. Ow."}}, -- Ashvane Jailer
-	[127486] = {{"Interrupts", "Interrupt(!): Handcuff (Silence, pacify, DoT)"}, {"Interrupts", "Stun / CC Interrupt: Riot Shield (dmg reduction, spell reflect)"}}, -- Ashvane Officer
-	[127488] = {{"Important", "Fuselighter will create a swirl under a random player. Dodge. Definitely dodge."}}, -- Ashvane Flamecaster
-	[130027] = {{"Important", "Have a threat table but a ranged basic attack."}, {"Important", "Frontal Cleave (Suppression Fire, tank must take, DoT)"}}, -- Ashvane Marine
-	[136665] = {{"Important", "Will blow up a barrel when engaged. Don't stand in it."}, {"Important", "Has a threat table but a ranged basic attack."}, 
-				{"Important", "Frontal Cleave (Suppression Fire, tank must take, DoT)"}}, -- Ashvane Spotter
-	[133972] = {{"Important", "You can get in the cannon to deal HEAVY AoE damage."}, {"Important", "WARNING: FRIENDLY FIRE. THE CANNON ALSO HITS ALLIES."},
-				{"Important", "Handle the next few packs by pulling them toward the cannon and then CC'ing in place while cannon kills."},
-				{"Fluff", "Up-and-coming super villains can use this opportunity to murder your friends."}}, -- Heavy Cannon (Vehicle, Neutral)
-	
-	-- Roof
-	[127497] = {{"Important", "Lockdown is a slow cast that'll root everyone within 6 yds. Avoid."}, {"TANK", "Consider kiting during the Heavily Armed buff. They'll deal dbl dmg."},
-				{"Important", "Drag them toward the cannons. Cannons very buff."}}, -- Ashvane Warden
-	[130028] = {{"Important", "Righteous Flames is a slow cast that'll disorient everyone within 6 yrds. Avoid."}, {"Interrupts", "Interrupt(!!): Inner Flames (AoE heal, dmg buff)"}}, -- Ashvane Priest
-	
-	
-	-- Bosses
-	[127479] = {{"Important", "When she burrows move away from the upheaval target"}, {"Important", "Avoid: Sand mounds (4s stun)"}, 
-				{"Important", "Killing drones gives boss a 4s damage buff. Kill in small bunches on higher keys"}, {"HEALER", "Sandstorm (heavy AoE) hits every 30s. Save healing CD's."},
-				{"HEALER", "The tank damage can be heavy, especially below 30%"}, {"DRUID", "Soothe: Enrage (Both when adds die, and when she hits 30% HP."},
-				{"HUNTER", "Tranq Shot: Enrage (Both when adds die, and when she hits 30% HP."}}, -- The Sand Queen
-	[127484] = {{"Important", "Hide around the corner during Flashing Daggers cast or you will die."}, {"Interrupts", "Interrupt: Howling Fear (long AoE fear)"},
-				{"Important", "At 50% boss will run away. Chase while killing prisoner adds."}, {"Important", "As soon as you reach boss interrupt his Motivating Cry"},
-				{"Important", "During P2 Bobby will join fight and stun ally. Damage his shield off FIRST then interrupt"}, {"HEALER", "Dispel or heal: Crippling Shiv (Poison, medium DoT)"}}, -- Jes Howlis
-	[127490] = {{"Important", "You need to pick up and move barrels out of: Cinderflame (cone on random player) and Ignition (big red circles)"}, {"Important", "Everyone must help. You click to pick up, then use extra action bar to drop."},
-				{"Advanced", "You only need to keep a corner clean. Tank in a corner and leave the barrels on other side of room."},
-				{"Advanced", "There are two barrels near the door when you come in. Move them into the corridor before the fight begins"}}, -- Knight Captain Valyri
-	[127503] = {{"Important", "Tank in the north west corner of the room. Everyone spreads around boss with backs to the small walls"}, {"Important", "This will stop you getting pushed back and minimizes movement"},
-				{"Important", "You need to dodge the Cross Ignition. It's marked with black paths along the ground."}, {"Important", "If you move more than a few inches then you'll be stunned and likely die."},
-				{"HEALER", "Even with good play this is a bursty high damage fight. Try and keep the party topped up."}, {"HEALER", "The group is close together so make sure you keep group heals like Effloresence down."}}, -- Overseer Korgus
-	
-	
-	
-	----- Waycrest Manor -----
-	-- Entrance Hall
-	[135240] = {{"Important", "Moderate damage casts at random allies. Group them up and AoE CC."}}, -- Soul Essence	
-	[131677] = {{"Important", "Frontal Cleave (Marking Cleave, tank can dodge after cast start)"}, {"Interrupts", "Interrupt(!): Etch (ST damage channel)"}}, -- Heartsbane Runeweaver
-	
-	-- Right Side
-	[135234] = {{"Important", "Mostly harmless."}}, -- Diseased Mastiff
-	[131849] = {{"Important", "Targets random players."}, {"Important", "Will fire a rocket at a random player. Spread out so only one person gets hit."}}, -- Crazed Marksman
-	[131850] = {{"Important", "Will throw out traps. One deals heavy damage, one stuns for 8s."}, {"Important", "You really need to make sure you don't walk into them."},
-				{"Interrupts", "Interrupt(!): Serving Serpents (AoE disease DoT)"}}, -- Maddened Survivalist
-	[134024] = {{"Important", "Harmless UNLESS it has the Parasitic debuff. If it does it must be burned down or interrupted."}, {"Important", "Successful Infest casts will spawn two more maggots"}}, -- Devouring Maggot
-	[134041] = {{"Important", "Mostly harmless."}}, -- Infected Peasant
-	[135048] = {{"Important", "Mostly harmless. Maybe even cute?"}}, -- Gorestained Piglet
-	[137850] = {{"Important", "Frontal Cleave (Retch)"}, {"Important", "Will leap to furthest ally and deal 5yd AoE DoT. Spread a little."}}, -- Pallid Gorger
-	[131586] = {{"Interrupts", "Interrupt: Dinner Bell (AoE 8yd silence)"}}, -- Banquet Steward
-	[131847] = {{"Important", "Mostly harmless."}}, -- Waycrest Reveler
-	
-	-- Left Side
-	[131670] = {{"Interrupts", "Interrupt or Purge(!): Grasping Thorns (Stun, DoT)"}}, -- Heartsbane Vinetwister
-	[131585] = {{"Important", "Frontal Cleave (Shadow Cleave)"}}, -- Enthralled Guard
-	[131587] = {{"Interrupts", "Interrupt or Purge: Spirited Defense (medium DR)"}}, -- Bewitched Captain
-	--[131685] = {{"Important", ""}}, -- Runic Disciple
-	[131818] = {{"Important", "Try and interrupt Runic Mark but if not then the marked player walks away from the group."}, {"Interrupts", "Interrupt or Purge(!!): Soul Fetish (buffs allies on death)"}}, -- Marked Sister
-	--[135049] = {{"Important", ""}}, -- Dreadwing Raven
-	[135474] = {{"Interrupts", "Interrupt: Bone Splinter, Drain Essence (both DoTs)"}}, -- Thistle Acolyte
-	[135052] = {{"Important", "Creates big green swirl on death. Move."}}, -- Blight Toad
-	
-	-- Courtyard
-	[131669] = {{"Important", "Moderate tank damage."}}, -- Jagged Hound
-	[131858] = {{"Important", "Heavy tank damage."}, {"Important", "Explodes into a brown swirl on death. Is as nasty as it sounds. Move."}, 
-				{"DRUID", "Soothe: Enrage (+25% dmg)"}, {"HUNTER", "Tranq Shot: Enrage (+25% dmg)"}}, -- Thornguard
-	[131666] = {{"Important", "Will conjure roots underneath allies. Don't stand in them."}, 
-				{"Interrupts", "Interrupt(!!): Effigy Reconstruction (full AoE heal)"}, {"Interrupts", "Interrupt or Purge(!!): Soul Fetish (buffs allies on death)"},
-				{"HEALER", "Dispel or heal: Infested Thorn (Disease, medium DoT)"}}, -- Coven Thornshaper
-	[135329] = {{"Important", "Very heavy tank damage during uninterruptable Thorned Barrage cast."}, {"Important", "More browl swirls. Move."}}, -- Matron Bryndle
-	
-	-- Cellar
-	[131819] = {{"Interrupts", "Interrupt or Purge(!!): Soul Fetish (buffs allies on death)"}, {"HEALER", "Dispel: Fragment Soul (DoT, buffs the mob later)"}}, -- Coven Diviner
-	[135365] = {{"Important", "Spread with Dread Mark. Your healer will give you $5 later."}, {"Interrupts", "Interrupt(!): Ruinous Volley (AoE nuke)"},
-				{"TANK", "Have a defensive ready for Decaying Touch. It increases your dmg taken."}}, -- Matron Alna
-	[139269] = {{"Important", "Will leap to furthest player and deal 5yd AoE DoT. Have one player stand out."}}, -- Gloom Horror
-	[131812] = {{"Important", "Drag mobs out of any candles the soulcharmer drops. Save the romance for later."}, {"Interrupts", "Interrupt: Soul Volley (AoE nuke)"}}, -- Heartsbane Soulcharmer
-	
-	-- Bosses
-	[131863] = {{"Important", "Dodge: Rotten Expulsion, Tenderize (Cone AoEs)"}, {"Important", "If Wasting Servants get to boss he gets damage buff. Ignore them when boss is low."}, 
-				{"Important", "Servants vulnerable to ALL CCs if you need more time"}, {"PriorityTargets", "Priority Target: Wasting Servants > Boss. AoE oozelings."},
-				{"HEALER", "Low damage so help DPS adds and triage any rookies that stand in puddles."}}, -- Raal the Gluttenous
-	[131667] = {{"PriorityTargets", "Priority Target: Soul Thorns (stuns random player until dead)"}, {"HEALER", "Little red spirits will chase you around. Don't stop moving for long"},
-				{"HEALER", "Heavy tank damage until boss is dragged over fire, then heavy party damage"}, {"HEALER", "Healing CDs: Burning Brush (moderate AoE)"},
-				{"TANK", "Drag the boss into fire to reset his stacks. Do it whenever possible."}}, -- Soulbound Goliath
-	[131824] = {{"Important", "Can only dmg one at a time. Don't multi-DoT. Targetable mob will be bigger."}, {"Important", "Aura of Dread: you MUST keep moving. The active aura rotates."},
-				{"Important", "Will periodically MC an ally. Switch DPS to them until broken free."},
-				{"DAMAGE", "Aura of Thorns: You'll take damage after every attack. Care."}, {"HEALER", "Very hard fight. Aura of Apathy: 50% healing reduction. Conserve mana."},
-				{"HEALER", "Spam Heal: Jagged Nettles debuff (heavy DoT, lasts til target is above 90%.)"}, {"HEALER", "Each boss deals heavy AoE at 100 energy. Track it and top the party before."}}, -- Witches: Sister Selena
-	[131825] = {{"Important", "Can only dmg one at a time. Don't multi-DoT. Targetable mob will be bigger."}, {"Important", "Aura of Dread: you MUST keep moving. The active aura rotates."},
-				{"Important", "Will periodically MC an ally. Switch DPS to them until broken free."},
-				{"DAMAGE", "Aura of Thorns: You'll take damage after every attack. Care."}, {"HEALER", "Very hard fight. Aura of Apathy: 50% healing reduction. Conserve mana."},
-				{"HEALER", "Spam Heal: Jagged Nettles debuff (heavy DoT, lasts til target is above 90%.)"}, {"HEALER", "Each boss deals heavy AoE at 100 energy. Track it and top the party before."}}, -- Witches: Sister Briar
-	[131823] = {{"Important", "Can only dmg one at a time. Don't multi-DoT. Targetable mob will be bigger."}, {"Important", "Aura of Dread: you MUST keep moving. The active aura rotates."},
-				{"Important", "Will periodically MC an ally. Switch DPS to them until broken free."},
-				{"DAMAGE", "Aura of Thorns: You'll take damage after every attack. Care."}, {"HEALER", "Very hard fight. Aura of Apathy: 50% healing reduction. Conserve mana."},
-				{"HEALER", "Spam Heal: Jagged Nettles debuff (heavy DoT, lasts til target is above 90%.)"}, {"HEALER", "Each boss deals heavy AoE at 100 energy. Track it and top the party before."}}, -- Witches: Sister Malady
-		[135052] = {{"Important", ""}}, -- Blight Toad
-	[131545] = {{"Important", "Virulent Pathogen debuff (green circle): run it out of the group"}, {"Important", "Run out the debuff, stay out of purple swirls and this is very easy fight"},
-				{"Important", "Lady will heal Lord a few times using her own health. No counterplay, just keep DPS'ing"}, {"TANK", "Lady Waycrest will fly over at 10% health. You need to taunt her immediately"},
-				{"HEALER", "Don't dispel the disease in most cases. Only lasts 5s and they need to run out"}}, -- L&L: Lady Waycrest
-	[131527] = {{"Important", "Virulent Pathogen debuff (green circle): run it out of the group"}, {"Important", "Run out the debuff, stay out of purple swirls and this is very easy fight"},
-				{"Important", "Lady will heal Lord a few times using her own health. No counterplay, just keep DPS'ing"}, {"TANK", "Lady Waycrest will fly over at 10% health. You need to taunt her immediately"},
-				{"HEALER", "Don't dispel the disease in most cases. Only lasts 5s and they need to run out"}}, -- L&L: Lord Waycrest
-	[131864] = {{"Important", "Slavers cast Death Lens. Either kill quickly or interrupt cast with knockbacks / grips."}, {"Important", "Yorrick will drop flasks of fire on the floor. Assign one DPS to pick them up"},
-				{"Important", "Kill the adds near the boss and then cast Alchemical Fire when boss casts Dread Essence"}, {"Important", "If you don't then he'll resummon all dead adds."},
-				{"HEALER", "Add Death Lens to your frame. They'll need big healing if the cast goes through"}}, -- Gorak Tul	
-	
-	
-	
-	
-	----- Shrine of the Storm -----
-	-- Path to Aqu'sirr
-	[136347] = {{"Important", "Mostly harmless. They'll run when low so watch for that."}}, --  Tidesage Initiate
-	[134139] = {{"Important", "Annoying mob. CC them where possible and kill them alone."}, {"Important", "Frontal Cleave (Heaving blow, stuns, dodgeable by tank)"},
-				{"Interrupts", "Interrupt or Purge: Tidal Surge (+haste +dmg)"}}, -- 	Shrine Templar
-	[134137] = {{"Important", "Move out of the blue swirl."}, {"Interrupts", "Interrupt as many Water Blasts as you can but it isn't urgent."}}, -- 	Temple Attendant
-	[134173] = {{"Important", "Mostly harmless."}}, -- 	Animated Droplet
-	[136186] = {{"Interrupts", "Interrupt(!!): Mending Rapids (Massive heal)"}, {"Important", "Anchor of Binding will toss an anchor at a player. Dodgeable."}}, -- 	Tidesage Spiritualist
-	[134144] = {{"Important", "Dangerous mob. Will throw players into the air and deal heavy AoE damage."}, {"Important", "You CAN now Line of Sight the Rising Tides. Healers / DPS are encouraged to."}}, -- 	Living Current
-	
-	-- Path to Council
-	[139800] = {{"Important", "Move from the windy zones and dodge any tornadoes."}, {"Interrupts", "Interrupt: Tempest (spawns high damage dodgeable tornadoes)"}}, -- 	Galecaller Apprentice
-	[139799] = {{"Important", "Heavy tank damage. AoE 8yd cleave (Whirling Slam, dodgeable)"}, {"TANK", "Kite during the Blessing of Ironsides buff. Mob deals dbl dmg but moves slow."}}, -- 	Ironhull Apprentice
-	[134150] = {{"Important", "Ok he'll put a ward down and everyone should stand in it at all times."}, {"Important", "He'll cast Carve Flesh on a random party member."},
-				{"Important", "If you're in the ward you'll take -75% dmg and live. If you're 50 yards away you're dead."}, {"TANK", "You want to stand in the ward yourself, while keeping the miniboss out of it."},
-				{"HEALER", "Make sure you can see Carve Flesh on your frames. Try and save idiot DPS that isn't in ward."}}, -- 	Runecarver Sorn
-	[136249] = {{"Important", "BFA's Mariner. Will channel heavy AoE damage on party."}, {"HEALER", "Make sure you have healing CD's ready. It's predictable but heavy damage."}, 
-				{"HEALER", "Dispel: Electrifying Shock (Medium DoT)"}}, -- 	Guardian Elemental
-	[136214] = {{"Important", "Jump in the Swiftness Wards she summons for a 25% haste buff"}, {"TANK", "The haste ward also buffs Heldis and any other trash. Drag them out."},
-				{"HEALER", "Gale Winds is a moderately harmful AoE channel. You'll need to heal through it."},
-				{"Fluff", "With all that haste you'll feel like you're still playing a different expansion."}},
-	
-	-- Path to Stormsong
-	[134417] = {{"Important", "PULL ONE AT A TIME"}, {"Important", "Spread out with Void Seed. It doesn't hurt if you're 6yds apart."}, 
-				{"Interrupts", "Interrupt(!!): Unending Darkness (AoE nuke, inc shad dmg taken debuff)"}}, -- 	Deepsea Ritualist
-	[139626] = {{"Important", "You can purge their shield to make them easier kills. Arcane Torrent is beautiful here."}}, -- 	Dredged Sailor
-	[134338] = {{"Important", "Conjures many blue swirls. I died to them once. Don't be me."}}, -- 	Tidesage Enforcer
-	[134418] = {{"Important", "Have many interruptable casts. Priority is Touch of the Drowned > Rip Mind > Void Bolt."}, {"Interrupts", "Interrupt or dispel(!): Touch of the Drowned (medium DoT)"},
-				{"Interrupts", "Interrupt: Rip Mind (ST Nuke, -max HP)"}}, -- 	Drowned Depthbringer
-	[134514] = {{"Important", "Frontal Cleave ('Mental Assault', stun, tank can dodge)"}, {"Interrupts", "Interrupt or Purge(!): Consuming Void (spell absorb buff)"},
-				{"Interrupts", "Interrupt: Detect Thoughts (100% dodge chance, 6s)"}}, -- 	Abyssal Cultist
-	[136353] = {{"Important", "Deal heavy AoE damage. Make sure your tank is standing close to them."}}, -- 	Colossal Tentacles
-	[134423] = {{"Important", "Deal medium AoE damage. AoE them quickly."}}, -- 	Abyss Dweller
-	
-	-- The Seas
-	[140038] = {{"Important", "Moderate tank damage. Otherwise harmless."}}, -- 	Abyssal Eel
-	[136295] = {{"Important", "Heavy tank damage. Slow so can be kited."}}, -- 	Sunken Denizen
-	[136297] = {{"Interrupts", "Interrupt(!!) Consume Essence (AoE Nuke + full AoE heal)"}}, -- 	Forgotten Denizen
-	
-	-- Bosses
-	[134056] = {{"Important", "Don't stand in blue swirls. Don't stand in front of boss when he charges. DPS Grasps."}, {"Important", "Boss will split into three smaller elementals. Same abilities. Watch out for the charges."}, 
-				{"Important", "YOU CAN FALL OFF THE PLATFORM. KEEP YOURSELF SAFE."}, {"HEALER", "Dispel: Choking Brine (DoT)"}, {"DRUID", "You can shapeshift out of the Grasp of the Depths root"}, 
-				{"PALADIN", "You can Freedom the Roots."}}, -- 	Aqu'sirr
-		[134828] = {{"Important", "Don't stand in blue swirls. Don't stand in front of boss when he charges. DPS Grasps."}, {"Important", "Boss will split into three smaller elementals. Same abilities. Watch out for the charges."}, 
-				{"Important", "YOU CAN FALL OFF THE PLATFORM. KEEP YOURSELF SAFE."}, {"HEALER", "Dispel: Choking Brine (DoT)"}, {"DRUID", "You can shapeshift out of the Grasp of the Depths root"}, 
-				{"PALADIN", "You can Freedom the Roots."}}, -- 	Aqualing
-	[134063] = {{"Important", "Swiftness and Reinforcing wards are dropped through fight. ALWAYS stand in them"}, {"Important", "Reinforcing clears Slicing Winds stacks, Swiftness is +25% haste"},
-				{"Important", "Kill Faye first, or both at the same time (efficient but tough on mana)"}, {"Important", "Interrupt: Slicing Blast (when Faye is in a swiftness ward)"},
-				{"TANK", "When Ironhull casts Blessing you need to kite. He deals double damage"}, {"TANK", "Face the cleave away from the party. You can clear the movement debuff in swiftness wards"},
-				{"HEALER", "Track Slicing Blast stacks. They should be cleared every reinforcing ward but DPS are slow sometimes"}, {"HEALER", "Warning: The tank is likely to take heavy spiky damage"}}, -- 	TC: Brother Ironhull
-	[134058] = {{"Important", "Swiftness and Reinforcing wards are dropped through fight. ALWAYS stand in them"}, {"Important", "Reinforcing clears Slicing Winds stacks, Swiftness is +25% haste"},
-				{"Important", "Kill Faye first, or both at the same time (efficient but tough on mana)"}, {"Important", "Interrupt: Slicing Blast (when Faye is in a swiftness ward)"},
-				{"TANK", "When Ironhull casts Blessing you need to kite. He deals double damage"}, {"TANK", "Face the cleave away from the party. You can clear the movement debuff in swiftness wards"},
-				{"HEALER", "Track Slicing Blast stacks. They should be cleared every reinforcing ward but DPS are slow sometimes"}, {"HEALER", "Warning: The tank is likely to take heavy spiky damage"}}, -- 	TC: Galecaller Faye
-	[134060] = {{"Important", "MC'd targets must take damage by running through orbs and being targeted by allies."}, {"Important", "If you're not MC'd, don't get hit by the orbs or I'm taking away your dungeon license."},
-				{"HEALER", "Dispel: Mind Rend (DoT, slow). You can also dispel Explosive Void (stun) if someone hits an orb."}}, -- 	Lord Stormsong
-	[134069] = {{"Important", "Complex fight. Start by dodging tentacle slams and big black circles."}, {"Important", "Boss will drop everyone to sunken realm. Tank & healer in one, DPS in the other. Must kill add to escape"},
-				{"Important", "Healer gets debuff that gives +damage +healing -maximum health. Healer MUST help DPS. DPS can receive buff if healer already has it"}, {"Important", "Debuff can be cleansed if you don't trust yourself to dodge everything"},
-				{"Important", "Manifestation adds can't reach boss but will deal AoE damage when killed. Ensure nobody is low"}, {"Important", "Advanced strat on the website soon (too long for tooltips)"}}, -- 	Vol'zith the Whisperer
-		[136100] = {{"Important", "Kite it, kill it. Healer MUST DPS it. Cast from your spellbook if you must; you're hitting it."}}, -- 	Sunken Denizen
-	
-	
-	---------------------------------------------------
-	
-	
-	
-	---------------------------------------------------
-	---------------------Legion------------------------
-	---------------------------------------------------	
-				
-	-- Halls of Valor
-	[97087] = {{"Legion", "Not strong. Minor tank damage."}}, -- Valarjar Champion
-	[96611] = {{"Legion", "Can skip with Sap / Imprison"}, {"Interrupts", "STUN Interrupt: Rumbling Stomp"}}, -- Angerhoof Bull
-	[96608] = {{"Legion", "Don't pull more than 2-3 at a time!"}, {"Legion", "Use grips / stuns to minimize damage"}}, -- Ebonclaw Worg
-	[96677] = {{"Legion", "Don't pull. Inefficient."}}, -- Steeljaw Grizzly
-	[96640] = {{"Legion", "Penetrating shot fires in direction of tank."}, {"Important", "Penetrating Shot will one shot you!"}}, -- Valarjar Marksman
-	[95834] = {{"Interrupts", "Interrupts: Holy Radiance > Rune of Healing"}}, -- Valarjar Mystic
-	[101637] = {{"Important", "Skip this pack by hugging the left or right walls"}}, -- Valarjar Aspirant
-	[96664] = {{"Interrupts", "Interrupts: Etch"}, {"Interrupts", "Interrupts: Shattered Rune"}}, -- Valarjar Runecarver
-	[95832] = {{"Important", "Frontal Cleave!"}, {"HEALER", "Healing / Armor reduction on tank"}}, -- Valarjar Shieldmaiden
-	[95842] = {{"Interrupts", "Interrupts: Thunderous Bolt"}, {"HEALER", "Dispel: Thunderstrike"}, {"Legion", "Use AoE stuns / knockbacks to control large packs"}}, -- Valarjar Thundercaller
-	[97068] = {{"PriorityTargets", "Priority Target"}, {"TANK", "You need a big CD for each Lightning Breath. Face away from party"}, {"HEALER", "Top the tank up before each Lightning Breath"},
-				{"DRUID", "You're a beautiful person"}, {"DEMONHUNTER", "You're doing great"}}, -- Storm Drake
-	[96574] = {{"Important", "Gives Interrupts immunity to nearby mobs. Pull alone."}}, -- Stormforged Sentinel
-	[99891] = {{"PriorityTargets", "Priority Target"}, {"TANK", "You need a big CD for each Lightning Breath"}, {"HEALER", "Top the tank up before each Lightning Breath"}}, -- Storm Drake
-	[97197] = {{"PriorityTargets", "Priority Target (or CC)"}, {"Interrupts", "Interrupt: Cleansing Flame"}}, -- Valarjar Purifier
-	[99804] = {{"Fluff", "You shouldn't need to pull this"}}, -- Valarjar Falconer
-	[96934] = {{"Important", "Drops Bear Traps. Don't stand on them."}}, -- Valarjar Trapper
-	
-	-- Mini Bosses
-	[97202] = {{"Important", "Dodge: Sanctify balls (AoE damage to your party)"}}, -- Olmyr
-	[97219] = {{"Important", "Stand in bubble during Eye of the Storm"}}, -- Solsten
-	[97083] = {{"Important", "Recommended kill order: #1/4"}, {"Interrupts", "Interrupt: Unruly Yell"}}, -- King Ranulf
-	[95843] = {{"Important", "Recommended kill order: #3=/4"}, {"TANK", "Does heavy tank damage with Sever."}, {"HEALER", "Tank will get smashed with Sever. Keep alive."}}, -- King Haldor
-	[97081] = {{"Important", "Recommended kill order: #3=/4"}, {"HEALER", "Will wang random targets with Wicked Dagger."}}, -- King Bjorn
-	[97084] = {{"Important", "Recommended kill order: #2/4"}, {"Legion", "Ancient Ancestors vulnerable to almost every CC."}}, -- King Tor
-	
-	
-	-- Bosses
-	[95833] = {{"Defensives", "Defensives: Save for Expel Light / Arcing combo."},
-				{"HEALER", "Healing CD: Every Eye of the Storm (every 1min)"}, {"HEALER", "This is a very tough fight. Prepare for heavy, spiky damage."}, 
-				{"TANK", "Face Shield of Light toward opposite side of the room"}, {"Legion", "There's a Weak Aura for Arcing Bolt on QuestionablyEpic"}}, -- Hyrja
-	[94960] = {{"Important", "Start in the middle for Storm Drakes. Move into the first section to be hit by lightning."}, {"Important", "Focus on dodging Ball Lightning. Your damage doesn't matter."},
-				{"HEALER", "Horn of Valor deals heavy AoE damage. Top the party before it hits"}, {"TANK", "Big frontal cleave. Face boss away from the party at all times."}}, -- Hymdall
-	[99868] = {{"Important", "Party must be 10 yards apart during Ravenous Leap"}, {"Important", "Claw Frenzy is split between everyone close to the boss"}, 
-				{"Legion", "You can pop immunities during Scent of Blood to keep boss still."}, {"HEALER", "Keep party healthy to survive claw frenzy"},
-				{"Advanced", "Shadowmeld: Ravenous Leap to cancel the entire ability."}}, -- Fenryr II
-	[95674] = {{"Important", "Party must be 10 yards apart during Ravenous Leap"}, {"Important", "Claw Frenzy is split between everyone close to the boss"}, 
-				{"Legion", "You can pop immunities during Scent of Blood to keep boss still."}, {"HEALER", "Keep party healthy to survive claw frenzy"},
-				{"Advanced", "Shadowmeld: Ravenous Leap to cancel the entire ability."}}, -- Fenryr	I		
-				
-	[95675] = {{"Important", "Felblaze Rush can be dodged! Stand max range; Use mobility cooldowns or defensives"}, 
-				{"HEALER", "You have time to DPS during the fight, very little damage"},
-				{"TANK", "You are responsible for using Aegis of Aggramar during Ragnarok"}, {"TANK", "Remember to pick up the shield again when it falls to the floor!"}}, -- God King Skovald
-	[95676] = {{"PriorityTargets", "Kill Obliterators as Priority targets. You MUST interrupt"}, {"Legion", "You get a big damage buff when you cash in Runic Brand. Save cooldowns"}}, -- Odyn
-	----------------------------
-
-	
-	-- Lower Karazhan
-	[114627] = {{"Interrupts", "Interrupt: Terrifying Wail"}, {"HEALER", "Dispel: Cursed Touch"}}, -- Shrieking Terror (spirit)
-	[114626] = {{"Interrupts", "Interrupt: Soul Leech"}, {"HEALER", "Dispel: Shadow Rend"}}, -- Forlorn Spirit (spirit)
-	[114541] = {{"Legion", "Not strong. Minor tank damage"}}, -- Spectral Patron
-	[114542] = {{"Important", "Dodge coins on the ground instead of reading this"}, {"TANK", "Ultra-high unavoidable tank damage with throw coin"}}, -- Ghostly Philanthropist
-	[114584] = {{"Legion", "Not strong. Minor tank damage"}}, -- Phantom Crew (?)
-	[114526] = {{"Important", "Standing in the spotlights increases your damage by 50%!"}, 
-				{"Important", "Final Curtain is a 5 yard range one shot"},
-				{"TANK", "Keep the mobs out of the spotlights"}}, -- Ghostly Understudy
-					
-	[116549] = {{"Interrupts", "Interrupt(!!): Firelands Portal"},
-				{"Important", "Use AoE stuns to prevent casts. They will murder you."}}, -- Backup Singer
-	[114544] = {{"Important", "Face away from the mobs during Flashlight!"},
-				{"HEALER", "Flashlight does moderate AoE damage even when handled correctly"}}, -- Skeletal Usher 
-	[114625] = {{"Legion", "Mass Interrupts to group them together"},
-				{"Legion", "Not dangerous"}}, -- Phantom Guest
-	[114629] = {{"Important", "Dangerous mob. Pull with caution."},
-				{"Interrupts", "Interrupt: Oath of Fealty"},
-				{"TANK", "Oath of Fealty can mind control you if cast"}}, -- Spectral Retainer
-	[114634] = {{"Interrupts", "Interrupt: Shackles of Servitude"}, {"HEALER", "Dispel (Curse): Shackles of Servitude"}}, -- Undying Servant
-	[114636] = {{"Important", "Frontal Cleave with Shield Slam"},
-				{"TANK", "You can also dodge Shield Slam yourself"}},	-- Phantom Guardsman
-	[114637] = {{"Legion", "Will fire on random party members"}}, -- Spectral Sentry
-	[114783] = {{"Legion", "Stun and focus the Maiden as she hits 50% to avoid Heartbreaker"}, {"HEALER", "Dispel Flirt to reduce danger of a Heartbreaker cast. Tank priority"}}, -- Reformed Maiden
-	[114796] = {{"Interrupts", "Interrupt: Banshee Wail"}, {"HEALER", "Dispel anyone near 100 Alluring Aura stacks to avoid MC"}}, -- Wholesome Hostess
-	[114792] = {{"Important", "Don't stand in the Charming Perfume"}, {"Interrupts", "Interrupt: Shadowbolt Volley"}}, -- Virtuous Lady
-	[115020] = {{"Legion", "This is a poor place to get your trash percentage"}}, -- Arcanid
-	[115019] = {{"Legion", "This is a poor place to get your trash percentage"}}, -- Coldmist Widow
-	[115115] = {{"Legion", "This is a poor place to get your trash percentage"}}, -- Coldmist Stalker
-	[114624] = {{"Important", "Avoid the blue swirls on the floor"}, {"Legion", "Spread with Volatile Charge debuffs"}}, -- Arcane Warden
-	[114628] = {{"HEALER", "Dispel: Brittle Bones"}}, -- Skeletal Waiter
-	[114794] = {{"TANK", "Defensive: Rotting Bite"}}, -- Skeletal Hound
-	[114716] = {{"TANK", "Not dangerous, but will knock you down for 2 seconds"}},	 -- Ghostly Baker
-	[114715] = {{"Legion", "Moderate frontal cleave. Stay at max range"}}, -- Ghostly Chef
-	[114802] = {{"Important", "Heavy frontal cleave with Smash. Can be avoided by tank"}}, -- Spectral Journeyman
-	[114801] = {{"PriorityTargets", "Priority Target"}, {"Important", "Spreadout with Burning Brand. It hurts. A lot."}}, -- Spectral Apprentice
-	[114804] = {{"Legion", "Stand near the wall, shorter charge = more DPS"},
-				{"Legion", "Consider stun-interrupting Tramping Stomp"}},-- Spectral Charger
-	[114803] = {{"Interrupts", "Interrupt: Healing Touch"}}, -- Spectral Stable Hand
-	[114633] = {{"Interrupts", "Interrupt: Demoralizing Shout"}}, -- Spectral Valet
-	[116550] = {{"Legion", "Not strong. Minor tank damage."}}, -- Spectral Patron
-	[114632] = {{"Interrupts", "Interrupt: Shadow Rejuvenation (Heal)"}}, -- Spectral Attendant
-	[114714] = {{"Important", "Will stun the tank"}}, -- Ghostly Steward
-	
-	--Bosses
-	[113971] = {{"Interrupts", "Interrupt: Holy Wrath, Holy Shock"},
-				{"DAMAGE", "Save DPS cooldowns for Holy Bulwark"},
-				{"HEALER", "Try and get a stack of Sacred Ground 5s before Mass Repentance"},
-				{"HEALER", "This reduces the burst healing required to deal with the mechanic"}}, -- Maiden
-	[114262] = {{"Important", "Stack with the tank for Shared Suffering unless they are able to dodge it"},
-				{"TANK", "You cannot easily dodge Mortal Strike, a 50% max HP reduction"},
-				{"Legion", "Let your healer know if you have the spirit on you."},
-				{"Legion", "Manually scanning five people is much slower"},
-				{"Legion", "During Spectral Charge, try and stay near the center of the room"}}, -- Attumen
-	[114312] = {{"Important", "Add CC is broken when Moroes below 60% but can be hunter trapped after"},
-				{"HEALER", "Long grueling fight. Watch your mana"},
-				{"HEALER", "Dispel: Coat Check (Incr dmg taken)"}}, -- Moroes main
-	[114316] = {{"Legion", "Casts Mana Drain, Arcane Blast"},
-				{"Interrupts", "Interrupts(!): Mana Drain"}}, --  Dorothea Millstipe
-	[114317] = {{"Legion", "Casts Healing Stream, Smite"},
-				{"Interrupts", "Interrupts(!): Healing Stream"}}, -- Catriona
-	[114318] = {{"Legion", "Casts Iron Whirlwind"},
-				{"Legion", "Stay as far from Rafe as you can"}}, -- Baron Rafe
-	[114319] = {{"Legion", "Casts Empowered Arms"},
-				{"Interrupts", "Interrupts(!): Empowered Arms"}}, -- Keira
-	[114320] = {{"Legion", "Casts Whirling Edge (projectile)"},
-				{"Legion", "Harmless if you avoid the blade he throws at you"}}, -- Robin Daris
-	[114321] = {{"Legion", "Casts Will Breaker"},
-				{"Legion", "Long cast, large floor-based AoE one-shot"},
-				{"Advanced", "You can interrupt Will Breaker with knock backs"}}, -- Crispin Ference
-			
-	-- Upper Karazhan
-	[114334] = {{"Legion", "Straightforward. Don't stand in the swirls"}}, -- Damaged Golem
-	[115765] = {{"Legion", "Soul always appears in the same place. Gives +100% damage to you"}}, -- Abstract Nullifier
-	[114338] = {{"Legion", "You can line of sight Arcane Barrage"},
-				{"Interrupts", "Interrupt: Arcane Barrage when shield drops"}}, -- Mana Confluence
-	[114364] = {{"Legion", "Not strong"}}, -- Mana-Gorged Wyrm
-	[115484] = {{"Legion", "You can taunt to bring to the ground. Rarely required"}}, -- Fel Bat
-	[115488] = {{"Important", "You must soak the Fel Orbs by standing in them"},
-				{"Important", "They explode if not soaked. Use defensive when soaking"}},-- Infused Pyromancer
-	[115757] = {{"Important", "Nasty frontal cleave"}, {"Legion", "Kite him up into the tunnel to avoid flame floor"}}, -- Wrathguard Flamebringer
-	[115419] = {{"Important", "Avoid pulling"},
-				{"Interrupts", "Interrupt: Consume Magic"}}, -- Ancient Tome
-	[115417] = {{"Legion", "Avoid stampede. Keep tank alive."}}, -- Rat
-	[115418] = {{"HEALER", "Dispel Leech Life if able as priority"},
-				{"HEALER", "Keep Web targets alive"}},-- Spider
-	[115831] = {{"Important", "Intercept orbs for a damage buff"},
-				{"Important", "Any orbs that hit wyrms explode for AoE damage"}}, -- Mana Devourer
-	[115486] = {{"Important", "Frontal cleave that will knock you off!"}}, -- Erudite Slayer
-	[115388] = {{"Important", "The King won't put up new shield below 30%"},
-				{"Legion", "Focus on low HP targets first, like Knights"},
-				{"Legion", "Don't die. This sucks enough as-is"}}, -- King
-				
 	---Bosses
-	[114247] = {{"Important", "Killing sparks is absolute priority"},
-				{"Important", "High keys: Move as a group to preserve space"},
-				{"HEALER", "Heavy AoE damage from sparks. Keep party topped"},
-				{"HEALER", "Help DPS during Evocation"}}, -- Curator
-	[114350] = {{"Important", "Keep Frostbite Interrupted. Coordinate Interrupts"},
-				{"Legion", "Blink after Inferno Bolt is cast to avoid it entirely"},
-				{"WARRIOR", "Piercing Missles can be spell reflected"},
-				{"HEALER", "Flame Wreath must be healed through. Be amazing"},
-				{"HEALER", "Healing CDs: Bird phase. Something for Flame Wreath"}}, -- Shade of Medivh
-	[116494] = {{"Important", "You can use immunities to soak mass balls"},
-				{"Legion", "If not, grab 1-2 orbs each only"}}, -- Mana Devourer
-	[114790] = {{"Important", "Keep an eye on the eyeball during Disintegrate"},
-				{"Important", "Pre-spread before Chaotic Shadows goes out. Don't stack"},
-				{"Interrupts", "Interrupt: Burning Blast"}}, -- Viz'aduum
-	---------------0--------------------
-	
-	
-	-- Eye of Azshara
-	[106785] = {{"Legion", "Dispellable debuff on tank, otherwise harmless"}}, -- Bitterbrine Slave
-	[101414] = {{"Important", "Has more health than other murlocs. Beware on Bolster"}}, -- Saltscale Skulker
-	[91796] = {{"PriorityTargets", "Priority Target"}, {"Important", "Casts: Rising Fury (AoE stun)"}}, -- Skrog Wavecrasher
-	[97172] = {{"Legion", "Harmless"}}, -- Saltsea Droplet
-	[91782] = {{"Interrupts", "Interrupt: Thundering Stomp"}}, -- Hatecoil Crusher
-	[97170] = {{"Important", "Don't pull!"}}, -- Hatecoil Wavebinder
-	[97173] = {{"Important", "Don't pull!"}}, -- Restless Tides
-	[91783] = {{"Interrupts", "Interrupt: Arc Lightning(!), Storm"}}, -- Hatecoil Stormweaver
-	[95861] = {{"Interrupts", "Interrupt: Rejuvenating Waters(!)"}}, -- Hatecoil Oracle
-	[95939] = {{"Important", "Casts: Massive Quake (dodgeable circles)"}}, -- Skrog Tidestomper
-	[100216] = {{"Interrupts", "Stun Interrupt(!!!): Lightning Prod (Big AoE)"}}, -- Hatecoil Wrangler
-	[106787] = {{"Legion", "Dispellable debuff on tank, otherwise harmless"}}, -- Bitterbrine Slave
-	[106786] = {{"Legion", "Dispellable debuff on tank, otherwise harmless"}}, -- Bitterbrine Slave
-	[97171] = {{"Interrupts", "Interrupt: Arcane Rebound (ST Nuke). Ignore others"}}, -- Hatecoil Arcanist
-	[95920] = {{"Important", "Don't pull!"}}, -- Animated Storm
-	[99630] = {{"Legion", "Dispellable debuff on tank, otherwise harmless"}}, -- Bitterbrine Scavenger
-	[91793] = {{"Legion", "Harmless"}}, -- Seaspray Crab
-	[91792] = {{"Important", "Dangerous Tail Cleave"},
-				{"TANK", "Hydra autoattacks have chance to deal heavy magic damage"}}, -- Stormwake Hydra
-	[99629] = {{"Legion", "Dispellable debuff on tank, otherwise harmless"}}, -- Bitterbrine Scavenger
-	[91781] = {{"Important", "Frontal Cleave"}}, -- Hatecoil Warrior
-	[91794] = {{"Legion", "Harmless"}}, -- Saltscale Lurker
-	[91785] = {{"Legion", "Harmless. You can stun the shield off"}}, -- Wandering Shellback
-	[95940] = {{"Legion", "Dispellable debuff on tank, otherwise harmless"}}, -- Bitterbrine Scavenger
-	[95947] = {{"Legion", "Breaking mob shield deals AoE damage. Has cleave."}}, -- Mak'rana Hardshell
-	[91790] = {{"Important", "Stun or dodge Spray Sand"},
-				{"HEALER", "Dispel: Sandstorm (reduced hit chance)"}}, -- Mak'rana Siltwalker
-	[91786] = {{"Legion", "Doesn't melee. Slime hits in a cone"}}, -- Gritslime Snail
-	[91787] = {{"Legion", "Pull before bosses. Will disorient nearby targets"}}, -- Cove Seagull
-	[100248] = {{"Interrupts", "Interrupt: Lightning Blast (ST Nuke)"}}, -- Ritualist Lesha
-	[100249] = {{"Interrupts", "Interrupt: Lightning Blast (ST Nuke)"},
-				{"HEALER", "Dispel: Polymorph Fish (CC)"}}, -- Channeler Varisz
-	[100250] = {{"Interrupts", "Interrupt: Lightning Blast (ST Nuke)"},
-				{"HEALER", "Dispel or heal: Magic Binding (5 targets)"}}, -- Binder Ashioi
-	[98173] = {{"Interrupts", "Interrupt(!): Lightning Blast(!)"},
-				{"Interrupts", "Interrupt or Dodge: Storm (10 yard AoE)"}}, -- Mystic Ssa'veh
-	---Bosses
-	[91784] = {{"Important", "Stand behind a minion during Impaling Spear"},
-				{"Interrupts", "Interrupts (Shellbreaker): Bellowing Roar"},
-				{"HEALER", "Impaling Spear targets need big heals"}}, -- Parjesh				 
-	[91789] = {{"Important", "Spread during Focused Lightning"},
-			{"Legion", "Careful with your curse, it knocks back on expiry. Don't murder your friends"},
-			{"Legion", "The tornadoes destroy the land. Take care"},
-			{"Defensives", "Defensive: Focused Lightning"}}, -- Hatecoil
-	[91808] = {{"Legion", "Remember your health potions. Fight is very spread out"}, {"Legion", "Damage dealt to spawns also hits Serpentrix"}}, -- Serpentrix
-	[91797] = {{"Legion", "Aftershock hits 4s after Quake. Move from cracked ground"},
-				{"Legion", "Remove bubbles with Quake and Call of the Seas"}}, -- King Deepbeard
-	[96028] = {{"Important", "Stick together! Mark your healer"},
-				{"Legion", "You must stack on or sacrifice the Crushing Depths target"},
-				{"HEALER", "Dispel: Arcane Bomb (ST Nuke)"},
-				{"HEALER", "Healing CDs: Save for Phase 2 (sub 10%)"}}, -- Wrath of Azshara
-	------------------0-----------------
+	[16807] = {{"Important", "The fight will start when the last/fourth Fel Orc Convert dies (this can be killed by players, or may be killed by the boss if group is taking too much time to pull"},
+				{"Legion", "Shadow Resistance Buffs/Aura will be helpful with this boss"},
+				{"Advanced", "PHASE 1:"},
+				{"Dodge", "DODGE: Players inside Void zones (starting out as circular red graphic will appear around a player) will need to run out of them ASAP!"},
+				{"Important", "Boss will cast Death Coil on random players dealing Shadow Damage +4 sec fear!"},
+				{"SHAMAN", "Fear Totem can be helpful to protect healer from getting 4 sec Death Coil fear"},
+				{"Advanced", "PHASE 2 (starts at boss 20% health):"},
+				{"Important", "Boss will begin channeling Dark Spin WW dealing Physical Damage in melee plus firing Shadow Bolts at random players. Burn him down QUICKLY in phase 2!"},
+				{"ROGUE", "Save Cloak of Shadows and Evasion until things get dangerous for you during Phase 2"}}, 
+				-- Grand Warlock Nethekurse
+	[20923] = {{"TANK", "Tank the boss against a wall"},
+				{"Important", "Has a brief fear"},
+				{"Important", "Due to high-hitting melee cleave, the players standing close to boss will take increased damage and will need more heals"}}, 
+				-- Blood Guard Porung (Heroic-Only)
+	[16809] = {{"Legion", "HEROIC MODE: It is best to have TANK put on DPS gear due to being untauntable. Tank and 2 DPS having a buffed HP of 8500 is helpful here. The third 'DPS' should go off-heals to help out main spec healer"},
+				{"Legion", "Fire Resistance Buffs/Aura will help deal with this boss' damaging abilities"},
+				{"TANK", "Tank the boss in the middle of the room and be prepared to pickup stealthed assassins that may strike when boss unleashes fear"},
+				{"Important", "Untauntable (using high threat abilities causes him to focus on that player"},
+				{"Important", "BEATDOWN: When boss emotes, he will wipe aggro table and attack random player"},
+				{"PALADIN", "If tank, use Seal of Vengeance! Maintaining that 5th tick of debuff on boss will help pull aggro back to you during aggro switch"},
+				{"WARRIOR", "If tank, make sure to keep Sunder Armor stacked to help pull aggro back to you when aggro table is wiped."},
+				{"DRUID", "If tank, keep Lacerate applied to boss to help pull aggro back to you when aggro table is wiped"},
+				{"Defensives", "When boss' weapon glows red he will deal increased fire damage to target and unleash an AoE Blast Wave (Fire Damage +Movement Speed Slow)"},
+				{"Important", "FEAR: Boss dishes out an AoE 3 sec fear"},
+				{"SHAMAN", "Fear Totem will be helpful in contending with boss' AoE Fear"},
+				{"Important", "Boss will occasionally Thunder Clap (-35% attack speed and -35% movement speed to players for 10 sec) melee-ranged players. This should be removed."}}, 
+				-- Warbringer O'mrogg
+	[16808] = {{"Advanced", "POSITIONING: TANK boss near entrance to his 'platform' and facing that same direction. When fight begins, HEALER should stand in the opposite side of the platform, and DPS should stand between boss and Healer. Players should spread as much as possible"},
+				{"Legion", "ASSIGNMENTS (to keep healer from going oom): Have 1 DPS dedicated to adds, another DPS switching between Boss and helping deal with the Adds, and another focusing on boss"},
+				{"Important", "ADDS: ~30 sec into the fight (increasing in frequency over the fight), boss will call for adds that will come up the stairs to entrance of platform. Tank should swap to these targets to pick up aggro while DPS focuses on adds as priority"},
+				{"Important", "If group is not able to balance dealing with increased number of adds, this boss fight can overwhelm group and result in a wipe"},
+				{"Important", "BLADE DANCE/CHARGE: ~30 sec after fight begins and every 30 sec thereafter, boss will charge random player and strike them (+1 sec stun). As the fight continues, boss will charge an increased number of players dealing damage to them."},
+				{"HEALER", "During boss' SWEEPING STRIKES, boss' next 5 melee attacks will strike an additional player"}}, 
+				-- Warchief Kargath Bladefist
 
-	
-	
-	-- Black Rook Hold
-	[101839] = {{"Important", "Ranged: Stand at least 40 yards away and spread"},
-				{"Important", "Priority Kill Target"}}, -- Risen Companion
-	[98691] = {{"Interrupts", "Stun Interrupt: Knife Dance (AoE)"},
-				{"Important", "Knife Dance has short range so run out if you can't stun"}}, -- Risen Scout
-	[98706] = {{"Important", "Beware: Bonebreaking Strike stuns in a frontal line"}}, -- Commander Shemdah'sohn
-	[98366] = {{"Legion", "You can skip with invis pot"},
-				{"HEALER", "Dispel: Soul Blade"}}, -- Ghostly Retainer
-	[98368] = {{"PriorityTargets", "Priority Kill Target"}, {"Legion", "You can skip with invis pot"}}, -- Ghostly Protector
-	[101549] = {{"PriorityTargets", "Priority Kill Target"}, {"Important", "Move out of blue swirls on ground"}}, -- Arcane Minion
-	[102138] = {{"Important", "Where did you find this man??"}}, -- Vanguard Ixxilon (not in game)
-	[98275] = {{"Important", "Shoot has a 30 yard range. Sorry melee"}, {"Legion", "Arrow Barrage hits slightly further than the animation"},
-				{"Legion", "You can line of sight Shoot if low"}}, -- Risen Archer 
-	[98280] = {{"Interrupts", "Interrupt: Arcane Blitz (ST Nuke)"}}, -- Risen Arcanist
-	[98243] = {{"Important", "Beware: Bonebreaking Strike stuns in a frontal line"}}, -- Soul-Torn Champion
-	[98677] = {{"Important", "Explodes on death"}, {"HEALER", "Dispel(!): Soul Venom (large DoT)"}}, -- Rook Spiderling
-	[98538] = {{"Important", "Stay spread out. Moderately high tank & party damage"}, 
-				{"Legion", "You can skip with invis pot"}}, -- Lady Velandras Ravencrest
-	[98521] = {{"Important", "Move out of the party with Soul Echos"}, 
-				{"Interrupts", "Interrupt: Spirit Blast"},
-				{"Legion", "You can skip with invis pot"}}, -- Lord Etheldrin Ravencrest
-	[98813] = {{"Legion", "Harmless"}}, -- Bloodscent Felhound
-	[98681] = {{"Legion", "Harmless"}}, -- Rook Spinner
-	[98370] = {{"Interrupts", "Interrupt: Dark Mending (Heal)"}}, -- Ghostly Councilor
-	[102788] = {{"Interrupts", "Interrupt: Felfrenzy"}, {"Legion", "Good luck with the staircase my friend"}}, -- Felspite Dominator
-	[98810] = {{"Interrupts", "Stun Interrupt: Brutal Assault"}, {"TANK", "Brutal Assault deals heavy tank damage. Stun or run away"}}, -- Wrathguard Bladelord
-	[98792] = {{"Legion", "Abilities change after potion drink"}, {"Legion", "Basically just give them some space"}}, -- Wyrmtongue Scavenger
-	[101923] = {{"Legion", "Does a variety of abilities after potion drink"}, {"Legion", "Basically just give them some space"}}, -- Wyrmtongue Scavenger
-	[98900] = {{"Legion", "Harmless. Bolster warning: Low HP mob"}}, -- Wyrmtongue Trickster
-	[102095] = {{"Important", "Dodge the brown swirls on the floor"}}, -- Risen Lancer
-	[102094] = {{"TANK", "Coup de Grace deals heavy damage"}}, -- Risen Swordsman
-	---Bosses
-	[98542] = {{"Important", "P2: CC a spirit to delay Soul Burst until 15%"}, {"Important", "Use ALL of your defensives on Soul Burst"}, {"TANK", "Pull to one side of the room. Run out of Reap Soul"}}, -- Amalgam of Souls
-	[98696] = {{"Important", "Ranged: Spread for Brutal Glaive, then line up for Blazing Trail"}, {"Important", "P2: Kill Arcanist first. Interrupts casts"}, 
-				{"TANK", "Use your core defensive ability before Vengeful Shear"},
-				{"HEALER", "Big heals on Brutal Glaive targets"}}, -- Illysanna Ravencrest
-	[98949] = {{"Important", "When targeted, move Fel Vomit to the side of the room"}, {"Important", "Move away from Fel Vomit during Earthshaking Stomp"},
-			{"Important", "Brutal Gaze should be intercepeted by tank / tanky DPS, 1-2 stacks max"}, {"TANK", "When boss energy hits 100: expect heavy tank damage"}}, -- Smashspite
-	[94923] = {{"Important", "Use BIG defensives for first Shadowbolt Volley"}, {"Important", "Dodge Whirling Blade. It hurts"},
-			{"Important", "Dark Obliteration can move in both directions. Be prepared"}, {"HEALER", "Swarm targets will need big healing"}}, -- Kur'talos
-	----------------0--------------------
-	
-	
-	-- Arcway
-	[98728] = {{"Legion", "Jumps to random players to eat them. You can walk away"}}, -- Acidic Bile
-	[98756] = {{"Important", "Arcane Slicer is a line based one shot. Itll face a direction to cast it"}, {"Interrupts", "Interrupt: Arcane Reconstitution (Full Heal)"}}, -- Arcane Anomaly
-	[105617] = {{"Interrupts", "Interrupt: Demonic Ascension (purgeable)"}, {"Interrupts", "Interrupt: Portal Argus / Brand of the Legion"}, 
-				{"WARLOCK", "Enslave then cast Brand of the Legion on allies"}}, -- Eredar Chaosbringer
-	[105682] = {{"TANK", "Heavy hitter. Reduces healing received. Take care"}}, -- Felguard Destroyer
-	[98732] = {{"Important", "Won't always attack tanks. Use AoE CC to keep debuff stacks low"}, {"HEALER", "Dispel the disease if possible, otherwise pump big heals"}}, -- Plagued Rat
-	[105651] = {{"Important", "Line of Sight: Prophecies of Doom to avoid all damage"}, {"DEATHKNIGHT", "Death Grip can interrupt Seer casts"},
-				{"DEMONHUNTER", "Sigil of Chains can interrupt Seer casts"}}, -- Dreadborne Seer
-	[98759] = {{"Legion", "Devour can be stunned, or removed with Freedom / Shapeshifting"}}, -- Vicious Manafang
-	[105876] = {{"Important", "Explodes on death!!"}}, -- Enchanted Broodling
-	[102351] = {{"Legion", "Line of sight: They'll group up for your AoE DPS"}}, -- Mana Wyrm
-	[105915] = {{"Interrupts", "Interrupt(!!): Eye of the Vortex (Huge AoE DoT)"}, {"Legion", "Stand in the blue circles for a 50% haste buff"}, 
-				{"HEALER", "Dispel: Eye of the Vortex but get DPS to kick"}}, -- Nightborne Reclaimer
-	[105921] = {{"Important", "Stand in the circle for a 50% haste buff."}, {"TANK", "Keep all mobs in the pack out of the haste circle"}, {"DAMAGE", "When shielded, avoid attacking from the front"}}, -- Nightborne Spellsword
-	[105706] = {{"Legion", "Stand away during Bladestorm channel"}}, -- Priestess of Misery
-	[98425] = {{"Important", "Dodge: Ooze explosion (15yd range, 2s cast)"}}, -- Unstable Amalgamation
-	[106059] = {{"Interrupts", "Interrupt(!): Arcane Reconstitution (Full Heal)"}, {"Interrupts", "Interrupt: Phase Breach (heavy AoE damage)"}}, -- Warp Shade
-	[98733] = {{"Important", "On Death: AoE silence (15 yard range)"}}, -- Withered Fiend
-	[105952] = {{"Legion", "Don't stand in the pretty clouds"}}, -- Withered Manawraith
-	[98770] = {{"Defensives", "Defensives: Searing Wound (heavy DoT)"},
-				{"HEALER", "Big Healing on Searing Wound targets"}}, -- Wrathguard Felblade
-	[105629] = {{"Important", "You can line of sight the cast"}}, -- Wyrmtongue Scavenger
-	[113699] = {{"Important", "Each cast reduces healing received by 10%."},{"Important", "Interrupt or line of sight on high stacks"}}, -- Forgotten Spirit
-	
-	---Bosses
-	[98206] = {{"Defensives", "Defensive CD: Wicked Slam"}, {"Important", "Wicked Slam can be dodged (with dodge stat)"},
-				{"HEALER", "Top everyone before Wicked Slam but otherwise easy boss to heal"}, {"TANK", "Remember to pick up the bats"}}, -- Xakal
-	[98207] = {{"Important", "Use mobility to break Tangled Web ASAP. Aim to take < 3 ticks"}, {"Important", "Kill the adds. They'll root you into Blink Strikes"},
-				{"WARLOCK", "Use Demonic Portal to immediately break web"}}, -- Nal'tira
-	[98205] = {{"Important", "Stand with a friend for Quarantine. Alone = dead"}, {"Fluff", "Very easy. Please don't wipe."}}, -- Corstilax
-	[98203] = {{"Interrupts", "Interrupt: Overcharge Mana(!), Arcane Blast (some)"}, {"Important", "Moving during Nether Link pushes allies away. Be careful"}}, -- Ivanyr
-	[98208] = {{"Important", "Be aware of your surroundings. Chrono Shards explode - big damage"}, {"Legion", "Reapply DoTs during Banish in Time cast"},
-			{"Legion", "Intermission: Best path is always the outside path leading north"}, {"Legion", "Unstable Mana: Melee kite in a circle around boss to keep DPSing"}}, -- Vandros
-	----------------0------------------
-	
-	
-	
-	-- Darkheart Thicket
-	[95771] = {{"Important", "Move from the shiny purple beams"}}, -- Dreadsoul Ruiner
-	[95779] = {{"Important", "The roar is a 30yd range. Ranged DPS / Healers stand at max range"}}, -- Festerhide Grizzly
-	[99358] = {}, -- Rotheart Dryad
-	[101679] = {{"Important", "The poison explodes in an 8yd radius. If it cant be dispelled then spread out"},
-				{"HEALER", "Dispel: Nightmare Toxin (DoT + AoE)"}}, -- Dreadsoul Poisoner
-	[95766] = {{"Legion", "Easy mob but face away from the party and avoid charge"}}, -- Crazed Razorbeak
-	[99359] = {{"PriorityTargets", "Priority Target"}, {"Important", "Auto-heals nearby mushrooms"}}, -- Rotheart Keeper
-	[99360] = {}, -- Vilethorn Blossom
-	[95769] = {{"Interrupts", "Interrupt: Unnerving Screech (Disorient)"}}, -- Mindshattered Screecher
-	[95772] = {{"PriorityTargets", "Priority Target. Keep stunned if possible"}}, -- Frenzied Nightclaw
-	[100531] = {{"Important", "Giant blood bomb will fall from the sky. Don't get hit by it"},{"Advanced", "Run away from the Fury as it dies and small blobs won't aggro"}}, -- Bloodtainted Fury (elementals)
-	[101991] = {{"Interrupts", "Interrupt: Tormenting Fear (Fear)"}}, -- Nightmare Dweller
-	[100526] = {{"Legion", "Stacks heavy disease on the tank. Consider kiting / stunning"}}, -- Tormented Bloodseeker
-	[100527] = {}, -- Dreadfire Imp
-	[100539] = {{"Legion", "Will ping random targets and teleport around"}}, -- Taintheart Deadeye
-	[99365] = {{"Legion", "The stalker... stalks (hits random targets for medium damage)"}}, -- Taintheart Stalker
-	[99366] = {}, -- Taintheart Summoner
-	[100529] = {{"Important", "They drop a blood pool when they die. Treat like fire"}}, -- Hatespawn Slime
-	---Bosses
-	[96512] = {{"Important", "Grievous Leap always targets furthest ally from boss"}, {"Important", "You can CC the adds to stop them dripping everywhere"}, 
-				{"TANK", "Face the boss away from your party. Primal Rampage charges in your direction"}}, -- Glaidalis
-	[103344] = {{"Important", "You can stand in the Strangling Roots to prevent adds spawning"}, {"Important", "Druids and BoF are great for clearing them"},
-			{"Important", "Crushing Grip is very heavy tank damage. Use a big cooldown / heals"}}, -- Oakheart
-	[99200] = {{"Important", "Stand inside bosses hitbox during Down Draft to minimize blowback"}, {"Important", "Spread before Earthshaking Roar"},
-			{"Important", "Whole party can avoid Breath of Corruption, including tank"}, {"HEALER", "Healing CDs: Down Draft (heavy AoE with pushback)"}}, -- Dresaron
-	[99192] = {{"Defensives", "Defensives: Apoc Empowerment (boss at 50%"}, {"Defensives", "Defensives: Feed on the Weak (heavy DoT)"}, 
-			{"Important", "Stack for Nightmare Bolt, spread for Induced Nightmare"},
-			{"HUNTER", "You can Feign Death the Feed on the Weak cast"}, {"Advanced", "High key? Wear Prydaz"}}, -- Shade of Xavius
-	-----------------0-------------------------
-	
-	
-	-- Seat of the Triumvirate
-	[124171] = {{"Legion", "Suppression Field debuff = don't move"}}, -- Shadowguard Subjugator
-	[122322] = {{"Legion", "Use AoE CC to keep your tank alive"},
-				{"TANK", "Use anti-magic mitigation. These really hurt."},
-				{"TANK", "Don't tank on the black ground"}}, -- Famished Broken
-	[122478] = {{"Important", "Explodes when it dies leaving giant DoT. Run."},
-				{"HEALER", "Dispel: Corrupting Touch"}}, -- Void Discharge
-	[122571] = {{"Important", "Move out of the black swirls on the ground"},
-				{"Interrupts", "Interrupt: Stygian Blast"},
-				{"TANK", "Don't tank on the black ground"}}, -- Rift Warden
-	[122405] = {{"Legion", "Interrupts as often as possible"}}, -- Shadowguard Conjurer
-	[122403] = {{"Important", "Frontal Cleave"},
-				{"HEALER", "Heavy tank damage"}}, -- Shadowguard Champion
-	[124947] = {{"Legion", "Interrupt or stun the constant Dark Flay casts"}}, -- Void Flayer
-	[127784] = {{"Important", "Spread + mobility cooldowns to escape Corrupting Void"}, {"HEALER", "Heavy healing warning. Use Cooldowns"}}, -- Shadowguard Voidbender
-	[125857] = {{"Fluff", "More like Paper Mache Voidlings"}}, -- Lashing Voidling
-		
-	-- Bosses
-	[122313] = {{"Legion", "Void adds explode if reach boss. Use CC to help."},
-				{"DPS", "Void Realm: Kill adds until full energy. Click extra action button."},
-				{"TANK", "Void Realm: Kill adds until full energy. Click extra action button."},
-				{"TANK", "Never tank him on the black ground"}}, -- Zuraal
-	[122316] = {{"Legion", "Please don't stand on the mines. I asked nicely"}},-- Saprish
-	[125340] = {{"Interrupts", "Interrupt(!!): Dread Screech (Disorient)"}}, -- Shadewing
-	[122319] = {{"Important", "Dodge: Ravaging Darkness"}}, -- Darkfang
-	[124309] = {{"Interrupts", "Interrupt(!!): Eternal Twilight (One shot), Howling Dark (Fear)"},
-				{"Important", "Stack near the boss before Entropic Force is cast"},
-				{"HEALER", "Track Void Lashing on your healer frames"},
-				{"HEALER", "Prioritize healing to anyone attacked by multiple tentacles"},
-				{"DPS", "Kill Priority is Voidtenders >> Tentacles > Boss"}}, -- Viceroy Nezhar	
-	[122314] = {{"Important", "Rift Wardens will cast Fragment of Despair"},
-				{"Important", "You must soak the black circles it leaves"},
-				{"Important", "Safest to soak with immunities but not required"},
-				{"Legion", "Two waves of Rift Wardens. Single and a double"},
-				{"HEALER", "High, ticking damage through fight. Be efficient with mana"}}, -- L'ura
-	----------------------------------------------------------------------------------------
-	
-	
-	-- Vault of the Wardens
-	[99649] = {{"Important", "Skip this guy! Illianna is easier"}, {"Important", "You pulled him? Ok, stack for the meteor"}}, -- Dreadlord Mendacius
-	[102583] = {{"Important", "Explodes on death (woah!). Stagger kills if multiple Scorchers"}}, -- Fel Scorcher
-	[99956] = {{"Important", "You can knockback or stun Fel Gaze to greatly reduce party damage"}, {"Interrupts", "Interrupt: Unleash Fury (huge AoE damage)"}}, -- Fel-Infused Fury
-	[97674] = {}, -- Brood Mother (not in game)
-	[102584] = {}, -- Malignant Defiler
-	[100364] = {{"Legion", "Wont move naturally, run away from them to get them to port to you"}, {"Legion", "Will hit DPS / Healers if tank isn't in range. They hurt"}}, -- Spirit of Vengeance
-	[98963] = {{"Legion", "Do almost nothing. Grab as many as you can"}, {"Legion", "Bursting / Bolstering don't apply"}}, -- Blazing Imp
-	[95771] = {}, -- Dreadsoul Ruiner (in DHT)
-	[96480] = {{"Legion", "Do almost nothing. Grab as many as you can (except on Bursting!)"}}, -- Viletongue Belcher
-	[96657] = {{"Legion", "Casters: Stop casting during Defeaning Shout or be locked out for 4s"}, {"Legion", "Focus DPS on Illianna and let cleave take care of dogs"}}, -- Blade Dancer Illianna
-	[97677] = {{"Legion", "Will start running away at low health. Save your stuns / knockbacks"}}, -- Barbed Spiderling
-	[96584] = {{"Legion", "No notable mechanics"}}, -- Immoliant Fury
-	[97678] = {{"Legion", "Will strangle a player and drag them into webbing. Not that dangerous"}}, -- Aranasi Broodmother
-	[96587] = {{"HEALER", "Dispel: Nightmares (long stun)"}}, -- Felsworn Infester
-	[98177] = {{"Important", "Will transform and deal very heavy damage sub-50%"}, {"HEALER", "Will wreck both tank and party sub 50%. Use your healing CDs"}}, -- Glayvianna Soulrender
-	[98533] = {{"Important", "Don't stand underneath her. The little pool reduces hit chance"}, {"Important", "Dodge the swirls or you'll be judged"}}, -- Foul Mother
-	[98926] = {{"Legion", "No notable mechanics"}}, -- Shadow Hunter
-	[98954] = {{"Important", "Frontal silence cone. Face away from party"}}, -- Felsworn Myrmidon
-	[102566] = {{"Important", "When somebody gets caged STACK on it. The damage is shared"}, {"Important", "... but dodge the green swirls"}}, -- Grimhorn the Enslaver
-	
-	---Bosses
-	[95885] = {{"Important", "Interrupt and kill adds"}, {"Important", "Give the Hatred beam a wide berth. It moves quickly"}, 
-				{"TANK", "You need to use your active mitigation when boss casts Darkstrike"}}, -- Tirathon
-	[96015] = {{"Important", "NW: Quillen. Can be CC'd, otherwise kill"}, {"Important", "NE: Void. Kill order: Mindflayer > Voidcaster > Juggernaut"},
-			{"Important", "SW: Shadowmoon. Spread. Interrupt Seed of Corruption. Kill Technician > Warlock"}, {"Important", "SE: Corruption. Spread, AoE down"},
-				{"TANK", "Consider tanking up where he starts. Makes avoiding gazes very easy"}}, -- Tormentorum
-	[95887] = {{"Important", "If you stand under boss you can't be hit by balls"}, {"Important", "Move boss after each floor puddle"}, 
-				{"Important", "Boss takes extra damage after Focus phase"}}, -- Glazer
-	[95886] = {{"Important", "Stop adds exploding and don't stand in fire"}, {"Legion", "Very easy boss"}}, -- Ash'golm
-	[95888] = {{"Important", "You must dodge the Moonglaive, even as tank"}, {"Important", "Consider throwing the light to new shadows. Quicker"},
-				{"Important", "Stick together during Creeping Doom"}, {"HUNTER", "You can use flare to pop the boss out of hiding during Shadowstep"}}, -- Cordana
-	--------------------0----------------------
+	---Kargath Bladefist's Buddies
+	[17621] = {{"Legion", "Fury Warrior-type mob"},
+				{"Important", "BLOODTHIRST: Next 5 successful attacks restore health to mob"},
+				{"Defensives", "ENRAGE: Increased Physical Dmg + attack speed by 30% for 1 minute"}}, 
+				-- Heathen Guard
+	[17622] = {{"Legion", "Hunter-type-mob"}, 
+				{"Important", "SCATTER SHOT: Deals Physical Damage +4 sec disorient to player."},
+				{"Important", "INCENDIARY SHOT: Applies fire DoT to player"}}, -- Sharpshooter Guard
+	[17623] = {{"Legion", "Arms Warrior-type mob"}, 
+				{"Important", "KNOCKBACK ability: When fighting mob, try to stand with back against wall"},
+				{"Important", "CLEAVE: Mob will deal Physical damage to player and their closest ally"},
+				{"Defensives", "ENRAGE: Increased Physical Dmg + attack speed by 30% for 1 minute"}}, 
+				-- Reaver Guard
 
-	-- Template
-	-- {"Legion", ""}
-	-- {"Important", ""}
-	-- {"Interrupts", "Interrupt: "}
-	-- {"HEALER", ""}
-	-- {"TANK", ""}	
-	-- {"DPS", "DPS Note", ""}	
-	
-	
-	-- Maw of Souls
-	[97097] = {{"Interrupts", "Interrupt: Bone Chilling Scream (AoE Fear)"}, {"Legion", "The fear also has a 15 yard range"}}, -- Helarjar Champion
-	[97043] = {{"Important", "Barbed Spear is in two parts. A dispellable grip and an AoE cleave afterwards"}, {"Important", "You can be hit by the cleave even if not targeted by the grip; melee take care"},
-			{"Important", "Don't stand in the blue swirling muck"}}, -- Seacursed Slaver
-	[99188] = {{"Important", "Barrels roll toward a player and hurt. Small"}}, -- Waterlogged Soul Guard
-	[102375] = {{"Interrupts", "Interrupt: Fire Blast (Heavy ST nuke)"}}, 		-- Runecarver Slave
-	[98919] = {{"Important", "Big frontal cleave during ghost form"}}, -- Seacursed Swiftblade
-	[97182] = {{"Defensives", "Defensives: Lantern of Darkness (expect 2)"}, {"HEALER", "Healing CD: Lantern of Darkness (prep for 2)"}},		 -- Night Watch Mariner
-	[99033] = {{"Interrupts", "Interrupt: Whirlpool of souls (AoE damage / healing)"}}, -- Helarjar Mistcaller
-	[97185] = {{"Important", "Frontal Cleave (Bile Breath)"}}, -- The Grimewalker
-	[97119] = {{"Important", "Spiky party damage. Use AoE CC"}}, -- Shroud Hound
-	[97200] = {{"Important", "Defiant Strike: charges slowly in one direction. Hurts."}, {"Important", "If he reaches a wall during charge he will turn"}}, -- Seacursed Soulkeeper
-	[102104] = {{"Important", "Frontal cleave. Melee beware"}},	 -- Enslaved Shieldmaiden
-	[97365] = {}, 	-- Seacursed Mistmender
-	[99307] = {{"Important", "Give no Quarter: Spread. Move when targeted"}, {"Important", "The Necromancer adds explode when left alive. AoE them"},
-			{"Interrupts", "Interrupt: Debilitating Shout (Damage + -MaxHP)"}},			 -- Skjal
-	[98973] = {}, -- Skeletal Warrior
+	---Trash Mobs
+	[16507] = {{"Important", "Immune to MC on Heroic; Will charge opponent stunning them for 2 sec"}}, -- Shattered Hand Sentry
+	[16523] = {{"Legion", "Arms Warrior-Type Mob"},
+				{"Defensives", "Use defensives as needed when mob is buffed with Slice and Dice (Increased attack speed by 30% for 8 sec)"}}, 
+				-- Shattered Hand Savage
+	[16593] = {{"Important", "Immune to MC in Heroic"},
+				{"Important", "Remove Curse of the Shattered Hand (Damage taken increased by 15%, damage done increased by 5%) from tank"}}, 
+				-- Shattered Hand Brawler
+	[16594] = {{"Legion", "Healing Priest-Type Mobs"},
+				{"Interrupts", "Interrupt: Prayer of Healing (3 sec AoE Heal); Mob can also be CC'd"}}, 
+				-- Shadowmoon Acolyte
+	[16699] = {{"Legion", "Immune to Mind Control on Normal and Heroic difficulties"},
+				{"Important", "Hand Reaver will knock back player. Tank should have back against wall when fighting when this mob is present"}}, 
+				-- Shattered Hand Reaver
+	[16700] = {{"PriorityTargets", "When one of his squad dies, he will call for a replacement. If you kill this mob first, replacements won't come for the others anymore"}}, 
+				-- Shattered Hand Legionnaire
+	[16704] = {{"Important", "Dispel Viper Sting (Poison; Drains mana from player) from mana-user (esp if it's healer)"}}, 
+				-- Shattered Hand Sharpshooter
+	[17083] = {{"Legion", ""}}, -- Fel Orc Convert
+	[17301] = {{"Important", "HEROIC-only mob. Due to the quest present on this difficulty, this mob needs to die quickly to ensure people on quest can make timer."}}, 
+				-- Shattered Hand Executioner
+	[17356] = {{"Legion", "AoE mobs down"},
+				{"TANK", "Use AoE threat ability (ie Thunder Clap/Consecration) to aggro packs while DPS AoE them"}}, 
+				-- Creeping Ooze
+	[17357] = {{"Legion", "AoE mobs down"}, 
+				{"TANK", "Use AoE threat ability (ie Thunder Clap/Consecration) to aggro packs while DPS AoE them"}}, 
+				-- Creeping Oozeling
+	[17420] = {{"Legion", ""}}, -- Shattered Hand Heathen
+	[17427] = {{"Dodge", "DODGE: Casts Flaming Arrows. You should run around these during the gauntlet event"}}, 
+				-- Shattered Hand Archer
+	[17461] = {{"Legion", ""}}, -- Shattered Hand Blood Guard
+	[17462] = {{"Important", "Applies Hamstring to player (Physical damage +reduced movement speed)"}}, -- Shattered Hand Zealot
+	[17464] = {{"Defensives", "Applies Mortal Strike to target reducing healing effectiveness by 50% for 5 sec"}}, 
+				-- Shattered Hand Gladiator
+	[17465] = {{"Important", "On Heroic-mode, when dealing with timer, skip these mobs"}}, -- Shattered Hand Centurion
+	[17578] = {{"Legion", ""}}, -- Hellfire Training Dummy
+	[17669] = {{"Legion", ""}}, -- Rabid Warhound
+	[17670] = {{"Important", "Ranged mob with pets; Can't be CC'd in Heroic difficulty"}}, -- Shattered Hand Houndmaster
+	[17671] = {{"Important", "Mob will use Concussion Blow (5 sec stun). This can cause issues for tank building threat if dealt at the start of fight. Once freed, the tank needs to move to pickup/continue to build aggro!"}},
+				-- Shattered Hand Champion
+	[17693] = {{"Legion", ""}}, -- Shattered Hand Scout
+	[17694] = {{"Important", "Warlock-Type Mob"},
+				{"Interrupts", "Interrupt: Fear"},
+				{"Dodge", "Run out of Rain of Fire when mob casts it at selected location"}}, -- Shadowmoon Darkcaster
+	[17695] = {{"Legion", "Stealthed/Rogue-Type Mobs"},
+				{"Important", "When they first aggro they will sap a random player (usually the player taking point) and proceed to assault other players. This mob should be CC'd while the tank/healer is sapped"}}, 
+				-- Shattered Hand Assassin
+
+
+	------- Dungeon: The Slave Pens -----------------
+
+	---Friendly NPCs
+	[17893] = {{"Legion", "Free him from cage and waves of mobs will appear. After their defeat, speak with him again to receive Nature Resist Buff +Stats"},
+				{"TANK", "Keep mobs off of Naturalist Bite NPC to ensure that you can obtain Nature Resist buff for final boss!"},
+				{"HEALER", "Keep Naturalist Bite NPC healed to ensure that you can obtain Nature Resist buff for final boss!"}},
+				-- Naturalist Bite
+
 	---Bosses
-	[96756] = {{"Important", "Skeletons cannot be CC'd"}, {"Important", "Skeletons should be AoE'd down as absolute priority"},
-		{"Legion", "Hunter pets and Boomkin Treants can taunt the boss before Dark Slash"}}, -- Ymiron
-	[96754] = {{"Important", "Dodge scythe at all times. It does hit slightly behind the boss"}, {"Important", "Use CC on fragments to keep them in one place for AoE"}, {"Legion", "Try and keep the party close for good Servitor spawns"},
-				{"HEALER", "Add Fragment to your frames. The debuff really hurts"}, {"TANK", "Move boss away from nether rips as they overwhelm an area"}}, -- Harbaron
-	[96759] = {{"PriorityTargets", "Focus Destructor Tentacles first. Two up at once is dangerous"}, {"Important", "The tentacle hitboxes are huge so you can usually AoE them"}, 
-			{"Important", "P2: Her breath hits a third of the platform. It can one shot you"}, {"Important", "Intermission: Stand on platform edge. Holes won't spawn under you"},
-			{"Legion", "Bloodlust the 1st phase for a CLEAN kill, or 2nd for a FAST kill"}}, -- Helya
-	------------------0-------------------
-	
-	
-	-- Neltharion's Lair
-	[102404] = {{"Important", "Stoneshatter is an AoE targeted on tank"}, {"Important", "Grubs MUST be CC'd or immediately killed or they'll transform"}}, -- Stoneclaw Grubmaster
-	[91332] = {}, -- Stoneclaw Hunter
-	[92610] = {{"Important", "Interrupt his cast to stop the drumming. Animation still plays but harmless"}}, -- Understone Drummer
-	[92351] = {{"Important", "Interrupt his cast to stop the drumming. Animation still plays but harmless"}}, -- Understone Drummer (missing)
-	[91008] = {{"Important", "Attacks allies at random. Won't cast if tank is 40 yards+ away"}}, -- Rockbound Pelter
-	[90998] = {{"Interrupts", "Interrupt: Stone Bolt (Heavy ST nuke)"}}, -- Blightshard Shaper
-	[102253] = {{"Important", "The Charskin transform cast can be stunned, else run away from the giant"}}, -- Understone Demolisher
-	[102232] = {{"Interrupts", "Interrupt: Bound (Long stun on random player)"}, {"Important", "Pelts random players. Consider CC'ing while you kill the scorpion"}}, -- Rockbound Trapper
-	[90997] = {{"Important", "Move when you see Avalanche cast. Don't run where another player was standing"}, {"Important", "Consider a weak aura to warn you to move"}}, -- Mightstone Breaker
-	[92350] = {}, -- Understone Drudge
-	[91000] = {{"Interrupts", "Stun interrupt: Piercing Shards (Huge cone AoE damage)"}, {"Important", "If low on stuns then face mob away from the party to minimize damage"},
-				{"Legion", "Piercing Shards will ALWAYS follow the Fracture knock back"}}, -- Vileshard Hulk
-	[101438] = {{"Important", "Dodge: Crush (10 yard AoE)"}}, -- Vileshard Chunk
-	[91006] = {{"Legion", "Moderate tank damage. Easily kited."}}, -- Rockback Gnasher
-	[105636] = {}, -- Understone Drudge
-	[105720] = {}, -- Understone Drudge
-	[101437] = {{"PriorityTargets", "Priority Target"}}, -- Burning Geode
-	[98406] = {}, -- Embershard Scorpion (ones at the beginning)
-	[102287] = {{"Important", "Always hits the three furthest allies from the mob"}, {"Important", "Frontal cleave. Face away from the party"},
-				{"Defensives", "Defensives: throughout and stay grouped"}, {"Interrupts", "Stun Interrupt: Frenzy (Huge damage buff)"}, 
-				{"HEALER", "Healing CDs: Need one for every scorpion"}}, -- Emberhusk Dominator (Scorps at the end)
-	[96247] = {}, -- Vileshard Crawler
-	[91001] = {}, -- Tarspitter Lurker
-	[102430] = {{"Important", "Harmless but be careful on Bursting / Bolstering"}}, -- Tarspitter Slug
-	[113998] = {{"Important", "Move when you see Avalanche cast. Don't run where another player was standing"}, {"Important", "Consider a weak aura to warn you to move"}}, -- Mightstone Breaker
-	[113537] = {{"Important", "Always hits the three furthest allies from the mob"}, {"Important", "Frontal cleave. Face away from the party"},
-				{"Defensives", "Defensives: throughout and stay grouped"}, {"Interrupts", "Stun Interrupt: Frenzy (Huge damage buff)"}, 
-				{"HEALER", "Healing CDs: Need one for every scorpion"}}, -- Emberhusk Dominator
+	[17941] = {{"Legion", "Boss deals Nature (and some fire damage thru totem). Having proper resistance gear/pots can help mitigate this damage"},
+				{"Important", "Prior to pulling boss, make sure to deal with Adds that might pull if your boss fighting will get too close"},
+				{"PriorityTargets", "Make sure that as DPS you're swapping to his totems when he drops them"},
+				{"TANK", "While avoiding adds, backup to pull boss out of range of his totems"},
+				{"WARRIOR", "Use Spell Reflection to deal with boss' Lightning Bolts"},
+				{"SHAMAN", "Grounding Totem will absorb Lightning Bolts"}}, 
+				-- Mennu the Betrayer
+	[17991] = {{"Legion", "Boss deals Frost damage thru WATER SPIT (40 yd range). Use Frost Resistance Aura/Buffs to mitigate this damage"},
+				{"Advanced", "POSITIONING: If tank and DPS place themselves between boss and healer, healer may be able to stay out of range of Water Spit"},
+				{"TANK", "Use/Time Defensives effectively as this boss hits hard"},
+				{"HEALER", "When player is afflicted by boss' GRIEVOUS WOUND, heal them to full to drop this debuff from player"},
+				{"DAMAGE", "Players can use bandages (when not being melee attacked by boss to help healer when they are struck by GRIEVOUS WOUND debuff."},
+				{"HEALER", "When not dealing with GRIEVOUS WOUND, healer should be prioritizing tank due to heavy hitting boss damage"},
+				{"Important", "WATER SPIT is an AoE Frost attack (use pots/resist to mitigate)"},
+				{"Important", "HEROIC MODE: Boss will ENRAGE at 20% health - save healing pots/healthstones for this phase"}}, 
+				-- Rokmar the Crackler
+	[17942] = {{"Legion", "Deals Nature damage - all player should use proper Nature resist gear/pots for fight"},
+				{"Important", "Grab Naturalist Bite's Nature resist buff BEFORE engaging boss - adds will spawn when you free him from cage"},
+				{"Advanced", "POSITIONING: Tank should have boss turned away from group (preferably with back against wall) to avoid group tanking heavy cleave damage and knockback ability. Other players need to make sure that they are spread out and NOT standing near Naturalist Bite as ground Nature AoE will kill NPC"},
+				{"Important", "POISON BOLT VOLLEY: Wide radius ignoring LoS (Nature Damage +DoT)."},
+				{"Important", "If you can dispel POISON, you should be doing this!"}}, 
+				-- Quagmirran
+
+	---Mennu's Totems
+	[18176] = {{"Important", "Lasts 30 sec; Immobalizes nearby players (may need ranged players to deal with totem."}}, -- Tainted Earthgrab Totem
+	[18177] = {{"PriorityTargets", "Lasts 60 sec; Reduces melee damage boss takes by 50%"}}, -- Tainted Stoneskin Totem
+	[18179] = {{"PriorityTargets", "Deals AoE Fire damage to players after 18 sec OR if it is attacked - if you can kill the boss w/in 18 sec window or pull boss out of range of Nova totem, you should leave this totem alone!"}}, -- Corrupted Nova Totem
+	[20208] = {{"PriorityTargets", "Lasts 30 sec; Periodically heals boss"}}, -- Mennu's Healing Ward
+
+	---Trash Mobs
+	[17816] = {{"Defensives", "Tank may need pop defensive CD/receive extra heals when struck by Piercing Jab (reduces player's armor by 15% for 20 sec)"}}, 
+				-- Bogstrok
+	[17817] = {{"Important", "Dispel Decayed Strength (weak disease) from Strength using players (such as tank) as this reduces strength for 5 minutes"}}, 
+				-- Greater Bogstrok
+	[17938] = {{"Legion", "Mob deals primarily Fire damage in form of Heavy Dynamite AoE and Immolate"},
+				{"Important", "Immune to Mind Control & Warlock's Seduction in Heroic, but vulnerable to Fear & Freezing Trap (even in Heroic difficulty)"}}, 
+				-- Coilfang Observer
+	[17940] = {{"Dodge", "DODGE/RUN from Rain of Fire and Blizzard AoE effects"}}, -- Coilfang Technician
+	[17957] = {{"Important", "Tank should face these mobs away from group due to Cleave ability"},
+				{"Important", "Champion will cast Frightening Shout (AoE Fear; Instant cast)"},
+				{"Important", "Mob is immune to Mind Control in HEROIC difficulty"}}, -- Coilfang Champion
+	[17958] = {{"Important", "Mobs break CC on Normal difficulty & immune to ALL CC on Heroic-mode."},
+				{"Important", "When these mobs come in a pack, one can be slowed/kited by a ranged DPS while tank and rest of group deal with the other Defender"}}, 
+				-- Coilfang Defender
+	[17959] = {{"Defensives", "Tank may need to pop a defensive during Head Crack (15 sec reduced stamina debuff), or may need additional heals"},
+				{"Important", "This mob will stun a player (usually the tank) for 3 sec. If mob moves away from tank, they should slowed & kited while tank is stunned"}}, 
+				-- Coilfang Slavehandler
+	[17960] = {{"Legion", "Arcane Mage-Type Mob"},
+				{"Important", "Mob will sometimes cast Domination (10 sec mind-control) on a player. That player should be CC'd or stunned."}, 
+				{"Important", "Mob is vulnerable to all forms of CC in Normal/Heroic including Mind-Control"},
+				{"Legion", "Decayed Intellect can be removed from player (magic-effect lasts 20 sec reducing player intellect by 25%"}},
+				-- Coilfang Soothsayer
+	[17961] = {{"Legion", "Immune to Mind-Control on Heroic difficulty"},
+				{"PriorityTargets", "Enchantress will sometimes MC players. This player should be stunned/CC'd "},
+				{"Important", "Players should run out of Lightning Cloud"},
+				{"Important", "Dispel Entangling Roots (magic-effect) from players when mob casts Lightning Cloud"}}, 
+				-- Coilfang Enchantress
+	[17962] = {{"Legion", "Can be CC'd, but Immune to Mind-Control on Heroic"},
+				{"PriorityTargets", "Dispel Cripple from player (Magic effect; Reduces movement speed by 50%, strength reduced by 50% and time between attacks increased by 100%; lasts 15 sec)"}}, 
+				-- Coilfang Collaborator
+	[17963] = {{"Legion", "Ignore these mobs and instead focus on their naga masters"}}, -- Wastewalker Slave
+	[17964] = {{"Legion", "Ignore these mobs and instead focus on their naga masters"}}, -- Wastewalker Worker
+	[21126] = {{"PriorityTargets", "Interrupt: Heal"},
+				{"Important", "On Normal & Heroic Mode, mob is vulnerable to all forms of CC, including Mind-Control"}}, 
+				-- Coilfang Scale-Healer
+	[21127] = {{"Important", "Dispel Deadly Poison from player (Nature DoT lasting 15 sec)"}}, -- Coilfang Tempest
+	[21128] = {{"PriorityTargets", "Mob will cast Psychic Horror (AoE Fear). Make sure to DPS these pets down quickly"}}, 
+				-- Coilfang Ray <Observer's Pet>
+
+
+	------- Dungeon: The Underbog -------------------
+
 	---Bosses
-	[91003] = {{"Important", "Shatter deals heavy AoE damage based on HP remaining of Skitters"}, {"Important", "Ensure they're cleared / mostly dead before Shatter to avoid death"},
-				{"Important", "Frontal cleave: Razor Shards"}, {"Legion", "Don't move with Crystalline Ground debuff"}}, -- Rokmora
-	[91004] = {{"Important", "First rock phase: after 35s. Subsequent: every 70s"}, {"Important", "There's no trick or weak aura to find where he's hiding. Watch closely"},
-				{"TANK", "Sunder is nature damage"}, {"WARRIOR", "Sunder can be spell reflected"}, {"DEATHKNIGHT", "Consider AMS if tanking Sunder"}}, -- Ularogg
-	[91005] = {{"Important", "Every add or tank eaten by boss buffs her melee damage by 50%"}, {"Important", "Ranged should stand 20-30 yards from the boss to drop the sticky green pools there"},
-			{"Important", "During Spiked Tongue the tank can use the puddles to avoid being eaten"}, {"Important", "Naraxas attacks nearby allies when spiked tongue ends. Don't be within 10 yards until tank is"}}, -- Naraxas
-	[91007] = {{"Important", "Must be faced away from the party and any Crystal Walls"}, {"Important", "Magma wave is deadly and you must have a wall between you and boss to avoid a roasting"},
-			{"Important", "Magma sculptors spawn where players are standing. Run them into walls to stun them"}, {"Legion", "Walls don't block line of sight. Ranged / Healers can hide early"}}, -- Dargrul
-	-------------0-------------
-		
-	
-	-- Cathedral of Eternal Night
-	[119952] = {{"Interrupts", "Interrupt: Shadow Wail (shield) or drag mobs away from it"}}, -- Felguard Destroyer
-	[120550] = {{"Important", "Outrange: Fel Strike (30 yards)"}}, -- Wrathguard Invader
-	[118704] = {{"Important", "Dodge: Shadow Wave (huge cone with slow cast)"}}, -- Dul'zak
-	[119923] = {{"Interrupts", "Interrupt: Demonic Mending (AoE heal)"}}, -- Helblaze Soulmender
-	[118700] = {{"Important", "Pop defensives and keep stunned. Will leap on random allies"}}, -- Felblight Stalker
-	[119930] = {{"Legion", "Frontal Cleave"}}, -- Dreadwing
-	[120366] = {{"Interrupts", "Interrupt(!): Alluring Aroma (Mind Control)"}}, -- Hellblaze Temptress
-	[119978] = {{"Important", "Will Fixate a player and explode on death. Kite"}}, -- Fulminating Lasher
-	[118703] = {{"Interrupts", "Interrupt: Blistering Rain (Channeled AoE)"}, {"Interrupts", "Interrupt: Fel Rejuvenation (Heal)"}}, -- Felborne Botanist
-	[118716] = {}, -- Bilespray Lasher
-	[119977] = {{"Interrupts", "Stun Interrupt: Choking Vines (or run away)"}}, -- Stranglevine Lasher
-	[118717] = {{"Interrupts", "Interrupt: Fel Bolt (ST Nuke). AoE stuns / silences recommended"}}, -- Helblaze Imp
-	[118719] = {{"Important", "Kill the Arcane Tomes or they'll become a nasty arcane minion"}}, -- Wyrmtongue Scavenger
-	[118723] = {{"Important", "Face away from the mob during Blinding Glare"},
-				{"HEALER", "Healing CD: Focused Destruction (heavy AoE damage)"}}, -- Gazerax
-	[120274] = {}, -- Felstrider Magus
-	[118706] = {{"HEALER", "Dispel: Sinister Fangs deals (heavy ticking damage)"}}, -- Necrotic Spiderling
-	[118712] = {{"Important", "Nasty frontal cleave"}}, -- Felstrider Enforcer
-	[118705] = {{"Important", "Will teleport behind someone before casting Venom Storm"}, {"Important", "Adjusts to face a player before unleashing. Watch carefully"}}, -- Nal'asha
-	[120374] = {{"Interrupts", "Interrupt: Shadow Wail (shield) or drag mobs away from it"}}, -- Felguard Destroyer
-	[118690] = {{"Important", "Outrange: Fel Strike (30 yards)"}}, -- Wrathguard Invader
-	[118724] = {{"Legion", "Conjures bubble that gives +50% haste but deals heavy damage"}, {"Legion", "On high keys you probably want to avoid standing inside"}}, -- Helblaze Felbringer
-	[120556] = {{"Legion", "Frontal Cleave"}}, -- Dreadwing
-	[120405] = {{"Legion", "Frontal Cleave"}}, -- Dreadwing
-	[118714] = {{"Interrupts", "Interrupt(!): Alluring Aroma (Mind Control)"}}, -- Hellblaze Temptress
-	[121318] = {{"Important", "Fixates a player and explodes on death"}}, -- Fulminating Lasher
-	[121569] = {{"Interrupts", "Stun Interrupt: Lumbering Crash (Heavy AoE)"}}, -- Vilebark Walker
-	[121711] = {}, -- Bilespray Lasher
-	[120371] = {{"Interrupts", "Interrupt: Fel Bolt (ST Nuke). AoE stuns / silences recommended"}}, -- Helblaze Imp
-	[118713] = {{"Important", "The spinning green orb will one shot you. Stand at distance"}}, -- Felstrider Orbcaster
-	[121553] = {{"Interrupts", "Interrupt: Dread Scream"}, {"Legion", "Frontal Cleave"}}, -- Dreadhunter
+	[17770] = {{"Legion", "Nature Resistance gear/pots will be helpful to mitigate some boss damage."},
+				{"Important", "Immune to CC."},
+				{"Important", "Before fight begins, you will need to deal with 2 Bog Giants (both pull when one is pulled). One of them can be kited by a DPS who then jumps off ledge, allowing grp to fight one Bog Lord at a time"},
+				{"Legion", "If your group is too weak to deal with both Bog Giants at once, focus down one as that one will not respawn if you wipe to the second"},
+				{"Advanced", "POSITIONING: It is helpful for DPS and Healer to stand close together so that they move (around the boss) as a group to avoid mushrooms"},
+				{"PriorityTargets", "When boss summons an Underbog Mushroom, ALL players (tank included) need to run away from it as it causes MASSIVE AoE damage! (showing nameplates can be helpful to see these mushrooms spawn and adjust accordingly)"},
+				{"Dodge", "RUN AWAY: All players (tank included) needs to run away from boss at 20% as boss leeches health with AoE Foul Spores ability (Lasts 11 seconds)"}}, 
+				-- Hungarfen
+	[18105] = {{"Legion", "Nature Resistance gear/pots will be helpful to mitigate some boss damage"},
+				{"Advanced", "POSITIONING: Tank should have boss turned away from group. DPS/Heals need to stand at sides to avoid frontal attack & tail sweep"}}, 
+				-- Ghaz'an
+	[17826] = {{"Important", "Prior to starting fight, defeat the nearby Underbog Lord so that this guy isn't pulled with boss"},
+				{"Advanced", "POSITIONING: Stand with backs against a wall to avoid knockback from Musel'ek, and all players should stack on boss to avoid majority of his ranged abilities (including Aimed Shot)."},
+				{"Important", "Due to heal interrupts, keeping HoTs up will be especially helpful to preserve group"},
+				{"TANK", "TANK should build threat on Claw first before switching back to Musel'ek."},
+				{"HEALER", "Priority heals to player (esp tank) if afflicted by ECHOING ROAR AoE debuff (reduces armor by 50-82% depending on difficulty; 10 yd range)"},
+				{"TANK", "After Freezing Trap Effect (5 sec trap to players within 50 yds), tank needs to get back in melee of boss ASAP"}}, 
+				-- Swamplord Musel'ek
+	[17827] = {{"Important", "Make sure TANK can build up sufficient threat on this guy before engaging boss and this add. Claw turns friendly when at 20%"},
+				{"Important", "ECHOING ROAR: AoE ability reducing players' within 10 yds armor by 50% on normal-mode (82% on heroic). If this is the tank, they will need to pop additional defensives and receive big heals for 20 sec debuff."},
+				{"Important", "Stack Claw on top of Musel'ek to negate Claw's FERAL CHARGE +knockback"}}, 
+				-- Claw <Swamplord Musel'ek's Pet>
+	[17882] = {{"Legion", "Nature Resistance gear/pots will be helpful to mitigate some boss damage"},
+				{"Advanced", "POSITIONING: Players should spread as much as possible to mitigate number of players hit by boss' Chain Lightning. Spreading will also mitigate number of players struck with Static Charge (AoE Nature DoT)"},
+				{"Defensives", "As boss hits tank hard, defensives will need to be timed and healer should keep tank as close to max health as much and as often as possible!"},
+				{"Dodge", "DODGE: If struck by Static Charge (30 yd AoE Nature DoT), run away from nearby players. If tank is struck, other players will need to run from the tank"},
+				{"Important", "LEVITATE: Boss will levitate a player into the air"},
+				{"Legion", "LEVITATE: By standing near small mushrooms, players can mitigate this boss ability (some abilities can allow players to also break free"},
+				{"PRIEST", "Use DISPEL MAGIC to dispel boss' Levitate from yourself/other player and then cast your own Levitate ability to avoid fall damage"},
+				{"PRIEST", "When falling from Levitate, cast Levitate on yourself/other player to mitigate their fall damage"},
+				{"PALADIN", "Use CLEANSE to dispel Levitate from yourself or another player"},
+				{"WARLOCK", "Felhunter's can Dispel levitate"},
+				{"MAGE", "Use Blink to escape from Levitate and then Slow Fall"},
+				{"DRUID", "Feral Druid (Bear Form) can use Feral Charge to break free from Levitate and avoid fall damage"},
+				{"HEALER", "Players that are levitated will need be topped off to ensure they can survive fall damage. They will also need additional heals when they actually receive the fall damage (unless that damage can be slowed)"}}, 
+				-- The Black Stalker
+
+	---Ghaz'an's (possible) Buddy
+	[18107] = {{"Important", "Defeat Tidewrath before Ghaz'an reaches and eats him and \n you will be awarded bonus loot (even if you wipe on boss, but \n manage to take down Tidewrath)."}}, -- Overseer Tidewrath (Removed shortly after TBC retail release and may not be part of TBC Classic
+
+	---Black Stalker Summoned Adds
+	[22299] = {{"PriorityTargets", "DPS need to focus down adds before going back to boss; summoned ~every 10 sec."},
+				{"Interrupts", "Interrupt: Lightning Bolt (Deals Nature Damage)"}}, -- Spore Strider
+
+	---Trash Mobs
+	[17723] = {{"Important", "Immune to all forms of CC and Snares (Traps)! On HEROIC mode (esp when in pairs) can hit pretty hard. They move slowly and can be kited (helpful when in pairs)"}}, -- Bog Giant
+	[17724] = {{"TANK", "Do NOT turn your back to this mob when it is attacking as it deals increased damage from behind. If you need to pull this mob away from another pat: backup or strafe"}}, -- Underbat
+	[17725] = {{"Defensives", "Defensives may be needed for this mob as Wild Growth increases physical damage it deals by 50%"}}, 
+				-- Underbog Lurker
+	[17726] = {{"Legion", ""}}, -- Wrathfin Myrmidon
+	[17727] = {{"Important", "Enemy uses Shield Bash (Interrupting a player's cast)"}}, -- Wrathfin Sentry
+	[17728] = {{"Legion", ""}}, -- Murkblood Tribesman
+	[17729] = {{"Legion", "Ranged Hunter-Type Mob"},
+				{"Important", "CC this mob/dispel Viper Sting from players (Drains player mana over 8 sec). If no one in the group can CC this mob, it should be a priority target!"}},
+				-- Murkblood Spearman
+	[17730] = {{"Legion", "Healer-Type Mob"},
+				{"Interrupts", "INTERRUPT: Holy Light (Big heal to an ally; 2.5 sec cast; 40 yd range)"},
+				{"Interrupts", "INTERRUPT: Prayer of Healing (Moderate AoE heal to allies; 3 sec cast time)"}}, -- Murkblood Healer
+	[17731] = {{"Interrupts", "INTERRUPT: Psychic Horror (1.5 sec cast; 10 yd range; Causing player to be feared for 3 sec"},
+				{"TANK", "Due to Psychic Horror, make sure that you aren't too close to nearby groups when you pull this mob, otherwise a fear may cause you to pull mobs you weren't ready to engage"}}, 
+				-- Fen Ray
+	[17732] = {{"Important", "Dispel POISON SPIT (Nature DoT lasting 10 sec) disease from player"}}, -- Lykul Wasp
+	[17734] = {{"Important", "Deals a knockback ability to a player"},
+				{"Important", "Mob has an enrage where they grow larger over time and should be burned down quickly to mitigate strong attacks"}}, 
+				-- Underbog Lord
+	[17735] = {{"Legion", "This mob has an enrage effect and should be focused down to mitigate damage as a result of this ability"},
+				{"Important", "Enemy uses Shield Bash (Interrupting a player's cast)"}}, 
+				-- Wrathfin Warrior
+	[17771] = {{"Legion", "Mob uses a combination of Shadow, Frost, and Fire abilities"},
+				{"Important", "Dispel Magic AMPLIFY DAMAGE from player (increases physical & magical damage player takes by 30% for 6 sec)"}}, 
+				-- Murkblood Oracle
+	[17871] = {{"Interrupts", "INTERRUPT: Fungal Regrowth (40 yd range; 2 sec cast; Heals ally for initial amount also applying HoT to that ally"},
+				{"Interrupts", "INTERRUPT: Itchy Spores (15 yd range; Deals Nature DoT to player lasting 10 sec)"},
+				{"Important", "Dispel Disease: Itchy Spores from players if unable to interrupt this ability"}}, 
+				-- Underbog Shambler
+	[17990] = {{"Dodge", "RUN AWAY! Spore Cloud, from this object, deals AoE Nature Damage"}}, -- Underbog Mushroom
+	[19632] = {{"Defensives", "DEFENSIVE: May be needed for tank/targeted player to pop CDs during Stinger Rage"},
+				{"Important", "Vulnerable to CC even on Heroic-mode"}}, -- Lykul Stinger
+	[20465] = {{"Important", "Why are you swimming with the fishes?"}}, -- Underbog Frenzy
+
+
+	------- Dungeon: The Steam Vaults ---------------
+
 	---Bosses
-	[117193] = {{"Important", "Run out of choking vines > target adds > target boss"}, {"Important", "Don't let flowers touch you!"}, {"Legion", "Flowers are vulnerable to CC"}}, -- Agronox
-	[117194] = {{"Important", "Don't let the boss hit the south west bookcase if possible"}, {"Legion", "Charge: You can pop a full immunity instead of hiding behind a bookcase"}}, -- Thrashbite
-	[119542] = {{"Important", "Coordinate DPS between portals to kill both before they finish cast"}, {"Important", "Mistresses have a knockback. Keep them away from shield"}, 
-				{"TANK", "Boss will cleave. Always face away from the shield"}}, -- Domatrax (first ID)
-	[118804] = {{"Important", "Coordinate DPS between portals to kill both before they finish cast"}, {"Important", "Mistresses have a knockback. Keep them away from shield"}, 
-				{"TANK", "Boss will cleave. Always face away from the shield"}}, -- Domatrax (second ID)
-	[120793] = {{"Important", "Move Demonic Upheaval to the side of the room"}, {"Important", "Stay spread to avoid extra Dark Solitude damage"}, 
-				{"Important", "P2: Clear adds clockwise as a group"}, {"HEALER", "Damage is heavy and spiky. Save your CD's for P2"}}, -- Mephistroth
-	-------------0--------------
-	
-	
-	-- Court of Stars
-	[105705] = {{"Interrupts", "Interrupt: Charged Blast"}}, -- Bound Energy
-	[105704] = {{"Interrupts", "Interrupt: Drain Magic"}}, -- Arcane Manifestation
-	[104247] = {{"Interrupts", "Interrupt: Nightfall Orb"}}, -- Duskwatch Arcanist
-	[104246] = {{"Important", "Cone frontal cleave (visible)"}}, -- Duskwatch Guard
-	[111563] = {{"Important", "Cone frontal cleave (visible)"}}, -- Duskwatch Guard
-	[104270] = {{"Interrupts", "Interrupt: Charging Station (ignore if construct is alone)"}, {"Interrupts", "Interrupt: Suppress (Can also be dispelled)"}}, -- Guardian Construct
-	[105703] = {{"Important", "Explodes on death!"}}, -- Mana Wyrm
-	[105699] = {{"Important", "Spread out to avoid multiple people getting hit by Mana Fang"}, {"Important", "You can stun or knock the cat back during the leap"}, 
-				{"HEALER", "Dispel the large DoT the cat leaves after a jump"}}, -- Mana Saber
-	[104251] = {{"Important", "Chucks torch at first target. Let tank pull"}, {"Important", "Use CC and burst damage to stop sentry ringing bell"}}, -- Duskwatch Sentry
-	[104277] = {{"Important", "Creates puddles on floor. Dont stand in them"}}, -- Legion Hound
-	[104295] = {{"Interrupts", "Interrupt: All casts. Use AoE stuns and kill quickly"}}, -- Blazing Imp
-	[105715] = {{"Interrupts", "Stun / Knockback Interrupt: Eye Storm"}, {"HEALER", "This mob hurts. Keep the party topped up"}}, -- Watchful Inquisitor
-	[104278] = {{"Important", "Line of sight the Fel Detonation cast if not tank. It hurts"}}, -- Felbound Enforcer
-	[104300] = {{"HEALER", "Dispel: Bewitch"}}, -- Shadow Mistress
-	
-	-- Mini Bosses
-	[104275] = {{"Important", "Beware Whirling Blades (AoE attack)"}}, -- Imacut'ya
-	[104274] = {{"DEFENSIVES", "Defensive: Disintegration Beam"}, {"HEALER", "Drop big heals on the Beam target"}}, -- Baalgar
-	[104273] = {{"Important", "Dodge: Shockwave (frontal cleave)"}, {"HEALER", "Mob does nothing. Practice DPS'ing"}}, -- Jazshariu
-	[108151] = {{"Important", "Face away from the party since Carrion Swarm is a frontal cone"}, {"Important", "On Fortified Shadowbolt Volley REALLY hurts. Consider a defensive"}},  -- Gerenth the Vile
-	
+	[17797] = {{"Legion", "Boss deals Nature damage; Adds deal Frost damage (Nature resist should be prioritized if only have one option and have no Frost Aura for group from Paladin)"},
+				{"Important", "Tank should focus on boss and use AoE threat (such as Thunderclap) on adds. DPS need to focus down the adds (or banish one of them) before going after boss. Adds will despawn once boss dies."},
+				{"Important", "Dispel: Enveloping Wind esp if applied to tank/healer (magic effect applied to player stunning them for 6 sec)"},
+				{"Dodge", "DODGE/RUN: Watch for Lightning Cloud and run out of it (deals AoE Nature damage)"},
+				{"Important", "HEROIC-mode: Boss will cast two Lightning Clouds at a time"}}, 
+				-- Hydromancer Thespia
+	[17796] = {{"Advanced", "POSITIONING: Only the tank should be standing in front of boss due to Super Shrink Ray (frontal cone that reduces player damage dealt by 35% for 15 sec)"},
+				{"Important", "At 75%, 50% and 25%, boss announces 'Tune em' up boys' and 3 repair gnomes will spawn. These should be AoE'd down ASAP"},
+				{"Important", "Thunder Clap from Warriors or Consecration from Paladins are helpful during add phases"},
+				{"Important", "HEROIC-mode: Boss summons an additional gnome every 7 sec"},
+				{"Important", "HEROIC-mode: Boss has a 5 minute enrage timer and quickly one shots players!"}},
+				-- Mekgineer Steamrigger
+	[17798] = {{"TANK", "Tank the boss in the middle of the room"},
+				{"Important", "Spell-casting players need to stop DPS on boss during Spell Reflection (white bubble around boss that reflects damage back to player)."},
+				{"Important", "Players will be occasionally struck with Impale (Physical damage DoT)"},
+				{"HEALER", "Most of your heals will be on the tank, but watch for impales on other players and players that are still attacking boss during boss' Spell Reflection."},
+				{"PriorityTargets", "DPS down Naga Distiller w/in 12 sec of boss drawing power from it to prevent boss from gaining WARLORD'S RAGE (increased boss attack speed and damage done)"},
+				{"DAMAGE", "Save big damage CDs for Naga Distillers. While failing to destroy one distiller in the time alloted won't necessarily result in a wipe, failure to burn down multiple containers will."},
+				{"TANK", "When Naga Distiller activates, you should focus down the container with your DPS!"},
+				{"Legion", "Macro to help with containers would be: /targetexact Naga Distiller"},
+				{"Defensives", "Boss will crack a player on the head reducing their stamina for 15 sec."}}, 
+				-- Warlord Kalithresh
+
+	---Thespia's Adds
+	[17917] = {{"PriorityTargets", "Burn these down before boss. Warlocks can BANISH one of them"}}, -- Coilfang Water Elemental
+
+	---Mekgineer Steamrigger's Adds
+	[17951] = {{"PriorityTargets", "Focus down adds anytime they are up as they will heal/repair boss"},
+				{"WARRIOR", "When adds appear, a warrior casting Thunder Clap can delay repairs conducted by adds"},
+				{"PALADIN", "Pallys using Consecration can quickly burn Mechanics down"}}, -- Steamrigger Mechanic
+
+	---Warlord Kalithresh Adds
+	[17954] = {{"PriorityTargets", "When boss draws power from distiller, it must be destroyed w/in 12 sec to prevent a boss enrage!"}}, -- Naga Distiller
+
+	---Trash Mobs
+	[17721] = {{"Important", "Players should spread when fighting mob due to Net root casts & AoE Fire Bombs"}}, 
+				-- Coilfang Engineer
+	[17722] = {{"Important", "Interrupt/Run out of AoE from Blizzard (Channeled Frost AoE)"}}, -- Coilfang Sorceress
+	[17800] = {{"Important", "Mob should be tanked away from players due to Cleave. Melee players hit with Cleave will require increased healing"}}, 
+				-- Coilfang Myrmidon
+	[17801] = {{"Important", "Interrupt: Fear or CC mob"}}, -- Coilfang Siren
+	[17802] = {{"Defensives", "Applies Mortal Blow (reduced armor and attack speed for 12 sec) to Tank, during this time, tank may need to pop defensive CDs & receive extra heals"}}, 
+				-- Coilfang Warrior
+	[17803] = {{"PriorityTargets", "Interrupt: Heal or CC mob"},
+				{"Important", "Mob should be tanked away from casters as Sonic Burst will spelllock players w/in 10 yds for 3 sec"}}, 
+				-- Coilfang Oracle
+	[17805] = {{"Important", "Will use Disarm (likely on tank) causing issue with threat building/maintaining when this happens. This mob should be slowed if it begins to move toward DPS/Healer, while tank is Disarmed"}}, 
+				-- Coilfang Slavemaster
+	[17799] = {{"Important", "Tank can use AoE threat-building abilities such as Thunder Clap/Consecration, but DPS should ignore them"}}, 
+				-- Dreghood Slave
+	[21338] = {{"Important", "Non-elite mob that should be AoE'd down"}}, -- Coilfang Leper
+	[21694] = {{"Legion", "Deals Nature & Physical Damage; use resistance armor/pots esp if undergeared"},
+				{"Important", "Mob should be tanked away from group due to Trample (mob deals Physical AoE). Melee players struck by this may need additional healing"},
+				{"Important", "Dispel Fungal Decay from player (Disease; Nature DoT w/momvement speed slow lasting 18 sec)"},
+				{"Important", "Dispel Poison Bolt from player (Poison; Nature DoT lasting 10 sec)"},
+				{"Dodge", "Run out of Disease Cloud (Nature DoT)"}}, -- Bog Overlord
+	[21695] = {{"Legion", "This mob deals Frost Damage; having proper aura/resistances can be helpful in mitigating some of mob's damage"},
+				{"Important", "These mobs should be tanked with your back against the wall due to Water Sprout knockback (40 yd range; Frost Damage)"},
+				{"Important", "Surger pops Frost Nova rooting nearby players for 8 sec"}}, -- Tidal Surger
+	[21696] = {{"Legion", "This mob deals Frost Damage; having proper aura/resistances can be helpful in mitigating some of mob's damage"},
+				{"Legion", "Mob has 45 yd range attack in form of Water Bolt (Instant Frost damaging ability)"}}, 
+				-- Steam Surger
+	[22891] = {{"Legion", ""}}, -- Second Fragment Guardian
+
+	------- Dungeon: Mana-Tombs ---------------------
+
 	---Bosses
-	[104215] = {{"Important", "Give Resonant Slash a wide berth"}, {"Important", "Leave one Signal Beacon up before you engage"}, {"HEALER", "Dispel Arcane Lockdown. Contribute DPS"}}, -- Gerdo
-	[104217] = {{"Important", "Stack before Infernal Eruption to auto-group imps"}, {"Interrupts", "Interrupt: Withering Soul, Imps"}, {"HEALER", "Big Persistent damage. Use CDs regularly"}}, -- Talixae
-	[104218] = {{"Important", "Stack to one side before Blade Surge to keep images together"}, {"Legion", "Wear Avoidance gear if possible"}, {"HEALER", "Gear to maximise healing in 5s period"},
-				{"HEALER", "Healing CD: Slicing Maelstrom (every 25s)"}, {"HEALER", "Focus. You've got this."}}, -- Melandrus
-	----------------0-----------------
-	
+	[18341] = {{"Legion", "Shadow Resistance Buffs/Aura will be helpful with this boss"},
+				{"Important", "Pulling this boss will also pull the trash in the room!"},
+				{"Important", "VOID BLAST (Volley of Void Bolts dealing Shadow damage +Knock back to players) - Fight mob with back against wall."},
+				{"SHAMAN", "Keep Grounding Totem active as it will absorb Shadow Bolts"},
+				{"WARRIOR", "If you don't have a Shaman that can apply Grounding Totem, use SPELL REFLECTION to reflect the Void Blast back to boss"},
+				{"Important", "DARK SHELL - ALL STOP ATTACKING! (Reflects melee and spell attacks back to player, but not Hunter's ranged abilities)"},
+				{"Legion", "Watch for emote: 'Pandemonius shifts into the void...' to know when you should stop DPS due to Dark Shell"},
+				{"DRUID", "Thorns should NOT be applied to the tank due to Dark Shell"},
+				{"PALADIN", "Retribution Aura should NOT be used due to Dark Shell"}}, 
+				-- Pandemonius
+	[18343] = {{"Legion", "Nature Resistance gear/pots will be helpful to mitigate some boss damage during Earthquake"},
+				{"Advanced", "POSITIONING: Melee should be behind boss, with ranged standing at max range. Tank boss away from party members to avoid Arcing Smash frontal attack"},
+				{"Important", "Earthquake (Deals AoE Nature damage +3 sec stun)"},
+				{"HEALER", "Make sure party members are topped off when Earthquake is being cast"}, 
+				{"Important", "Crystal Prison (Stuns random player in crystal; Dealing 50% of your health in damage over 5 sec as nature damage)"},
+				{"HEALER", "Heal up the player that is in the Crystal Prison!"}}, -- Tavarok
+	[18344] = {{"Legion", "Boss & Apprentice adds deal combo of Fire & Frost damage; Beacons deal Arcane Damage."},
+				{"PALADIN", "Use Fire Resistance Aura (second pally can use Frost Resist Aura)"},
+				{"PRIEST", "Use Shadow Protection on party members"},
+				{"PriorityTargets", "Make sure that the Ethereal Beacons are being focused down anytime they're active!"},
+				{"Legion", "Watch for when boss says: 'I have such fascinating things to show you.' This is the group's warning to switch to the Beacons about to spawn"},
+				{"Important", "Boss often casts Frost Nova and Blinks out of melee range - bringing a group with strong ranged attacks is helpful."},
+				{"Important", "Dispel Frost Nova (magic-effect) from group, or at least the tank"},
+				{"TANK", "When Frost Nova wears off move quickly to boss to get aggro back!"}}, 
+				-- Nexus-Prince Shaffar
+	[22930] = {{"Legion", "Summonable only on HEROIC mode by a party member that has Shaffar's Stasis Chamber Key or The Eye of Haramad (the eye is not consumed on use)"},
+				{"Legion", "TANK: Fire Resistance gear/pots will be helpful to mitigate some boss damage during frontal-cone DOUBLE BREATH"},				
+				{"TANK", "Tank should turn boss away from group as Yor's DOUBLE BREATH deals frontal cone of Fire Damage"},
+				{"Important", "Yor will use Stomp (Knockback w/10 yd range)"},
+				{"Important", "DPS and Healer should stand as far from boss as possible on his backside to avoid frontal fire damage +knockback"}}, 
+				-- Yor <Void Hound of Shaffar> (Heroic-Only)
+
+	---Nexus-Prince Shaffar Summoned Adds
+	[18431] = {{"PriorityTargets", "DPS should burn down these mobs down ASAP (Spawns every ~10 sec)"}}, -- Ethereal Beacon
+	[18430] = {{"PriorityTargets", "If Ethereal Beacons are not destroyed quickly enough, these mobs will take their place"},
+				{"Important", "Deal HEAVY Fire & Frost damage"},
+				{"Legion", "Vulnerable to CC such as Polymorph"}}, -- Ethereal Apprentice
+
+	---Trash Mobs
+	[18309] = {{"Important", "Mobs will use Shield Bash (spell locks player from casting that magic school for 8 sec), mob will sometimes leave tank to interrupt your ability"}, 
+				{"HEALER", "Healer should stand some distance when dealing with these mobs to allow for advance notice of this mob approaching you"}},
+				-- Ethereal Scavenger
+	[18311] = {{"Important", "Tank should LoS pull mob to walk into melee range, otherwise it could charge and stunning a player for 2 sec."},
+				{"Defensives", "Mob will apply Soul Strike (likely to tank; lasting 5 sec) which cuts the effectivess of heals received by 50%. Tanks may need to pop additional CDs and will require extra heals to stay alive"}}, 
+				-- Ethereal Crypt Raider
+	[18312] = {{"PriorityTargets", "Main threat from this mob actually comes from the Ethereal Wraith that they summon. Burn adds and this mob down quickly!"}, 
+				{"Important", "Casters should stand at max range to avoid Counterspell (3 sec spell locking)"}},
+				-- Ethereal Spellbinder
+	[18313] = {{"PriorityTargets", "Tank should LoS pull these ranged mobs. Group should DPS mob down quickly due to heavy damage from Arcane Missiles. Sorcerer summons an Arcane Fiend."}}, 
+				-- Ethereal Sorcerer
+	[18314] = {{"Important", "Mob will apply Gouge (likely on tank; lasting 4 sec). Mobs will then go after #2 on the threat meter. Use of slows/kiting will be helpful until tank can pick up aggro again"}}, 
+				-- Nexus Stalker
+	[18315] = {{"Legion", "Deals mostly Fire & Physical damage"},
+				{"Interrupts", "INTERRUPT: Polymorph (sheeps random player)"},
+				{"Important", "Slow/Kite mob if it successfully Polymorphs tank"}}, -- Ethereal Theurgist
+	[18317] = {{"PriorityTargets", "Due to Holy Nova doing good sized heal to allies and damage to players, it is best to focus these adds down or DPS them quickly."},
+				{"Interrupts", "INTERRUPT: Heal"}}, -- Ethereal Priest
+	[18331] = {{"Important", "LoS pull these ranged mobs"},
+				{"Interrupts", "INTERRUPT: Mana Burn"}}, -- Ethereal Darkcaster
+	[18394] = {{"PriorityTargets", "Summoned from Ethereal Spellbinders; DPS should focus this mob down quickly as high damage Shadow Bolt Volley hits nearby players"}}, 
+				-- Ethereal Wraith
+	[18429] = {{"PriorityTargets", "Deals Arcane Explosion & Counterspell on casters"}}, -- Arcane Fiend
+	[19306] = {{"Important", "LoS pull this mob; Ranged DPS/Healer should stand at least 10 yds away to avoid Arcane Explosion AoE"},
+				{"PriorityTargets", "INTERRUPT: Mana Burn"},
+				{"Important", "Dispel Faerie Fire from especially from melee player (magic effect; reduces armor for 20 sec)"},
+				{"Important", "When mob dies, it will deal an Arcane Explosion AoE"}}, -- Mana Leech
+	[19307] = {{"PriorityTargets", "Deals Shadow Damage - Having Shadow resistance gear/buffs/auras/pots can help mitigate some of the damage this mob deals to group"},
+				{"Important", "Dispel Curse of Impotence (magical damage dealt reduced for 60 sec) from mana-using player"},
+				{"Defensives", "Defensive/Extra Heals when mob applies Shadows Embrace to player (40 yd range; Shadow DoT over 6 sec; Physical damage dealt decreased by 50%)."},
+				{"Important", "LoS pull these mobs to safe area as this mob will cast Psychic Scream (AoE Fear) as well as Death Coil fear"},
+				{"SHAMAN", "Use Tremor Totem to negate Psychic Scream & Death Coil fears"}}, -- Nexus Terror
+
+
+	------- Dungeon: Auchenai Crypts ----------------
+
+	---Bosses
+	[18371] = {{"TANK", "Tank the boss away from ranged DPS/Healers"},
+				{"Important", "Casters should stand at max range due to Inhibit Magic (passive aura that slows casting speed the closer you get to boss"},
+				{"Dodge", "Watch for emote of 'Shirrak the Dead Watchers focuses on...' Players (including the player name the boss emotes) need to run away as boss will begin to shoot fire damage at the flare location"},
+				{"Important", "Group should burn boss down quickly before Carnivorous Bite bleed stacks get too high on tank"},
+				{"Important", "Run away from boss during Attract Magic (Boss will pull party members to it)"}}, 
+				-- Shirrak the Dead Watcher
+	[18373] = {{"Important", "Save CDs for when boss is at 25% health due to increased damage dealt"},
+				{"Important", "Boss deals an AoE Fear called Soul Scream"},
+				{"SHAMAN", "Drop Tremor Totem to negate boss' AoE fear"},
+				{"Important", "Focus down any shadow images that appear and tank should pickup Avatar of the Martyred when he spawns"}}, 
+				-- Exarch Maladaar
+
+	---Trash Mobs
+	[18441] = {{"PriorityTargets", "Focus on this mob when summoned by Maladaar"}}, -- Stolen Soul
+	[18478] = {{"Legion", ""}}, -- Avatar of the Martyred
+	[18493] = {{"Important", "Dispel Touch of the Forgotten (esp from tank) as it reduces their heals taken for 3 minutes"}}, 
+				-- Auchenai Soulpriest
+	[18495] = {{"Legion", ""}}, -- Auchenai Vindicator
+	[18497] = {{"TANK", "Monk should be tanked away from group!"},
+				{"Important", "Deals an AoE Knockback - keep backs against walls to avoid pulling unplanned groups"},
+				{"Important", "Immune to polymorph & rogue sapping"},
+				{"Important", "Casters/Healers should not stand in melee range of this mob due to the interrupt and spell lock from Counter Kick"}}, 
+				-- Auchenai Monk
+	[18498] = {{"Important", "DPS/TANK: Avoid using abilities that are not instant-cast as this mob will shield bash players and spell lock them"},
+				{"HEALER", "This mob has will Shield Bash players (Interrupts player cast and spell locks) - Apply HoT to tank if possible"}}, 
+				-- Unliving Soldier
+	[18499] = {{"Legion", ""}}, -- Unliving Sorcerer
+	[18500] = {{"PriorityTargets", "This mob is a healer"},
+				{"Interrupts", "Interrupt: Major Heal (3 sec cast; Heals ally)"}}, 
+				-- Unliving Cleric
+	[18501] = {{"Important", "Dispel Spirit Vengeance (magic) from mob (increases mob attack attack speed by 50% and movement speed by 40%"}}, 
+				-- Unliving Stalker
+	[18503] = {{"PriorityTargets", "Due to them being able to cast a 60 sec MC on a player, these should be burned down ASAP"}}, 
+				-- Phantasmal Possessor
+	[18506] = {{"Important", "Casts RAGE (4.5 sec cast dealing AoE Knockback). This can be unpleasant esp when on the bridge to Shirrak as it could knock you to your death"}}, 
+				-- Raging Soul
+	[18521] = {{"Legion", ""}}, -- Raging Skeleton
+	[18524] = {{"Legion", ""}}, -- Angered Skeleton
+	[18556] = {{"Important", "DPS/TANK: Avoid using abilities that are not instant-cast as this mob will shield bash players and spell lock them"},
+				{"HEALER", "This mob has will Shield Bash players (Interrupts player cast and spell locks) - Apply HoT to tank if possible"}}, 
+				-- Phasing Soldier
+	[18557] = {{"PriorityTargets", "This mob is a healer"},
+				{"Interrupts", "Interrupt: Major Heal (3 sec cast; Heals ally)"}}, 
+				-- Phasing Cleric
+	[18558] = {{"Legion", ""}}, -- Phasing Sorcerer
+	[18559] = {{"Important", "Dispel Spirit Vengeance (magic) from mob (increases mob attack attack speed by 50% and movement speed by 40%"}}, 
+				-- Phasing Stalker
+	[18700] = {{"Important", "Mob will sunder target's armor reducing its effectiveness"}}, 
+				-- Reanimated Bones
+	[18702] = {{"Important", "Dispel magic from player struck by Seed of Corruption. If no dispellers, have this player run away from other party members (or have party members run away if it is the tank that was hit by it)"}}, 
+				-- Auchenai Necromancer
+
+
+	------- Dungeon: Sethekk Halls ------------------
+
+	---Bosses
+	[18472] = {{"Legion", "Boss has two phase encounter - a boss only phase and add phase. Depending on grp makeup, plan kill order on elementals during add phase"},
+				{"Advanced", "PHASE 1"},
+				{"Important", "Players should spread as much as possible to mitigate some of the group damage taken from Chain Lightning"},
+				{"Advanced", "PHASE 2 - Adds Phase (occurs when boss at 90%, 55% and 10% HP)"},
+				{"Important", "Each add is immune to damage from their type (Fire Mage shouldn't attack Fire Elemental, and Warlock shouldn't deal Shadow damage to Shadow Elemental) & Shadow Elemental is immune to Fear and Banish from a Warlock - It is best to assist tank and DPS these mobs one at a time, rather than cleave/AoEing them down"},
+				{"TANK", "When ADD phase begins, tank should use AoE taunting abilities (such as Consecration/Thunder Clap) to pick up adds"},
+				{"DAMAGE", "Focus down summoned elementals before swapping back to the boss. Alternatively, a Priest or Warlock can do an AoE Fear to the Fire, Frost and Arcane elementals when they spawn"}},
+				-- Darkweaver Syth
+	[18473] = {{"Legion", "Boss does primarily Arcane-type damage; Resistances/Pots can be potentially helpful here."},
+				{"PriorityTargets", "When boss reaches 80%, 50% and 25%, he'll blink to a random player location and begin casting Arcane Explosion. Line-of-sight MUST be broken by standing behind a pillar not in sight of boss or it will one-shot you!"},
+				{"Important", "Boss will apply Polymorph to a random party member (can be tank or healer) and lasts 5 seconds. DPS should make sure to not push Arcane Explosion phase transition while party member is sheeped, as they will be vulnerable to being one-shot."},
+				{"SHAMAN", "Shaman using GROUNDING TOTEM on HEROIC can prevent tank, or other player from being polymorphed!"},
+				{"Important", "Healer and Tank can have a PVP trinket to break themselves free of Polymorph (if you don't have a Shaman w/Grounding Totem). If healer can't be broken from Polymorph (based on group dynamic and healer trinket choices), you should plan ahead to utilize a secondary healer if the main healer is sheeped"}}, -- Talon King Ikiss
+	[23035] = {{"Legion", "Boss deals a combo of Physical Damage and Shadow Damage (having resistance gear/aura/pots) can be helpful to mitigate those damaging abilities"},
+				{"Advanced", "Players should stack on the boss to deal AoE during bird phase."},
+				{"Important", "Casters (esp healers) afflicted with Spell Bomb need to STOP using their abilities as it will drain mana and cause damage to that player. If the healer is afflicted with this, an off-healer should pick up the slack during the 8 sec debuff"},
+				{"Important", "At 66% and 33%, boss will banish itself and summon birds (boss unbanishes when all birds are dead or after 1 min, whichever comes first)."},
+				{"DAMAGE", "While summoned birds are active, DPS should focus on AoE'ing them down before swapping back to a potentially unbanished boss"},
+				{"TANK", "Be ready to pick up Anzu when it is unbanished!"},
+				{"Important", "If Druid is in party, their using a HoT on these statues will allow them to assist you. Keeping Eagle, Hawk and Falcon Spirits alive can provide benefits you during boss fight. They are the Eagle (AoE damage), Hawk (mitigation) and Falcon (Haste) Spirits"}}, 
+				-- Anzu (Heroic-Only)
+
+	---Darkweaver Syth Summoned Elementals
+	[19203] = {{"PriorityTargets", "Focus on elemental adds when they're up before going back to boss!"},
+				{"Legion", "Immune to Fire Damage!"},
+				{"Important", "Deals Fire damage (+Fire DoT) with stacking debuff to players that increases their Fire damage taken"}}, 
+				-- Syth Fire Elemental
+	[19204] = {{"PriorityTargets", "Focus on elemental adds when they're up before going back to boss!"},
+				{"Legion", "Immune to Frost Damage!"},
+				{"Important", "Deals Frost damage with stacking debuff to players that increases their Frost damage taken"}}, 
+				-- Syth Frost Elemental
+	[19205] = {{"PriorityTargets", "Focus on elemental adds when they're up before going back to boss!"},
+				{"Legion", "Immune to Arcane Damage!"},
+				{"Important", "Deals Arcane damage with stacking debuff to players that increases their Arcane damage taken"}}, 
+				-- Syth Arcane Elemental
+	[19206] = {{"PriorityTargets", "Focus on elemental adds when they're up before going back to boss!"},
+				{"Legion", "Immune to Shadow Damage and only elemental immune to Fear & Banish!"},
+				{"Important", "Deals Shadow damage with stacking debuff to players that increases their Shadow damage taken"}}, 
+				-- Syth Shadow Elemental
+
+	---Trash Mobs
+	[18318] = {{"Important", "When Spell Reflection is applied, stop casting against this mob and melee instead"}}, 
+				-- Sethekk Initiate
+	[18319] = {{"Interrupts", "INTERRUPT: Flash Heal"},
+				{"PriorityTargets", "If no priest/hunter is present to CC this mob, it should be priority kill due to instant heal Rejuvenation"},
+				{"PRIEST", "Can be Shackled"},
+				{"HUNTER", "Can be Trapped"}}, -- Time-Lost Scryer
+	[18320] = {{"Important", "Dispel Curse of the Dark Talon from player (Debuff causes player to take increased physical damage +Reduces player stamina)"},
+				{"Important", "If player has Curse of the Dark Talon, they should stop DPS until it falls off or is dispelled as their attacks can trigger Rend on themselves (Physical Bleed)"},
+				{"MAGE", "Spellsteal (lvl 70 ability) Arcane Destruction buff"},
+				{"PRIEST", "Can be Shackled"},
+				{"HUNTER", "Can be Trapped"}}, -- Time-Lost Shadowmage
+	[18321] = {{"Important", "Casts Avenger Shield causing multiple players to become dazed"},
+				{"Important", "Dispel magic Talon of Justice (Stuns player for 5 sec from player (esp if tank/healer)"}}, 
+				-- Sethekk Talon Lord
+	[18322] = {{"Important", "Howling Screech is applied to player (magic ability reducing movmement speed and damage dealt; Dispellable if another more dangerous debuff isn't going to be applied to tank/healer)"},
+				{"Important", "Has an Enrage effect, use debuffs such as Warlock's Curse of Weakness to reduce damage these mobs deal to tank."}}, 
+				-- Sethekk Ravenguard
+	[18323] = {{"Important", "Deals Thunder Clap AoE (10 yd range); HEROIC version also is immune to CC"},
+				{"TANK", "These should be tanked away from ranged DPS and Healer"}}, -- Sethekk Guard
+	[18325] = {{"PriorityTargets", "DPS this down ASAP or use CC - Fears up to 4 players w/in 8 yards."}}, 
+				-- Sethekk Prophet
+	[18326] = {{"Legion", ""}}, -- Sethekk Shaman
+	[18327] = {{"PriorityTargets", "Mob drops a Charm Totem that mind-controls player for 30 sec"},
+				{"Important", "Vulnerable to Shackle Undead"},
+				{"MAGE", "Spellsteal (lvl 70 ability) Arcane Destruction buff"}}, 
+				-- Time-Lost Controller
+	[18328] = {{"Interrupts", "INTERRUPT: Arcane Lightning (1.5 sec cast; Chain Lightning-Type ability w/4 sec spell silence) - If no interrupts available, casters should STOP casting to avoid spell school being silenced (esp healer)"}}, 
+				-- Sethekk Oracle
+	[18701] = {{"Legion", "Elemental add summoned by Sethekk Shaman"}}, -- Dark Vortex
+	[19428] = {{"Legion", "Deals Nature damage in form of Lightning Breath"},
+				{"Important", "Wing Buffet deals knockback to players in front of mob"},
+				{"Important", "When dealing with a pack/individual with this mob present, tank mob away from ranged DPS and Healer & have your back close against a wall to counteract mob's knockback"}}, 
+				-- Cobalt Serpent
+	[19429] = {{"Important", "Sonic Charge rushes a player dealing damage +knockback to player - can get serious if mob is left alive too long!"},
+				{"Important", "Players can counteract knockback by having everyone stand with their backs to the wall."}}, -- Avian Darkhawk
+	[20343] = {{"PriorityTargets", "Summoned by Time-Lost Controller; Totem Mind-Controls players for 30 seconds"}}, 
+				-- Charming Totem
+	[21891] = {{"Legion", ""}}, -- Avian Ripper
+	[21904] = {{"Important", "Swoop is an ability that deals frontal-cone damage +applies 2 sec stun to ones struck - Stand behind mob unless you're the tank!"}}, 
+				-- Avian Warhawk
+	[23132] = {{"PriorityTargets", "Screech ability reduces attack power of players w/in 20 yds for 8 seconds"}}, 
+				-- Brood of Anzu
+
+
+	------- Dungeon: Shadow Labyrinth ---------------
+
+	---Bosses
+	[18731] = {{"Legion", "Boss deals Nature damage. Having Nature resistance gear/pots (mostly for tank) can help mitigate such damage"},
+				{"Advanced", "POSITIONING: Tank boss in tunnel leading into room so that healer won't lose LoS. Tank should face boss away from group so that tank is only one taking Corrosive Acid. DPS and Healer should stand behind boss. Note that if tank is feared Corrosive Acid DoT may be applied to multiple players"},
+				{"Important", "Boss does an AoE Fear (1.5 sec cast time), which has a 45 yd range and lasts 6 sec"},
+				{"SHAMAN", "Use Tremor Totem when you see boss cast Fear so that this can be quickly removed from group"},
+				{"WARRIOR", "Use Spell Reflection to avoid getting Feared and giving your group Corrosive Acid when boss chases you"}}, 
+				-- Ambassador Hellmaw
+	[18667] = {{"Important", "Make sure that the room is cleared of ALL trash before pulling boss!"},
+				{"Advanced", "POSITIONING: Tank should pull boss to a corner with back against the wall to avoid AoE knockback."},
+				{"Important", "DPS should blow their damaging CDs at start of fight as Incite Chaos (mind control) will cause these big CDs to activate at that time"},
+				{"Important", "Incite Chaos is a 15 sec MC boss applies to all players. When boss makes the statement 'Time for fun', know that the MC is coming!"},
+				{"Important", "To deal with Incite Chaos, players can remove their weapons, Pets can be placed on passive, Hunter can drop a freezing trap under healer, can also use Major Dreamless Sleep Potion (2 min CD) to avoid some of the Incite Chaos"},
+				{"Important", "WAR STOMP: Boss knockbacks players w/in 20 yards"},
+				{"Important", "CHARGE: Boss charges random player stunning them for 2 sec"}}, 
+				-- Blackheart the Inciter
+	[18732] = {{"Legion", "Boss deals combo of Fire and Shadow Damage; Buffs/Auras can help mitigate boss' spell damage"},
+				{"TANK", "Kite boss if Void Traveler add approaches so DPS can burn add down (Add coming into contact w/boss deals damage +knockback +heals boss)!"},
+				{"DAMAGE", "When Void Travelers appear from the Void Rifts, the adds need to be killed quickly (Add coming into contact w/boss deals damage +knockback +heals boss)"},
+				{"Important", "When boss casts Draw Shadows, players will be teleported to his platform and he will cast a hard hitting Rain of Fire AoE on players!"}, 
+				{"Important", "HEROIC ONLY: Boss will Banish a random player making them invulnerable, but unable to attack for 6 sec"}},
+				-- Grandmaster Vorpil
+	[18708] = {{"Important", "Nature Protection potions can be helpful to mitigate some of the damage during fight"},
+				{"Advanced", "POSITIONING: Except for during Sonic Boom, players should stand less than 25 yds from boss to avoid any player receiving Thundering Storm (Nature damage to target standing 25 yds or more away)"},
+				{"Important", "After fight starts watch for emote 'Murmur draws energy from the air...' This will be the signal for all players (including tank) to run at least 34 yds away to avoid Sonic Boom damage."},
+				{"ROGUE", "Rogues can use Cloak of Shadows to avoid a Sonic Boom (if correctly timed)."},
+				{"Important", "Due to Resonance ability (deals Nature damage to all players when no melee in range w/increase to Nature damage), tank needs to get back in to fight boss IMMEDIATELY after Sonic Boom"},
+				{"Dodge", "Watch for Touch of Murmur debuff and be sure to run away from player that has the debuff. When debuff goes off, that player and any allies w/in 20 yds will be silenced"},
+				{"HEALER", "If the healer is afflicted by Touch of Murmur, make sure that group (esp tank) is healed up before it goes off, as will silence you for 6 sec"}}, 
+				-- Murmur
+
+	---Grandmaster Vorpil Add
+	[19226] = {{"PriorityTargets", "If Void Traveler reaches boss, it will explode dealing Shadow damage and knockback, also healing boss"},
+				{"TANK", "If DPS is slow in burning down Void Travelers, kite the boss to avoid them coming into contact!"}}, -- Void Traveler
+
+	---Trash Mobs
+	[18631] = {{"Important", "Tank should use instant-cast abilities as mob can interrupt cast using Kick.  If aggro is lost, use slows on the mob to keep it from interrupting a caster"}}, 
+				-- Cabal Cultist
+	[18632] = {{"Important", "Mobs should be tanked away from group as tank will usually have two at a time"},
+				{"Important", "Immune to most forms of CC"},
+				{"Dodge", "DODGE: Whirlwind is a channeled ability that players should run from while being cast!"},
+				{"DAMAGE", "When Executioner is being fought in pairs, DPS should focus each one at a time as the WW can be dangerous even to some tanks"}},
+				-- Cabal Executioner
+	[18633] = {{"PriorityTargets", "Healer-type mob that should be CC'd or Focused down by DPS"},
+				{"Interrupts", "Interrupt: Heal"}}, -- Cabal Acolyte
+	[18634] = {{"PriorityTargets", "Mob will summon two adds to assist. The Summoner should be quickly CC'd before this, or killed before other non-summoned adds in the pack. While summoned mobs are active, these take priority."}},
+				-- Cabal Summoner
+	[18635] = {{"Important", "It is best for tank to fight this mob away from group due to AoE Physical damage. Melee DPS may need additional heals when engaging this type of mob"}}, 
+				-- Cabal Deathsworn
+	[18636] = {{"Important", "Will quickly down non-tanks, which is why tank should take point."},
+				{"WARLOCK", "After defeating first boss, warlocks should use their Succubus pet to CC assassin if they become stunned by these stealthed mobs"}}, 
+				-- Cabal Assassin
+	[18637] = {{"Important", "Dispel Shadow Word: Pain (magic effect; Shadow DoT)"},
+				{"Interrupts", "Interrupt: Mind Flay"}}, -- Cabal Shadow Priest
+	[18638] = {{"Important", "Dispel Shape of the Beast from mob (Magic effect that reduces time between attacks, increased attack power, but can't cast spells). Because this buff prevents spell casting, a Warlock Felhunter's ability Devour Magic should be used. If no one can effectively remove the beneficial magic from enemy, tank may need additional heals/pop defensive CDs"}}, 
+				-- Cabal Zealot
+	[18639] = {{"Important", "CC player who is mind-controlled from Brain Wash"},
+				{"Defensives", "Defensives may be needed if either the tank or healer gets MC'd"}},
+				-- Cabal Spellbinder
+	[18640] = {{"Important", "Dispel Seed of Corruption from players (magic effect dealing AoE shadow damage)"},
+				{"Important", "If no dispeller, the player struck by Seed of Corruption should run out of group. If tank is the one hit by it, players need to run 10 yds from tank to avoid AoE"}}, 
+				-- Cabal Warlock
+	[18641] = {{"Legion", ""}}, -- Cabal Familiar
+	[18642] = {{"PriorityTargets", "Felhounds that can spell lock players for 4 sec. Use slows while DPS focuses these mobs down"}},
+				-- Fel Guardhound
+	[18663] = {{"PriorityTargets", "Non-elite mob that can mind-control a player for 6 sec"},
+				{"WARLOCK", "This mob is vulnerable to Banish & Enslave Demon"},
+				{"Important", "Dispel Seduction (mind-control magic effect from player/CC that player"}}, 
+				-- Maiden of Discipline
+	[18794] = {{"Legion", "This could be either the rogue-type (equipped with daggers) or a caster type (carries staff)"},
+				{"Advanced", "Caster-Type w/Staff"},
+				{"Legion", "Mob deals a combination of Fire/Frost damage"},
+				{"Important", "Dispel Frost Nova (AoE Magic Root) from tank (if only can do one dispel) or players (if using priest's Mass Dispel"},
+				{"Advanced", "Rogue-Type w/Daggers"},
+				{"Important", "Will frequently use Gouge (3 sec stun) on the tank. While tank is unable to use avoidance, they will need extra heals!"}}, 
+				-- Cabal Ritualist
+	[18796] = {{"Important", "These Felguards should be pulled away from other packs and backs against wall due to AoE Fear and Knockback"},
+				{"TANK", "If this mob is patrolling around the room of Hellmaw (1st boss), it is best to fight mob in the curved cooridor leading into 1st boss' room.  If you're pulling this mob from the hallway connecting Hellmaw's and Blackheart's room, they can be pulled into the now empty room where 1st boss' adds were located"}}, 
+				-- Fel Overseer
+	[18797] = {{"Legion", ""}}, -- Tortured Skeleton
+	[18830] = {{"Important", "Use CCs or Slows on this mob; Immune to MC on Heroic"},
+				{"Important", "Fanatic will fixate on a player and that player will need to kite mob for 5 sec while Fixate active on that player"}},
+				-- Cabal Fanatic
+	[18848] = {{"Legion", "Shivarra deals mostly Shadow Damage - having appropriate auras/buffs/pots/gear can be helpful in dealing with some of mob's abilities"}, 
+				{"Defensives", "Watch for Mark of the Malice (Places 5 stacks of debuff w/1 going away each time player is hit. If all 5 are expended w/in 30 sec, player receives Shadow damage)"},
+				{"Important", "This mob should be fought away from the group due to Shadow Nova (AoE Shadow Damage)"},
+				{"Important", "HEROIC-ONLY: Shivarra will Disarm the tank (lasts 5 sec) reducing tank's ability to hold threat. DPS need to watch their aggro when this happens so they don't pull off of tank. Tank may need to react quickly after disarm ends to pick aggro back up."}},
+				-- Malicious Instructor
+	[19208] = {{"PriorityTargets", "Summoned by Cabal Summoner"},
+				{"Legion", "Healer-Type Mob"},
+				{"Interrupts", "Interrupt: Heal"}}, -- Summoned Cabal Acolyte
+	[19209] = {{"PriorityTargets", "Summoned by Cabal Summoner"},
+				{"Legion", "Warrior-Type Mob"},
+				{"Important", "DPS and Healer should avoid standing too close to mob as Black Cleave deals Shadow Damage and applies a DoT"},
+				{"HEALER", "Deathsworn will periodically Knockdown which stuns player for 2 sec. If/when applied to tank, they will need additional heals."}, 
+				-- Summoned Cabal Deathsworn
+
+	[22890] = {{"Legion", ""}}, -- First Fragment Guardian
+
+
+	------- Dungeon: Escape from Durnholde (Old Hillsbrad Foothills) ----------
+
+	---Bosses
+	[17848] = {{"Legion", "Tank n Spank fight, but be sure trash has been cleared so you aren't feared into a pat"},
+				{"Important", "Boss will cast Frightening Shout (AoE Fear w/10 yd range [as of Patch 2.3] lasting 6 sec) - Standing beyond this range to negate fear and his WW ability."}, 
+				{"Defensives", "Drake applies Mortal Strike to target reducing their healing effectiveness. Tank may need to use defensive CDs to help party healer during this part."}},
+				-- Lieutenant Drake
+	[17862] = {{"Legion", "Paladin-Type Mob"},
+				{"Advanced", "KILL ORDER: Warden (Healer), Veteran (Rogue), then Skarloc (Boss)"},
+				{"TANK", "Be quick to pick up boss and use AoE to hold aggro on Veteran (Rogue)"},
+				{"DAMAGE", "Focus down Warden (Healer) before going after Veteran or Boss (tank should be focusing on these two targets at start of fight)"},
+				{"Interrupts", "INTERRUPT: Holy Light (Heals an ally)"},
+				{"HEALER", "When Tank is struck by Hammer of Justice (5 sec stun) be sure to focus your heals to keep tank topped off!"},
+				{"WARLOCK", "Immune to Curse of Tongues."},
+				{"Important", "Stay out of Consecration at all times. If the tank, it's your job to kite the boss out of it!"}}, 
+				-- Captain Skarloc
+	[18096] = {{"Advanced", "PHASE ONE - Trash Waves"},
+				{"Legion", "1st Wave (Trash from west/same direction as boss)"},
+				{"Legion", "2nd Wave (Trash from south - direction Thrall and players entered Tarren Mill)"},
+				{"Legion", "3rd Wave (Trash from west/same direction as boss and 1st wave)"},
+				{"Important", "After 3rd wave goes down, group should use food/water to get health/mana back up - Save your POTS!"},
+				{"Advanced", "PHASE TWO - After brief intermission, boss will land"},
+				{"TANK", "When boss lands, tank him near NW small house of Tarren Mill under the outside roof of building & keep boss faced away from group due to frontal cone Sand Breath (Reduces movement speed +reduced attack for 10 sec)"},
+				{"Important", "Players should stand as far from boss as possible due to Wing Buffet (Knocks back players w/in 15 yds)"},
+				{"Important", "Boss has Magic Distruption Aura which will periodically dispel magical effects (buffs) from players"},
+				{"Defensives", "While under the effect of Impending Death you will take increased damage. Pop Defensives. Healer focus on this player!"}}, 
+				-- Epoch Hunter
+
+	---Friendly NPCs
+	[18725] = {{"Important", "Click to be flown to the other side of the instance"}}, -- Brazen
+	[18786] = {{"Important", "Escort and Protect Thrall"}}, -- Thrall (Friendly)
+
+	---Trash Mobs
+	[17814] = {{"Legion", "Protection Warrior-Type Mob"},
+				{"Important", "After mob casts Shield Block, only the first melee attack might be blocked for the next 5 sec. Avoid using big CD abilities during this 5 sec window"}}, 
+				-- Lordaeron Watchman
+	[17815] = {{"Legion", "Ranged mobs that Shoot players"}}, -- Lordaeron Sentry
+	[17819] = {{"Important", "Mobs will cleave nearest ally to their target, so tank should pull this mob away from ranged DPS/healer. Melee DPS may need extra heals"}}, 
+				-- Durnholde Sentry
+	[17820] = {{"Important", "Potentially dangerous with Scatter Shot (Disorients player); These mobs can be CC'd"}}, 
+				-- Durnholde Rifleman
+	[17833] = {{"PriorityTargets", "(Priest) Healer-Type Mob"},
+				{"Important", "Can be CC'd"},
+				{"Interrupts", "INTERRUPT: Heal (Heals an ally)"},
+				{"Interrupts", "INTERRUPT: Psychic Scream (4 sec AoE Fear)"}}, -- Durnholde Warden
+	[17840] = {{"Defensives", "During Frenzy, tank may need to pop defensive CDs to mitigate some of the damage"}},
+				-- Durnholde Tracking Hound
+	[17846] = {{"Legion", ""}}, -- Pit Spectator
+	[17860] = {{"Legion", "Rogue-Type Mob"},
+				{"Important", "Can be CC'd"},
+				{"Important", "KIDNEY SHOT (Stuns player for 4 sec)"},
+				{"Important", "BACKSTAB (Increased damage if mob is standing behind target)"}}, -- Durnholde Veteran
+	[18092] = {{"Important", "Will apply Mortal Strike debuff on player (Reduced healing effectiveness)"}}, 
+				-- Tarren Mill Guardsman
+	[18093] = {{"PriorityTargets", "Mob heals, cleanses and stuns"},
+				{"Interrupts", "Interrupt: Heal"}}, -- Tarren Mill Protector
+	[18094] = {{"Important", "Dispel Curse of Infinity from player - usually the tank. (Debuff causing increased damage taken by 50%)"}}, 
+				-- Tarren Mill Lookout
+	[18170] = {{"Defensives", "Defensive: Applies Mortal Wounds debuff to target (reduces effectiveness of healing taken by 50% for 5 sec)"}}, 
+				-- Infinite Slayer
+	[18171] = {{"Important", "Dispel Curse of Infinity from player - usually the tank. (Debuff causing increased damage taken by 50%)"}}, 
+				-- Infinite Defiler
+	[18172] = {{"Important", "Inflicts Shadow & Physical Damage; Cleave also hits a nearby player"}}, -- Infinite Saboteur
+	[18673] = {{"Legion", ""}}, -- Pit Announcer
+	[18764] = {{"Legion", ""}}, -- Durnholde Armorer
+	[18765] = {{"Legion", ""}}, -- Durnholde Cook
+	[18934] = {{"Important", "Mage dealing combo of Frost and Fire damage"},
+				{"Important", "CC this mob and avoid AoE - mob will Polymorph a player"}}, -- Durnholde Mage
+	[26650] = {{"Legion", ""}}, -- Durnholde Captain
+	[28132] = {{"Legion", "Ranged mob that uses Net to root players and disorient them with Scatter Shot"}}, -- Don Carlos
+	[28163] = {{"Important", "Reduces enemy's strength and agility by 10% for 30 sec"}}, -- Guerrero
+
+
+	------- Dungeon: Opening of the Dark Portal (Black Morass) -----
+
+	---Friendly NPCs
+	[15608] = {{"Legion", ""}}, -- Medivh
+	[17023] = {{"Legion", ""}}, -- Shadow Council Enforcer
+	[17918] = {{"Legion", "Summoned using Chrono-Beacon (can deal with whelps during boss portals) - speak with Sa'at for each party member to receive one"}}, 
+				-- Time Keeper
+	[20201] = {{"Important", "Speak with him in order to receive Chrono-Beacon - you will need this to deal with small whelps that come out during boss portals and attack Medivh"}}, 
+				-- Sa'at
+
+	---Bosses
+	[17879] = {{"Legion", "Deals Arcane Damage - Having appropriate resistance gear/pots can help mitigate damage"},
+				{"Important", "CHRONO-BEACON: Stand between boss portal and Medivh and use ONE Chrono-Beacon to summon a Time Keeper to deal with the whelps that leave the portal to attack Medivh (if you spawn your dragon too close to boss, boss will cause your dragon to despawn)!"}, 
+				{"Important", "HEROISM is a good idea for THIS boss - Arcane Discharge has a 50 yd range and also increases damage from next Arcane Discharge."},
+				{"Important", "Arcane Blast (Deals Arcane Damage +Knockback)"},
+				{"TANK", "Stand with your back against a tree, or other such object to avoid boss' knockback"}},
+				-- Chrono Lord Deja
+	[17880] = {{"Important", "CHRONO-BEACON: Stand between boss portal and Medivh and use ONE Chrono-Beacon to summon a Time Keeper to deal with the whelps that leave the portal to attack Medivh (if you spawn your dragon too close to boss, boss will cause your dragon to despawn)!"},
+				{"Important", "Dispel HASTEN (Magic Effect) from boss to reduce boss' damage dealt"},
+				{"Important", "Mortal Wound can be mitigated with the tank's dodge/parry/block/miss, but also with a priest's PW: Shield ability"},
+				{"Advanced", "OFF-TANK STRATEGY:"},
+				{"Important", "Boss is not tauntable. If using an off-tank, that off-tank/dps can create high threat thru specific abilities. Doing this could allow tank's Mortal Wound a chance to fall off"},
+				{"DRUID", "If off-tanking, use BEAR FORM to build threat"},
+				{"SHAMAN", "If off-tanking, use shield +Frost Shock +melee attacks to build threat"},
+				{"HUNTER", "If off-tanking, DISTRACTING SHOT can help build threat and ASPECT OF THE MONKEY +DETERRENCE can mitigate damage"},
+				{"WARLOCK", "If off-tanking, use SEARING PAIN to build threat, SOUL LINK to mitigate damage and SOUL SHATTER to drop threat"},
+				{"PALADIN", "If off-tanking, use RIGHTEOUS FURY +JUDGMENT +CONSECRATION to build threat"},
+				{"WARRIOR", "If off-tanking, use DEFENSIVE STANCE to build threat"}}, 
+				-- Temporus
+	[17881] = {{"Legion", "Deals Nature Damage - Having appropriate resistance gear/pots (for tank) can help mitigate damage"},
+				{"Important", "Using Chrono-Beacons aren't viable on this boss as the boss will destroy summoned dragons with an AoE dispel!"},
+				{"TANK", "Keep boss faced away from group so other players don't get hit by Sand Breath (frontal-cone attack dealing Nature Damage)"},
+				{"WARRIOR", "Using SPELL REFLECTION can grant immunity from Time Stop - just be sure to time this so spell reflect is active prior to TIME STOP"},
+				{"HUNTER", "Using THE BEAST WITHIN can grant immunity from Time Stop - just be sure to time this so spell reflect is active prior to TIME STOP"},
+				{"ROGUE", "Using CLOAK OF SHADOWS can grant immunity from Time Stop - just be sure to time this so spell reflect is active prior to TIME STOP"},
+				{"Important", "DPS and HEALER should stand on side of boss to avoid Sand Breath (frontal-cone attack)"},
+				{"Defensives", "Use Defensive CDs during Enrage phase. Tank may also need increased heals!"},
+				{"HUNTER", "Dispel Frenzy from boss using Tranquilizing Shot"},
+				{"Important", "Boss will occasionally STOP TIME (6 sec time stop). Some abilities and trinkets can remove this ability, such as PVP Trinkets"},
+				{"HEALER", "Keep tank as close to max health as often as possible during boss fight!"}}, 
+				-- Aeonus
+
+	---Mini Bosses
+	[17839] = {{"TANK", "DEFENSIVE: Mob applies Mortal Strike (Healing Effects reduced)"},
+				{"Important", "Rift Lord should be tanked away from players due to its Thunder Clap (Nature) AoE ability"},
+				{"Important", "Mob deals Knockdown (Stun for 2 seconds) on target"},
+				{"Defensives", "DEFENSIVE/HEALS: When Frenzy is applied, tank will be taking increased damage"}}, 
+				-- Rift Lord
+	[21104] = {{"Legion", "Mage-Type deals Fire Damage & Warlock-Type deals Shadow Damage - use appropriate Auras/Buffs to mitigate damage"},
+				{"Advanced", "WARLOCK-TYPE MOB (Shadow):"},
+				{"Important", "DISPEL: Curse of Vulnerability from player (player takes 50% increased magical damage for 30 sec)"},
+				{"Interrupts", "Interrupt: Fear (20 yd range; 1.5 sec cast; Fears player for 4 sec"},
+				{"Interrupts", "Interrupt: Shadow Bolt Volley (Main attack; may only need to worry about interrupting if tank has Curse of Vulnerability that can't be dispelled."},
+				{"Advanced", "MAGE-TYPE MOB (Fire):"},
+				{"Important", "Dispel POLYMORPH magic from player when applied (esp to tank/healer)"},
+				{"Advanced", "BOTH-TYPES:"},
+				{"Defensives", "DEFENSIVE/HEALS: When Frenzy is applied, tank will be taking increased damage"}}, 
+				-- Rift Keeper
+	[21697] = {{"Legion", "If group wiped to Chrono-Lord Deja, this 'boss' will take its place and not drop loot"}}, 
+				-- Infinite Chrono-Lord
+	[21698] = {{"Legion", "If group wiped to Temporus, this 'boss' will take its place"}},
+				-- Infinite Timereaver
+
+	---Trash Mobs (Infinite Dragonflight)
+	[17835] = {{"Legion", "Rogue-type mob"},
+				{"PriorityTargets", "Mob will head for Medivh and may cause a wipe forcing group to start over at Portal 1 if Medivh's shield breaks to these mob's attacks"},
+				{"Important", "Uses Backstab ability from behind their target."}}, 
+				-- Infinite Assassin
+	[17892] = {{"Legion", "Deals Arcane Damage; using appropriate pots can be helpful to mitigate damage (esp if poorly geared)"},
+				{"PriorityTargets", "Mob will head for Medivh and may cause a wipe forcing group to start over at Portal 1 if Medivh's shield breaks to these mob's attacks"},
+				{"Important", "Pet classes (esp with pet taunting) can pick these mobs up as they deal Arcane Explosion to nearby players"}, 
+				{"HEALER", "Be aware that any players w/in range of Chromomancer (esp melee) will take increased damage from mob's AoE"}},
+				-- Infinite Chronomancer
+	[18994] = {{"PriorityTargets", "Mob will head for Medivh and may cause a wipe forcing group to start over at Portal 1 if Medivh's shield breaks to these mob's attacks"}}, 
+				-- Infinite Executioner
+	[18995] = {{"Legion", "Deals Fire & Shadow Damage (use appropriate buffs/auras to mitigate damage from this mob)"},
+				{"PriorityTargets", "Mob will head for Medivh and may cause a wipe forcing group to start over at Portal 1 if Medivh's shield breaks to these mob's attacks"}}, -- Infinite Vanquisher
+	[21818] = {{"PriorityTargets", "Mob will head for Medivh and may cause a wipe forcing group to start over at Portal 1 if Medivh's shield breaks to these mob's attacks"}, 
+				{"Important", "Mobs come out of portal in quick succession! Tank should pickup aggro using AoE tanking abilities (ie Thunder Clap/Consecration), but as making sure that they don't reach Medivh is a priority, all DPS should be burning these down and not worry about aggroing them"}}, 
+				-- Infinite Whelp
+
+	---Trash Mobs (Animals)
+	[17952] = {{"Legion", ""}}, -- Darkwater Crocolisk
+	[18982] = {{"Legion", ""}}, -- Sable Jaguar
+	[18983] = {{"Important", "Deals Ebon Poison (Nature DoT Poison +Reduced healing by 23% for 12 sec) - can be dispelled"}}, -- Blackfang Tarantula
+
+
+	------- Dungeon: The Mechanar -------------------
+
+	---Bosses
+	[19219] = {{"Legion", "Boss deals primarily Arcane damage; Having the appropriate resistance gear/pots could be helpful, esp if you're a melee DPS or tank"},
+				{"Advanced", "POSITIONING: Players should spread out as much as possible to mitigate some of the damage caused by Nether Charges (summoned by boss every ~15 sec and explodes dealing Arcane AoE)"},
+				{"Important", "Players (including tank and healer) need to watch for which Polarity shift they have and stand by players with the same polarity"},
+				{"Important", "Stop melee DPS if boss has Reflective DAMAGE Shield"},
+				{"Important", "Stop caster DPS if boss has Reflective MAGIC Shield"},
+				{"Dodge", "DODGE: Players should avoid areas being struck by Netherbombs while standing close to anyone with same polarity"}}, 
+				-- Mechano-Lord Capacitus
+	[19221] = {{"Legion", "Fire resistance gear/pots/aura is helpful in dealing with this boss and her summoned fire adds"},
+				{"Advanced", "OPTIONAL BOSS; Be sure to clear the boss' room before engaging as you will need room to kite adds. Also, do NOT go down hallway to 3rd boss, during the fight, as trash there will cause problems for group."},
+				{"Important", "Player with aggro on a fire elemental needs to kite away from (but NOT through) the group due to fire patches it places on the ground as it moves"},
+				{"Important", "All players will be moving during much of this fight between kiting of the elemental adds and players avoiding the fire that they leave on the ground"},
+				{"Important", "Tank boss faced away from the group as Dragon's Breath is a frontal-cone attack that disorients player for 4 sec."},
+				{"Important", "Dispel Dragon's Breath from Tank (Magic Effect) as after tank is struck by Dragon's Breath, boss will run to another player with threat (likely the healer)."},
+				{"TANK", "After recovering from the effects of Dragon's Breath, pick aggro back up on the boss ASAP!"}}, 
+				-- Nethermancer Sepethrea
+	[19220] = {{"Legion", "Boss deals Arcane-type damage; having the proper resistance gear/pots can help mitigate damage from boss and adds"},
+				{"Advanced", "POSITIONING: Players (esp mana users) MUST stand at least 25 yds from boss to avoid Arcane Torrent silencing them and stealing their mana"},
+				{"Important", "Nether Wraith adds will be summoned frequently to help boss. DPS should focus and AoE these down anytime they're up, before shifting damage back to the boss"},
+				{"TANK", "Focus on the boss; the Nether Wraith adds don't need to be tanked"},
+				{"Important", "When player is struck with Domination (5 sec mind-control), that player needs be stunned/CC'd ASAP!"},
+				{"Defensives", "If tank is MC'd, boss will likely go after healer. Either way, be prepared to pop a defensive or other helpful CD"}}, 
+				-- Pathaleon the Calculator
+
+	---Mini Bosses
+	[19218] = {{"Important", "Mini-boss should be tanked faced away from the group"},
+				{"Advanced", "POSITIONING: DPS & Healer should spread out so multiple players don't receive Sawblade Bleed (Spread on Heroic-Only)"},
+				{"HEALER", "Watch for players that are struck with Sawblade as they will need increased heals for the 8 sec bleed."},
+				{"Important", "Dispel Shadow Power (Magic buff that increases mob attack speed by 100% for 15 sec) from mob."},
+				{"Important", "Dispel Stream of Machine Fluid (Poison debuff increases time between attacks and reducing armor by 35%) from tank."}},
+				-- Gatewatcher Gyro-Kill
+	[19710] = {{"Dodge", "DODGE: When boss starts casting Jack Hammer, all players need to run from it (including tank) as this does AoE damage centered on himself"},
+				{"Important", "Dispel Shadow Power (Magic buff that increases mob attack speed by 100% for 15 sec) from mob."},
+				{"Important", "Dispel Stream of Machine Fluid (Poison debuff increases time between attacks and reducing armor by 35%) from tank."}},
+				-- Gatewatcher Iron-Hand
+
+	---Nethermancer Sepethrea's summoned adds
+	[20481] = {{"Important", "Player targeted by mob needs to kite them away from group. They will place fire patches on the ground."}}, -- Raging Flames
+
+	---Pathaleon's Summoned adds
+	[21062] = {{"PriorityTargets", "Summoned every 30-45 sec; Despawn when boss reaches 20% health."},
+				{"Interrupts", "INTERRUPT: Casts Arcane Bolt at players dealing Arcane Damage"}}, 
+				-- Nether Wraith
+
+	---Trash Mobs
+	[19166] = {{"Legion", "Mob deals mostly Arcane Damage"},
+				{"TANK", "Pull this mob away from other mobs to prevent other trash from also being pulled"},
+				{"Important", "Ranged DPS and Healer should stand at least 5 yds from Patroller as it has a 2 sec AoE Stun"}}, 
+				-- Tempest-Forge Patroller
+	[19167] = {{"Defensives", "When fighting these mobs, healers will need to pay extra attention to tank's health as mob's Solar Strike reduces healing effectiveness, as well as Melt Armor (reducing nearby player's armor). Tank may also need to pop a defensive CD"}}, 
+				-- Bloodwarder Slayer
+	[19168] = {{"Legion", "Fire Mage-Type Mob"},
+				{"Important", "It is best to use ranged DPS to burn these mobs down as Fire Shield deals AoE Fire Damage to nearby players"}},
+				-- Sunseeker Astromage
+	[19231] = {{"Legion", "Mob will disarm their target with the Claw ability"},
+				{"Important", "Dispel Poison (Glob of Machine Fluid) from players (Nature DoT over 10 sec; +Reduced movement speed"}}, 
+				-- Mechanar Crusher
+	[19510] = {{"Important", "Warrior-Type Mobs that decrease nearby players' armor and increase attack and movement speed."},
+				{"Defensives", "When Centurion's are up and in the group that is being fought, tank may need to pop extra defensive CDs due to Melt Armor ability, and may also need additonal heals"}}, 
+				-- Bloodwarder Centurion
+	[19712] = {{"Important", "DPS and Healer needs to watch their threat as Driller applies stacking debuff that reduces movement speed and armor of their target!"}, 
+				{"WARLOCK", "This mob is vulnerable to Banish and Fear"},
+				{"Important", "Driller applies debuff that will reduce armor by 20% per stack, stacking up to 5 times. This mob should be killed quickly as it can overwhelm tank & healer at higher stacks"}},
+				-- Mechanar Driller
+	[19713] = {"Legion", "Mob will disorient their target for 5 sec with the Pound ability"},
+				{"Important", "Dispel Poison (Glob of Machine Fluid) from players (Nature DoT over 10 sec; +Reduced movement speed"}}, 
+				-- Mechanar Wrecker
+	[19716] = {{"Important", "Players should spread out when this mob is in a pull as Netherbomb deals Arcane AoE to selected area"},
+				{"Important", "Ranged DPS are preferred for this mob as Nether Explosion deals heavy AoE in their melee range"}},
+				-- Mechanar Tinkerer
+	[19735] = {{"Legion", "Mob deals mostly Arcane Damage"},
+				{"TANK", "Pull this mob away from other mobs to prevent other trash from also being pulled"},
+				{"Important", "Ranged DPS and Healer should stand at least 5 yds from Destroy as it has a 2 sec AoE Stun, and Destroyer has melee range AoE"}}, 
+				-- Tempest-Forge Destroyer
+	[20059] = {{"PriorityTargets", "Mob should be CC'd or killed quickly due to Arcane Nova (AoE Arcane Damage that also heals its allies)."},
+				{"Important", "When Netherbinder summons their Arcane Servant, this should be DPS'd down quickly due to its low health and AoE damage"}}, 
+				-- Sunseeker Netherbinder
+	[20478] = {{"PriorityTargets", "Summoned by Sunseeker Netherbinder; Deals AoE damage."}}, -- Arcane Servant
+	[20988] = {{"PriorityTargets", "These mobs can be dangerous as they buff their allies. Use CC abilities or focus them down quickly"}}, -- Sunseeker Engineer
+	[20990] = {{"PriorityTargets", "Mob should be crowd-controlled or killed first"},
+				{"Interrupts", "INTERRUPT: Bandage (8 sec Channeled; Healing an ally)"},
+				{"Important", "Dispel player that is put to sleep by mob (esp if it's the healer) - this lasts 6 sec. If no dispel available, an off-healer may need to step up to fill healer's role during that time"},
+				{"SHAMAN", "Use your Tremor Totem to remove sleep"}},
+				-- Bloodwarder Physician
+
+
+	------- Dungeon: The Botanica -------------------
+
+	---Bosses
+	[17976] = {{"Important", "Make sure to pull adds before engaging the boss (boss will pat back and forth over a bridge"},
+				{"Legion", "Arcane resistance pots and gear could be helpful for this fight, but debuffs still need to be watched/dispelled."},
+				{"Important", "Dispel Arcane Resonance (increases target's Arcane damage taken) as often as possible."},
+				{"TANK", "Maintain strong defensives, esp if you don't have a group that can dispel Arcane Resonance as Arcane Devastation hit hard!"},
+				{"PriorityTargets", "When adds appear, focus them down first. The Mender (healer) is elite and can be CC'd or Feared. When not feared, her heals must be interrupted"}}, -- Commander Sarannis
+	[17975] = {{"PriorityTargets", "Focus DPS on adds when they spawn before shifting back to boss"},
+				{"Important", "When boss shapeshifts into Tree Form, boss becomes immune (this happens with greater frequency as fight goes on). At this point, 3 Frayer Protectors are summoned and begin channeling Tranquility (heal) to boss. When tank pulls them away from boss, DPS should focus down these adds"},
+				{"TANK", "When boss changes into Tree Form, drag the Frayer Protectors away from boss"},
+				{"Important", "During add phases (esp), DPS should focus on the tank's target (boss/adds) to burn mobs down quickly else the fight will be very long and healer will run out of mana"}}, -- High Botanist Freywinn
+	[17978] = {{"Legion", "Optional Boss"},
+				{"Legion", "Boss deals a combination of Fire AoE Damage and Shadow damage DoT during Sacrifice phase. Use of auras/buffs/pots can help mitigate this damage (use fire if you have only one choice)."},
+				{"Important", "Boss casts Hellfire which deals AoE fire damage. Healers should take note of this as melee will take increased damage"},
+				{"Important", "Clear room by killing the adds near boss and two stealthed mobs in the direction of Laj's chambers"},
+				{"Advanced", "POSITIONING: Tank should fight boss in the middle of the room (to avoid LoS issues with healer). It's reccomended to assign an off-healer in case healer is being sacrificed"},
+				{"Important", "If healer is being Sacrificed (8 sec stun +Shadow DoT +boss leeches sacrificed player's health), use your 'off-healer' to assist with heals, and melee DPS should run out of range of boss' Hellfire AoE to mitigate group damage (if off-healer isn't well geared or off-healer not present)"},
+				{"TANK", "DEFENSIVES: If healer is being Sacrificed be prepared to pop defensives to assist off-healer, or esp if an off-healer isn't available"},
+				{"Defensives", "DEFENSIVES: Use defensive CD if boss is enraging against you (likely tank)."},
+				{"HEALER", "Healer will need to keep 'enraged' player at max health (or as close to as possible)."}}, -- Thorngrin the Tender
+	[17980] = {{"Important", "Watch for and dispel Allergic Reaction (Disease) from tank."},
+				{"Important", "Watch for the color that Laj turns to see which school of magic it becomes immune to & don't cast from that school."},
+				{"Legion", "[BLUE] Frost; [RED] Fire; [GREEN] Nature; [BLACK] Shadow; [WHITE] Arcane"},
+				{"PriorityTargets", "When boss teleports to original platform, adds will appear that must be focused down"}}, 
+				-- Laj
+	[17977] = {{"Important", "DPS and Healer should be at maximum range (if possible) when dealing with boss to avoid Stomp (25 yd range; Deals AoE Physical damage +5 sec stun)"},
+				{"WARRIOR", "Use Berserker Rage to grant brief immunity to Stomp's stun effect"},
+				{"PriorityTargets", "Focus down Sapling adds when summoned as they will heal boss. Some abilities from hunter (Aimed Shot), warrior (Mortal Strike) and rogue (Wound Poison) can reduce healing effects."},
+				{"Important", "Sapling adds can also be CC'd using a mage's Frost Nova or a priest's Psychic Scream."}}, 
+				-- Warp Splinter
+
+	---Sarannis' Adds
+	[20078] = {{"Legion", "Deals Arcane melee damage"}}, -- Summoned Bloodwarder Reservist (Non-Elite)
+	[20083] = {{"PriorityTargets", "Fear/Burn Down mob asap as it will heal allies (including boss)"}}, -- Summoned Bloodwarder Mender (Elite)
+
+	---Freywinn Seedlings
+	[19953] = {{"PriorityTargets", ""}}, -- Frayer Protector
+	[19958] = {{"Important", "Dispel magic-effect from player that is encased in block of ice (Freezing Touch)"}}, -- White Seedling
+	[19962] = {{"Important", "AoE ability that reduces movement speed of players for 4 sec"}}, -- Blue Seedling
+	[19964] = {{"Important", "Deals Fire damage to random player"}}, -- Red Seedling
+	[19969] = {{"Important", "Deals AoE Nature damage"}}, -- Green Seedling
+
+	---Laj's Adds
+	[19919] = {{"PriorityTargets", "Shots Thorn Missiles at player applying a Physical damage bleed"}}, -- Thorn Lasher
+	[19920] = {{"PriorityTargets", "Casts Mind Flay at player applying Shadow damage +movement speed reduction to that player"}}, -- Thorn Flayer
+
+	---Warp Splinter Adds
+	[19949] = {{"PriorityTargets", "Burn these adds down to prevent boss from being healed"}}, -- Sapling
+
+	---Trash Mobs
+	[17993] = {{"PriorityTargets", "CC/DPS these mobs down quickly before they can put up Spell Reflection"},
+				{"Important", "Immune to Mind Control"}}, 
+				-- Bloodwarder Protector
+	[17994] = {{"Defensives", "Player with Call of the Falcon mark will take extra damage from Bloodfalcons"}}, 
+				-- Bloodwarder Falconer
+	[18155] = {{"Legion", ""}}, -- Bloodfalcon
+	[18404] = {{"Dodge", "DODGE: Arcane Flurry (AoE/WW Ability) when mob begins channeling, or stun this mob"}}, 
+				-- Bloodwarder Steward
+	[18405] = {{"Legion", "Deal AoE damage and drain player mana from nearby players"}}, -- Tempest-Forge Peacekeeper
+	[18419] = {{"Legion", "Mobs deal primarily Nature Damage"},
+				{"Important", "Dispel Impending Coma (Poison) from tank (increases time between attacks +reduces movement speed +puts target to sleep"}, 
+				{"Interrupts", "Interrupt: Greenkeeper's Fury (Lightning Bolt dealing Nature damage)"}}, 
+				-- Bloodwarder Greenkeeper
+	[18420] = {{"Important", "Casts Arcane Explosion AoE (melee players may need extra heals)"},
+				{"Important", "Immune to Crowd Control"}}, -- Sunseeker Geomancer
+	[18421] = {{"Important", "Applies Frost/Fire/Nature DoT (magic debuff) to players that can be dispelled"}}, 
+				-- Sunseeker Researcher
+	[18422] = {{"Legion", "Resto Druid-Type Mob"},
+				{"PriorityTargets", "INTERRUPT: Regrowth & Rejuvenate Plant (Both 2 sec cast time that heal/apply HoTs to their allies"}}, 
+				-- Sunseeker Botanist
+	[18587] = {{"Important", "Mob applies buff to itself making it immune to either Arcane, Fire, Frost, or Shadow - players should switch to alternate spell types to counter immunities"}}, 
+				-- Frayer
+	[19486] = {{"Important", "These mobs should be tanked away from the group"},
+				{"Dodge", "Move out of poison clouds from Vial of Poison"}}, -- Sunseeker Chemist
+	[19505] = {{"PriorityTargets", "Mob applies damage buff to nearby allies. This mob is fairly weak when it is alone"},
+				{"Important", "Dispel: Soul Channel (magic ability leeching health and mana over 6 sec)"}}, 
+				-- Sunseeker Channeler
+	[19507] = {{"Legion", "Death Knight-Type Mob"},
+				{"Dodge", "DODGE/RUN from area that Death & Decay is cast (AoE targeted at a selected location"}}, 
+				-- Sunseeker Gene-Splicer
+	[19508] = {{"Important", "Herbalists will summon Mutate Fleshlashers that should be DPS'd down quickly!"}, 
+				{"Important", "Dispel Entangling Roots from players (Roots player and deals Nature DoT over 6 sec)"}},
+				-- Sunseeker Herbalist
+	[19509] = {{"Important", "These mobs should be CC'd or burned down quickly as their casting of Polymorph could be very dangerous to the group if done to tank/healer"}}, 
+				-- Sunseeker Harvester
+	[19511] = {{"Important", "Immune to Enslave, but vulnerable to Banish"},
+				{"Important", "Dispel Deadly Poison from player (Nature DoT lasting 60 sec)"}}, 
+				-- Nethervine Inciter
+	[19512] = {{"Important", "Dispel Pale Death (curse effect reducing stamina by 35% for 60 sec) from tank ASAP!"},
+				{"Defensives", "Due to cleave AoE, melee ranged players will take increased damage and will need additional heals"}}, 
+				-- Nethervine Reaper
+	[19513] = {{"Important", "Immune to most forms of CC; Vulnerable to a hunter's Ice Trap slows"},
+				{"Important", "Fear-Shrieker has an AoE Fear, it should be pulled clear of other mobs so you don't pull unwanted groups."}}, 
+				-- Mutate Fear-Shrieker
+	[19557] = {{"Legion", ""}}, -- Greater Frayer
+	[19598] = {{"Legion", ""}}, -- Mutate Fleshlasher
+	[19608] = {{"Important", "These mobs should be defeated prior to engaging Warp Splinter (boss)"}}, 
+				-- Frayer Wildling
+	[19633] = {{"PriorityTargets", "INTERRUPT: Greater Heal (mob will cast this on self or ally)"}}, 
+				-- Bloodwarder Mender
+	[19843] = {{"Legion", "Rogue-Type Mob"},
+				{"Important", "Mob starts Stealthed, deals increased damage from behind target"}}, 
+				-- Nethervine Trickster
+	[19865] = {{"Important", "Use Stuns/Ice Trap; Mob is immune to Polymorph and Fear"}}, -- Mutate Horror
+	[25354] = {{"PriorityTargets", "Hard hitting non-elites summoned by Sunseeker Herbalists"}}, -- Mutate Fleshlasher
+
+
+	------- Dungeon: The Arcatraz -------------------
+
+	---Bosses
+	[20870] = {{"Legion", "Boss deals Shadow damage - having Shadow resistance gear/auras/buffs/pots can help mitigate damage taken"},
+				{"TANK", "Tank the boss with your back against the wall to avoid knockback"},
+				{"Dodge", "DODGE/RUN from Void Zones boss spawns (Purple swirl on ground dealing Shadow damage to players"},
+				{"Dodge", "DODGE: If you are afflicted with Seed of Corruption, run out of group as AoE Shadow damage will be dealt to players w/in 10 yards and applying a Shadow DoT to those players. If the tank is the one afflicted, all other players must run away from tank."},
+				{"Important", "Players can minimize the knockback from Shadow Nova by standing with backs close to a wall, but still need to be aware of void zones that will spawn"}}, 
+				-- Zereketh the Unbound
+	[20885] = {{"Legion", "Boss deals Shadow damage - having Shadow resistance gear/auras/buffs/pots can help mitigate damage taken"},
+				{"Dodge", "DODGE: ~30 sec into the fight, boss will do a Whirlwind (lasts 6 sec), be sure to run out of this as it deals massive AoE Physical damage"},
+				{"PriorityTargets", "INTERRUPT: After boss' Whirlwind ends, she will cast a heal on herself"},
+				{"Important", "Boss applies Gift of the Doomsayer to player (looks like Shadow Protection buff from a priest and has a chance to heal boss if player with debuff is healed this includes healing pots)"},
+				{"SHAMAN", "Avoid using Earth Shield on a player, during this fight"},
+				{"PRIEST", "Power Word: Shield is okay to use, but do NOT use Vampiric Embrace during this fight as it could result in boss getting healed."},
+				{"Important", "Using Wound Poison (rogue), Aimed Shot (hunter) or Mortal Strike (warrior) can reduce the amount of healing boss receives, if she manages to get a cast off."}}, 
+				-- Dalliah the Doomsayer
+	[20886] = {{"Legion", "Boss deals mostly Fire damage - having Fire resistance gear/auras/pots can help mitigate damage taken"},
+				{"Important", "Boss should be tanked with tank's back against the wall to mitigate Knockback"},
+				{"Dodge", "After boss does Knockback, he will charge a random player and apply a Felfire trail that must be moved out of!"},
+				{"HEALER", "Boss applies Fel Immolation Aura that deals AoE fire damage to players w/in 15 yds. If you have melee DPS in your group, be aware that these ones will take increased damage as a result"},
+				{"Important", "Dispel player afflicted ith Felfire Shock (Fire DoT)"}}, 
+				-- Wrath-Scryer Soccothrates
+	[20912] = {{"Advanced", "PHASE ONE - 4 Cells will open, the 1st, 3rd and 4th will be one of two possibility enemies"},
+				{"Legion", "First Cell: Mobs deal Fire/Physical Damage"},
+				{"Legion", "Second Cell: Millhouse Manastorm (Helps players)"},
+				{"Legion", "Third Cell: Mobs deal Fire/Physical for Blackwing or Fire/Frost/Arcane for Twilight Drakonaar"},
+				{"Advanced", "PHASE TWO - Begins once 4th cell's mob is defeated and Skyriss becomes active."},
+				{"Legion", "Boss deals primarily Shadow/Physical Damage to players"},
+				{"Important", "During fight, boss will mind-control a player that needs to be CC'd ASAP!"}, 
+				{"Important", "Boss will create illusions of himself at 66% and 33%. Boss and illusions use Mind Rend (Channeled Shadow Damage against players)"},
+				{"TANK", "Make sure to pick up and hold aggro of boss and his clones so that healer won't get hit by multiple Mind Rend's and die"},
+				{"Important", "Boss will also fear a random player. Use of Fear Ward or a Tremor Totem can mitigate problems, esp if it is done to a healer/tank"}},
+				-- Harbinger Skyriss
+
+	-- Warden Mellichar
+	[20905] = {{"Important", "Once you approach Warden, players will enter combat and fight will soon begin. Make sure that your group is aware of boss strategy before entering 'combat range'"}}, 
+				-- Warden Mellichar
+
+	-- Warden Mellich's Prisons
+	[20905] = {{"Legion", "Deals Fire Damage"},
+				{"Important", "Use non-Fire spells against this mob as they have increased Fire resistance"}}, 
+				-- Blazing Trickster (1st Cell)
+	[20906] = {{"Important", "Mob will cast Warp and appear behind a player"},
+				{"Important", "Mob will deal increased damage when attacking a player from behind"}}, 
+				-- Phase-Hunter (1st Cell)
+	[20977] = {{"Legion", "Friendly; Helps players"}}, -- Millhouse Manastorm (2nd Cell)
+	[20908] = {{"Legion", "Deals mostly Nature damage"},
+				{"Important", "Dispel Magic Grounding (applies buff that mob takes 50% reduced magic damage for 30 sec)"},
+				{"HEALER", "Apply extra heals to player afflicted with Lightning Jump (causes player to receive increased damage from all schools of magic for 60 sec)."},
+				{"Important", "Lightning Discharge is a chain lightning dealing nature damage all to players w/in 50 yds"}}, 
+				-- Akkiris Lightning-Waker (3rd Cell)
+	[20909] = {{"Important", "Deals mostly Fire (AoE) & Shadow (single-target) damage"},
+				{"Important", "Dispel curse from player of Magma-Thrower's Curse (curse reduces effectiveness of healing received)"},
+				{"Important", "Casts Rain of Fire (10 yd AoE), which deals damage every 2 sec for 8 sec"},
+				{"Dodge", "Run out of Rain of Fire!"},
+				{"Important", "Casts Shadow Bolt at a player"}}, 
+				-- Sulfuron Magma-Thrower (3rd Cell)
+	[20910] = {{"Legion", "ONLY the tank should be standing in front of the mob so rest can avoid damage mob deals!"},
+				{"Important", "Mob will deal certain type of damage depending on color buff it has:"},
+				{"Important", "BROOD POWER: Green (Stuns players in front of mob for 1 sec)"},
+				{"Important", "BROOD POWER: Black (Deals Fire damage to players in front of it)"},
+				{"Important", "BROOD POWER: Blue (Deals Frost damage to players in front of it destroying player mana and increasing player time between attacks)"},
+				{"Important", "BROOD POWER: Bronze (Deals Arcane damage +reduced casting +increased time between attacks to players in front of it)"},
+				{"Important", "BROOD POWER: Red (Applies Fire DoT to players in front of it)"}}, 
+				-- Twilight Drakonaar (4th Cell)
+	[20911] = {{"Legion", "Mob deals mostly Fire damage"},
+				{"Important", "Deals frontal-cone Fire damage (only tank should be standing in front of mob)"},
+				{"Important", "Mob applies Mortal Wounds debuff to target causing reduced effectiveness to heals received"},
+				{"Important", "Mob deals AoE Fire damage thru Blsat Wave ability"}}, 
+				-- Blackwing Drakonaar (4th Cell)
+
+	---Trash Mobs
+	[20857] = {{"Legion", "Deals a combination of Fire and Nature damage in form of DoTs"},
+				{"Important", "Immolate (Fire DoT; Magic-ability can be dispelled from tank)"},
+				{"Important", "Infected Blood (Nature DoT; Disease-ability can be dispelled from tank)"}}, -- Arcatraz Defender
+	[20859] = {{"Legion", "Ranged Hunter-type mobs"},
+				{"Important", "Make sure to defeat these mobs. Leaving them alone will result in adds continuing to spawn, which will be very problematic if DPS/Healer need to run back after a wipe."}}, 
+				-- Arcatraz Warder
+	[20864] = {{"Legion", "Deals Nature damage and some physical damage"},
+				{"Important", "Group should try to fight this at range w/only the tank in melee range due to Incubation (AoE explosion)"}}, 
+				-- Protean Nightmare
+	[20865] = {{"Legion", "Triggered when group gets too close to these mobs. Tank should pickup aggro and group focus them down"}}, 
+				-- Protean Horror
+	[20866] = {{"Legion", "Deals combination of Fire and Shadow Damage"},
+				{"Important", "Only the tank should be in front of this mob due to frontal cone Fel Breath (Fire Damage)"},
+				{"Important", "Mob will summon Sightless Eyes that DPS should focus on killing as they apply a movement speed and casting/attack speed debuff to players"}}, 
+				-- Soul Devourer
+	[20867] = {{"PriorityTargets", "Once boss reaches 50% health, group has 15 sec to finish mob off as massive dmg is dealt to those with the debuff when timer goes out"},
+				{"Important", "If your group is lacking in the DPS needed to bring mob down from 50% to 0 in 15 sec, DPS and Healer can drop LoS from boss prior to 50% to prevent debuff from being applied to them."},
+				{"ROGUE", "Using Cloak of Shadows can drop Mark of Death debuff from you"},
+				{"Important", "Dispel Drain Life (Magic) from Tank"}}, -- Death Watcher
+	[20868] = {{"Important", "Mob deals big damage to players in front of him, so only the tank should be in front."},
+				{"Important", "After tank takes Chaos Breath make sure to dispel curse, poison and magics from tank ASAP that this ability puts on them."},
+				{"Important", "If Healer or Tank are Hexed (5 sec CC against players), an off-tank or off-healer may need to pick up the slack during the sheeping"}}, 
+				-- Entropic Eye
+	[20869] = {{"Important", "Mob sparks AoE Arcane Damage"},
+				{"TANK", "When/If mob comes back to life, tank should be quick to pick up aggro (these mobs will regularly reset aggro also"},
+				{"ROGUE", "Sentinels are vulnerable to Cheap Shot and Kidney Shot to mitigate some of the damage being dealt to tank"},
+				{"Important", "Ranged DPS/Healer should stand 40 yds away from mob to avoid Energy Discharge while alive"},
+				{"Dodge", "RUN AWAY: When mob reaches low health they will try to explode dealing AoE Damage"}}, 
+				-- Arcatraz Sentinel
+	[20873] = {{"Important", "When mob places glowing purple AoE below them, tank will need to kite boss away as it heals mob for large amount, and increases the damage they deal"}}, 
+				-- Negaton Warp-Master
+	[20875] = {{"Important", "Players need to pay attention to the Elemental Response buff that mob applies to itself. This buff reduces certain magic schools/physical abilities it takes by 75%. Make sure to coordinate (if poss) switching magic schools cast to keep boss guessing"},
+				{"Important", "When tank is about to pull, players should first strike boss with an ability that the tank isn't primarily using (Holy for Prot Paladin, Physical for Prot Warrior), so that Tank can quickly grab & maintain aggro"},
+				{"TANK", "Threat building/maintaining might be issue if mob resists your type of attack (Holy, Physical, etc). If that's the case, wait for mob to switch to different resistance before using an abilities it isn't resisting"},
+				{"Important", "Shaman using Tremor Totem or Priest applying Fear Ward to the tank is helpful to mitigate issues during Psychic Scream (AoE Fear)"}}, 
+				-- Negaton Screamer
+	[20879] = {{"Important", "Dispel Soul Steal (magic buff) from tank (reduces stats & damage done by 45% for 20 sec)"},
+				{"MAGE", "Dispel Soul Steal (magic buff) from mob (increases mob stats & damage done by 45% for 20%."},
+				{"Defensives", "If there is no mage in the grp to dispel Soul Steal from enemy mob, tank will need to pop extra CDs and need extra heals to deal with damage"}}, 
+				-- Eredar Soul-Eater
+	[20880] = {{"PriorityTargets", "Mob casts Diminish Soul on player (stacks up to 10) for 12 sec. If stacks get too high on tank because fight is taking too long, tank could quickly become overwhelmed resulting in a wipe"},
+				{"Legion", "Mob deals AoE shadow damage to players (~40 yd range); having proper resistance buffs/pots can help deal with Diminish Soul stacks"},
+				{"Important", "Forceful Cleave is an AoE knockback, players (esp tank) should stand with backs against a wall."}}, 
+				-- Eredar Deathbringer
+	[20881] = {{"Legion", "Mob deals Physical and Shadow damage"},
+				{"WARLOCK", "Felguard is immune to Enslave and Banish"},
+				{"Important", "Mob should be tanked with tank's back against wall due to Devastate"},
+				{"Important", "Mob will cast Deafening Roar (AoE Interrupt); Healers and DPS can LoS until after this mob casts Deafening Roar on the tank to minimize chances that they will get hit by a second one"}}, 
+				-- Unbound Devastator
+	[20882] = {{"Important", "Mob begins stealthed, and will Gouge (stun) the tank regularly. When this happens, mob will attack second highest player on the threat table."}}, 
+				-- Skulking Witch
+	[20883] = {{"Important", "Mob will cast Domination on player mind-controlling them for 6 sec. MC'd player needs to be stunned/CC'd ASAP!"}}, 
+				-- Spiteful Temptress
+	[20896] = {{"Legion", "Rogue-type mob with Evasion ability"},
+				{"Important", "When Evasion is active on mob, its Dodge abilities are increased (save big attacks when buff not active)"},
+				{"Important", "Dispel Impaired Poison when mob applies this to players"}, 
+				{"Important", "Immune to Mind Control on Heroic difficulty"}}, -- Ethereum Slayer
+	[20897] = {{"Legion", "Arcane Mage-Type Mob"},
+				{"Important", "Dispel polymorph from tank/healer"},
+				{"Important", "Sonic Boom is AoE Arcane Explosion ability w/45 yd range. This ability also disrupts casting of spells from a school of magic that were being cast when this was activated for 4 seconds"},
+				{"HEALER", "If possibly try to use instant cast heals, totems or healing spells with as short of a cast time as possible to minimize risk of becoming spell silenced."},
+				{"Important", "If Healer is spell silenced from Sonic Boom, an off-healer may be needed as well as tank popping extra defensive CDs"}}, 
+				-- Ethereum Wave-Caster
+	[20898] = {{"Legion", "Mob deals mostly Fire-type damage - use appropriate resistances"},
+				{"Important", "Players need to stack to split damage from Meteor!"},
+				{"Important", "When Meteor isn't being used, ranged DPS and Healer should be at least 20 yds away to avoid Fire Shield AoE that will impact those in melee range"}, 
+				{"WARLOCK", "Abyssal is immune to Banish & Enslave"}}, -- Gargantuan Abyssal
+	[20900] = {{"Important", "Players need to watch their threat when dealing with this target. If non-tank pulls aggro just before War Stomp (5 sec AoE stun) goes off, it could result in a wipe."}, 
+				{"WARLOCK", "Doomguard is immune to Enslave Demon"}}, -- Unchained Doombringer
+	[20901] = {{"Important", "Ranged mobs that root tank and disorient players with Hooked Net and Scatter Shot"},
+				{"Important", "Immune to Freezing Trap, Banish, Fear, Enslave Demon and most stuns"}}, 
+				-- Sargeron Archer
+	[20902] = {{"Legion", "Mob deals mostly Fire Damage"},
+				{"Important", "Immune to Freezing Trap, Banish, Fear, Enslave Demon and most stuns"},
+				{"Dodge", "When mob casts Hellfire (AoE Damage) at random location/player, players need to run out this ability!"}}, 
+				-- Sargeron Hellcaller
+	[21303] = {{"Legion", ""}}, -- Defender Corpse
+	[21346] = {{"PriorityTargets", "Applies Sightless Touch to players (Reduced movement speed by 40% +Reduced attack/casting speed by 50%"}}, 
+				-- Sightless Eye
+	[21395] = {{"Legion", ""}}, -- Protean Spawn
+	[21702] = {{"Legion", "Shadow Priest-Type Mob dealing mostly Shadow damage"},
+				{"Important", "Immobilizes players with Shackle and Bind"}}, -- Ethereum Life-Binder
+	[22892] = {{"Important", "Can be stunned, blinded and gouged"}}, -- Third Fragment Guardian
+
+
+
+	------- Dungeon: Magister’s Terrace -------------
+
+	---Bosses
+	[24723] = {{"Important", ""}}, -- Selin Fireheart
+	[24744] = {{"Important", ""}}, -- Vexallus
+	[24560] = {{"Important", ""}}, -- Priestess Delrissa
+	[24664] = {{"Important", ""}}, -- Kael'thas Sunstrider <Lord of the Blood Elves>
+
+	---Priestess Delrissa' Minions
+	[24552] = {{"Important", ""}}, -- Sliver <Garaxxas' Pet>
+	[24553] = {{"Important", ""}}, -- Apoko
+	[24554] = {{"Important", ""}}, -- Eramas Brightblaze
+	[24555] = {{"Important", ""}}, -- Garaxxas
+	[24556] = {{"Important", ""}}, -- Zelfan
+	[24557] = {{"Important", ""}}, -- Kagani Nightstrike
+	[24558] = {{"Important", ""}}, -- Ellrys Duskhallow
+	[24559] = {{"Important", ""}}, -- Warlord Salaris
+	[24561] = {{"Important", ""}}, -- Yazzai
+
+	---Trash Mobs
+	[24656] = {{"Important", ""}}, -- Fizzle
+	[24674] = {{"Important", ""}}, -- Phoenix
+	[24675] = {{"Legion", ""}}, -- Phoenix Egg
+	[24683] = {{"Important", ""}}, -- Sunblade Mage Guard
+	[24684] = {{"Important", ""}}, -- Sunblade Blood Knight
+	[24685] = {{"Important", ""}}, -- Sunblade Magister
+	[24686] = {{"Important", ""}}, -- Sunblade Warlock
+	[24687] = {{"Important", ""}}, -- Sunblade Physician
+	[24688] = {{"Important", ""}}, -- Wretched Skulker
+	[24689] = {{"Important", ""}}, -- Wretched Bruiser
+	[24690] = {{"Important", ""}}, -- Wretched Husk
+	[24696] = {{"Important", ""}}, -- Coilskar Witch
+	[24697] = {{"Important", ""}}, -- Sister of Torment
+	[24698] = {{"Important", ""}}, -- Ethereum Smuggler
+	[24722] = {{"Legion", ""}}, -- Fel Crystal
+	[24745] = {{"Legion", ""}}, -- Pure Energy
+	[24761] = {{"Important", ""}}, -- Brightscale Wyrm
+	[24762] = {{"Important", ""}}, -- Sunblade Keeper
+	[24777] = {{"Important", ""}}, -- Sunblade Sentinel
+	[24781] = {{"Legion", ""}}, -- Nether Energy
+	[24815] = {{"Important", ""}}, -- Sunblade Imp
+
+
+	-------------0--------------	
 	
 	[0] = {{"-"}}	
 	
-}
+}                                                                                                                                                                                                                                                  
