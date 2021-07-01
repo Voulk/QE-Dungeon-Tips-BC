@@ -125,12 +125,30 @@ addon.acceptedDungeons = {
 	[270] = true, -- Arcatraz
 	[271] = true, -- Arcatraz
 	[272] = true, -- Mana-Tombs
-	[273] = true, -- Black Morass
+	[173] = true, -- Black Morass
+	[733] = true, -- Black Morass
 	[274] = true, -- Old Hillsbrad
 	
 	[347] = true, -- Hellfire Ramparts
 	
 	-- Raid Content --
+	[350] = true, -- Karazhan (Servants Quarters)
+	[351] = true, -- Karazhan
+	[352] = true, -- Karazhan (Ballroom)
+	[353] = true, -- Karazhan (Guests Chambers)
+	[354] = true, -- Opera Hall Balcony
+	[355] = true, -- Master's Terrace
+	[356] = true, -- Lower Broken Stair
+	[357] = true, -- Upper Broken Stair
+	[358] = true, -- The Menagerie
+	[359] = true, -- The Guardians Library
+	[360] = true, -- The Repository
+	[361] = true, -- Upper Library
+	[362] = true, -- The Celestial Watch
+	[363] = true, -- Gamesman's Hall
+	[364] = true, -- Medivh's Quarters
+	[365] = true, -- The Power Station
+	[366] = true, -- Netherspace
 	-- Coming Soon --
 
 	
@@ -236,7 +254,6 @@ end
 
 -- This starts the ball rolling. This function is called whenever an NPC tooltip is moused over.
 GameTooltip:HookScript("OnTooltipSetUnit", function(self)
-	
   if QEConfig.ShowFrame == "Show in separate frame" and QEConfig.TargetTrigger == "Show targeted mob" then return end -- Tiny Snippet to disable the tooltip hook if targeting is selected instead.
   if QEConfig.ShowFrame == "Show in separate frame" and QEConfig.TargetTrigger == "Show mouseover" and QE_onBoss then return end -- Disable tooltip hook if player is using frame + Mouseover but is on boss
   if not addon:checkInstance() then return end -- We won't be adding anything to tooltips if the addon is disabled in the current instance.
@@ -246,6 +263,7 @@ GameTooltip:HookScript("OnTooltipSetUnit", function(self)
   local _, class, _ = UnitClass("player")
   
 	if unit then
+		
 		local guid = UnitGUID(unit) or ""
 		local id = tonumber(guid:match("-(%d+)-%x+$"), 10) -- This is the mobs ID. Don't worry about the regex.
 		local name = UnitName(unit) or ""
@@ -283,9 +301,8 @@ function addon:getTarget(mobType)
     --local guid = UnitGUID(unit) or ""
     local id = tonumber(guid:match("-(%d+)-%x+$"), 10) -- This is the mobs ID. Don't worry about the regex.
 	local name = UnitName(mobType) or ""
-	
 	-- Check our dictionary to see if we actually have any tips for the mob targeted.
-	if tipsMap[id]  then
+	if tipsMap[id] then
 		-- Don't remove active tip if you accidentally mouse over ally.
 		
 		QE_TipText:SetText("")		

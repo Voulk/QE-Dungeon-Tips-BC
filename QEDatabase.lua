@@ -1684,7 +1684,7 @@ tipsMap = {
 	[19209] = {{"PriorityTargets", "Summoned by Cabal Summoner"},
 				{"Legion", "Warrior-Type Mob"},
 				{"Important", "DPS and Healer should avoid standing too close to mob as Black Cleave deals Shadow Damage and applies a DoT"},
-				{"HEALER", "Deathsworn will periodically Knockdown which stuns player for 2 sec. If/when applied to tank, they will need additional heals."}, 
+				{"HEALER", "Deathsworn will periodically Knockdown which stuns player for 2 sec. If/when applied to tank, they will need additional heals."}}, 
 				-- Summoned Cabal Deathsworn
 
 	[22890] = {{"Legion", ""}}, -- First Fragment Guardian
@@ -1912,7 +1912,7 @@ tipsMap = {
 				{"WARLOCK", "This mob is vulnerable to Banish and Fear"},
 				{"Important", "Driller applies debuff that will reduce armor by 20% per stack, stacking up to 5 times. This mob should be killed quickly as it can overwhelm tank & healer at higher stacks"}},
 				-- Mechanar Driller
-	[19713] = {"Legion", "Mob will disorient their target for 5 sec with the Pound ability"},
+	[19713] = {{"Legion", "Mob will disorient their target for 5 sec with the Pound ability"},
 				{"Important", "Dispel Poison (Glob of Machine Fluid) from players (Nature DoT over 10 sec; +Reduced movement speed"}}, 
 				-- Mechanar Wrecker
 	[19716] = {{"Important", "Players should spread out when this mob is in a pull as Netherbomb deals Arcane AoE to selected area"},
