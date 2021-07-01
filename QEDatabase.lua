@@ -930,15 +930,13 @@ tipsMap = {
 				{"Important", "Spread out to avoid knockback from Surge"}}, -- Watchkeeper Gargolmar
 	[17309] = {{"PriorityTargets", "INTERRUPT: Heal (Heals boss, will also use Renew)"}},
 				-- Hellfire Watcher <Watchkeeper's Subordinate>
-	[17308] = {{"Legion", "Having high shadow resistance will help deal with boss' damage dealt to players"},
-				{"Dodge", "If inflicted with Bane of Treachery run away from group. If healer or tank gets Bane, DPS needs to run away from them. Lasts 15 sec"},
+	[17308] = {{"Dodge", "If inflicted with Bane of Treachery run away from group. If healer or tank gets Bane, DPS needs to run away from them. Lasts 15 sec"},
 				{"Important", "~40% health, the boss casts Demonic Shield on self reducing physical and magical damage taken by 75% for 10 sec"},
 				{"Important", "CC boss' hounds or have tank taunt them"}}, -- Omor the Unscarred
 	[17540] = {{"TANK", "Taunt pets to avoid them going after other players!"},
 				{"Important", "CC/Burn down adds"},
 				{"Interrupts", "Interrupt: Drain Life"}}, -- Fiendish Hound <Omar's Pets>
-	[17537] = {{"Legion", "Bosses deal Fire damage - use resistances/pots to aid in reducing damage done to players"},
-				{"Important", "Party members should spread out to minimize multiple people being hit with AoE Fireball from Nazan"},
+	[17537] = {{"Important", "Party members should spread out to minimize multiple people being hit with AoE Fireball from Nazan"},
 				{"Dodge", "DODGE: If hit by Fireball from Nazan, run away to avoid continuing ticks of damage!"},
 				{"TANK", "Be quick to pick up boss as he will run quickly to highest threat upon landing"},
 				{"Advanced", "VAZRUDEN (Orc) Strategy (Phase 1)"},
@@ -949,8 +947,7 @@ tipsMap = {
 				{"TANK", "When Nazan lands, the tank should turn the boss away from the group to avoid fire AoE hitting the group"},
 				{"Important", "Nazan will do a Bellowing Roar (AoE fear)"},
 				{"DAMAGE", "Don't stand in front of Nazan!"}}, -- Vazruden
-	[17536] = {{"Legion", "Bosses deal Fire damage - use resistances/pots to aid in reducing damage done to players"},
-				{"Important", "Party members should spread out to minimize multiple people being hit with AoE Fireball from Nazan"},
+	[17536] = {{"Important", "Party members should spread out to minimize multiple people being hit with AoE Fireball from Nazan"},
 				{"Dodge", "DODGE: If hit by Fireball from Nazan, run away to avoid continuing ticks of damage!"},
 				{"TANK", "Be quick to pick up boss as he will run quickly to highest threat upon landing"},
 				{"Advanced", "VAZRUDEN (Orc) Strategy (Phase 1)"},
@@ -971,12 +968,12 @@ tipsMap = {
 				-- Bleeding Hollow Darkcaster
 	[17270] = {{"Important", "Tank should turn these mobs away from the group to avoid party members from being hit by Aimed Shot & Multi-Shot"}}, 
 				-- Bleeding Hollow Archer
-	[17271] = {{"Important", "Tank should watch direction their back is as this mob will do a knockback and you avoid pulling unwanted groups."},
+	[17271] = {{"Important", "Tank should watch direction their back is as this mob will do a knockback and you want to avoid pulling unwanted groups."},
 				{"Defensives", "Mortal Strike will also be applied to target reducing the effectiveness of healing received"}}, 
 				-- Bonechewer Destroyer
 	[17280] = {{"Legion", "Non-elites; Deals heavy damage to cloth wearers"},
 				{"Important", "Vulnerable to CCs such as Polymorph, Trap and Hibernate"}}, -- Shattered Hand Warhound
-	[17281] = {{"Defensives", "Has an enrage when they become larger. Tank popping Defensive CDs may be necessary here, as well as additional heals to compensate for the increase in damage"}}, 
+	[17281] = {{"Defensives", "Has an enrage when they become larger. Tank popping Defensive CDs may be necessary here and have healing ready."}}, 
 				-- Bonechewer Ripper
 	[17455] = {{"Important", "Beastmaster summons Warhounds to aid them, and also deals Uppercut (knockback to a player)."}}, 
 				-- Bonechewer Beastmaster
@@ -996,21 +993,18 @@ tipsMap = {
 				{"Important", "Boss will Mind Control random player. The MC'd player should be CC'd asap. If MC is on the tank, the boss will go straight for the healer!"},
 				{"Important", "Boss will spew an AoE Acid Spray within melee range"}}, 
 				-- The Maker
-	[17380] = {{"Legion", "Deals Nature Damage - Nature resistance (gear/pots) helpful here to mitigate damage received"},
-				{"TANK", "Kite boss out of Poison Cloud"},
+	[17380] = {{"TANK", "Kite boss out of Poison Cloud"},
 				{"Important", "Only the tank should stand in front of boss due to boss' Slime Spray frontal cone attack"},
 				{"HEALER", "Watch for players hit by Poison Bolt as this is a Nature damage DoT"}}, 
 				-- Broggok
 	[17429] = {{"Legion", "4 waves, first wave activated by clicking Cell Door Lever"},
-				{"TANK", "Tank should be the closest one to the cage that is to open. Pop an AoE taunt ability (such as Consecration, Thunder Clap, Swipe as Bear Druid to pull adds to you."},
+				{"TANK", "Tank should be the closest one to the cage that is to open. Pop an AoE high threat ability (such as Consecration, Thunder Clap, Swipe as Bear Druid to pull adds to you."},
 				{"Important", "Mobs can be feared/trapped/slowed, which allows players to receive less damage from mass of orcs"},
 				{"Important", "When mob from each wave dies, the next cell door will automatically open. Boss' door will open after last orc from 4th wave goes down."}}, -- Fel Orc Neophyte <Broggok's Buddies>
-	[17377] = {{"Legion", "Boss/Adds deals Fire & Shadow Damage - having fire & shadow resistance will be helpful in dealing with mechanics (shadow more important)"},
-				{"Important", "Spread out as much as possible to mitigate group damage from Shadow Bolt Volley (30 yd shadow AoE - mostly helpful for ranged players/healer)"},
+	[17377] = {{"Important", "Spread out as much as possible to mitigate group damage from Shadow Bolt Volley (30 yd shadow AoE - mostly helpful for ranged players/healer)"},
 				{"Important", "Run away when you hear boss saying 'CLOSER...COME CLOSER AND BURN' as he is about to do a HEAVY Fire damage AoE"}}, 
 				-- Keli'dan the Breaker
-	[17653] = {{"Legion", "Adds deals Shadow Damage - having shadow resistance will be helpful in dealing with boss mechanics"},
-				{"Important", "After Adds go down, boss will come after group"}}, 
+	[17653] = {{"Important", "After Adds go down, boss will come after group"}}, 
 				-- Shadowmoon Channeler
 
 	---Trash Mobs
@@ -1057,7 +1051,7 @@ tipsMap = {
 
 	---Bosses
 	[16807] = {{"Important", "The fight will start when the last/fourth Fel Orc Convert dies (this can be killed by players, or may be killed by the boss if group is taking too much time to pull"},
-				{"Legion", "Shadow Resistance Buffs/Aura will be helpful with this boss"},
+				{"Legion", "Shadow Resistance Buffs/Aura are helpful here if you run into trouble."},
 				{"Advanced", "PHASE 1:"},
 				{"Dodge", "DODGE: Players inside Void zones (starting out as circular red graphic will appear around a player) will need to run out of them ASAP!"},
 				{"Important", "Boss will cast Death Coil on random players dealing Shadow Damage +4 sec fear!"},
@@ -1071,7 +1065,6 @@ tipsMap = {
 				{"Important", "Due to high-hitting melee cleave, the players standing close to boss will take increased damage and will need more heals"}}, 
 				-- Blood Guard Porung (Heroic-Only)
 	[16809] = {{"Legion", "HEROIC MODE: It is best to have TANK put on DPS gear due to being untauntable. Tank and 2 DPS having a buffed HP of 8500 is helpful here. The third 'DPS' should go off-heals to help out main spec healer"},
-				{"Legion", "Fire Resistance Buffs/Aura will help deal with this boss' damaging abilities"},
 				{"TANK", "Tank the boss in the middle of the room and be prepared to pickup stealthed assassins that may strike when boss unleashes fear"},
 				{"Important", "Untauntable (using high threat abilities causes him to focus on that player"},
 				{"Important", "BEATDOWN: When boss emotes, he will wipe aggro table and attack random player"},
@@ -1158,26 +1151,25 @@ tipsMap = {
 
 	---Friendly NPCs
 	[17893] = {{"Legion", "Free him from cage and waves of mobs will appear. After their defeat, speak with him again to receive Nature Resist Buff +Stats"},
-				{"TANK", "Keep mobs off of Naturalist Bite NPC to ensure that you can obtain Nature Resist buff for final boss!"},
-				{"HEALER", "Keep Naturalist Bite NPC healed to ensure that you can obtain Nature Resist buff for final boss!"}},
+				{"TANK", "Keep mobs off of Naturalist Bite NPC and you'll get a Nature Resist buff for final boss!"},
+				{"HEALER", "Keep Naturalist Bite NPC healed to ensure that you get the buff"}},
 				-- Naturalist Bite
 
 	---Bosses
-	[17941] = {{"Legion", "Boss deals Nature (and some fire damage thru totem). Having proper resistance gear/pots can help mitigate this damage"},
-				{"Important", "Prior to pulling boss, make sure to deal with Adds that might pull if your boss fighting will get too close"},
+	[17941] = {{"Important", "Prior to pulling boss, make sure to deal with Adds that might pull if your boss fighting will get too close"},
 				{"PriorityTargets", "Make sure that as DPS you're swapping to his totems when he drops them"},
 				{"TANK", "While avoiding adds, backup to pull boss out of range of his totems"},
 				{"WARRIOR", "Use Spell Reflection to deal with boss' Lightning Bolts"},
 				{"SHAMAN", "Grounding Totem will absorb Lightning Bolts"}}, 
 				-- Mennu the Betrayer
-	[17991] = {{"Legion", "Boss deals Frost damage thru WATER SPIT (40 yd range). Use Frost Resistance Aura/Buffs to mitigate this damage"},
-				{"Advanced", "POSITIONING: If tank and DPS place themselves between boss and healer, healer may be able to stay out of range of Water Spit"},
+	[17991] = {{"Advanced", "POSITIONING: If tank and DPS place themselves between boss and healer, healer may be able to stay out of range of Water Spit"},
 				{"TANK", "Use/Time Defensives effectively as this boss hits hard"},
 				{"HEALER", "When player is afflicted by boss' GRIEVOUS WOUND, heal them to full to drop this debuff from player"},
 				{"DAMAGE", "Players can use bandages (when not being melee attacked by boss to help healer when they are struck by GRIEVOUS WOUND debuff."},
 				{"HEALER", "When not dealing with GRIEVOUS WOUND, healer should be prioritizing tank due to heavy hitting boss damage"},
 				{"Important", "WATER SPIT is an AoE Frost attack (use pots/resist to mitigate)"},
-				{"Important", "HEROIC MODE: Boss will ENRAGE at 20% health - save healing pots/healthstones for this phase"}}, 
+				{"Important", "HEROIC MODE: Boss will ENRAGE at 20% health - save healing pots/healthstones for this phase"},
+				{"Legion", "Boss deals Frost damage thru WATER SPIT (40 yd range). Use Frost Resistance Aura/Buffs to mitigate this damage"}}, 
 				-- Rokmar the Crackler
 	[17942] = {{"Legion", "Deals Nature damage - all player should use proper Nature resist gear/pots for fight"},
 				{"Important", "Grab Naturalist Bite's Nature resist buff BEFORE engaging boss - adds will spawn when you free him from cage"},
@@ -1236,16 +1228,14 @@ tipsMap = {
 	------- Dungeon: The Underbog -------------------
 
 	---Bosses
-	[17770] = {{"Legion", "Nature Resistance gear/pots will be helpful to mitigate some boss damage."},
-				{"Important", "Immune to CC."},
+	[17770] = {{"Important", "Immune to CC."},
 				{"Important", "Before fight begins, you will need to deal with 2 Bog Giants (both pull when one is pulled). One of them can be kited by a DPS who then jumps off ledge, allowing grp to fight one Bog Lord at a time"},
 				{"Legion", "If your group is too weak to deal with both Bog Giants at once, focus down one as that one will not respawn if you wipe to the second"},
 				{"Advanced", "POSITIONING: It is helpful for DPS and Healer to stand close together so that they move (around the boss) as a group to avoid mushrooms"},
 				{"PriorityTargets", "When boss summons an Underbog Mushroom, ALL players (tank included) need to run away from it as it causes MASSIVE AoE damage! (showing nameplates can be helpful to see these mushrooms spawn and adjust accordingly)"},
 				{"Dodge", "RUN AWAY: All players (tank included) needs to run away from boss at 20% as boss leeches health with AoE Foul Spores ability (Lasts 11 seconds)"}}, 
 				-- Hungarfen
-	[18105] = {{"Legion", "Nature Resistance gear/pots will be helpful to mitigate some boss damage"},
-				{"Advanced", "POSITIONING: Tank should have boss turned away from group. DPS/Heals need to stand at sides to avoid frontal attack & tail sweep"}}, 
+	[18105] = {{"Advanced", "POSITIONING: Tank should have boss turned away from group. DPS/Heals need to stand at sides to avoid frontal attack & tail sweep"}}, 
 				-- Ghaz'an
 	[17826] = {{"Important", "Prior to starting fight, defeat the nearby Underbog Lord so that this guy isn't pulled with boss"},
 				{"Advanced", "POSITIONING: Stand with backs against a wall to avoid knockback from Musel'ek, and all players should stack on boss to avoid majority of his ranged abilities (including Aimed Shot)."},
@@ -1258,8 +1248,7 @@ tipsMap = {
 				{"Important", "ECHOING ROAR: AoE ability reducing players' within 10 yds armor by 50% on normal-mode (82% on heroic). If this is the tank, they will need to pop additional defensives and receive big heals for 20 sec debuff."},
 				{"Important", "Stack Claw on top of Musel'ek to negate Claw's FERAL CHARGE +knockback"}}, 
 				-- Claw <Swamplord Musel'ek's Pet>
-	[17882] = {{"Legion", "Nature Resistance gear/pots will be helpful to mitigate some boss damage"},
-				{"Advanced", "POSITIONING: Players should spread as much as possible to mitigate number of players hit by boss' Chain Lightning. Spreading will also mitigate number of players struck with Static Charge (AoE Nature DoT)"},
+	[17882] = {{"Advanced", "POSITIONING: Players should spread as much as possible to mitigate number of players hit by boss' Chain Lightning. Spreading will also mitigate number of players struck with Static Charge (AoE Nature DoT)"},
 				{"Defensives", "As boss hits tank hard, defensives will need to be timed and healer should keep tank as close to max health as much and as often as possible!"},
 				{"Dodge", "DODGE: If struck by Static Charge (30 yd AoE Nature DoT), run away from nearby players. If tank is struck, other players will need to run from the tank"},
 				{"Important", "LEVITATE: Boss will levitate a player into the air"},
@@ -1371,13 +1360,12 @@ tipsMap = {
 	[17799] = {{"Important", "Tank can use AoE threat-building abilities such as Thunder Clap/Consecration, but DPS should ignore them"}}, 
 				-- Dreghood Slave
 	[21338] = {{"Important", "Non-elite mob that should be AoE'd down"}}, -- Coilfang Leper
-	[21694] = {{"Legion", "Deals Nature & Physical Damage; use resistance armor/pots esp if undergeared"},
+	[21694] = {{"Legion", "Deals Nature & Physical Damage; consider resistance armor/pots if undergeared"},
 				{"Important", "Mob should be tanked away from group due to Trample (mob deals Physical AoE). Melee players struck by this may need additional healing"},
 				{"Important", "Dispel Fungal Decay from player (Disease; Nature DoT w/momvement speed slow lasting 18 sec)"},
 				{"Important", "Dispel Poison Bolt from player (Poison; Nature DoT lasting 10 sec)"},
 				{"Dodge", "Run out of Disease Cloud (Nature DoT)"}}, -- Bog Overlord
-	[21695] = {{"Legion", "This mob deals Frost Damage; having proper aura/resistances can be helpful in mitigating some of mob's damage"},
-				{"Important", "These mobs should be tanked with your back against the wall due to Water Sprout knockback (40 yd range; Frost Damage)"},
+	[21695] = {{"Important", "These mobs should be tanked with your back against the wall due to Water Sprout knockback (40 yd range; Frost Damage)"},
 				{"Important", "Surger pops Frost Nova rooting nearby players for 8 sec"}}, -- Tidal Surger
 	[21696] = {{"Legion", "This mob deals Frost Damage; having proper aura/resistances can be helpful in mitigating some of mob's damage"},
 				{"Legion", "Mob has 45 yd range attack in form of Water Bolt (Instant Frost damaging ability)"}}, 
@@ -1387,18 +1375,17 @@ tipsMap = {
 	------- Dungeon: Mana-Tombs ---------------------
 
 	---Bosses
-	[18341] = {{"Legion", "Shadow Resistance Buffs/Aura will be helpful with this boss"},
-				{"Important", "Pulling this boss will also pull the trash in the room!"},
+	[18341] = {{"Important", "Pulling this boss will also pull the trash in the room!"},
 				{"Important", "VOID BLAST (Volley of Void Bolts dealing Shadow damage +Knock back to players) - Fight mob with back against wall."},
 				{"SHAMAN", "Keep Grounding Totem active as it will absorb Shadow Bolts"},
 				{"WARRIOR", "If you don't have a Shaman that can apply Grounding Totem, use SPELL REFLECTION to reflect the Void Blast back to boss"},
 				{"Important", "DARK SHELL - ALL STOP ATTACKING! (Reflects melee and spell attacks back to player, but not Hunter's ranged abilities)"},
 				{"Legion", "Watch for emote: 'Pandemonius shifts into the void...' to know when you should stop DPS due to Dark Shell"},
 				{"DRUID", "Thorns should NOT be applied to the tank due to Dark Shell"},
-				{"PALADIN", "Retribution Aura should NOT be used due to Dark Shell"}}, 
+				{"PALADIN", "Retribution Aura should NOT be used due to Dark Shell"},
+				{"Legion", "Shadow Resistance Buffs/Aura will be helpful with this boss"}}, 
 				-- Pandemonius
-	[18343] = {{"Legion", "Nature Resistance gear/pots will be helpful to mitigate some boss damage during Earthquake"},
-				{"Advanced", "POSITIONING: Melee should be behind boss, with ranged standing at max range. Tank boss away from party members to avoid Arcing Smash frontal attack"},
+	[18343] = {{"Advanced", "POSITIONING: Melee should be behind boss, with ranged standing at max range. Tank boss away from party members to avoid Arcing Smash frontal attack"},
 				{"Important", "Earthquake (Deals AoE Nature damage +3 sec stun)"},
 				{"HEALER", "Make sure party members are topped off when Earthquake is being cast"}, 
 				{"Important", "Crystal Prison (Stuns random player in crystal; Dealing 50% of your health in damage over 5 sec as nature damage)"},
@@ -1429,7 +1416,7 @@ tipsMap = {
 	[18309] = {{"Important", "Mobs will use Shield Bash (spell locks player from casting that magic school for 8 sec), mob will sometimes leave tank to interrupt your ability"}, 
 				{"HEALER", "Healer should stand some distance when dealing with these mobs to allow for advance notice of this mob approaching you"}},
 				-- Ethereal Scavenger
-	[18311] = {{"Important", "Tank should LoS pull mob to walk into melee range, otherwise it could charge and stunning a player for 2 sec."},
+	[18311] = {{"Important", "Tank should LoS pull mob to walk into melee range, otherwise it could charge and stun a player for 2 sec."},
 				{"Defensives", "Mob will apply Soul Strike (likely to tank; lasting 5 sec) which cuts the effectivess of heals received by 50%. Tanks may need to pop additional CDs and will require extra heals to stay alive"}}, 
 				-- Ethereal Crypt Raider
 	[18312] = {{"PriorityTargets", "Main threat from this mob actually comes from the Ethereal Wraith that they summon. Burn adds and this mob down quickly!"}, 
@@ -1453,7 +1440,7 @@ tipsMap = {
 				{"PriorityTargets", "INTERRUPT: Mana Burn"},
 				{"Important", "Dispel Faerie Fire from especially from melee player (magic effect; reduces armor for 20 sec)"},
 				{"Important", "When mob dies, it will deal an Arcane Explosion AoE"}}, -- Mana Leech
-	[19307] = {{"PriorityTargets", "Deals Shadow Damage - Having Shadow resistance gear/buffs/auras/pots can help mitigate some of the damage this mob deals to group"},
+	[19307] = {{"PriorityTargets", "Deals Shadow Damage - Having Shadow resistance buffs/auras can help mitigate some of the damage this mob deals to group"},
 				{"Important", "Dispel Curse of Impotence (magical damage dealt reduced for 60 sec) from mana-using player"},
 				{"Defensives", "Defensive/Extra Heals when mob applies Shadows Embrace to player (40 yd range; Shadow DoT over 6 sec; Physical damage dealt decreased by 50%)."},
 				{"Important", "LoS pull these mobs to safe area as this mob will cast Psychic Scream (AoE Fear) as well as Death Coil fear"},
@@ -1527,12 +1514,11 @@ tipsMap = {
 				{"TANK", "When ADD phase begins, tank should use AoE taunting abilities (such as Consecration/Thunder Clap) to pick up adds"},
 				{"DAMAGE", "Focus down summoned elementals before swapping back to the boss. Alternatively, a Priest or Warlock can do an AoE Fear to the Fire, Frost and Arcane elementals when they spawn"}},
 				-- Darkweaver Syth
-	[18473] = {{"Legion", "Boss does primarily Arcane-type damage; Resistances/Pots can be potentially helpful here."},
-				{"PriorityTargets", "When boss reaches 80%, 50% and 25%, he'll blink to a random player location and begin casting Arcane Explosion. Line-of-sight MUST be broken by standing behind a pillar not in sight of boss or it will one-shot you!"},
+	[18473] = {{"PriorityTargets", "When boss reaches 80%, 50% and 25%, he'll blink to a random player location and begin casting Arcane Explosion. Line-of-sight MUST be broken by standing behind a pillar not in sight of boss or it will one-shot you!"},
 				{"Important", "Boss will apply Polymorph to a random party member (can be tank or healer) and lasts 5 seconds. DPS should make sure to not push Arcane Explosion phase transition while party member is sheeped, as they will be vulnerable to being one-shot."},
 				{"SHAMAN", "Shaman using GROUNDING TOTEM on HEROIC can prevent tank, or other player from being polymorphed!"},
 				{"Important", "Healer and Tank can have a PVP trinket to break themselves free of Polymorph (if you don't have a Shaman w/Grounding Totem). If healer can't be broken from Polymorph (based on group dynamic and healer trinket choices), you should plan ahead to utilize a secondary healer if the main healer is sheeped"}}, -- Talon King Ikiss
-	[23035] = {{"Legion", "Boss deals a combo of Physical Damage and Shadow Damage (having resistance gear/aura/pots) can be helpful to mitigate those damaging abilities"},
+	[23035] = {{"Legion", "Boss deals a combo of Physical Damage and Shadow Damage (having resistance aura/pots) can be helpful to help mitigate"},
 				{"Advanced", "Players should stack on the boss to deal AoE during bird phase."},
 				{"Important", "Casters (esp healers) afflicted with Spell Bomb need to STOP using their abilities as it will drain mana and cause damage to that player. If the healer is afflicted with this, an off-healer should pick up the slack during the 8 sec debuff"},
 				{"Important", "At 66% and 33%, boss will banish itself and summon birds (boss unbanishes when all birds are dead or after 1 min, whichever comes first)."},
@@ -1607,8 +1593,7 @@ tipsMap = {
 	------- Dungeon: Shadow Labyrinth ---------------
 
 	---Bosses
-	[18731] = {{"Legion", "Boss deals Nature damage. Having Nature resistance gear/pots (mostly for tank) can help mitigate such damage"},
-				{"Advanced", "POSITIONING: Tank boss in tunnel leading into room so that healer won't lose LoS. Tank should face boss away from group so that tank is only one taking Corrosive Acid. DPS and Healer should stand behind boss. Note that if tank is feared Corrosive Acid DoT may be applied to multiple players"},
+	[18731] = {{"Advanced", "POSITIONING: Tank boss in tunnel leading into room so that healer won't lose LoS. Tank should face boss away from group so that tank is only one taking Corrosive Acid. DPS and Healer should stand behind boss. Note that if tank is feared Corrosive Acid DoT may be applied to multiple players"},
 				{"Important", "Boss does an AoE Fear (1.5 sec cast time), which has a 45 yd range and lasts 6 sec"},
 				{"SHAMAN", "Use Tremor Totem when you see boss cast Fear so that this can be quickly removed from group"},
 				{"WARRIOR", "Use Spell Reflection to avoid getting Feared and giving your group Corrosive Acid when boss chases you"}}, 
@@ -1789,8 +1774,7 @@ tipsMap = {
 				-- Sa'at
 
 	---Bosses
-	[17879] = {{"Legion", "Deals Arcane Damage - Having appropriate resistance gear/pots can help mitigate damage"},
-				{"Important", "CHRONO-BEACON: Stand between boss portal and Medivh and use ONE Chrono-Beacon to summon a Time Keeper to deal with the whelps that leave the portal to attack Medivh (if you spawn your dragon too close to boss, boss will cause your dragon to despawn)!"}, 
+	[17879] = {{"Important", "CHRONO-BEACON: Stand between boss portal and Medivh and use ONE Chrono-Beacon to summon a Time Keeper to deal with the whelps that leave the portal to attack Medivh (if you spawn your dragon too close to boss, boss will cause your dragon to despawn)!"}, 
 				{"Important", "HEROISM is a good idea for THIS boss - Arcane Discharge has a 50 yd range and also increases damage from next Arcane Discharge."},
 				{"Important", "Arcane Blast (Deals Arcane Damage +Knockback)"},
 				{"TANK", "Stand with your back against a tree, or other such object to avoid boss' knockback"}},
@@ -1807,8 +1791,7 @@ tipsMap = {
 				{"PALADIN", "If off-tanking, use RIGHTEOUS FURY +JUDGMENT +CONSECRATION to build threat"},
 				{"WARRIOR", "If off-tanking, use DEFENSIVE STANCE to build threat"}}, 
 				-- Temporus
-	[17881] = {{"Legion", "Deals Nature Damage - Having appropriate resistance gear/pots (for tank) can help mitigate damage"},
-				{"Important", "Using Chrono-Beacons aren't viable on this boss as the boss will destroy summoned dragons with an AoE dispel!"},
+	[17881] = {{"Important", "Using Chrono-Beacons aren't viable on this boss as the boss will destroy summoned dragons with an AoE dispel!"},
 				{"TANK", "Keep boss faced away from group so other players don't get hit by Sand Breath (frontal-cone attack dealing Nature Damage)"},
 				{"WARRIOR", "Using SPELL REFLECTION can grant immunity from Time Stop - just be sure to time this so spell reflect is active prior to TIME STOP"},
 				{"HUNTER", "Using THE BEAST WITHIN can grant immunity from Time Stop - just be sure to time this so spell reflect is active prior to TIME STOP"},
@@ -1868,23 +1851,21 @@ tipsMap = {
 	------- Dungeon: The Mechanar -------------------
 
 	---Bosses
-	[19219] = {{"Legion", "Boss deals primarily Arcane damage; Having the appropriate resistance gear/pots could be helpful, esp if you're a melee DPS or tank"},
-				{"Advanced", "POSITIONING: Players should spread out as much as possible to mitigate some of the damage caused by Nether Charges (summoned by boss every ~15 sec and explodes dealing Arcane AoE)"},
+	[19219] = {{"Advanced", "POSITIONING: Players should spread out as much as possible to mitigate some of the damage caused by Nether Charges (summoned by boss every ~15 sec and explodes dealing Arcane AoE)"},
 				{"Important", "Players (including tank and healer) need to watch for which Polarity shift they have and stand by players with the same polarity"},
 				{"Important", "Stop melee DPS if boss has Reflective DAMAGE Shield"},
 				{"Important", "Stop caster DPS if boss has Reflective MAGIC Shield"},
 				{"Dodge", "DODGE: Players should avoid areas being struck by Netherbombs while standing close to anyone with same polarity"}}, 
 				-- Mechano-Lord Capacitus
-	[19221] = {{"Legion", "Fire resistance gear/pots/aura is helpful in dealing with this boss and her summoned fire adds"},
-				{"Advanced", "OPTIONAL BOSS; Be sure to clear the boss' room before engaging as you will need room to kite adds. Also, do NOT go down hallway to 3rd boss, during the fight, as trash there will cause problems for group."},
+	[19221] = {{"Advanced", "OPTIONAL BOSS; Be sure to clear the boss' room before engaging as you will need room to kite adds. Also, do NOT go down hallway to 3rd boss, during the fight, as trash there will cause problems for group."},
 				{"Important", "Player with aggro on a fire elemental needs to kite away from (but NOT through) the group due to fire patches it places on the ground as it moves"},
 				{"Important", "All players will be moving during much of this fight between kiting of the elemental adds and players avoiding the fire that they leave on the ground"},
 				{"Important", "Tank boss faced away from the group as Dragon's Breath is a frontal-cone attack that disorients player for 4 sec."},
 				{"Important", "Dispel Dragon's Breath from Tank (Magic Effect) as after tank is struck by Dragon's Breath, boss will run to another player with threat (likely the healer)."},
-				{"TANK", "After recovering from the effects of Dragon's Breath, pick aggro back up on the boss ASAP!"}}, 
+				{"TANK", "After recovering from the effects of Dragon's Breath, pick aggro back up on the boss ASAP!"}, 
+				{"Legion", "Fire resistance aura is helpful in dealing with this boss and her summoned fire adds"}},
 				-- Nethermancer Sepethrea
-	[19220] = {{"Legion", "Boss deals Arcane-type damage; having the proper resistance gear/pots can help mitigate damage from boss and adds"},
-				{"Advanced", "POSITIONING: Players (esp mana users) MUST stand at least 25 yds from boss to avoid Arcane Torrent silencing them and stealing their mana"},
+	[19220] = {{"Advanced", "POSITIONING: Players (esp mana users) MUST stand at least 25 yds from boss to avoid Arcane Torrent silencing them and stealing their mana"},
 				{"Important", "Nether Wraith adds will be summoned frequently to help boss. DPS should focus and AoE these down anytime they're up, before shifting damage back to the boss"},
 				{"TANK", "Focus on the boss; the Nether Wraith adds don't need to be tanked"},
 				{"Important", "When player is struck with Domination (5 sec mind-control), that player needs be stunned/CC'd ASAP!"},
@@ -2064,25 +2045,25 @@ tipsMap = {
 	------- Dungeon: The Arcatraz -------------------
 
 	---Bosses
-	[20870] = {{"Legion", "Boss deals Shadow damage - having Shadow resistance gear/auras/buffs/pots can help mitigate damage taken"},
-				{"TANK", "Tank the boss with your back against the wall to avoid knockback"},
+	[20870] = {{"TANK", "Tank the boss with your back against the wall to avoid knockback"},
 				{"Dodge", "DODGE/RUN from Void Zones boss spawns (Purple swirl on ground dealing Shadow damage to players"},
 				{"Dodge", "DODGE: If you are afflicted with Seed of Corruption, run out of group as AoE Shadow damage will be dealt to players w/in 10 yards and applying a Shadow DoT to those players. If the tank is the one afflicted, all other players must run away from tank."},
+				{"Legion", "Boss deals Shadow damage - having Shadow resistance auras/buffs can help mitigate damage taken"},
 				{"Important", "Players can minimize the knockback from Shadow Nova by standing with backs close to a wall, but still need to be aware of void zones that will spawn"}}, 
 				-- Zereketh the Unbound
-	[20885] = {{"Legion", "Boss deals Shadow damage - having Shadow resistance gear/auras/buffs/pots can help mitigate damage taken"},
-				{"Dodge", "DODGE: ~30 sec into the fight, boss will do a Whirlwind (lasts 6 sec), be sure to run out of this as it deals massive AoE Physical damage"},
+	[20885] = {{"Dodge", "DODGE: ~30 sec into the fight, boss will do a Whirlwind (lasts 6 sec), be sure to run out of this as it deals massive AoE Physical damage"},
 				{"PriorityTargets", "INTERRUPT: After boss' Whirlwind ends, she will cast a heal on herself"},
 				{"Important", "Boss applies Gift of the Doomsayer to player (looks like Shadow Protection buff from a priest and has a chance to heal boss if player with debuff is healed this includes healing pots)"},
 				{"SHAMAN", "Avoid using Earth Shield on a player, during this fight"},
 				{"PRIEST", "Power Word: Shield is okay to use, but do NOT use Vampiric Embrace during this fight as it could result in boss getting healed."},
+				{"Legion", "Boss deals Shadow damage - having Shadow resistance auras/buffs can help mitigate damage taken"},
 				{"Important", "Using Wound Poison (rogue), Aimed Shot (hunter) or Mortal Strike (warrior) can reduce the amount of healing boss receives, if she manages to get a cast off."}}, 
 				-- Dalliah the Doomsayer
-	[20886] = {{"Legion", "Boss deals mostly Fire damage - having Fire resistance gear/auras/pots can help mitigate damage taken"},
-				{"Important", "Boss should be tanked with tank's back against the wall to mitigate Knockback"},
+	[20886] = {{"Important", "Boss should be tanked with tank's back against the wall to mitigate Knockback"},
 				{"Dodge", "After boss does Knockback, he will charge a random player and apply a Felfire trail that must be moved out of!"},
 				{"HEALER", "Boss applies Fel Immolation Aura that deals AoE fire damage to players w/in 15 yds. If you have melee DPS in your group, be aware that these ones will take increased damage as a result"},
-				{"Important", "Dispel player afflicted ith Felfire Shock (Fire DoT)"}}, 
+				{"Important", "Dispel player afflicted ith Felfire Shock (Fire DoT)"},
+				{"PALADIN", "Boss deals mostly Fire damage - consider Fire Resistance Aura"}}, 
 				-- Wrath-Scryer Soccothrates
 	[20912] = {{"Advanced", "PHASE ONE - 4 Cells will open, the 1st, 3rd and 4th will be one of two possibility enemies"},
 				{"Legion", "First Cell: Mobs deal Fire/Physical Damage"},
@@ -2175,7 +2156,7 @@ tipsMap = {
 				{"Defensives", "If there is no mage in the grp to dispel Soul Steal from enemy mob, tank will need to pop extra CDs and need extra heals to deal with damage"}}, 
 				-- Eredar Soul-Eater
 	[20880] = {{"PriorityTargets", "Mob casts Diminish Soul on player (stacks up to 10) for 12 sec. If stacks get too high on tank because fight is taking too long, tank could quickly become overwhelmed resulting in a wipe"},
-				{"Legion", "Mob deals AoE shadow damage to players (~40 yd range); having proper resistance buffs/pots can help deal with Diminish Soul stacks"},
+				{"Legion", "Mob deals AoE shadow damage to players (~40 yd range); Consider Shadow Resistance auras & buffs."},
 				{"Important", "Forceful Cleave is an AoE knockback, players (esp tank) should stand with backs against a wall."}}, 
 				-- Eredar Deathbringer
 	[20881] = {{"Legion", "Mob deals Physical and Shadow damage"},
@@ -2197,10 +2178,10 @@ tipsMap = {
 				{"HEALER", "If possibly try to use instant cast heals, totems or healing spells with as short of a cast time as possible to minimize risk of becoming spell silenced."},
 				{"Important", "If Healer is spell silenced from Sonic Boom, an off-healer may be needed as well as tank popping extra defensive CDs"}}, 
 				-- Ethereum Wave-Caster
-	[20898] = {{"Legion", "Mob deals mostly Fire-type damage - use appropriate resistances"},
-				{"Important", "Players need to stack to split damage from Meteor!"},
+	[20898] = {{"Important", "Players need to stack to split damage from Meteor!"},
 				{"Important", "When Meteor isn't being used, ranged DPS and Healer should be at least 20 yds away to avoid Fire Shield AoE that will impact those in melee range"}, 
-				{"WARLOCK", "Abyssal is immune to Banish & Enslave"}}, -- Gargantuan Abyssal
+				{"WARLOCK", "Abyssal is immune to Banish & Enslave"},
+				{"Legion", "Mob deals mostly Fire-type damage - consider Fire Resistance aura."}}, -- Gargantuan Abyssal
 	[20900] = {{"Important", "Players need to watch their threat when dealing with this target. If non-tank pulls aggro just before War Stomp (5 sec AoE stun) goes off, it could result in a wipe."}, 
 				{"WARLOCK", "Doomguard is immune to Enslave Demon"}}, -- Unchained Doombringer
 	[20901] = {{"Important", "Ranged mobs that root tank and disorient players with Hooked Net and Scatter Shot"},
